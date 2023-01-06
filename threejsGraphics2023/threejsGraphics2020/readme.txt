@@ -15,3 +15,8 @@ https://stackoverflow.com/questions/10752055/cross-origin-requests-are-only-supp
 The three.js programs from my graphics site https://sites.nova.edu/mjl/graphics/ will run under this framework.
 
 
+----THIS THE PATH TO DISPLAY MY WORK FOR THIS CLASS----
+
+https://empress637.github.io/threejsGraphics2023/threejsGraphics2020/show1.html?load=js/triangle015.js
+
+https://empress637.github.io/threejsGraphics2023/threejsGraphics2020/show1.html?load=js/square020.js
