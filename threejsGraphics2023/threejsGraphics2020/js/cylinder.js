@@ -44,16 +44,13 @@ for (let j = 0; j < n*2; j++) {
 	geom.faces.push(face1);
 	}
 	
-geometry = new THREE.BoxGeometry( 10, 10, 10, 2, 2, 2 );
-mat = new THREE.MeshBasicMaterial( { color: 0xFF0000 } );
-object = new THREE.Mesh( geom);
+	let mat = new THREE.MeshBasicMaterial({ color:0xFF0000,  wireframe:true });	
+	 // assign materials to the 12 triangular faces
+  for (let i = 0; i < n+1; i++){   
+      geom.faces[i].materialIndex = i;
+  }
+  
 
-edges = new THREE.EdgesHelper( object, 0xFF0000 );
-
-scene.add( object );
-scene.add( edges );
-
-	//let mat = new THREE.MeshBasicMaterial({   wireframe:false, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });	
     let mesh = new THREE.Mesh(geom, mat);
 	return mesh;
 }
