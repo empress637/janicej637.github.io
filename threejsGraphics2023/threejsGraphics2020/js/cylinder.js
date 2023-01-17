@@ -10,16 +10,10 @@ let cameraControls;
 let clock = new THREE.Clock();
 
 
-/*************************
- * CISC 681: Assignment 1
- * Janice James
- * January 16, 2023
- ************************/
-
 //PROBLEM 2 = createCylinder(n, rad, len)
 
 function createScene() {
-    let cylinder = createCylinder(4,8,15); 
+    let cylinder = createCylinder(10,8,15); 
 	let axes = new THREE.AxesHelper(10);
     scene.add(cylinder);
 	
@@ -28,31 +22,45 @@ function createScene() {
 }
 
 function createCylinder(n, rad, len){
-  let len2 = len / 2;  
-    let geom = new THREE.Geometry();
-	
-    // push vertices
- for (let i = 0; i < n+1; i++) {
+let len2 = len / 2;  
+let geom = new THREE.Geometry();
+let points1 = [];	
+let points2 = [];
+
+	//sides
+for (let i = 0; i <= n; i++) {
     let x = rad * Math.cos(2 * Math.PI * i / n);
 	let y = rad * Math.sin(2 * Math.PI * i / n);
-	geom.vertices.push(new THREE.Vector3(x,len2,y),new THREE.Vector3(x,-len2,y));	
+	geom.vertices.push(new THREE.Vector3(x,len2,y),new THREE.Vector3(x,-len2,y));
     }
 	
-    //push faces
-for (let j = 0; j < n*2; j++) {
-    let face1 = new THREE.Face3(j, j +1, j + 2);
-	geom.faces.push(face1);
-	}
+	//top
+for (let i = 0; i <= n; i++) {
+    let x = rad * Math.cos(2 * Math.PI * i / n);
+	let y = rad * Math.sin(2 * Math.PI * i / n);	
+	points1.push( new THREE.Vector3(x,len2,y) );
+    }
 	
-	let mat = new THREE.MeshBasicMaterial({ color:0xFF0000,  wireframe:true });	
-	 // assign materials to the 12 triangular faces
-  for (let i = 0; i < n+1; i++){   
-      geom.faces[i].materialIndex = i;
-  }
-  
+    //bottom
+for (let i = 0; i <= n; i++) {
+    let x = rad * Math.cos(2 * Math.PI * i / n);
+	let y = rad * Math.sin(2 * Math.PI * i / n);
+	points2.push( new THREE.Vector3(-x,-len2,y) );
+ }
+    
+let top = new THREE.BufferGeometry().setFromPoints( points1 );
+let bottom = new THREE.BufferGeometry().setFromPoints( points2 ); 
+let mat = new THREE.MeshBasicMaterial({color: 0xff0000});	
+let lines = new THREE.LineSegments(
+            geom,
+            new THREE.LineBasicMaterial({
+                color: new THREE.Color('red')
+            }));
+let lines1 = new THREE.Line(top, mat );
+let lines2 = new THREE.Line(bottom, mat );
+	
+scene.add(lines, lines1, lines2 );
 
-    let mesh = new THREE.Mesh(geom, mat);
-	return mesh;
 }
 
 function animate() {
