@@ -3,11 +3,7 @@ let camera, scene, renderer;
 let cameraControls;
 let clock = new THREE.Clock();
 
-/*************************
- * CISC 681: Assignment 1
- * Janice James
- * January 16, 2023
- ************************/
+
 
 //PROBLEM 1 = regularPolygonMesh(n, rad, innerColor, outerColor)
 
