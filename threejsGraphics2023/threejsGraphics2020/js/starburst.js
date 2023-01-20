@@ -10,42 +10,53 @@ let cameraControls;
 let clock = new THREE.Clock();
 
 
-function createSceneA() {
-    sphereRadius = 15;
-    root = starburstsOnSphereA(400, sphereRadius, 100, 1)
-    scene.add(root);
+//PROBLEM 1 = Starburst Torus 
+
+
+function createScene() {
+	let torus = makeTorus(12,2, 57,2);
+	scene.add(torus);
+	
+	//let axes = new THREE.AxesHelper(10);	
+	//scene.add(axes);
 }
 
 
-function starburstsOnSphereA(nbrBursts, sphereRadius, maxRays, maxRad) {
-    let root = new THREE.Object3D();
-    for (let i = 0; i < nbrBursts; i++) {
-        let mesh = starburstA(maxRays, maxRad);
-        let p = getRandomPointOnSphere(sphereRadius);
-        mesh.position.set(p.x, p.y, p.z);
-        root.add(mesh);
-    }
-    return root;
+function makeTorus(majorRad,minorRad, nbrRays, rad){
+	let geom = new THREE.TorusGeometry(majorRad, minorRad, 100, 1220);
+	let root = new THREE.Object3D();
+	let max = geom.vertices.length;
+
+for (let i = 0; i < 800; i++) {
+        let j = getRandomInt(1,max);
+        let vertex = geom.vertices[j];
+		let burst = starburst(nbrRays,rad);
+        burst.position.set(vertex.x , vertex.z , vertex.y);
+		root.add(burst);    
+	}	  
+return root;
+
 }
 
-function starburstA(maxRays, maxRad) {
-    let rad = 1;   // had been rad = 10?????
+function starburst(maxRays, maxRad) {
     let origin = new THREE.Vector3(0, 0, 0);
     let innerColor = getRandomColor(0.8, 0.1, 0.8);
     let black = new THREE.Color(0x000000);
     let geom = new THREE.Geometry();
     let nbrRays = getRandomInt(1, maxRays);
+    if (Math.random() < 0.5) {
+        nbrRays = getRandomInt(4, 57);
+    }
     for (let i = 0; i < nbrRays; i++) {
-        let r = rad * getRandomFloat(0.1, maxRad);
+        let r = getRandomFloat(0.1, maxRad);
         let dest = getRandomPointOnSphere(r);
         geom.vertices.push(origin, dest);
         geom.colors.push(innerColor, black);
     }
-    let args = {vertexColors: true, linewidth: 2};
+    let args = {vertexColors: true, linewidth: 1};
     let mat = new THREE.LineBasicMaterial(args);
-    return new THREE.Line(geom, mat, THREE.LineSegments);
+    return new THREE.Line(geom, mat, THREE.LineSegments);	
 }
-
 
 function animate() {
 	window.requestAnimationFrame(animate);
@@ -83,7 +94,7 @@ function init() {
 
 function addToDOM() {
 	let container = document.getElementById('container');
-	let canvas = container.getElementsByTagName('canvas');
+	let canvas = container.getElementsByTagName('canvas')
 	if (canvas.length>0) {
 		container.removeChild(canvas[0]);
 	}
