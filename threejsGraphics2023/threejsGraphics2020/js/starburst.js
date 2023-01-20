@@ -58,6 +58,7 @@ function starburst(maxRays, maxRad) {
     return new THREE.Line(geom, mat, THREE.LineSegments);	
 }
 
+
 function animate() {
 	window.requestAnimationFrame(animate);
 	render();
@@ -94,7 +95,7 @@ function init() {
 
 function addToDOM() {
 	let container = document.getElementById('container');
-	let canvas = container.getElementsByTagName('canvas')
+	let canvas = container.getElementsByTagName('canvas');
 	if (canvas.length>0) {
 		container.removeChild(canvas[0]);
 	}
