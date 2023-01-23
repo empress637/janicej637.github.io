@@ -13,42 +13,60 @@ let clock = new THREE.Clock();
 //PROBLEM 2 = Pyramid of Toruses 
 
 
+
 function createScene() {
-	let pyramid = makePyramid(14,18,.4);
-	scene.add(pyramid);
-	
-	//let axes = new THREE.AxesHelper(10);	
-	//scene.add(axes);
+    pyramid = makePyramid(10,2.5,14, 5);
+    let light = new THREE.PointLight(0xFFFFFF, 1.0, 1000 );
+    light.position.set(0, 0, 40);
+    let light2 = new THREE.PointLight(0xFFFFFF, 1.0, 1000 );
+    light2.position.set(20, 40, -40);
+    let ambientLight = new THREE.AmbientLight(0x333333);
+    scene.add(light);
+    scene.add(light2);
+    scene.add(ambientLight);
+    scene.add(pyramid);
+
+    
 }
 
 
-function makePyramid(nbrTorus,majorRad,minorRad){
-let root = new THREE.Object3D();
-let j = -5;
-for (let i = nbrTorus-1; i < nbrTorus && i >=0; i--) {
-		let y = j;
-		let torus = makeTorus(majorRad,minorRad);
-        torus.position.set(0,j,0);   
-		torus.rotateX(190);		
-		root.add(torus);  
-		j = j+.7;
-		majorRad = majorRad-1;
-		minorRad = minorRad+.5/majorRad;
+
+function makePyramid(majorRad,minorRad,nbrToruses,cherry,materials) {
+    let ypos = cherry ;
+    let sf = .01;
+    if (!materials) mats = [];
+    root = new THREE.Object3D();
+    for (let i = 0; i <= nbrToruses; i++) {
+        let geom = new THREE.TorusGeometry(majorRad, minorRad/i*2,  150, 20);
+        let mat;
+        if (!materials) {
+            let matArgs = { color: getRandomColor()};
+            mat = new THREE.MeshLambertMaterial(matArgs);
+            mats.push(mat);
+        } else {
+            mat = mats[i];
+        }
 		
-	if( i == 0){
-	let sphereColor = getRandomColor(0.6, 0.5, 0.4);
-	let geometry = new THREE.SphereGeometry( majorRad );
-	let mat = new THREE.MeshBasicMaterial({ color: sphereColor});
-    let mesh = new THREE.Mesh(geometry, mat);
-	mesh.position.set(0,j+.5,0);
-	scene.add(mesh);
-	}
-	}	  
-
+        let cyl = new THREE.Mesh(geom, mat);
+        cyl.position.y = ypos;
+        cyl.scale.set(sf, sf, sf);
+		cyl.rotateX(190);
+        root.add(cyl);
+        ypos = ypos-.5;
+        sf = sf+0.1;
+		
+		if(i==nbrToruses){
+		let geometry = new THREE.SphereGeometry( minorRad*2/i*1.5 );
+		let gem = new THREE.Mesh(geometry, mat);
+		gem.position.y = cherry;
+		root.add(gem);
+		}
+    }
 	
-return root;
-}
+   
+	 return root;
 
+}
 function makeTorus(majorRad,minorRad){
 let geom = new THREE.TorusGeometry(majorRad, minorRad, 150, 20);	
 let innerColor = getRandomColor(0.6, 0.5, 0.4);
