@@ -36,7 +36,7 @@ function createScene() {
 
 function makeCantor3(retainF, level, mat, len=1) {
     if (level == 0) {
-        let geom = new THREE.BoxGeometry(len, len, len);
+        let geom = new THREE.TetrahedronGeometry(len, 0);
         return new THREE.Mesh(geom, mat);
     }
     else {
