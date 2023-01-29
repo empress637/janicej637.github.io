@@ -1,28 +1,46 @@
 /***********
- * triangle015.js
- * A simple triangle with orbit control
+ * cantor3C.js
  * M. Laszlo
- * September 2019
+ * 3D Cantor set (Sierpinski sponge) with GUI
+ * April 2020
  ***********/
+
 
 let camera, scene, renderer;
 let cameraControls;
 let clock = new THREE.Clock();
+let cantor;
+let len = 1;
+let mat;
+
 
 
 function createScene() {
-    let tetra = makeTetra();
-    let axes = new THREE.AxesHelper(10);
-    scene.add(tetra);
-    scene.add(axes);
+    let nbrLevels = controls.nbrLevels;
+    let color = new THREE.Color(controls.color);
+    let opacity = controls.opacity;
+    let matArgs = {color: color, transparent: true, opacity: opacity};
+    mat = new THREE.MeshLambertMaterial(matArgs);
+    cantor = makeCantor3(retainSierpinskiCube, nbrLevels, mat, len);
+    let light = new THREE.PointLight(0xFFFFFF, 1.0, 1000 );
+    light.position.set(0, 0, 40);
+    let light2 = new THREE.PointLight(0xFFFFFF, 0.4, 1000 );
+    light2.position.set(20, 40, -20);
+    let ambientLight = new THREE.AmbientLight(0x111111);
+    scene.add(light);
+    scene.add(light2);
+    scene.add(ambientLight);
+    scene.add(cantor);
 }
 
-function makeTetra(retainF, level, mat, len=1) {
+
+function makeCantor3(retainF, level, mat, len=1) {
     if (level == 0) {
-        let geom = new THREE.TetrahedronGeometry(len, 0);
+        let geom = new THREE.BoxGeometry(len, len, len);
         return new THREE.Mesh(geom, mat);
-    } else {
-        let cantor = makeTetra(retainF, level-1, mat, len);
+    }
+    else {
+        let cantor = makeCantor3(retainF, level-1, mat, len);
         let root = new THREE.Object3D();
         root.scale.set(1/3, 1/3, 1/3);
         for (x of [-len, 0, len]) {
@@ -39,49 +57,108 @@ function makeTetra(retainF, level, mat, len=1) {
         return root;
     }
 }
- 
-function retainF(x, y, z, len) {
+
+// cantor
+function retainSierpinskiCube(x, y, z, len) {
     return (Math.abs(x) + Math.abs(y) + Math.abs(z)) > len;
 }
 
-
-function animate() {
-	window.requestAnimationFrame(animate);
-	render();
+function retainMoselySnowflake(x, y, z, len) {
+    return (Math.abs(x) + Math.abs(y) + Math.abs(z)) < 3 * len;
 }
+
+function retainMoselySnowflakeLight(x, y, z, len) {
+    let val = Math.abs(x) + Math.abs(y) + Math.abs(z);
+    return (val < 3 * len) && (val > 0);
+}
+
+
+function retainSMSnowflakeAlt(x, y, z, len) {
+    let val = Math.abs(x) + Math.abs(y) + Math.abs(z);
+    return (Math.abs(x) + Math.abs(y) + Math.abs(z)) == 2 * len;
+}
+
+function retainSMSnowflake(x, y, z, len) {
+    return retainSierpinskiCube(x, y, z, len) && retainMoselySnowflake(x, y, z, len);
+}
+
+
+var controls = new function() {
+    this.nbrLevels = 2;
+    this.opacity = 1.0;
+    this.color = '#3366ff';
+    this.type = 'Sierpinski cube';
+}
+
+function initGui() {
+    var gui = new dat.GUI();
+    gui.add(controls, 'nbrLevels', 0, 4).step(1).onChange(update);
+//    gui.add(controls, 'opacity', 0.1, 1.0).step(0.1);
+    gui.addColor(controls, 'color');
+    let objectTypes = ['Sierpinski cube', 'Mosely snowflake', 'Light Mosely snowflake', 'SM snowflake'];
+    gui.add(controls, 'type', objectTypes).onChange(update);
+}
+
+function update() {
+    if (cantor)
+        scene.remove(cantor);
+    let f = null;
+    switch (controls.type) {
+        case 'Sierpinski cube': 
+            f = retainSierpinskiCube;
+            break;
+        case 'Mosely snowflake':
+            f = retainMoselySnowflake;
+            break;
+        case 'Light Mosely snowflake':
+            f = retainMoselySnowflakeLight;
+            break;
+        case 'SM snowflake':
+            f = retainSMSnowflake;
+            break
+    }
+    cantor = makeCantor3(f, controls.nbrLevels, mat, len);    
+    scene.add(cantor);
+}
+
 
 
 function render() {
-    let delta = clock.getDelta();
+    var delta = clock.getDelta();
     cameraControls.update(delta);
-	renderer.render(scene, camera);
+    mat.color = new THREE.Color(controls.color);
+    mat.opacity = controls.opacity;
+    renderer.render(scene, camera);
 }
 
 
+
 function init() {
-	let canvasWidth = window.innerWidth;
-	let canvasHeight = window.innerHeight;
-	let canvasRatio = canvasWidth / canvasHeight;
+	var canvasWidth = window.innerWidth;
+	var canvasHeight = window.innerHeight;
+	var canvasRatio = canvasWidth / canvasHeight;
 
 	scene = new THREE.Scene();
 
-	renderer = new THREE.WebGLRenderer({antialias : true, preserveDrawingBuffer: true});
+	renderer = new THREE.WebGLRenderer({antialias : true});
 	renderer.gammaInput = true;
 	renderer.gammaOutput = true;
 	renderer.setSize(canvasWidth, canvasHeight);
 	renderer.setClearColor(0x000000, 1.0);
+    renderer.setAnimationLoop(function () {
+        render();
+    });
 
-	camera = new THREE.PerspectiveCamera( 40, canvasRatio, 1, 1000);
-	camera.position.set(0, 0, 30);
-	camera.lookAt(new THREE.Vector3(0, 0, 0));
-
-	cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
+    camera = new THREE.PerspectiveCamera( 40, canvasRatio, 1, 1000);
+    camera.position.set(0, 2, 3);
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
+    cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
 }
 
 
 function addToDOM() {
-	let container = document.getElementById('container');
-	let canvas = container.getElementsByTagName('canvas');
+	var container = document.getElementById('container');
+	var canvas = container.getElementsByTagName('canvas');
 	if (canvas.length>0) {
 		container.removeChild(canvas[0]);
 	}
@@ -89,8 +166,10 @@ function addToDOM() {
 }
 
 
+
 init();
 createScene();
+initGui();
 addToDOM();
-render();
-animate();
+
+
