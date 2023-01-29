@@ -11,24 +11,37 @@ let clock = new THREE.Clock();
 
 
 function createScene() {
-    let triangle = makeTriangle();
+    let tetra = makeTetra();
     let axes = new THREE.AxesHelper(10);
-    scene.add(triangle);
+    scene.add(tetra);
     scene.add(axes);
 }
 
-
-function makeTriangle() {
-    let geom = new THREE.Geometry();
-    let a = new THREE.Vector3(0, 0, 0);
-    let b = new THREE.Vector3(4, 0, 0);
-    let c = new THREE.Vector3(0, 8, 0);
-    geom.vertices.push(a, b, c);
-    let face = new THREE.Face3(0, 1, 2);
-    geom.faces.push(face);
-    let mat = new THREE.MeshBasicMaterial({color: 0xFF00FF, side: THREE.DoubleSide});
-    let mesh = new THREE.Mesh(geom, mat);
-    return mesh;
+function makeTetra(retainF, level, mat, len=1) {
+    if (level == 0) {
+        let geom = new THREE.TetrahedronGeometry(len, 0);
+        return new THREE.Mesh(geom, mat);
+    } else {
+        let cantor = makeTetra(retainF, level-1, mat, len);
+        let root = new THREE.Object3D();
+        root.scale.set(1/3, 1/3, 1/3);
+        for (x of [-len, 0, len]) {
+            for (y of [-len, 0, len]) {
+                for (z of [-len, 0, len]) {
+                    if (retainF(x, y, z, len)) {
+                        let clone = cantor.clone();
+                        clone.position.set(x, y, z);
+                        root.add(clone);
+                    }
+                }
+            }
+        }
+        return root;
+    }
+}
+ 
+function retainF(x, y, z, len) {
+    return (Math.abs(x) + Math.abs(y) + Math.abs(z)) > len;
 }
 
 
