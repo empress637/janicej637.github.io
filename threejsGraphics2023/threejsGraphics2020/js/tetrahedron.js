@@ -1,124 +1,99 @@
-/***********
- * cantor3C.js
- * M. Laszlo
- * 3D Cantor set (Sierpinski sponge) with GUI
- * April 2020
- ***********/
-
-
+ 
 let camera, scene, renderer;
 let cameraControls;
 let clock = new THREE.Clock();
-let cantor;
-let len = 1;
+let tetrahedron;
+let len;
 let mat;
+let geometry;
 
-
+//PROBLEM 1 =  Sierpinski Tetrahedron
 
 function createScene() {
-    let nbrLevels = controls.nbrLevels;
-    let color = new THREE.Color(controls.color);
+    let Levels = controls.Levels;
+    let Color = new THREE.Color(controls.Color);
     let opacity = controls.opacity;
-    let matArgs = {color: color, transparent: true, opacity: opacity};
+    let matArgs = {color: Color, transparent: true, opacity: opacity};
     mat = new THREE.MeshLambertMaterial(matArgs);
-    cantor = makeCantor3(retainSierpinskiCube, nbrLevels, mat, len);
+	geometry = new THREE.TetrahedronGeometry(len);	
+	tetrahedron = maketetrahedron3(6, mat, len, 0.5, geometry);
     let light = new THREE.PointLight(0xFFFFFF, 1.0, 1000 );
     light.position.set(0, 0, 40);
     let light2 = new THREE.PointLight(0xFFFFFF, 0.4, 1000 );
-    light2.position.set(20, 40, -20);
+    light2.position.set(20, 40,20);
     let ambientLight = new THREE.AmbientLight(0x111111);
     scene.add(light);
     scene.add(light2);
     scene.add(ambientLight);
-    scene.add(cantor);
+    scene.add(tetrahedron);
+	
+	let axes = new THREE.AxesHelper(10);
+	//scene.add(axes);
 }
 
 
-function makeCantor3(retainF, level, mat, len=1) {
-    if (level == 0) {
-        let geom = new THREE.TetrahedronGeometry(len, 0);
-        return new THREE.Mesh(geom, mat);
+function maketetrahedron3( level, mat, len=1, scale, geometry) {
+    if (level == 0) {		
+	let mesh = new THREE.Mesh(geometry, mat);
+    return mesh;	
     }
     else {
-        let cantor = makeCantor3(retainF, level-1, mat, len);
-        let root = new THREE.Object3D();
-        root.scale.set(1/3, 1/3, 1/3);
-        for (x of [-len, 0, len]) {
-            for (y of [-len, 0, len]) {
-                for (z of [-len, 0, len]) {
-                    if (retainF(x, y, z, len)) {
-                        let clone = cantor.clone();
-                        clone.position.set(x, y, z);
-                        root.add(clone);
-                    }
-                }
-            }
+		let root = new THREE.Object3D();
+        root.scale.set(scale, scale, scale);
+        let tf = (1 - scale) / scale;
+        for (let v of geometry.vertices) {
+            let root2 = new THREE.Object3D();
+            let v2 = v.clone().multiplyScalar(tf);
+            root2.position.set(v2.x, v2.y, v2.z);
+            root2.add(maketetrahedron3(level-1, mat, len, scale, geometry));
+            root.add(root2);
         }
         return root;
     }
+	
 }
 
-// cantor
-function retainSierpinskiCube(x, y, z, len) {
-    return (Math.abs(x) + Math.abs(y) + Math.abs(z)) > len;
-}
-
-function retainMoselySnowflake(x, y, z, len) {
-    return (Math.abs(x) + Math.abs(y) + Math.abs(z)) < 3 * len;
-}
-
-function retainMoselySnowflakeLight(x, y, z, len) {
-    let val = Math.abs(x) + Math.abs(y) + Math.abs(z);
-    return (val < 3 * len) && (val > 0);
-}
-
-
-function retainSMSnowflakeAlt(x, y, z, len) {
-    let val = Math.abs(x) + Math.abs(y) + Math.abs(z);
-    return (Math.abs(x) + Math.abs(y) + Math.abs(z)) == 2 * len;
-}
-
-function retainSMSnowflake(x, y, z, len) {
-    return retainSierpinskiCube(x, y, z, len) && retainMoselySnowflake(x, y, z, len);
-}
 
 
 var controls = new function() {
-    this.nbrLevels = 2;
+    this.Levels = 6;
+	this.Scale = 0.5;
     this.opacity = 1.0;
-    this.color = '#3366ff';
-    this.type = 'Sierpinski cube';
-}
+    this.Color = '#f20202';
 
-function initGui() {
-    var gui = new dat.GUI();
-    gui.add(controls, 'nbrLevels', 0, 4).step(1).onChange(update);
-//    gui.add(controls, 'opacity', 0.1, 1.0).step(0.1);
-    gui.addColor(controls, 'color');
-    let objectTypes = ['Sierpinski cube', 'Mosely snowflake', 'Light Mosely snowflake', 'SM snowflake'];
-    gui.add(controls, 'type', objectTypes).onChange(update);
 }
 
 function update() {
-    if (cantor)
-        scene.remove(cantor);
-    let f = null;
-    switch (controls.type) {
-        case 'Sierpinski cube': 
-            f = retainSierpinskiCube;
-            break;
-        case 'Mosely snowflake':
-            f = retainMoselySnowflake;
-            break;
-        case 'Light Mosely snowflake':
-            f = retainMoselySnowflakeLight;
-            break;
-        case 'SM snowflake':
-            f = retainSMSnowflake;
-            break
+	scene.remove(tetrahedron);
+    tetrahedron = maketetrahedron3( controls.Levels, mat, len,controls.Scale, geometry);	
+    scene.add(tetrahedron);	
+}
+
+function updateScale() {	
+    let scale = controls.Scale;
+    let tf = (1 - scale) / scale;
+    let updateRec = function (root, level) {
+        if (level > 0) {
+            root.scale.set(scale, scale, scale);
+            for (let i = 0; i < root.children.length; i++) {
+                let c = root.children[i];
+                let v = geometry.vertices[i].clone().multiplyScalar(tf);
+                c.position.set(v.x, v.y, v.z);
+                updateRec(c.children[0], level-1);
+            }
+        }
     }
-    cantor = makeCantor3(f, controls.nbrLevels, mat, len);    
-    scene.add(cantor);
+    updateRec(tetrahedron, controls.Levels);
+	
+}
+
+
+function initGui() {
+    var gui = new dat.GUI();
+    gui.add(controls, 'Levels', 0, 6).step(1).onChange(update);
+	gui.add(controls, 'Scale', 0.1, 0.9).step(0.01).onChange(updateScale);
+    gui.addColor(controls, 'Color');
+
 }
 
 
@@ -126,7 +101,7 @@ function update() {
 function render() {
     var delta = clock.getDelta();
     cameraControls.update(delta);
-    mat.color = new THREE.Color(controls.color);
+    mat.color = new THREE.Color(controls.Color);
     mat.opacity = controls.opacity;
     renderer.render(scene, camera);
 }
@@ -146,7 +121,7 @@ function init() {
 	renderer.setSize(canvasWidth, canvasHeight);
 	renderer.setClearColor(0x000000, 1.0);
     renderer.setAnimationLoop(function () {
-        render();
+    render();
     });
 
     camera = new THREE.PerspectiveCamera( 40, canvasRatio, 1, 1000);
@@ -171,5 +146,7 @@ init();
 createScene();
 initGui();
 addToDOM();
+
+
 
 
