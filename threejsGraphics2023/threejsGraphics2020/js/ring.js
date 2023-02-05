@@ -1,65 +1,30 @@
+/***********
+ * anim080D.js
+ * Rotating pyramid
+ * pyramid rotates around the z-axis.
+ *
+ * M. Laszlo
+ * September 2019
+ ***********/
+
 
 let camera, scene, renderer;
 let cameraControls;
 let clock = new THREE.Clock();
-
-
-let subject = new Subject();
-
-
-let pyramid, mats;
-
-function sequence(...fncs) {
-    return function(delta) { fncs.forEach(g => g.call(this, delta)) };
-}
-
-
-function moveChildren(root, ...fncs) {
-    let children = root.children;
-    children.forEach(function (child, i, children) {
-        let animFncs = fncs.map(g => g(child, i, children));
-        child.update = sequence(...animFncs);
-        subject.register(child);
-    });
-}
-
-
-
-function makeColorAnimator(rate, saturation=1.0, lightness=0.5) {
-    function f(child, i, children) {
-        child.crate = rate;
-        child.cval = i / children.length;
-        return function (delta) {
-            this.cval += delta * this.crate;
-            this.cval = mod(this.cval, 1);
-            let color = new THREE.Color().setHSL(this.cval, saturation, lightness);
-            this.material.color = color;
-        }
-    }
-    return f;
-}
-
+let pyramid;
+let cyl ;
 
 
 function createScene() {
     pyramid = makePyramid(10,2.5,14, 5);
-    moveChildren(pyramid, makeColorAnimator(-0.1));
-
-    let light = new THREE.PointLight(0xFFFFFF, 1.0, 1000 );
-    light.position.set(0, 0, 40);
-    let light2 = new THREE.PointLight(0xFFFFFF, 1.0, 1000 );
-    light2.position.set(0, 0, -40);
-    let ambientLight = new THREE.AmbientLight(0x333333);
-    scene.add(light);
-    scene.add(light2);
-    scene.add(ambientLight);
-    scene.add(pyramid);
+	let light = new THREE.DirectionalLight(0xFFFFFF, 1.0);
+	light.position.set(0, 0, 10);
+    let ambientLight = new THREE.AmbientLight(0x222222);
+	scene.add(light);
+	scene.add(ambientLight);
+	scene.add(pyramid);    
 
 }
-
-
-
-
 
 
 function makePyramid(majorRad,minorRad,nbrToruses,cherry,materials) {
@@ -78,12 +43,15 @@ function makePyramid(majorRad,minorRad,nbrToruses,cherry,materials) {
             mat = mats[i];
         }
 		
-        let cyl = new THREE.Mesh(geom, mat);
+        cyl = new THREE.Mesh(geom, mat);
         cyl.position.y = ypos;
         cyl.scale.set(sf, sf, sf);
 		cyl.rotateX(190);
         root.add(cyl);
+        ypos = ypos;
         sf = sf+0.1;
+		root.rps = .06;
+		cyl.rps = 50;
 		
 		if(i==nbrToruses){
 		let geometry = new THREE.SphereGeometry( minorRad*2/i*1.5 );
@@ -101,58 +69,53 @@ function makePyramid(majorRad,minorRad,nbrToruses,cherry,materials) {
 
 function update() {
     let delta = clock.getDelta();
-    subject.notify(delta);
-}
+    let deltaRadians = rpsToRadians(root.rps, delta);
+    root.rotation.z += deltaRadians;
+    root.rotation.y %= 2 * Math.PI;
+		 
+	for (let i = 0; i <= 14; i++){
+	let delta2 = clock.getDelta();
+    let deltaRadians2 = rpsToRadians(root.children[i].rps, delta2);
+    root.children[i].rotation.x += deltaRadians2;
+    root.children[i].rotation.z %= 2 * Math.PI;
 
-var controls = new function() {
-    this.colorRate = -0.1;
-    this.saturation = 1.0;
-}
+	root.position.y = root.position.y-.2;
+	root.position.y = root.position.y+.2;
+	}
 
-function initGui() {
-    let gui = new dat.GUI();
-    gui.add(controls, 'colorRate', -1.0, 1.0).step(0.1).onChange(updateZig);
-    gui.add(controls, 'saturation', 0.0, 1.0).step(0.1).onChange(updateZig);
-}
-
-
-
-function updateZig() {
-    let colorRate = controls.colorRate;
-    let saturation = controls.saturation;
-    moveChildren(pyramid, makeColorAnimator(colorRate, saturation));
-}
-
+	}
 
 
 function init() {
-	var canvasWidth = window.innerWidth;
-	var canvasHeight = window.innerHeight;
-	var canvasRatio = canvasWidth / canvasHeight;
+	let canvasWidth = window.innerWidth;
+	let canvasHeight = window.innerHeight;
+    let canvasRatio = canvasWidth / canvasHeight;
 
-	scene = new THREE.Scene();
+
+    scene = new THREE.Scene();
 
 	renderer = new THREE.WebGLRenderer({antialias : true});
-	renderer.gammaInput = true;
-	renderer.gammaOutput = true;
+    renderer.gammaInput = true;
+    renderer.gammaOutput = true;
 	renderer.setSize(canvasWidth, canvasHeight);
-	renderer.setClearColor(0x000000, 1.0);
-    renderer.setAnimationLoop( () => {
-        update();
+	renderer.setClearColor(0x0, 1.0);
+    renderer.setAnimationLoop(function () {
+       update();
         renderer.render(scene, camera);
     });
 
-	camera = new THREE.PerspectiveCamera( 40, canvasRatio, 1, 1000);
-	camera.position.set(0, 12, 5);
+	camera = new THREE.PerspectiveCamera(40, canvasWidth/canvasHeight, 1, 1000);
+	camera.position.set(50, 20, 20);
 	camera.lookAt(new THREE.Vector3(0, 0, 0));
-
 	cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
 }
 
 
+
+
 function addToDOM() {
-	var container = document.getElementById('container');
-	var canvas = container.getElementsByTagName('canvas');
+    	let container = document.getElementById('container');
+	let canvas = container.getElementsByTagName('canvas');
 	if (canvas.length>0) {
 		container.removeChild(canvas[0]);
 	}
@@ -163,6 +126,6 @@ function addToDOM() {
 
 init();
 createScene();
-initGui();
 addToDOM();
+
 
