@@ -379,8 +379,8 @@ function updateScale() {
 
 function initGui() {
     var gui = new dat.GUI();
-    gui.add(controls, 'Levels', 0, 6).step(1).onChange(update);
-	gui.add(controls, 'Scale', 0.1, 0.9).step(0.01).onChange(updateScale);
+   // gui.add(controls, 'Levels', 0, 6).step(1).onChange(update);
+	//gui.add(controls, 'Scale', 0.1, 0.9).step(0.01).onChange(updateScale);
     gui.addColor(controls, 'Color');
 
 }
