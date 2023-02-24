@@ -4,12 +4,11 @@ let clock = new THREE.Clock();
 let delta = clock.getDelta();
 
 let mat;
-let mat2;
+let mat2,ball;
 let material2;
 let figure,mats;
 let flo = new THREE.Color(0x333333);
 
-let army = new THREE.Object3D();
 
 function createScene() {
 	let Hair_Out = controls.Hair_Out;
@@ -48,9 +47,9 @@ function createScene() {
 class Figure  {
 	constructor(params) {
 		this.params = {
-			x: 0,
-			y: 0,
-			z: 0,
+			x: controls.Location_X,
+			y: controls.Location_Y,
+			z: controls.Location_Z,
 			ry:0,
 			angle: 0,
 			...params
@@ -60,7 +59,7 @@ class Figure  {
 		//this.group = new THREE.Group();
 		this.group =  new THREE.Object3D();
 		scene.add(this.group);
-		this.group.rps=2;
+		this.group.rps=20;
 		
 		// Position according to params
 		this.group.position.x = this.params.x;
@@ -408,13 +407,12 @@ function makeFloor() {
 }
 
 function update(){	
-scene.remove(scene.children[4]);
 
-    controls.Body_Color = '#f05628';
-	controls.Limbs_Color = '#cf461c';
-	controls.Hair_Color = '#1b1212';
-	controls.Eye_Color = '#704912';
-	mats.color = flo;
+for (let i = 4; i < scene.children.length; i++) {
+scene.remove(scene.children[i]); 
+}
+
+
 figure = new Figure();
 figure.initChar();
 
@@ -434,6 +432,9 @@ var controls = new function() {
 	this.Hair_Color = '#1b1212';
 	this.Eye_Color = '#704912';
 	this.Animation = 'Stop';
+	this.Location_X =0;
+	this.Location_Y =0;
+	this.Location_Z =0;
 
 }
 
@@ -443,7 +444,7 @@ function  degreesToRadians(degrees,deg) {
 }
 
 function updateAnimation(){
-camera.position.set(0, 1, 15);
+scene.remove(ball);
 
 
 
@@ -451,22 +452,27 @@ camera.position.set(0, 1, 15);
 	
 	switch (animationType) {
         case 'Stop':  {
-
+scene.remove(ball);
 
 update();
-
+resetChar();
+renderer.setAnimationLoop(null);
+renderer.render(scene, camera);
 
 
 
 		}	break;
 						case 'Walking':  {
+			resetChar();
+			
+			
 			
 	renderer.setAnimationLoop(function () {		
        walk();
         renderer.render(scene, camera);
 		});}
 						break;
-        case 'Talking':  {
+        case 'Talking':  {resetChar();
 	renderer.setAnimationLoop(function () {
 		
        talk();
@@ -474,7 +480,7 @@ update();
 		
 		});}
                         break;
-        case 'Dancing': {
+        case 'Dancing': {resetChar();
 			
 	renderer.setAnimationLoop(function () {
 		
@@ -482,23 +488,15 @@ update();
         renderer.render(scene, camera);
 		});}
                         break;
-		case 'Disco': {
+		case 'Disco': {resetChar();
 		let box = randomBoxes(50);	
-scene.add(box);	
+
 	renderer.setAnimationLoop(function () {
-		
+		scene.add(box);	
        disco();
         renderer.render(scene, camera);
 		});}
-                        break;
-		case 'Marching_Army': {
-	
-	renderer.setAnimationLoop(function () {
-		//update();
-       march();
-       renderer.render(scene, camera);
-		});}
-                        break;				
+                        break;		
     }
  
 
@@ -506,83 +504,124 @@ scene.add(box);
 }
 
 function	walk() {
-	 update();
-	 
-	    
-    let deltaRadians = rpsToRadians(scene.children[4].rps/20, delta);
-
-scene.children[4].position.z += 2;
-
-controls.Move_Legs +=5;	
-	
-	figure.movelegs;
-	scene.children[4].position.z  +=scene.children[4].position.z-deltaRadians;
-	
-	if (controls.Move_Legs >=0){
-	figure.movelegs;
-	scene.children[4].position.z  +=scene.children[4].position.z-deltaRadians;
-scene.children[4].position.x += scene.children[4].position.x +(Math.random()*(2 - -2) + -2);
-	
-	controls.Move_Legs -=controls.Move_Arms-deltaRadians;
-	controls.Move_Legs= -50;
-	}
-
-
-		
-	}
-
-function talk(){
 update();
 
-controls.Mouth = 2;	
+
+controls.Move_Legs +=5;	
+figure.movelegs;
+
+	
+if (controls.Move_Legs >=0){
+	figure.movelegs;	
+	controls.Move_Legs = -50;
+	}
+
+if(controls.Location_X>0 || controls.Location_X<= 3){
+	
+scene.children[4].rotation.y  = Math.PI / 2;	
+controls.Location_X +=Math.random(3)*.1;
+
+
+
+}
+if(controls.Location_X> 3  ){
+
+scene.children[4].rotation.y  = Math.PI ;
+
+controls.Location_X =3;
+controls.Location_Z -=Math.random(3)*.1;
+
+
+}
+if	(controls.Location_Z< -3 ){
+
+scene.children[4].rotation.y  = Math.PI/-2 ;
+controls.Location_Z += Math.random(3)*.1;
+}
+
+
+
+	
+
+}
+function talk(){
+		delta = clock.getDelta();
+    
+    let deltaRadians = rpsToRadians(scene.children[4].rps/40, delta);
+	
+update();
+controls.Location_Z= 6.9;
+controls.Location_Y= 1.7;
+controls.Location_X +=(Math.random()*(.6 - -.6) + -.6)*.01;
+
+
+controls.Mouth = 9;	
 figure.createMouth;
-controls.Mouth  +=(Math.random()*(9 - -2) + -9);
+controls.Mouth  +=(Math.random()*(80 - -80) + -80)*.09;
 controls.Eyes = 31;	
 figure.createEyes;
 controls.Eyes  =(Math.random()*(32 - 31) + 32);
-scene.children[4].position.z = 12;
+
 
 
 	
 }
 
+function resetChar(){
+	    controls.Body_Color = '#f05628';
+	controls.Limbs_Color = '#cf461c';
+	controls.Hair_Color = '#1b1212';
+	controls.Eye_Color = '#704912';
+	controls.Location_X = 0;
+	controls.Location_Y = 0;
+	controls.Location_Z = 0;
+	mats.color = flo;
+render();
+}
 
   
 function dance() {
 
     update();
+	
 
 	delta = clock.getDelta();
-    let deltaRadians = rpsToRadians(scene.children[4].rps, delta);
+    let deltaRadians = rpsToRadians(scene.children[4].rps/40, delta);
 	
 	controls.Move_Legs =(Math.random()*(30 - -30) + -30);	
 	controls.Move_Arms	=(Math.random()*(10 - 50) + 50);
 	figure.movelegs;
 	figure.moveArms;
 
-scene.children[4].position.z +=(Math.random()*(6 - -6) + -6);
-scene.children[4].position.x +=(Math.random()*(6 - -6) + -6);
+figure.z +=(Math.random()*(6 - -6) + -6)*.01;
+figure.x +=(Math.random()*(6 - -6) + -6)*.01;
 
 	mats.color = new THREE.Color(getRandomColor());
+	
+	spin();
 
 }
 
 function spin() {
 
- 
+
     
 
-    let deltaRadians = rpsToRadians(scene.children[4].rps/20, delta);
+    let deltaRadians = rpsToRadians(scene.children[4].rps/40, delta);
 
-	scene.children[4].position.x += deltaRadians;
+	//controls.Location_X += (Math.random()*(6 - -6) + -6)*.01;
 	scene.children[4].rotation.y  += deltaRadians;
 	
+	if(deltaRadians > -1 && deltaRadians <1){
+	scene.children[4].position.x += (Math.random()*(3 - -3) + -3)*deltaRadians*.01;
+	}
+	if (controls.Location_X >=3){
 	
-	if (scene.children[4].position.x >=3){
+	//controls.Location_X +=(Math.random()*(6 - -6) + -6)*.01;
+	scene.children[4].position.x +=(Math.random()*(6 - -6) + -6)*.01;
+	scene.children[4].position.z +=(Math.random()*(3 - -3) + -3)*.01;
 	
-	scene.children[4].position.x +=scene.children[4].position.x-deltaRadians;
-	scene.children[4].position.x =(Math.random()*(6 - -6) + -6);
-	scene.children[4].position.z =(Math.random()*(3 - -3) + -3);
+	
 	
 	
 	}
@@ -593,62 +632,36 @@ function spin() {
 
 
 
-function march(){
-	
-	
-	
-    let deltaRadians = rpsToRadians(scene.children[4].rps/20, delta);
-
-
-		
-	let x = (Math.random()*(6 - -6) + -6);
-	let z = (Math.random()*(6 - -6) + -6);
-	let y = 0;
-	let clone = scene.children[4].clone();
-
-	
-	clone.position.set(x,y, z) ;
-		if(scene.children.length <= 6){
-		army.add(clone);
-		scene.add(army);
-		
-		}
-				
-army.position.z =(Math.random()*(2 - -2) + -2);
-army.position.x =(Math.random()*(2 - -2) + -2);
-	
-
-
-	
-		
-}
 
 function disco(){
 	//update();
 	
-	controls.Body_Color = getRandomColor();
+	
 	controls.Limbs_Color = getRandomColor();
 	controls.Hair_Color = getRandomColor();
 	controls.Eye_Color = getRandomColor();
+	controls.Body_Color  = getRandomColor();
 	mats.color = new THREE.Color(getRandomColor());
 	render();
 
 	let geometry = new THREE.SphereGeometry(.95);
 	const mat1 = new THREE.MeshLambertMaterial({ color: getRandomColor()});
-	const ball = new THREE.Mesh(geometry, mat1);
+	ball = new THREE.Mesh(geometry, mat1);
 	
 	
 	delta = clock.getDelta();
     
-    let deltaRadians = rpsToRadians(scene.children[4].rps/8, delta);
+    let deltaRadians = rpsToRadians(scene.children[4].rps/40, delta);
 ball.position.y=3;
 
 
 	scene.add(ball);
-	scene.children[4].position.x += deltaRadians;
-	scene.children[4].rotation.y  += deltaRadians;
+
+	//scene.children[4].position.x += (Math.random()*(6 - -6) + -6)*.051;
+	//scene.children[4].rotation.y  += deltaRadians*.1;
+
 	
-		if(army) {scene.remove(army)};
+		
 	
 	spin();
 
@@ -673,9 +686,10 @@ let geometry = new THREE.BoxGeometry( (Math.random() * (maxSide - minSide) + min
 let gem = new THREE.Mesh(geometry, mat);
 
 	// position  		
-	let x = (Math.random()*(5 - -5) + -5);
-	let z = (Math.random()*(5 - -5) + -5);
-	gem.position.set(x,-4.5, z) ;
+	let x = (Math.random()*(6 - -6) + -6);
+	let z = (Math.random()*(6 - -6) + -6);
+
+	gem.position.set(x,-4.11, z) ;
 	
 	root.add(gem); 
 }
@@ -693,12 +707,15 @@ function initGui() {
 	gui.add(controls, 'Ears', 35, 55).step(.1).onChange(update);
 	gui.add(controls, 'Move_Arms', 0, 180).step(10).onChange(update);
 	gui.add(controls, 'Move_Legs', -50, 50).step(1).onChange(update);
+	gui.add(controls, 'Location_X', -6, 6).step(.1).onChange(update);
+	gui.add(controls, 'Location_Y', -3, 3).step(.1).onChange(update);
+	gui.add(controls, 'Location_Z', 3, 9).step(.1).onChange(update);
 	gui.addColor(controls, 'Hair_Color').onChange(render);
 	gui.addColor(controls, 'Eye_Color').onChange(render);
     gui.addColor(controls, 'Body_Color').onChange(render);
 	gui.addColor(controls, 'Limbs_Color').onChange(render);
 	
-	let animationType =  ['Stop','Walking', 'Talking', 'Dancing', 'Disco','Marching_Army'];
+	let animationType =  ['Stop','Walking', 'Talking', 'Dancing', 'Disco'];
 	gui.add(controls, 'Animation', animationType).onChange(updateAnimation);
 	
 
@@ -737,7 +754,7 @@ function init() {
     });
 
     camera = new THREE.PerspectiveCamera( 60, canvasRatio, 1.5, 1000);
-    camera.position.set(0, 1, 9);
+    camera.position.set(0, 2, 9);
     camera.lookAt(new THREE.Vector3(0, 0, 0));
 	
     cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
