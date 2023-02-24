@@ -754,7 +754,7 @@ function init() {
     });
 
     camera = new THREE.PerspectiveCamera( 60, canvasRatio, 1.5, 1000);
-    camera.position.set(0, 2, 9);
+    camera.position.set(0, 2, 15);
     camera.lookAt(new THREE.Vector3(0, 0, 0));
 	
     cameraControls = new THREE.OrbitControls(camera, renderer.domElement);
