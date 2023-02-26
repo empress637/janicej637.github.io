@@ -661,7 +661,7 @@ scene.children[4].position.z += Math.random(6)*.01;
 if(scene.children[4].position.z >= 3){
 scene.children[4].position.x -= Math.random(6)*.01;}
 else{	
-	
+scene.children[4].position.z=-3;	
 spin();}
 	
 	
