@@ -578,8 +578,7 @@ function dance() {
     update();
 	
 
-	delta = clock.getDelta();
-    let deltaRadians = rpsToRadians(scene.children[4].rps/40, delta);
+	
 	
 	controls.Move_Legs =(Math.random()*(30 - -30) + -30);	
 	controls.Move_Arms	=(Math.random()*(10 - 50) + 50);
@@ -628,7 +627,8 @@ function spin() {
 function disco(){
 	//update();
 	
-	
+	delta = clock.getDelta();
+    let deltaRadians = rpsToRadians(scene.children[4].rps/40, delta);
 	controls.Limbs_Color = getRandomColor();
 	controls.Hair_Color = getRandomColor();
 	controls.Eye_Color = getRandomColor();
@@ -658,11 +658,11 @@ scene.children[4].position.z += Math.random(6)*.01;
 
 }
 
-if(scene.children[4].position.z > 3){
-scene.children[4].position.x -= Math.random(6)*.01;}	
+if(scene.children[4].position.z >= 3){
+scene.children[4].position.x -= Math.random(6)*.01;}
+else{	
 	
-	spin();
-
+spin();}
 	
 	
 
