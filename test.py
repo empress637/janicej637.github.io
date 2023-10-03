@@ -1,9 +1,3 @@
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-%matplotlib inline
 import plotly.express as px
 fig = px.sunburst(df_m, path=['location', 'product',
                               'payment', 'gender', 'age'],
