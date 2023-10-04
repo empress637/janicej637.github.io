@@ -37,7 +37,7 @@ d3.csv(
     };
 
     var color = survivalDim.values;
-    var colorscale = [[0, 'lightsteelblue'], [1, 'mediumseagreen']];
+    var colorscale = [[0, 'red'], [1, 'green'], [3, 'blue']];
 
     // Build Traces
     var traces = [
@@ -52,7 +52,7 @@ d3.csv(
       }
     ];
 
-    var layout = {width: 100%};
+    var layout = {width: 1000};
 
     // Make plot
     Plotly.newPlot('myDiv', traces, layout);
