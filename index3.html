@@ -2,59 +2,95 @@
   
   <head>
     <meta charset="utf-8" />
-  </head>
+        <link rel="icon" type="image/x-icon" href="./favicon.png" />
+        <link
+            rel="stylesheet"
+            href="https://pyscript.net/latest/pyscript.css"
+        />
+        <link rel="stylesheet" href="./assets/css/examples.css" />
+        <style>
+            py-script {
+                display: none;
+            }
+        </style>
+        <script
+            type="module"
+            src="https://esm.sh/@pyscript/core@latest/core.js"
+        ></script>
+    </head>
+    <body>
   
-  <body>
     <h1 class="red-text" style="color: green;">
       <a href="https://empress637.github.io/">
         Home
       </a>
     </h1>
-    <div>
-      <script type="text/javascript">
-        window.PlotlyConfig = {
-          MathJaxConfig: 'local'
-        };
-      </script>
-      <script src="https://cdn.plot.ly/plotly-2.4.2.min.js">
-      </script>
-      <div id="5a679de1-471d-4950-a19b-14da2a008ac5" class="plotly-graph-div"
-      style="height:100%; width:100%;">
-      </div>
-     
-        <pre><code class="python">
-import plotly.graph_objects as go
-import pandas as pd
+        <nav class="navbar" style="background-color: #000000">
+            <div class="app-header">
+                <a href="/">
+                    <img src="./logo.png" class="logo" />
+                </a>
+                <a class="title" href="" style="color: #f0ab3c">Altair</a>
+            </div>
+        </nav>
+        <section class="pyscript">
+            <div id="altair"></div>
+            <py-tutor>
+                <py-config>
+                    packages = [
+                      "altair",
+                      "pandas",
+                      "vega_datasets"
+                    ]
+                    plugins = [
+                      "https://pyscript.net/latest/plugins/python/py_tutor.py"
+                    ]
+                </py-config>
+                <py-script>
+                    from pyscript import display
+                    import altair as alt
+                    from vega_datasets import data
 
-titanic_df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/titanic.csv")
+                    source = data.movies.url
 
-# Create dimensions
-class_dim = go.parcats.Dimension(
-    values=titanic_df.Pclass,
-    categoryorder='category ascending', label="Class"
-)
+                    pts = alt.selection(type="single", encodings=['x'])
 
-gender_dim = go.parcats.Dimension(values=titanic_df.Sex, label="Gender")
+                    rect = alt.Chart(data.movies.url).mark_rect().encode(
+                        alt.X('IMDB_Rating:Q', bin=True),
+                        alt.Y('Rotten_Tomatoes_Rating:Q', bin=True),
+                        alt.Color('count()',
+                            scale=alt.Scale(scheme='greenblue'),
+                            legend=alt.Legend(title='Total Records')
+                        )
+                    )
 
-survival_dim = go.parcats.Dimension(
-    values=titanic_df.Survived, label="Outcome", categoryarray=[0, 1],
-    ticktext=['perished', 'survived']
-)
+                    circ = rect.mark_point().encode(
+                        alt.ColorValue('grey'),
+                        alt.Size('count()',
+                            legend=alt.Legend(title='Records in Selection')
+                        )
+                    ).transform_filter(
+                        pts
+                    )
 
-# Create parcats trace
-color = titanic_df.Survived;
-colorscale = [[0, 'lightsteelblue'], [1, 'mediumseagreen']];
+                    bar = alt.Chart(source).mark_bar().encode(
+                        x='Major_Genre:N',
+                        y='count()',
+                        color=alt.condition(pts, alt.ColorValue("steelblue"), alt.ColorValue("grey"))
+                    ).properties(
+                        width=550,
+                        height=200
+                    ).add_selection(pts)
 
-fig = go.Figure(data = [go.Parcats(dimensions=[class_dim, gender_dim, survival_dim],
-        line={'color': color, 'colorscale': colorscale},
-        hoveron='color', hoverinfo='count+probability',
-        labelfont={'size': 18, 'family': 'Times'},
-        tickfont={'size': 16, 'family': 'Times'},
-        arrangement='freeform')])
-
-fig.show()
-
-          </code></pre>
-    </div>
-</body>
+                    display(alt.vconcat(
+                        rect + circ,
+                        bar
+                    ).resolve_legend(
+                        color="independent",
+                        size="independent"
+                    ), target="altair")
+                </py-script>
+            </py-tutor>
+        </section>
+    </body>
 </html>
