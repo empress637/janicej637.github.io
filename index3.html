@@ -52,16 +52,17 @@ d3.csv(
     // Build Traces
     var traces = [
       {type: 'parcats',
-       dimensions: [classDim, genderDim, survivalDim],
+       dimensions: [classDim,  survivalDim,genderDim],
        line: {color: color,
-              colorscale: colorscale},
+              colorscale: colorscale,
+	     	line_shape: 'hspline'},
        hoveron: 'color',
        hoverinfo: 'count+probability',
        labelfont: {size: 14},
        arrangement: 'freeform'
       }
     ];
-
+	
     var layout = {width: 1000};
 
     // Make plot
