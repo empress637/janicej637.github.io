@@ -1,6 +1,10 @@
 import plotly.graph_objects as go
 import pandas as pd
 
+import sys
+input=sys.argv[1]
+print(input)
+
 titanic_df = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/titanic.csv")
 
 # Create dimensions
