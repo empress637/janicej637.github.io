@@ -21,17 +21,17 @@ d3.csv(
     var classDim = {
       values: titanicData.map(function(row) {return row['Pclass']}),
       categoryorder: 'category ascending',
-      label: "Class"
+      label: "Pclass"
     };
 
     var genderDim = {
       values: titanicData.map(function(row) {return row['Sex']}),
-      label: "Gender"
+      label: "Sex"
     };
 
     var survivalDim = {
       values: titanicData.map(function(row) {return row['Survived']}),
-      label: "Outcome",
+      label: "Survived",
       categoryarray: [0, 1],
       ticktext: ['perished', 'survived'],
     };
@@ -52,7 +52,7 @@ d3.csv(
       }
     ];
 
-    var layout = {width: 600};
+    var layout = {width: 100%};
 
     // Make plot
     Plotly.newPlot('myDiv', traces, layout);
