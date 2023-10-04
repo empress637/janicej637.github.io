@@ -44,13 +44,4 @@ if __name__ == "__main__":
     state_data = clean(state_data)
 
     plot_cumulative_state(state_data, "index2.html")
-    
-cols = ['Sex', 'Age', 'Pclass', 'Survived']
-df = df[cols]
-df.head(5)
 
-color = df.Pclass
-colorscale = ['blue', 'green', 'red']
-fig = px.parallel_categories(df, dimensions=dimensions)
-fig.update_traces(line_color=color, line_colorscale=colorscale, line_shape='hspline')
-fig.show()
