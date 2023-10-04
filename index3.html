@@ -16,7 +16,7 @@
 var gd = document.getElementById('myDiv');
 
 d3.csv(
-  "https://raw.githubusercontent.com/plotly/datasets/master/titanic.csv",
+  "./titanic.csv",
   function(titanicData) {
     var classDim = {
       values: titanicData.map(function(row) {return row['Pclass']}),
