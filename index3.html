@@ -56,10 +56,10 @@ d3.csv(
     var layout = {width: 1000};
 
     // Make plot
-    if (document.getElementById("myDiv")) {
-	    Plotly.newPlot('myDiv', traces, layout)).then(function() {
+
+	    Plotly.newPlot('myDiv', traces, layout))
             Plotly.animate('myDiv', null);
-  });
+
 	</script>
 </div>
 </body>
