@@ -34,20 +34,20 @@ d3.csv(
       label: "Pclass"
     };
 
-    var genderDim = {
-      values: titanicData.map(function(row) {return row['Sex']}),
-      label: "Sex"
-    };
-
-    var survivalDim = {
+   var survivalDim = {
       values: titanicData.map(function(row) {return row['Survived']}),
       label: "Survived",
       categoryarray: [0, 1],
       ticktext: ['perished', 'survived'],
     };
 
-    var color = survivalDim.values;
-    var colorscale = [[0, 'red'], [1, 'green'], [2, 'blue']];
+   var genderDim = {
+      values: titanicData.map(function(row) {return row['Sex']}),
+      label: "Sex"
+    };
+	  
+    var color = classDim.values;
+    var colorscale = [[3, 'red'], [2, 'green'], [1, 'blue']];
 
     // Build Traces
     var traces = [
