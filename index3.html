@@ -65,14 +65,123 @@ d3.csv(
        arrangement: 'freeform'
       }
     ];
-	
-    var layout = {width: 1000};
-
-    // Make plot
-
-	    Plotly.newPlot('myDiv', traces, layout)
-            Plotly.animate('myDiv', null)
-  });
+	  
+	//https://plotly.com/javascript/bar-charts/
+	  //https://chart-studio.plotly.com/~mrsergei/23/titanic-survivors-by-class/#code
+	     // Build Traces Bargraph
+    trace1 = {
+  uid: '032add', 
+  name: '1st Class Passengers', 
+  type: 'bar', 
+  x: ['No', 'No', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes'], 
+  y: [0, 0, 118, 4, 5, 1, 57, 140], 
+  marker: {
+    line: {
+      color: 'white', 
+      width: 0
+    }, 
+    color: 'rgb(4, 158, 215)'
+  }
+};
+trace2 = {
+  uid: '53597c', 
+  name: '2nd Class Passengers', 
+  type: 'bar', 
+  x: ['No', 'No', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes'], 
+  y: [0, 0, 154, 13, 11, 13, 14, 80], 
+  marker: {
+    line: {
+      color: 'white', 
+      width: 0
+    }, 
+    color: 'rgb(114, 206, 243)'
+  }
+};
+trace3 = {
+  uid: '531427', 
+  name: '3rd Class Passengers', 
+  type: 'bar', 
+  x: ['No', 'No', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes'], 
+  y: [35, 17, 387, 89, 13, 14, 75, 76], 
+  marker: {
+    line: {
+      color: 'white', 
+      width: 0
+    }, 
+    color: 'rgb(2, 74, 97)'
+  }
+};
+trace4 = {
+  uid: 'ddd038', 
+  name: 'Titanic Crew', 
+  type: 'bar', 
+  x: ['No', 'No', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes'], 
+  y: [0, 0, 670, 3, 0, 0, 192, 20], 
+  marker: {
+    line: {
+      color: 'white', 
+      width: 0
+    }, 
+    color: 'rgb(171, 171, 173)'
+  }
+};
+data = [trace1, trace2, trace3, trace4];
+layout = {
+  font: {family: '"Droid Sans", sans-serif'}, 
+  title: 'Titanic survivors by class', 
+  width: 1124, 
+  xaxis: {
+    type: 'category', 
+    range: [-0.5, 1.5], 
+    title: 'Survival status', 
+    showgrid: false, 
+    tickfont: {
+      size: 10, 
+      color: 'black', 
+      family: '"Verdana", monospace'
+    }, 
+    zeroline: false, 
+    autorange: true, 
+    gridcolor: 'white', 
+    gridwidth: 1, 
+    titlefont: {
+      size: 12, 
+      color: 'black', 
+      family: '"Verdana", monospace'
+    }
+  }, 
+  yaxis: {
+    type: 'linear', 
+    range: [0, 705.2631578947369], 
+    ticks: '', 
+    title: 'Number of passengers', 
+    showgrid: true, 
+    tickfont: {
+      size: 10, 
+      color: 'black', 
+      family: '"Verdana", monospace'
+    }, 
+    zeroline: false, 
+    autorange: true, 
+    gridcolor: 'white', 
+    gridwidth: 1, 
+    titlefont: {
+      size: 12, 
+      color: 'black', 
+      family: '"Verdana", monospace'
+    }
+  }, 
+  height: 1049, 
+  barmode: 'group', 
+  autosize: true, 
+  showlegend: true, 
+  plot_bgcolor: 'rgb(213, 226, 233)', 
+  paper_bgcolor: 'rgb(213, 226, 233)'
+};
+Plotly.plot('plotly-div', {
+  data: data,
+  layout: layout
+});
 	</script>
 </div>
 </body>
