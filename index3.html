@@ -182,7 +182,11 @@ layout = {
   plot_bgcolor: 'rgb(213, 226, 233)', 
   paper_bgcolor: 'rgb(213, 226, 233)'
 };
-Plotly.plot('plotly-div', {
+	  //var layout = {width: 600};
+
+ Plotly.newPlot('myDiv', traces, layout);
+	  
+Plotly.newPlot('plotly-div', {
   data: data,
   layout: layout
 });
