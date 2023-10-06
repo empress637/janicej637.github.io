@@ -72,8 +72,7 @@ d3.csv(
       }
     ];
 	 
-	  
-		//var layout2 = {width: 1124};
+	
  Plotly.newPlot('myDiv', traces)});
 		
 	//https://plotly.com/javascript/bar-charts/
@@ -121,21 +120,8 @@ trace3 = {
     color: 'rgb(2, 74, 97)'
   }
 };
-trace4 = {
-  uid: 'ddd038', 
-  name: 'Titanic Crew', 
-  type: 'bar', 
-  x: ['No', 'No', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes'], 
-  y: [0, 0, 670, 3, 0, 0, 192, 20], 
-  marker: {
-    line: {
-      color: 'white', 
-      width: 0
-    }, 
-    color: 'rgb(171, 171, 173)'
-  }
-};
-data = [trace1, trace2, trace3, trace4];
+
+data = [trace1, trace2, trace3];
 layout = {
   font: {family: '"Droid Sans", sans-serif'}, 
   title: 'Titanic survivors by class',  
