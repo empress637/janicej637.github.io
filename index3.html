@@ -29,7 +29,7 @@
       style=" width: 100%; height: 100%;">
 			
 		<script>
-			// window.PLOTLYENV = window.PLOTLYENV || {};
+			 window.PLOTLYENV = window.PLOTLYENV || {};
 
 
 d3.csv(
@@ -182,14 +182,16 @@ layout = {
   plot_bgcolor: 'rgb(213, 226, 233)', 
   paper_bgcolor: 'rgb(213, 226, 233)'
 };
-	  //var layout = {width: 600};
-
- Plotly.newPlot('myDiv', traces, layout);
 	  
 Plotly.newPlot('plotly-div', {
   data: data,
   layout: layout
-});
+});	
+	  
+var layout = {width: 600};
+ Plotly.newPlot('myDiv', traces, layout);
+	  
+
 	</script>
 </div>
 </body>
