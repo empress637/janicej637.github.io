@@ -52,8 +52,8 @@ d3.csv(
     };
 
    var survivalDim = {
-      values: titanicData.map(function(row) {return row['Survived']}),
-      label: Survived1,
+      values: Survived1,
+      label: "Survived",
       categoryarray: [0, 1],
       ticktext: ['perished', 'survived'],
     };
