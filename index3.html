@@ -33,15 +33,18 @@
 		<script>
 			 window.PLOTLYENV = window.PLOTLYENV || {};
 
- // Preprocess Data
-    var Pclass1 = titanicData.map(function(row) { return row['Pclass'] });
-    var Survived1 = titanicData.map(function(row) { return row['Survived'] });
-    var Sex1 = titanicData.map(function(row) { return row['Sex'] });			
+		
 
 			
 d3.csv(
   "./titanic.csv",
   function(titanicData) {
+	  
+ // Preprocess Data
+    var Pclass1 = titanicData.map(function(row) { return row['Pclass'] });
+    var Survived1 = titanicData.map(function(row) { return row['Survived'] });
+    var Sex1 = titanicData.map(function(row) { return row['Sex'] });	
+	  
     var classDim = {
       values: class1,
       categoryorder: 'category ascending',
