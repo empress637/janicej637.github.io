@@ -95,7 +95,7 @@ d3.csv(
   type: 'bar', 
   x: Pclass1, 
   y: Survived1, 
-  categoryarray: ["male", "female"],
+  hue: Sex1,
   marker: {
     line: {
       color: 'white', 
@@ -109,7 +109,8 @@ trace2 = {
   name: '2nd Class Passengers', 
   type: 'bar', 
   x: Pclass1, 
-  y: Survived1, 
+  y: Survived1,
+  hue: Sex1,
   marker: {
     line: {
       color: 'white', 
@@ -123,7 +124,8 @@ trace3 = {
   name: '3rd Class Passengers', 
   type: 'bar', 
   x: Pclass1, 
-  y: Survived1, 
+  y: Survived1,
+  hue: Sex1,
   marker: {
     line: {
       color: 'white', 
