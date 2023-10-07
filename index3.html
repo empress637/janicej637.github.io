@@ -93,8 +93,8 @@ d3.csv(
   uid: '032add', 
   name: '1st Class Passengers', 
   type: 'bar', 
-  x: Pclass1, 
-  y: Survived1, 
+  x: Survived1,  
+  y: Pclass1,
   categoryarray: [Sex1],
   marker: {
     line: {
@@ -108,8 +108,8 @@ trace2 = {
   uid: '53597c', 
   name: '2nd Class Passengers', 
   type: 'bar', 
-  x: Pclass1, 
-  y: Survived1,
+  x: Survived1, 
+  y: Pclass1,
     categoryarray: [Sex1],
   marker: {
     line: {
@@ -123,8 +123,8 @@ trace3 = {
   uid: '531427', 
   name: '3rd Class Passengers', 
   type: 'bar', 
-  x: Pclass1, 
-  y: Survived1,
+  x: Survived1, 
+  y: Pclass1,
     categoryarray: [Sex1],
   marker: {
     line: {
@@ -141,7 +141,7 @@ layout = {
   title: 'Titanic survivors by class',  
   xaxis: {
     type: 'category', 
-    range: [-0.5, 5], 
+    range: [-0.5, 1.5], 
     title: 'Passenger Class', 
     showgrid: false, 
     tickfont: {
