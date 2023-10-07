@@ -33,25 +33,30 @@
 		<script>
 			 window.PLOTLYENV = window.PLOTLYENV || {};
 
+ // Preprocess Data
+    var Pclass1 = carsData.map(function(row) { return row['Pclass'] });
+    var Survived1 = carsData.map(function(row) { return row['Survived'] });
+    var Sex1 = carsData.map(function(row) { return row['Sex'] });			
 
+			
 d3.csv(
   "./titanic.csv",
   function(titanicData) {
     var classDim = {
-      values: titanicData.map(function(row) {return row['Pclass']}),
+      values: class1,
       categoryorder: 'category ascending',
       label: "Pclass"
     };
 
    var survivalDim = {
       values: titanicData.map(function(row) {return row['Survived']}),
-      label: "Survived",
+      label: Survived1,
       categoryarray: [0, 1],
       ticktext: ['perished', 'survived'],
     };
 
    var genderDim = {
-      values: titanicData.map(function(row) {return row['Sex']}),
+      values: Sex1,
       label: "Sex"
     };
 	  
@@ -79,11 +84,12 @@ d3.csv(
 	//https://plotly.com/javascript/bar-charts/
 	//https://chart-studio.plotly.com/~mrsergei/23/titanic-survivors-by-class/#code
 	// Build Traces Bar Graph
+
     trace1 = {
   uid: '032add', 
   name: '1st Class Passengers', 
   type: 'bar', 
-  x: ['No', 'No', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes'], 
+  x: Survived1, 
   y: [0, 0, 118, 4, 5, 1, 57, 140], 
   marker: {
     line: {
@@ -97,7 +103,7 @@ trace2 = {
   uid: '53597c', 
   name: '2nd Class Passengers', 
   type: 'bar', 
-  x: ['No', 'No', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes'], 
+  x: Survived1, 
   y: [0, 0, 154, 13, 11, 13, 14, 80], 
   marker: {
     line: {
@@ -111,7 +117,7 @@ trace3 = {
   uid: '531427', 
   name: '3rd Class Passengers', 
   type: 'bar', 
-  x: ['No', 'No', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes'], 
+  x: Survived1, 
   y: [35, 17, 387, 89, 13, 14, 75, 76], 
   marker: {
     line: {
