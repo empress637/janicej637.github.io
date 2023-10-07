@@ -82,7 +82,7 @@ d3.csv(
     ];
 	 
 	
- Plotly.newPlot('myDiv', traces, layout)
+ Plotly.newPlot('myDiv', traces)
 
 		
 	//https://plotly.com/javascript/bar-charts/
@@ -94,7 +94,7 @@ d3.csv(
   name: '1st Class Passengers', 
   type: 'bar', 
   x: Survived1, 
-  y: [0, 0, 118, 4, 5, 1, 57, 140], 
+  y: Sex1, 
   marker: {
     line: {
       color: 'white', 
@@ -108,7 +108,7 @@ trace2 = {
   name: '2nd Class Passengers', 
   type: 'bar', 
   x: Survived1, 
-  y: [0, 0, 154, 13, 11, 13, 14, 80], 
+  y: Sex1, 
   marker: {
     line: {
       color: 'white', 
@@ -122,7 +122,7 @@ trace3 = {
   name: '3rd Class Passengers', 
   type: 'bar', 
   x: Survived1, 
-  y: [35, 17, 387, 89, 13, 14, 75, 76], 
+  y: Sex1, 
   marker: {
     line: {
       color: 'white', 
