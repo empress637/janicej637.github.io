@@ -68,18 +68,18 @@ d3.csv(
     var color = classDim.values;
     var colorscale = [[3, 'red'], [2, 'green'], [1, 'blue']];
 
-    // Build Traces
+    // Build Traces // https://plotly.com/python/graphing-multiple-chart-types/
     var traces = [
-      {type: 'parcats',
-       dimensions: [classDim,survivalDim,genderDim],
-       line: {color: color,
-              colorscale: colorscale,
-	     	shape: 'hspline'},
-       hoveron: 'color',
-       hoverinfo: 'count+probability',
-       labelfont: {size: 14},
-       arrangement: 'freeform',
-       plot_bgcolor: 'rgb(213, 226, 233)'
+      {type: 'bar',
+x: Survived1,  
+  y: Pclass1,
+  marker: {
+    line: {
+      color: 'white', 
+      width: 0
+    }, 
+    color: 'rgb(4, 158, 215)'
+  }
       }
     ];
 	 
