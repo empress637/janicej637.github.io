@@ -1,41 +1,26 @@
-<head>
-
-</head>
-
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <body>
-    <h2 class="red-text" style="color: green;">
-      <a href="https://empress637.github.io/">
-        Home
-      </a>
-    </h2>
 
-	 <script type="text/javascript">
-        window.PlotlyConfig = {
-          MathJaxConfig: 'local'
-        };
-      </script>
-     
-	
-	<div id='myDiv' class="plotly-graph-div"
-      style=" height: 100%; width: 100%;  float: left; ">
+<div id="myPlot" style="width:100%;max-width:700px"></div>
 
-	</div>
-
-
-	
 <script>
-import plotly.express as px
-import pandas as pd
+const xArray = [55, 49, 44, 24, 15];
+const yArray = ["Italy ", "France ", "Spain ", "USA ", "Argentina "];
 
-# Sample data
-df = pd.DataFrame(dict(
-    group = ["A", "B", "C", "D", "E"],
-    value = [14, 12, 8, 10, 16]))
+const data = [{
+  x:xArray,
+  y:yArray,
+  type:"bar",
+  orientation:"h",
+  marker: {color:"rgba(255,0,0,0.6)"}
+}];
 
-fig = px.bar(df, x = 'value', y = 'group')
+const layout = {title:"World Wide Wine Production"};
 
-fig.show()
-
+Plotly.newPlot("myPlot", data, layout);
 </script>
 
 </body>
+</html>
