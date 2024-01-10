@@ -6,20 +6,25 @@
 <div id="myPlot" style="width:100%;max-width:700px"></div>
 
 <script>
-const xArray = [55, 49, 44, 24, 15];
-const yArray = ["Italy ", "France ", "Spain ", "USA ", "Argentina "];
+var trace1 = {
+  x: ['giraffes', 'orangutans', 'monkeys'],
+  y: [20, 14, 23],
+  name: 'SF Zoo',
+  type: 'bar'
+};
 
-const data = [{
-  x:xArray,
-  y:yArray,
-  type:"bar",
-  orientation:"h",
-  marker: {color:"rgba(255,0,0,0.6)"}
-}];
+var trace2 = {
+  x: ['giraffes', 'orangutans', 'monkeys'],
+  y: [12, 18, 29],
+  name: 'LA Zoo',
+  type: 'bar'
+};
 
-const layout = {title:"World Wide Wine Production"};
+var data = [trace1, trace2];
 
-Plotly.newPlot("myPlot", data, layout);
+var layout = {barmode: 'group'};
+
+Plotly.newPlot('myDiv', data, layout);
 </script>
 
 </body>
