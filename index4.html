@@ -1,11 +1,5 @@
 <head>
-	<!-- Load plotly.js into the DOM https://plotly.com/javascript/parallel-categories-diagram/-->
-    <meta charset="utf-8" />
-	 <script src="https://cdn.plot.ly/plotly-2.4.2.min.js">
 
-	<script src='https://cdn.plot.ly/plotly-2.26.0.min.js'></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
-      </script>
 </head>
 
 <body>
@@ -29,78 +23,19 @@
 
 
 	
-		<script>
-			 window.PLOTLYENV = window.PLOTLYENV || {};
-
-	
-
-			
-d3.csv(
-  "./titanic.csv",
-  function(titanicData) {
-	  
- // Preprocess Data
-    var Pclass1 = titanicData.map(function(row) { return row['Pclass'] });
-    var Survived1 = titanicData.map(function(row) { return row['Survived'] });
-    var Sex1 = titanicData.map(function(row) { return row['Sex'] });	
-	  
-    var classDim = {
-      values: Pclass1,
-      categoryorder: 'category ascending',
-      label: "Pclass"
-    };
-
-   var survivalDim = {
-      values: Survived1,
-      label: "Survived",
-      categoryarray: [0, 1],
-      ticktext: ['perished', 'survived'],
-    };
-
-   var genderDim = {
-      values: Sex1,
-      label: "Sex"
-    };
-	  
-    var color = classDim.values;
-    var colorscale = [[3, 'red'], [2, 'green'], [1, 'blue']];
-
-    // Build Traces // https://plotly.com/python/graphing-multiple-chart-types/
-    var traces = [
-      {type: 'bar',
-x: Survived1,  
-  y: Pclass1,
-  marker: {
-    line: {
-      color: 'white', 
-      width: 0
-    }, 
-    color: 'rgb(4, 158, 215)'
-  }
-      }
-    ];
-	 
-	
- Plotly.newPlot('myDiv', traces)
-
-	# Import necessary libraries
+<script>
 import plotly.express as px
 import pandas as pd
 
-# Load the DataFrame from an external CSV file
-df = pd.read_csv('sales_data.csv')
+# Sample data
+df = pd.DataFrame(dict(
+    group = ["A", "B", "C", "D", "E"],
+    value = [14, 12, 8, 10, 16]))
 
-# Create the grouped bar chart
-fig = px.bar(df, x='Region', y='Sales', color='Product', barmode='group')
+fig = px.bar(df, x = 'value', y = 'group')
 
-# Customize the plot
-fig.update_layout(title_text='Sales by Product and Region',
-                  xaxis_title='Region',
-                  yaxis_title='Sales')
-
-# Show the plot
 fig.show()
 
-	</script>
+</script>
 
 </body>
