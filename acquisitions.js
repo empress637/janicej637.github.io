@@ -1,4 +1,4 @@
-import Chart from 'https://github.com/chartjs/Chart.js/tree/master/auto'
+import Chart from 'chart.js/auto'
 
 (async function() {
   const data = [
