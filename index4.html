@@ -25,8 +25,12 @@ var data = {
     datasets: [
         {
             backgroundColor: "blue",
-            data: [titanic.filter(o => o.Survived == '1' && o.Sex == 'male'),
-                   titanic.filter(o => o.Survived == '0' && o.Sex == 'male')]
+            data: titanic.filter(o => o.Survived == '1')
+
+        },
+        {
+            backgroundColor: "red",
+            data: titanic.filter(o => o.Survived == '0')
 
         }
     ]
