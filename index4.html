@@ -30,7 +30,7 @@ function makeChart(titanic) {
    // return +d.Survived;
   //});
 
-  var statusData = titanic.map(d.filter(function(d){ return d.Survived == 1 }).length
+  var statusData = titanic.map(d.filter(function(d){ return d.Survived == 1 })).length
 }
 
  var genderColors = titanic.map(function(d) {return d.Sex === 'female' ? '#F15F36' : '#19A0AA';});
