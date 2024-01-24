@@ -8,7 +8,7 @@
       </a>
     </h2>
   
-<div>
+<div heigth = >
   <canvas id="chart"></canvas>
 </div>
 
@@ -16,7 +16,9 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-
+  // Request data using D3
+d3.csv("/titanic.csv")
+  .then(makeChart);
   
 function makeChart(titanic) {
   var status = titanic.map(function(d) {
@@ -58,10 +60,7 @@ var chart = new Chart('chart', {
   })
 }
 
-  // Request data using D3
-d3
-  .csv("/titanic.csv")
-  .then(makeChart);
+
 </script>
 
 </body>
