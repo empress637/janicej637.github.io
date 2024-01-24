@@ -21,19 +21,16 @@ d3.csv("/titanic.csv")
       // Plot the data with Chart.js
       function makeChart(titanic) {
 var data = {
-    labels: ['Survived','Perished'],
-    datasets: [
-        {
-            backgroundColor: "blue",
-            data: titanic.filter(o => o.Survived == '1')
-
-        },
-        {
-            backgroundColor: "red",
-            data: titanic.filter(o => o.Survived == '0')
-
-        }
-    ]
+  labels: ["Survived","Perished"],
+  datasets: [{
+    label: "Survived",
+    backgroundColor: "blue",
+    data: [3]
+  }, {
+    label: "Perished",
+    backgroundColor: "red",
+    data: [4]
+  }]
 };
         var chart = new Chart("myChart", {
           type: "horizontalBar",
