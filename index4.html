@@ -25,13 +25,16 @@ var data = {
     datasets: [
         {
             backgroundColor: "blue",
-            data: [(titanic.filter(function(d){ return d.Survived == 1 && d.Sex == 'male' })).length, 
-                   (titanic.filter(function(d){ return d.Survived == 1 && d.Sex == 'female' })).length]
+            data: [ titanic.filter(d => d.Survived == 1 && d.Sex  == 'male').length, 
+                   titanic.filter(d => d.Survived == 1 && d.Sex  == 'female').length]
+
+    users = users.filter(x => x.name == 'Mark' && x.address == 'England');
+
         },
         {
             backgroundColor: "red",
-            data: [(titanic.filter(function(d){ return d.Survived == 0 && d.Sex == 'male' })).length, 
-                   (titanic.filter(function(d){ return d.Survived == 0 && d.Sex == 'female' })).length]
+            data: [ titanic.filter(d => d.Survived == 0 && d.Sex  == 'male').length, 
+                   titanic.filter(d => d.Survived == 0 && d.Sex  == 'female').length]
         },
     ]
 };
