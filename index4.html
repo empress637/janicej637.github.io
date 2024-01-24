@@ -37,7 +37,13 @@ var data = {
           data: {
             datasets: [
               {
-                data: data
+                data: data,options: {
+    barValueSpacing: 20,
+    scales: {
+      yAxes: [{
+        ticks: {
+          min: 0,
+        }
               }
             ]
           }
