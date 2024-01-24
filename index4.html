@@ -25,14 +25,10 @@ var data = {
     datasets: [
         {
             backgroundColor: "blue",
-            data: [1,6]
+            data: [titanic.filter(o => o.Survived == '1' && o.Sex == 'male'),
+                   titanic.filter(o => o.Survived == '0' && o.Sex == 'male')]
 
-
-        },
-        {
-            backgroundColor: "red",
-            data: [2,8]
-        },
+        }
     ]
 };
         var chart = new Chart("myChart", {
