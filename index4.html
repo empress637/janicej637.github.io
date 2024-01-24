@@ -4,36 +4,66 @@
 <body>
 
 <div>
-  <canvas id="myChart"  style="height: 100%; width: 50%; float: right; "></canvas>
-  <canvas id="myChart2"  style="height: 100%; width: 50%; float: left; "></canvas>
+  <canvas id="chart"></canvas>
 </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-  const ctx = document.getElementById('myChart');
-  const ctx2 = document.getElementById('myChart2');
+
   
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-      datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-         indexAxis: 'y',
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
+function makeChart(titanic) {
+  // players is an array of objects where each object is something like:
+  // {
+  //   "Name": "Steffi Graf",
+  //   "Weeks": "377",
+  //   "Gender": "Female"
+  // }
+
+  var status = titanic.map(function(d) {
+    return d.survived;
   });
+  var statusData = titanic.map(function(d) {
+    return +d.Survived;
+  });
+   var genderColors = titanic.map(function(d) {return d.Sex === 'female' ? '#F15F36' : '#19A0AA';});
+
+var chart = new Chart('chart', {
+    type: 'horizontalBar',
+    options: {
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [
+          {
+            scaleLabel: {
+              display: true,
+              labelString: 'Weeks at No.1',
+              fontSize: 16
+            }
+          }
+        ]
+      }
+    },
+    data: {
+      labels: status,
+      datasets: [
+        {
+          data: statusData,
+          backgroundColor: genderColors
+        }
+      ]
+    }
+  })
+}
+
+  // Request data using D3
+d3
+  .csv("/titanic.csv")
+  .then(makeChart);
 </script>
 
 </body>
