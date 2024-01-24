@@ -25,11 +25,11 @@ var data = {
   datasets: [{
     label: "Survived",
     backgroundColor: "blue",
-    data: [3]
+    data: titanic.filter(o => o.Survived == 1 ).length
   }, {
     label: "Perished",
     backgroundColor: "red",
-    data: [4]
+    data: titanic.filter(o => o.Survived == 0 ).length
   }]
 };
         var chart = new Chart("myChart", {
