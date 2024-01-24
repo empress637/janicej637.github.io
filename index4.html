@@ -21,7 +21,7 @@ d3.csv("/titanic.csv")
       // Plot the data with Chart.js
       function makeChart(titanic) {
         var statusLabels = titanic.map(function (d) {
-          return d.Survived;
+          return ['Survived','Perished'];
         });
         var statusData = titanic.map(function (d) {
           return (titanic.filter(function(d){ return d.Survived == 1 })).length;
