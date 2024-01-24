@@ -8,14 +8,13 @@
       </a>
     </h2>
   
-<div heigth = >
+<div heigth = 1000px >
   <canvas id="chart"></canvas>
 </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
 
 <script>
@@ -27,10 +26,15 @@ function makeChart(titanic) {
   var status = titanic.map(function(d) {
     return d.Survived;
   });
-  var statusData = titanic.map(function(d) {
-    return +d.Survived;
-  });
-   var genderColors = titanic.map(function(d) {return d.Sex === 'female' ? '#F15F36' : '#19A0AA';});
+ // var statusData = titanic.map(function(d) {
+   // return +d.Survived;
+  //});
+
+  var statusData = titanic.map(function(d) {return
+  d.filter(function(d){ return d.Survived == 1 }).length
+}
+
+ var genderColors = titanic.map(function(d) {return d.Sex === 'female' ? '#F15F36' : '#19A0AA';});
 
 var chart = new Chart('chart', {
     type: 'horizontalBar',
