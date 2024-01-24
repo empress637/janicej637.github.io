@@ -25,12 +25,11 @@ var data = {
     datasets: [
         {
             backgroundColor: "blue",
-            data: titanic.filter(function(d){ return d.Survived == 1 })).length
+            data: (titanic.filter(function(d){ return d.Survived == 1 })).length
         },
         {
-            label: "Red",
             backgroundColor: "red",
-            data: titanic.filter(function(d){ return d.Survived == 0 })).length
+            data: (titanic.filter(function(d){ return d.Survived == 0 })).length
         },
     ]
 };
