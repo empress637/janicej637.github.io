@@ -27,7 +27,7 @@ function makeChart(titanic) {
     return d.Survived;
   });
  var statusData = titanic.map(function(d) {
-    return (d.filter(function(d){ return d.Survived == 1 })).length;
+    return (d3.filter(function(d){ return d.Survived == 1 })).length;
   });
 
  // var statusData = titanic.map(function(d) { return (d.filter(function(d){ return d.Survived == 1 })).length}
