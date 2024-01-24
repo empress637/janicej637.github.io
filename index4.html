@@ -14,15 +14,8 @@
 
   
 function makeChart(titanic) {
-  // players is an array of objects where each object is something like:
-  // {
-  //   "Name": "Steffi Graf",
-  //   "Weeks": "377",
-  //   "Gender": "Female"
-  // }
-
   var status = titanic.map(function(d) {
-    return d.survived;
+    return d.Survived;
   });
   var statusData = titanic.map(function(d) {
     return +d.Survived;
