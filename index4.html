@@ -14,44 +14,46 @@
  <canvas id="myChart" width="100" height="100"></canvas>
 
 <script>
-  // Request data using D3
-d3.csv("/titanic.csv")
-  .then(makeChart);
-    
-      // Plot the data with Chart.js
-      function makeChart(titanic) {
-var data = {
-  labels: ["Survived","Perished"],
-  datasets: [{
-    label: "Survived",
-    backgroundColor: "blue",
-    data: titanic.filter(o => o.Survived == 1 ).length
-  }, {
-    label: "Perished",
-    backgroundColor: "red",
-    data: titanic.filter(o => o.Survived == 0 ).length
-  }]
-};
-        var chart = new Chart("myChart", {
-          type: "horizontalBar",
-          data: {
-            datasets: [
-              {
+    // Request data using D3
+    d3.csv("/titanic.csv")
+    .then(makeChart);
+
+// Plot the data with Chart.js
+function makeChart(titanic) {
+    var data = {
+        labels: ["Survived", "Perished"],
+        datasets: [{
+            label: "Survived",
+            backgroundColor: "blue",
+            data: titanic.filter(o => o.Survived == 1).length
+        }, {
+            label: "Perished",
+            backgroundColor: "red",
+            data: titanic.filter(o => o.Survived == 0).length
+        }]
+    };
+    var chart = new Chart("myChart", {
+        type: "horizontalBar",
+        data: {
+            datasets: [{
                 data: data,
-                  options: {
-    barValueSpacing: 20,
-    scales: {
-      yAxes: [{
-        ticks: {
-          min: 0,
+                options: {
+                    barValueSpacing: 20,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                min: 0,
+                            }
+                        }]
+                    }
+                }
+            }]
         }
-              }
-            ]
-          }
-        }}]}});
-      }
+    });
+}
 
 </script>
+
 
 </body>
 </html>
