@@ -25,11 +25,12 @@ function makeChart(titanic) {
         datasets: [{
             label: "Survived",
             backgroundColor: "blue",
-            data: titanic.filter(d.Survived == 1).length
+            data: titanic.filter((d.Survived) => d.Survived == 1).length
+           
         }, {
             label: "Perished",
             backgroundColor: "red",
-            data: titanic.filter(d.Survived == 0).length
+            data: titanic.filter((d.Survived) => d.Survived == 0).length
         }]
     };
     var chart = new Chart("myChart", {
