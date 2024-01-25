@@ -29,7 +29,7 @@ function makeChart(titanic) {
         }, {
             label: "Perished",
             backgroundColor: "red",
-            data: titanic.selectAll(d.Survived == 1).length
+            data: titanic.selectAll(d.Survived == 0).length
         }]
     };
     var chart = new Chart("myChart", {
