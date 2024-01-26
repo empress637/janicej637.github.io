@@ -30,7 +30,8 @@ function makeChart(titanic) {
         }, {
             label: "Perished",
             backgroundColor: "red",
-            data: titanic.map(function(d) {return d.PClass})
+            data: titanic.map(function(d) {return d.filter((d.PClass) => d.PClass == 5).length})
+        
         }]
     };
     var chart = new Chart("myChart", {
