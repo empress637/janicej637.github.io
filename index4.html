@@ -25,7 +25,7 @@ function makeChart(titanic) {
         datasets: [{
             label: "Survived",
             backgroundColor: "blue",
-            data: titanic.map(function(d) {return d.Survived ==1})
+            data: titanic.map(function(d) {return d.PClass})
            
         }, {
             label: "Perished",
