@@ -16,9 +16,7 @@
 <script>
 
 function makeChart(titanic) {
-  var titanicLabels = titanic.map(function(d) {
-    return d.Sex;
-  });
+  var titanicLabels =["Survived", "Perished"];
   var ageData = titanic.map(function(d) {
     return +d.Age < 40;
   });
