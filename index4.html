@@ -17,7 +17,7 @@
       function makeChart(titanic) {
         var titanicLabels = ["Survived", "Perished"];
         var statusData  = d3.csv("/titanic.csv", function(csv) {
-    csv = csv.filter(function(row) {
+        csv = titanic.filter(function(row) {
         return row['Survived'] == 1 || row['Survived'] == '0';
     });
 
