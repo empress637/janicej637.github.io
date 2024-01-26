@@ -11,38 +11,41 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
     <script src='https://d3js.org/d3.v7.min.js'></script>
 
- <canvas id="myChart" width="100" height="100"></canvas>
+ <canvas id="chart" width="100px" height="100px"></canvas>
 
 <script>
-    // Request data using D3
-    d3.csv("/titanic.csv")
-    .then(makeChart);
 
-// Plot the data with Chart.js
 function makeChart(titanic) {
-    var data = {
-        labels: ["Survived", "Perished"],
-        datasets: [{
-            label: "Survived",
-            backgroundColor: "blue",
-            data: titanic.map(function(d) {return d.PClass})
-           
-        }, {
-            label: "Perished",
-            backgroundColor: "red",
-            data: titanic.map(function(d) {return d.filter((d.PClass) => d.PClass == 5).length})
-        
-        }]
-    };
-    var chart = new Chart("myChart", {
-        type: "horizontalBar",
-        data: {
-            datasets: [{
-                data: data
-            }]
+  var titanicLabels = titanic.map(function(d) {
+    return d.Sex;
+  });
+  var ageData = titanic.map(function(d) {
+    return +d.Age;
+  });
+
+  var chart = new Chart('chart', {
+    type: "horizontalBar",
+    options: {
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      }
+    },
+    data: {
+      labels: titanicLabels,
+      datasets: [
+        {
+          data: ageData
         }
-    });
+      ]
+    }
+  });
 }
+
+// Request data using D3
+d3
+  .csv("/titanic.csv")
+  .then(makeChart);
 
 </script>
 
