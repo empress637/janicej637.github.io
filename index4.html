@@ -17,23 +17,14 @@
 
 	
 	<script>
-		# Import necessary libraries
-import plotly.express as px
-import pandas as pd
+var data = [{
+  type: 'bar',
+  x: [20, 14, 23],
+  y: ['giraffes', 'orangutans', 'monkeys'],
+  orientation: 'h'
+}];
 
-# Load the DataFrame from an external CSV file
-df = pd.read_csv('/titanic.csv')
-
-# Create the grouped bar chart
-fig = px.bar(df, x='Survived', y='PClass', color='Sex', barmode='group')
-
-# Customize the plot
-fig.update_layout(title_text='Titanic',
-                  xaxis_title='Survived',
-                  yaxis_title='PClass')
-
-# Show the plot
-fig.show()
+Plotly.newPlot('myDiv', data);
 		
 	</script>
 
