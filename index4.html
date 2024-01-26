@@ -37,17 +37,7 @@ function makeChart(titanic) {
         type: "horizontalBar",
         data: {
             datasets: [{
-                data: data,
-                options: {
-                    barValueSpacing: 20,
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                min: 0,
-                            }
-                        }]
-                    }
-                }
+                data: data
             }]
         }
     });
