@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html>
 
-<body>
+  <body>
     <h2 class="red-text" style="color: green;">
       <a href="https://empress637.github.io/">
         Home
       </a>
     </h2>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
     <script src='https://d3js.org/d3.v7.min.js'></script>
 
- <canvas id="chart" width="100px" height="100px"></canvas>
+    <canvas id="chart" width="100px" height="100px"></canvas>
 
-<script>
+    <script>
+      function makeChart(titanic) {
+        var titanicLabels = ["Survived", "Perished"];
+        var statusData  = d3.csv("/titanic.csv", function(csv) {
+    csv = csv.filter(function(row) {
+        return row['Survived'] == 1 || row['Survived'] == '0';
+    });
 
-function makeChart(titanic) {
-  var titanicLabels =["Survived", "Perished"];
-  var statusData = data => {
-    var countS = titanic.map(({Survived}) => +Survived) 
-  .filter(num => num == 1).length
+    var Chart = d3.select("body")
+        // ...
+        .selectAll("rect")
+        .data(csv)
+        // ...
+});
+          
 
-      statusData = countS
-        };
-
-   var chart = new Chart('chart', {
-    type: "horizontalBar",
-    options: {
-      maintainAspectRatio: false,
-      legend: {
-        display: false
+        var chart = new Chart('chart', {
+          type: "horizontalBar",
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false
+            }
+          },
+          data: {
+            labels: titanicLabels,
+            datasets: [{
+              data: statusData
+            }]
+          }
+        });
       }
-    },
-    data: {
-      labels: titanicLabels,
-      datasets: [
-        {
-          data: statusData
-        }
-      ]
-    }
-  });
-}
 
-// Request data using D3
-d3
-  .csv("/titanic.csv")
-  .then(makeChart);
+      // Request data using D3
+      d3
+        .csv("/titanic.csv")
+        .then(makeChart);
 
-</script>
+    </script>
 
 
-</body>
+  </body>
+
 </html>
