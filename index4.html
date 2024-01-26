@@ -30,7 +30,7 @@ function makeChart(titanic) {
         }, {
             label: "Perished",
             backgroundColor: "red",
-            data: titanic.map(function(d) {return d.Survived ==0})
+            data: titanic.map(function(d) {return d.PClass})
         }]
     };
     var chart = new Chart("myChart", {
