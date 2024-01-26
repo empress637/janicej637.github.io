@@ -194,5 +194,25 @@ Plotly.newPlot('-plotly-div', {
 	  }); 
 
 	</script>
+	<script>
+		# Import necessary libraries
+import plotly.express as px
+import pandas as pd
+
+# Load the DataFrame from an external CSV file
+df = pd.read_csv('/titanic.csv')
+
+# Create the grouped bar chart
+fig = px.bar(df, x='Survived', y='PClass', color='Sex', barmode='group')
+
+# Customize the plot
+fig.update_layout(title_text='Titanic',
+                  xaxis_title='Survived',
+                  yaxis_title='PClass')
+
+# Show the plot
+fig.show()
+		
+	</script>
 
 </body>
