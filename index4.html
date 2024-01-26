@@ -16,18 +16,18 @@
     <script>
       function makeChart(titanic) {
         var titanicLabels = ["Survived", "Perished"];
-        var statusData  = d3.csv("/titanic.csv", function(csv) {
-        csv = titanic.filter(function(row) {
-        return row['Survived'] == 1 || row['Survived'] == '0';
-    });
+        var statusData = d3.csv("/titanic.csv", function(csv) {
+          csv = titanic.filter(function(row) {
+            return row['Survived'] == 1 ;
+          });
 
-    var Chart = d3.select("body")
-        // ...
-        .selectAll("rect")
-        .data(csv)
-        // ...
-});
-          
+          var Chart = d3.select("body")
+            // ...
+            .selectAll("rect")
+            .data(csv)
+          // ...
+        });
+
 
         var chart = new Chart('chart', {
           type: "horizontalBar",
