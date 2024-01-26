@@ -18,7 +18,7 @@
 function makeChart(titanic) {
   var titanicLabels =["Survived", "Perished"];
   var statusData = titanic.map(function(d) {
-    return titanic.match(d.Survived ==1).length;
+    return [titanic.match(d.Survived ==1).length, titanic.match(d.Survived ==0).length];
  
   });
 
