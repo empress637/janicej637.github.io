@@ -18,14 +18,8 @@
 function makeChart(titanic) {
   var titanicLabels =["Survived", "Perished"];
   var statusData = titanic.map(function(d) {
-    return [d.Survived ==1, d.Survived ==0];
-      const dataset = d3.csv('titanic.csv', function (data) {
-  return [
-    data[0],
-    ...data.filter((col, i) => i%2 === 0)
-  ];
-});
-      
+    return d.Survived ==1;
+ 
   });
 
   var chart = new Chart('chart', {
@@ -40,7 +34,7 @@ function makeChart(titanic) {
       labels: titanicLabels,
       datasets: [
         {
-          data: dataset
+          data: statusData
         }
       ]
     }
