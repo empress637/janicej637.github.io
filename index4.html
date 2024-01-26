@@ -17,11 +17,9 @@
 
 function makeChart(titanic) {
   var titanicLabels =["Survived", "Perished"];
-  var statusData = data => {titanic.map(({Survived}) => +Survived) 
+  var statusData  => {titanic.map(({Survived}) => +Survived) 
   .filter(num => num ==1).length
-    return statusData;
- 
-                           };
+        };
 
   var chart = new Chart('chart', {
     type: "horizontalBar",
