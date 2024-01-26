@@ -20,7 +20,7 @@ function makeChart(titanic) {
     return d.Sex;
   });
   var ageData = titanic.map(function(d) {
-    return +d.Age;
+    return +d.Age < 40;
   });
 
   var chart = new Chart('chart', {
