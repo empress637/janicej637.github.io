@@ -26,13 +26,13 @@ function unpack(rows, key) {
   }
 var data = status.map(function(status) {
     var rowsFiltered = rows.filter(function(row) {
-        return (row.survived === status);
+        return (row.Survived === status);
     });
     return {
        	type: 'bar',
        	name: status,
         orientation: 'h',
-	x: unpack(rowsFiltered, 'survived'),
+	x: unpack(rowsFiltered, 'Survived'),
   	y: ['Survived', 'Perished']
     };
   });	
