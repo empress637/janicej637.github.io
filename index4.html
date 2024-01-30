@@ -25,8 +25,8 @@ Plotly.d3.csv('/titanic.csv', (err, rows) => {
     return {
       type: 'bar',
       name: y,
-      x: d.map(r => r.Survived),
-      y: d.map(r => r.Survived ==1), 
+      x:  survived ,
+      y: d = rows.filter(r => r.Survived === 1), 
       orientation: 'h'
     }
   })
