@@ -1,9 +1,7 @@
 <head>
-	<!-- Load plotly.js into the DOM https://plotly.com/javascript/parallel-categories-diagram/-->
-    <meta charset="utf-8" />
-  <!-- Include Plotly.js file from CDN -->
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-      </script>
+	<!-- Load plotly.js into the DOM -->
+	<script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
 </head>
 
 <body>
@@ -13,29 +11,57 @@
       </a>
     </h2>
 
-<div id='graph'></div>
+<div id='myDiv'></div>
 	<script>
 //https://community.plotly.com/t/reading-data-from-csv-into-separate-traces/6787/4
-var survived = ['Survived', 'Perished']
+var gd = document.getElementById('graph');
 
-Plotly.d3.csv('/titanic.csv', (err, rows) => {
-  var data = survived.map(y => {
-    var d = rows.filter(r => r.Survived === 1)
-    
-    return {
-      type: 'bar',
-      name: y,
-      x:  survived ,
-      y: d = rows.filter(r => r.Survived === 1), 
-      orientation: 'h'
-    }
-  })
+d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/titanic.csv",
+  function(titanicData) {
+    var classDim = {
+      values: titanicData.map(function(row) {return row['Pclass']}),
+      categoryorder: 'category ascending',
+      label: "Class"
+    };
+
+    var genderDim = {
+      values: titanicData.map(function(row) {return row['Sex']}),
+      label: "Gender"
+    };
+
+    var survivalDim = {
+      values: titanicData.map(function(row) {return row['Survived']}),
+      label: "Outcome",
+      categoryarray: [0, 1],
+      ticktext: ['perished', 'survived'],
+    };
+
+const dataset = titanicData.filter((obj) => obj['Survived'] ==1);
+const dataset2 = titanicData.filter((obj) => obj['Survived'] ==0);
   
-  Plotly.newPlot('graph', data)
-})	
+    var color = survivalDim.values;
+    var colorscale = [[0, 'lightsteelblue'], [1, 'mediumseagreen']];
 
+    // Build Traces
+    var traces = [
+      {type: 'bar',
+       orientation: 'h',
+       y: ['Survived','Perished'],
+       x: [dataset.length,dataset2.length],
+       line: {color: color,
+              colorscale: colorscale},
+       hoveron: 'color',
+       hoverinfo: 'count+probability',
+       labelfont: {size: 14},
+       arrangement: 'freeform'
+      }
+    ];
 
-		
+    var layout = {width: 600};
+
+    // Make plot
+    Plotly.newPlot('myDiv', traces, layout);
+  });
 	</script>
 
 </body>
