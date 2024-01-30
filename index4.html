@@ -13,35 +13,25 @@
       </a>
     </h2>
 
-<div id='myDiv'></div>
+<div id='graph'></div>
 	<script>
+//https://community.plotly.com/t/reading-data-from-csv-into-separate-traces/6787/4
+var status = ['Survived', 'Perished']
 
-//https://medium.com/free-code-camp/an-introduction-to-plotly-js-an-open-source-graphing-library-c036a1876e2e		
-Plotly.d3.csv('/titanic.csv', function(err, rows){
-Plotly.plot('myDiv', data);
-
-		
-var survivedArray = unpack(rows, 'Survived');
-var status = [...new Set(survivedArray)];
-		
-function unpack(rows, key) {
-    return rows.map(function(row) { return row[key]; });
-  }
-		
-var data = status.map(function(status) {
-    var rowsFiltered = rows.filter(function(row) {
-        return (row.Survived === status);
-    });
+Plotly.d3.csv('//titanic.csv', (err, rows) => {
+  var data = status.map(y => {
+    var d = rows.filter(r => r.Survived === 1)
+    
     return {
-       	type: 'bar',
-       	name: status,
-        orientation: 'h',
-	y: [5,2], //unpack(rowsFiltered, 'Survived'),
-  	x: ['Survived', 'Perished']
-    };
-  });	 });
-
-		
+      type: 'bar',
+      name: y,
+      x: d.map(r => r.Survived),
+      y: d.map(r => r.Survived ==1)
+    }
+  })
+  
+  Plotly.newPlot('graph', data)
+})	
 
 
 		
