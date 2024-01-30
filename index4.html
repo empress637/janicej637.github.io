@@ -19,7 +19,7 @@
 //https://medium.com/free-code-camp/an-introduction-to-plotly-js-an-open-source-graphing-library-c036a1876e2e		
 Plotly.d3.csv('/titanic.csv', function(err, rows){
 Plotly.plot('myDiv', data);
-});
+
 		
 var survivedArray = unpack(rows, 'Survived');
 var status = [...new Set(survivedArray)];
@@ -39,7 +39,7 @@ var data = status.map(function(status) {
 	y: unpack(rowsFiltered, 'Survived'),
   	x: ['Survived', 'Perished']
     };
-  });	
+  });	 });
 
 		
 
