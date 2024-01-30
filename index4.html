@@ -30,7 +30,7 @@ function unpack(rows, key) {
 		
 var data = status.map(function(status) {
     var rowsFiltered = rows.filter(function(row) {
-        return (row.Survived === 1);
+        return (row.Survived === status);
     });
     return {
        	type: 'bar',
