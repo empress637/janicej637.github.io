@@ -36,7 +36,7 @@ d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/titanic.csv",
       ticktext: ['perished', 'survived'],
     };
 
-const dataset = titanicData.filter((obj) => obj['Survived'] ==1);
+const dataset =survivalDim.values;
 const dataset2 = titanicData.filter((obj) => obj['Survived'] ==0);
   
     var color = survivalDim.values;
