@@ -22,7 +22,9 @@ var data = [{
   orientation: 'h'
 }];
 
-Plotly.newPlot('myDiv', data);
+Plotly.d3.csv('/titanic.csv', function(err, rows){
+Plotly.plot('mapDiv', data);
+});
 		
 	</script>
 
