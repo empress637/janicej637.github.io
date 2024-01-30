@@ -15,7 +15,10 @@
 //https://medium.com/free-code-camp/an-introduction-to-plotly-js-an-open-source-graphing-library-c036a1876e2e
 <div id='myDiv'></div>
 	<script>
-
+Plotly.d3.csv('/titanic.csv', function(err, rows){
+Plotly.plot('myDiv', data);
+});
+		
 var survivedArray = unpack(rows, 'Survived');
 var status = [...new Set(survivedArray)];
 function unpack(rows, key) {
@@ -29,18 +32,14 @@ var data = status.map(function(status) {
        	type: 'bar',
        	name: status,
         orientation: 'h',
-	x: [20, 14],
-  	y: ['giraffes', 'orangutans'],
-       lat: unpack(rowsFiltered, 'reclat'),
-       lon: unpack(rowsFiltered, 'reclong')
+	x: unpack(rowsFiltered, 'survived'),
+  	y: ['Survived', 'Perished']
     };
   });	
 
 		
 
-Plotly.d3.csv('/titanic.csv', function(err, rows){
-Plotly.plot('myDiv', data);
-});
+
 		
 	</script>
 
