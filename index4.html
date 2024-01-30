@@ -16,10 +16,10 @@
 <div id='graph'></div>
 	<script>
 //https://community.plotly.com/t/reading-data-from-csv-into-separate-traces/6787/4
-var status = ['Survived', 'Perished']
+var survived = ['Survived', 'Perished']
 
 Plotly.d3.csv('/titanic.csv', (err, rows) => {
-  var data = status.map(y => {
+  var data = survived.map(y => {
     var d = rows.filter(r => r.Survived === 1)
     
     return {
