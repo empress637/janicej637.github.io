@@ -27,6 +27,7 @@ var status = [...new Set(survivedArray)];
 function unpack(rows, key) {
     return rows.map(function(row) { return row[key]; });
   }
+		
 var data = status.map(function(status) {
     var rowsFiltered = rows.filter(function(row) {
         return (row.Survived === status);
