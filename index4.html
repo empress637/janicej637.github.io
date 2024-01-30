@@ -3,19 +3,33 @@
 	<script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
 </head>
-
+<style>
+	.parent {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+.child {
+  display: inline-block;
+  border: 1px solid red;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+}
+	
+</style>
 <body>
     <h2 class="red-text" style="color: green;">
       <a href="https://empress637.github.io/">
         Home
       </a>
     </h2>
-
-<div id='myDiv'></div>
+<div class='parent' display= 'inline-block'>
+  <div class='child' id ='myDiv' ></div>
+  <div class='child' id='myDiv2' ></div>
+</div>
 	<script>
-//https://github.com/datasciencedojo/datasets/blob/master/titanic.csv
-//https://community.plotly.com/t/reading-data-from-csv-into-separate-traces/6787/4
-var gd = document.getElementById('graph');
+
 
 d3.csv("/titanic.csv",
   function(titanicData) {
@@ -31,24 +45,37 @@ d3.csv("/titanic.csv",
     };
 
     var survivalDim = {
-      values: titanicData.map(function(row) {return row['Survived']}),
+      values: titanicData.map(function(row) {
+        
+        var datasetSur = titanicData.filter((obj) => obj['Survived'] == 1);
+var datasetPer = titanicData.filter((obj) => obj['Survived'] == 0);
+        
+        return [datasetSur]}),
       label: "Outcome",
       categoryarray: [0, 1],
       ticktext: ['perished', 'survived'],
     };
 
-const dataset =titanicData.filter((obj) => obj['Survived'] ==1);
-const dataset2 = titanicData.filter((obj) => obj['Survived'] ==0);
+const datasetSur = titanicData.filter((obj) => obj['Survived'] == 1);
+const datasetPer = titanicData.filter((obj) => obj['Survived'] == 0);
+const datasetMa = titanicData.filter((obj) => obj['Sex'] == 'male' && obj['Survived'] ==1 );
+const datasetFe = titanicData.filter((obj) => obj['Sex'] == 'female' && obj['Survived'] ==1);
+  const datasetMa2 = titanicData.filter((obj) => obj['Sex'] == 'male' && obj['Survived'] ==0 );
+const datasetFe2 = titanicData.filter((obj) => obj['Sex'] == 'female' && obj['Survived'] ==0);
+const dataset1 = titanicData.filter((obj) => obj['class'] == 1);
+const dataset2 = titanicData.filter((obj) => obj['class'] == 2);
+const dataset3 = titanicData.filter((obj) => obj['class'] == 3);
   
     var color = survivalDim.values;
-    var colorscale = [[0, 'lightsteelblue'], [1, 'mediumseagreen']];
+    var colorscale = [[0, 'orange'], [1, 'blue']];
 
     // Build Traces
     var traces = [
       {type: 'bar',
+       name: 'Status',
        orientation: 'h',
        y: ['Survived','Perished'],
-       x: [dataset.length,dataset2.length],
+       x: [datasetSur.length,datasetPer.length],
        line: {color: color,
               colorscale: colorscale},
        hoveron: 'color',
@@ -58,10 +85,28 @@ const dataset2 = titanicData.filter((obj) => obj['Survived'] ==0);
       }
     ];
 
-    var layout = {width: 600};
-
+  var traces2 = 
+      {name: 'Survived',
+       type: 'bar',
+       orientation: 'h',
+       y: ['Male','Female'],
+       x: [datasetMa.length,datasetFe.length]
+      }
+    ;
+  
+  var traces3 = {name: 'Perished',
+       type: 'bar',
+       orientation: 'h',
+       y: ['Male','Female'],
+       x: [datasetMa2.length,datasetFe2.length]
+      };
+  
+    var layout = {width: 300, barmode:'group',showlegend: true};
+    var data2 = [traces2, traces3];
+  
     // Make plot
-    Plotly.newPlot('myDiv', traces, layout);
+  Plotly.newPlot('myDiv', traces, layout);
+  Plotly.newPlot('myDiv2', data2, layout);
   });
 	</script>
 
