@@ -16,7 +16,7 @@
 //https://community.plotly.com/t/reading-data-from-csv-into-separate-traces/6787/4
 var gd = document.getElementById('graph');
 
-d3.csv("https://raw.githubusercontent.com/plotly/datasets/master/titanic.csv",
+d3.csv("/titanic.csv",
   function(titanicData) {
     var classDim = {
       values: titanicData.map(function(row) {return row['Pclass']}),
