@@ -109,8 +109,8 @@ const datasetad4 = titanicData.filter((obj) => obj['age'] == 4 && obj['Survived'
        type: 'bar',
        orientation: 'h',
        y: ['Male','Female'],
-       x: [datasetMa2.length,datasetFe2.length]
-	color: 'Orange'
+       x: [datasetMa2.length,datasetFe2.length],
+	 line: {color: orange}
       };
   
     var layout = {width: 300, barmode:'group',showlegend: true};
