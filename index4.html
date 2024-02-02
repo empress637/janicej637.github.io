@@ -54,7 +54,7 @@ const datasetad2 = titanicData.filter((obj) => obj['Age'].length > 0 && obj['Age
 const datasetad3 = titanicData.filter((obj) => obj['Age'].length > 0 && obj['Age'] < 13 && obj['Survived'] ==0);
 const datasetad4 = titanicData.filter((obj) => obj['Age'].length == 0   && obj['Survived'] == 0);		  
 
-    var colorscale = [[0, rgb(242, 140, 40)], [1, rgb(204, 85, 0)]];
+    var colorscale = [[0, 'rgb(242, 140, 40)'], [1, 'rgb(204, 85, 0)']];
 
     // Build Traces
     var traces1 = 
@@ -63,7 +63,7 @@ const datasetad4 = titanicData.filter((obj) => obj['Age'].length == 0   && obj['
        orientation: 'h',
        y: ['Survived','Perished'],
        x: [datasetSur.length,datasetPer.length],
-       marker:{color: [rgb(204, 85, 0),rgb(242, 140, 40)]},
+       marker:{color: ['rgb(204, 85, 0)','rgb(242, 140, 40)']},
        hoveron: colorscale,
        hoverinfo: 'count+probability',
        labelfont: {size: 14},
