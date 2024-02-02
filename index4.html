@@ -32,28 +32,6 @@
 
 d3.csv("/titanic.csv",
   function(titanicData) {
-    var classDim = {
-      values: titanicData.map(function(row) {return row['Pclass']}),
-      categoryorder: 'category ascending',
-      label: "Class"
-    };
-
-    var genderDim = {
-      values: titanicData.map(function(row) {return row['Sex']}),
-      label: "Gender"
-    };
-
-    var survivalDim = {
-      values: titanicData.map(function(row) {
-        
-        var datasetSur = titanicData.filter((obj) => obj['Survived'] == 1);
-var datasetPer = titanicData.filter((obj) => obj['Survived'] == 0);
-        
-        return [datasetSur]}),
-      label: "Outcome",
-      categoryarray: [0, 1],
-      ticktext: ['perished', 'survived'],
-    };
 
 const datasetSur = titanicData.filter((obj) => obj['Survived'] == 1);
 const datasetPer = titanicData.filter((obj) => obj['Survived'] == 0);
@@ -75,8 +53,7 @@ const datasetad1= titanicData.filter((obj) => obj['age'] == 1 && obj['Survived']
 const datasetad2 = titanicData.filter((obj) => obj['age'] == 2 && obj['Survived'] ==0);
 const datasetad3 = titanicData.filter((obj) => obj['age'] == 3 && obj['Survived'] ==0);
 const datasetad4 = titanicData.filter((obj) => obj['age'] == 4 && obj['Survived'] ==0);		  
-  
-    var color = survivalDim.values;
+
     var colorscale = [[0, 'orange'], [1, 'blue']];
 
     // Build Traces
@@ -86,9 +63,8 @@ const datasetad4 = titanicData.filter((obj) => obj['age'] == 4 && obj['Survived'
        orientation: 'h',
        y: ['Survived','Perished'],
        x: [datasetSur.length,datasetPer.length],
-       line: {color: color,
-              colorscale: colorscale},
-       hoveron: 'color',
+       line: {colorscale: colorscale},
+       hoveron: 'colorscale',
        hoverinfo: 'count+probability',
        labelfont: {size: 14},
        arrangement: 'freeform'
@@ -111,12 +87,42 @@ const datasetad4 = titanicData.filter((obj) => obj['age'] == 4 && obj['Survived'
        x: [datasetMa2.length,datasetFe2.length],
 	 line: {color: 'orange'}
       };
-  
+
+  var traces4 = {name: 'Class Survived',
+       type: 'bar',
+       orientation: 'h',
+       y: ['Third','Second', 'First'],
+       x: [datasets3.length,datasets2.length,datasets1.length],
+	line: {colorscale: colorscale}
+      };
+  var traces5 = {name: 'Class Perished',
+       type: 'bar',
+       orientation: 'h',
+       y: ['Third','Second', 'First'],
+       x: [datasetd3.length,datasetd2.length,datasetd1.length],
+	line: {colorscale: colorscale}
+      };
+
+  var traces6 = {name: 'Age Survived',
+       type: 'bar',
+       orientation: 'h',
+       y: ['Unknown','Child', 'Teen', 'Adult'],
+       x: [datasetas4.length,datasetas3.length,datasetas2.length,datasetas1.length],
+	line: {colorscale: colorscale}
+      };
+  var traces7 = {name: 'Age Perished',
+       type: 'bar',
+       orientation: 'h',
+       y: ['Unknown','Child', 'Teen', 'Adult'],
+       x: [datasetad4.length,datasetad3.length,datasetad2.length,datasetad1.length],
+	line: {colorscale: colorscale}
+      };	  
+	  
     var layout = {width: 300, barmode:'group',showlegend: true};
     var data1 = [traces];
     var data2 = [traces2, traces3];
-    var data3 = [traces4, traces5, traces6];	
-    var data4 = [traces7, traces8, traces9, traces10];  
+    var data3 = [traces4, traces5];	
+    var data4 = [traces6, traces7];  
   
     // Make plot
   Plotly.newPlot('myDiv1', data1, layout);
