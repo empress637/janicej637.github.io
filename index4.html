@@ -48,11 +48,11 @@ const datasetd3 = titanicData.filter((obj) => obj['Pclass'] == 3 && obj['Survive
 const datasetas1 = titanicData.filter((obj) => obj['Age'] > 20  && obj['Survived'] ==1);
 const datasetas2 = titanicData.filter((obj) => obj['Age'] > 12 && obj['Age'] < 20 && obj['Survived'] ==1);
 const datasetas3 = titanicData.filter((obj) => obj['Age'] < 13 && obj['Survived'] ==1);
-const datasetas4 = titanicData.filter((obj) => obj['Age'] == null && obj['Survived'] ==1);	
+const datasetas4 = titanicData.filter((obj) => obj['Age'] == undefined && obj['Survived'] ==1);	
 const datasetad1 = titanicData.filter((obj) => obj['Age'] > 20 && obj['Survived'] ==0);
 const datasetad2 = titanicData.filter((obj) => obj['Age'] > 12 && obj['Age'] < 20 && obj['Survived'] ==0);
 const datasetad3 = titanicData.filter((obj) => obj['Age'] < 13 && obj['Survived'] ==0);
-const datasetad4 = titanicData.filter((obj) => obj['Age'] == null && obj['Survived'] ==0 );		  
+const datasetad4 = titanicData.filter((obj) => obj['Age'] == undefined && obj['Survived'] ==0 );		  
 
     var colorscale = [[0, 'orange'], [1, 'blue']];
 
