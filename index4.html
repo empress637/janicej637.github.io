@@ -118,7 +118,7 @@ const datasetad4 = titanicData.filter((obj) => obj['Age'] == null && obj['Surviv
 	line: {colorscale: colorscale}
       };	  
 	  
-    var layout = {width: 300, barmode:'group',showlegend: true};
+    var layout = {width: 300, barmode:'group',showlegend: true,line: {colorscale: colorscale}};
     var data1 = [traces1];
     var data2 = [traces2, traces3];
     var data3 = [traces4, traces5];	
