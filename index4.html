@@ -39,12 +39,12 @@ const datasetMa = titanicData.filter((obj) => obj['Sex'] == 'male' && obj['Survi
 const datasetFe = titanicData.filter((obj) => obj['Sex'] == 'female' && obj['Survived'] ==1);
 const datasetMa2 = titanicData.filter((obj) => obj['Sex'] == 'male' && obj['Survived'] ==0 );
 const datasetFe2 = titanicData.filter((obj) => obj['Sex'] == 'female' && obj['Survived'] ==0);
-const datasets1 = titanicData.filter((obj) => obj['class'] == 1 && obj['Survived'] ==1);
-const datasets2 = titanicData.filter((obj) => obj['class'] == 2 && obj['Survived'] ==1);
-const datasets3 = titanicData.filter((obj) => obj['class'] == 3 && obj['Survived'] ==1);
-const datasetd1= titanicData.filter((obj) => obj['class'] == 1 && obj['Survived'] ==0);
-const datasetd2 = titanicData.filter((obj) => obj['class'] == 2 && obj['Survived'] ==0);
-const datasetd3 = titanicData.filter((obj) => obj['class'] == 3 && obj['Survived'] ==0);
+const datasets1 = titanicData.filter((obj) => obj['pclass'] == 1 && obj['Survived'] ==1);
+const datasets2 = titanicData.filter((obj) => obj['pclass'] == 2 && obj['Survived'] ==1);
+const datasets3 = titanicData.filter((obj) => obj['pclass'] == 3 && obj['Survived'] ==1);
+const datasetd1= titanicData.filter((obj) => obj['pclass'] == 1 && obj['Survived'] ==0);
+const datasetd2 = titanicData.filter((obj) => obj['pclass'] == 2 && obj['Survived'] ==0);
+const datasetd3 = titanicData.filter((obj) => obj['pclass'] == 3 && obj['Survived'] ==0);
 const datasetas1= titanicData.filter((obj) => obj['age'] == 1 && obj['Survived'] ==1);
 const datasetas2 = titanicData.filter((obj) => obj['age'] == 2 && obj['Survived'] ==1);
 const datasetas3 = titanicData.filter((obj) => obj['age'] == 3 && obj['Survived'] ==1);
@@ -64,7 +64,7 @@ const datasetad4 = titanicData.filter((obj) => obj['age'] == null && obj['Surviv
        y: ['Survived','Perished'],
        x: [datasetSur.length,datasetPer.length],
        line: {color: 'orange'},
-       hoveron: 'colorscale',
+       hoveron: colorscale,
        hoverinfo: 'count+probability',
        labelfont: {size: 14},
        arrangement: 'freeform'
