@@ -67,7 +67,8 @@ const datasetad4 = titanicData.filter((obj) => obj['Age'] == null && obj['Surviv
        hoveron: colorscale,
        hoverinfo: 'count+probability',
        labelfont: {size: 14},
-       arrangement: 'freeform'
+       arrangement: 'freeform',
+       line: {colorscale: colorscale}
       };
 
   var traces2 = 
@@ -75,7 +76,8 @@ const datasetad4 = titanicData.filter((obj) => obj['Age'] == null && obj['Surviv
        type: 'bar',
        orientation: 'h',
        y: ['Male','Female'],
-       x: [datasetMa.length,datasetFe.length]
+       x: [datasetMa.length,datasetFe.length],
+       line: {colorscale: colorscale}
       } ;
   
   var traces3 = {name: 'Perished',
@@ -83,7 +85,7 @@ const datasetad4 = titanicData.filter((obj) => obj['Age'] == null && obj['Surviv
        orientation: 'h',
        y: ['Male','Female'],
        x: [datasetMa2.length,datasetFe2.length],
-	 line: {color: 'orange'}
+	line: {colorscale: colorscale}
       };
 
   var traces4 = {name: 'Class Survived',
