@@ -77,7 +77,7 @@ const datasetad4 = titanicData.filter((obj) => obj['Age'].length == 0   && obj['
        orientation: 'h',
        y: ['Male','Female'],
        x: [datasetMa.length,datasetFe.length],
-       line: {colorscale: colorscale}
+       marker: {colorscale: colorscale}
       } ;
   
   var traces3 = {name: 'Perished',
@@ -93,14 +93,14 @@ const datasetad4 = titanicData.filter((obj) => obj['Age'].length == 0   && obj['
        orientation: 'h',
        y: ['Third','Second', 'First'],
        x: [datasets3.length,datasets2.length,datasets1.length],
-	line: {colorscale: colorscale}
+	marker: {colorscale: colorscale}
       };
   var traces5 = {name: 'Class Perished',
        type: 'bar',
        orientation: 'h',
        y: ['Third','Second', 'First'],
        x: [datasetd3.length,datasetd2.length,datasetd1.length],
-	line: {colorscale: colorscale}
+	marker: {colorscale: colorscale}
       };
 
   var traces6 = {name: 'Age Survived',
@@ -108,14 +108,14 @@ const datasetad4 = titanicData.filter((obj) => obj['Age'].length == 0   && obj['
        orientation: 'h',
        y: ['Unknown','Child', 'Teen', 'Adult'],
        x: [datasetas4.length,datasetas3.length,datasetas2.length,datasetas1.length],
-	line: {colorscale: colorscale}
+	marker: {colorscale: colorscale}
       };
   var traces7 = {name: 'Age Perished',
        type: 'bar',
        orientation: 'h',
        y: ['Unknown','Child', 'Teen', 'Adult'],
        x: [datasetad4.length,datasetad3.length,datasetad2.length,datasetad1.length],
-	line: {colorscale: colorscale}
+	marker: {colorscale: colorscale}
       };	  
 	  
     var layout = {width: 300, barmode:'group',showlegend: true,line: {colorscale: colorscale}};
