@@ -52,7 +52,7 @@ const datasetas4 = titanicData.filter((obj) => obj['Age'] == null && obj['Surviv
 const datasetad1 = titanicData.filter((obj) => obj['Age'].length > 0 && obj['Age'] > 20 && obj['Survived'] ==0);
 const datasetad2 = titanicData.filter((obj) => obj['Age'].length > 0 && obj['Age'] > 12 && obj['Age'] < 20 && obj['Survived'] ==0);
 const datasetad3 = titanicData.filter((obj) => obj['Age'].length > 0 && obj['Age'] < 13 && obj['Survived'] ==0);
-const datasetad4 = titanicData.filter((obj) => obj['Age'] == null && obj['Survived'] ==0 );		  
+const datasetad4 = titanicData.filter((obj) => obj['Age'] == null );		  
 
     var colorscale = [[0, 'orange'], [1, 'blue']];
 
