@@ -57,7 +57,7 @@ const datasetad4 = titanicData.filter((obj) => obj['age'] == 4 && obj['Survived'
     var colorscale = [[0, 'orange'], [1, 'blue']];
 
     // Build Traces
-    var traces = [
+    var traces1 = [
       {type: 'bar',
        name: 'Status',
        orientation: 'h',
@@ -119,7 +119,7 @@ const datasetad4 = titanicData.filter((obj) => obj['age'] == 4 && obj['Survived'
       };	  
 	  
     var layout = {width: 300, barmode:'group',showlegend: true};
-    var data1 = [traces];
+    var data1 = [traces1];
     var data2 = [traces2, traces3];
     var data3 = [traces4, traces5];	
     var data4 = [traces6, traces7];  
