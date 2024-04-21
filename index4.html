@@ -31,7 +31,6 @@
   </div>
 </body>
 	<script>
-
 // Read and process data from csv
 d3.csv(
   "https://raw.githubusercontent.com/empress637/empress637.github.io/main/titanic.csv",
@@ -43,6 +42,7 @@ d3.csv(
     var pivotCategories = {};
     var val, pivotVal;
     var keysArr = [];
+    const colArr = [];
     var traces = dimensionsInQuestion.keys();
 
     /*
@@ -65,7 +65,11 @@ d3.csv(
 
     console.log(
       getPivotDimensions(dimensionsInQuestion[0]),
-      getPivotCount(dimensionsInQuestion[0])
+      getPivotCount(dimensionsInQuestion[0]),
+      getPivotDimensions(dimensionsInQuestion[0]).filter((k) =>
+        k.startsWith("Age|Adult")
+      ),
+      colArr
     );
 
     //console.log();
@@ -130,6 +134,7 @@ d3.csv(
             switch (dimensionsInQuestion[j] == "Survived") {
               case val == 1:
                 val = "Yes";
+
                 break;
               default:
                 val = "No";
@@ -177,7 +182,10 @@ d3.csv(
                   "|" +
                   pivotVal
               ] = 1;
-            } else {
+            colArr[j] = [
+                dimensionsInQuestion[j] + "|" + val,
+                getRandomColor()
+              ];} else {
               pivotCategories[
                 dimensionsInQuestion[j] +
                   "|" +
@@ -187,11 +195,14 @@ d3.csv(
                   "|" +
                   pivotVal
               ]++;
+              colArr[j] = [
+                dimensionsInQuestion[j] + "|" + val,
+                getRandomColor()
+              ];
             }
           }
         }
       }
-   
 
       categories = sort(categories);
       pivotCategories = sort(pivotCategories);
@@ -233,16 +244,19 @@ d3.csv(
       }
       return valArr;
     }
-
-    var colorscale = [
-      [0, "rgb(242, 140, 40)"],
-      [1, "rgb(204, 85, 0)"]
-    ];
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+    var colorscale = colArr;
 
     buildPivotTraces(dimensionsInQuestion, pivotDimension);
 
     function buildPivotTraces(dimensions, pivot) {
-      // dimensions.sort();
       for (var j = 0; j < dimensions.length; j++) {
         if (dimensions[j] == pivot) {
           traces[j] = {
@@ -252,12 +266,13 @@ d3.csv(
             orientation: "h",
             y: getDimensions(dimensions[j]), // array of keys ['Perished','Survived']
             x: getCount(dimensions[j]), //array of values
+           // color: getRandomColor(),
             marker: {
-              color: ["rgb(5, 89, 153)", "orange", "red", "yellow", "green"]
+              color:  getCount(dimensions[j])
             },
             hoveron: colorscale,
             hoverinfo: "count+probability",
-            labelfont: { size: 8 },
+            labelfont: { size: 8 }
             //arrangement: "freeform"
           };
         } else {
@@ -266,14 +281,15 @@ d3.csv(
             type: "bar",
             name: dimensions[j],
             orientation: "h",
+            color: getRandomColor(),
             y: getPivotDimensions(dimensions[j]), // array of keys
             x: getPivotCount(dimensions[j]), //array of values
-            marker: {
-              color: ["rgb(5, 89, 153)", "orange", "red", "yellow", "green"]
-            },
             hoveron: colorscale,
             hoverinfo: "count+probability",
             labelfont: { size: 8 },
+            marker: {
+              color:  getPivotCount(dimensions[j])
+            },
             //arrangement: "freeform"
           };
         }
@@ -284,7 +300,10 @@ d3.csv(
       width: 300,
       barmode: "group",
       showlegend: true,
-      line: { colorscale: colorscale }
+      color: getRandomColor(),
+      labelfont: { size: 8 },
+      marker_color: getRandomColor()
+      //line: { colorscale: ["red", "blue", "yellow"] }
     };
 
     var data1 = [traces[0]];
