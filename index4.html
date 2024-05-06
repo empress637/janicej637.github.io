@@ -37,12 +37,11 @@ d3.csv(
   function (titanicData) {
     const dimensions = Object.keys(titanicData[1]); // All dimensions from file
     const dimensionsInQuestion = ["Age", "Survived", "Pclass", "Sex"]; // Dimension to visualize
-    var pivotDimension = dimensionsInQuestion[1]; //Pivot that impacts all dimensions
+    var pivotDimension = dimensionsInQuestion[0]; //Pivot that impacts all dimensions
     var categories = {};
     var pivotCategories = {};
     var val, pivotVal;
     var keysArr = [];
-    const colArr = [];
     var colKeys = [];
     var traces = dimensionsInQuestion.keys();
 
@@ -170,7 +169,6 @@ d3.csv(
                   "|" +
                   pivotVal
               ] = 1;
-              colArr[j] = [dimensionsInQuestion[j] + "|" + val];
             } else {
               pivotCategories[
                 dimensionsInQuestion[j] +
@@ -181,21 +179,10 @@ d3.csv(
                   "|" +
                   pivotVal
               ]++;
-              colArr[j] = [dimensionsInQuestion[j] + "|" + val];
             }
           }
         }
       }
-
-      //Assign Colors
-      /*
-      for (var j = 0; j < getDimensions(dimensions[j]).length; j++) {
-        for (var i = 0; i < getDimensions(pivotDimensions[j]).length; i++) {
-          colKeys[pivotDimension[j]] = Object.values(
-            pivotCategories
-          ).filter((k) => k.endsWith(getDimensions(dimensions[j])[i]));
-    
-      }    }*/
 
       categories = sort(categories);
       pivotCategories = sort(pivotCategories);
@@ -253,16 +240,6 @@ d3.csv(
       }
       return col;
     }
-    function getRandomColor() {
-      var letters = "0123456789ABCDEF";
-      var color = "#";
-      for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
-    }
-    var colorscale = colArr;
-
     function myFunction(element) {
       element.style.border_color = "yellow";
     }
@@ -272,21 +249,6 @@ d3.csv(
     function buildPivotTraces(dimensions, pivot) {
       var col = [];
       var pivCol = {};
-
-      //CREATE COLOR ARRAY BASED ON PIVOT CATEGORIES
-      for (var j = 0; j < getDimensions(pivotDimension[j]).length; j++) {
-        for (var i = 0; i < getDimensions(dimensions[j]).length; i++) {
-          //console.log(getDimensions(pivotDimension[j])[i]);
-          //console.log(Object.keys(pivotCategories));
-          console
-            .log
-            //(col = Object.keys(pivotCategories).filter((k) => k.endsWith(getDimensions(pivotDimension[j])[i]))),
-            //getDimensions(dimensions[j])[i],
-            // categories[getDimensions(dimensions[j])[i]],
-            //getPivotColors('Age|Adult')
-            ();
-        }
-      }
 
       for (var j = 0; j < dimensions.length; j++) {
         if (dimensions[j] == pivot) {
@@ -300,7 +262,7 @@ d3.csv(
             marker: {
               color: getCount(dimensions[j])
             },
-            hoveron: colorscale,
+            //hoveron: col,
             hoverinfo: "count+probability",
             labelfont: { size: 8 }
             //arrangement: "freeform"
@@ -313,7 +275,7 @@ d3.csv(
             orientation: "h",
             y: getPivotDimensions(dimensions[j]), // array of keys
             x: getPivotCount(dimensions[j]), //array of values
-            hoveron: colorscale,
+            //hoveron: col,
             hoverinfo: "count+probability",
             labelfont: { size: 8 },
             marker: {
@@ -328,8 +290,7 @@ d3.csv(
     var layout = {
       width: 300,
       barmode: "group",
-      showlegend: true,
-      color: getRandomColor(),
+      showlegend: false,
       labelfont: { size: 8 }
     };
 
@@ -345,6 +306,7 @@ d3.csv(
     Plotly.newPlot("myDiv4", data4, layout);
   }
 );
+
 
 
 	</script>
