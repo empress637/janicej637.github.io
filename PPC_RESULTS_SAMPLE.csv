@@ -1,7 +1,7 @@
 Technique ,Task  ,Gender ,Age_Group ,Profession ,Optical Aid ,Task_Status ,Completion_Time(ms) 
 PPC ,1 ,M ,35 ,"IT Director" ,Glasses ,CompletedCorrect ,0-5000 
 PPC ,2 ,M ,35 ,"IT Director" ,Glasses ,CompletedCorrect ,0-5000 
-"HI-D MAPS" ,1 ,F ,18 ,"College Student" ,None ,CompletedCorrect ,0-5000 
-"HI-D MAPS" ,2 ,F ,18 ,"College Student" ,None ,CompletedCorrect ,0-5000 
+HI-D MAPS ,1 ,F ,18 ,"College Student" ,None ,CompletedCorrect ,0-5000 
+HI-D MAPS ,2 ,F ,18 ,"College Student" ,None ,CompletedCorrect ,0-5000 
 PCP ,1 ,M ,50 ,"IT Director" ,Contacts ,CompletedIncorrect ,5000-10000 
 PCP ,2 ,M ,50 ,"IT Director" ,Contacts ,CompletedIncorrect ,5000-10000 
