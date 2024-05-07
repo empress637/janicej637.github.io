@@ -74,13 +74,13 @@ d3.csv(
           i < ii;
           i++ // Get counts per category
         ) {
-          /* Assign value to val variable and handle for nulls
+          // Assign value to val variable and handle for nulls
           if (titanicData[i][dimensionsInQuestion[j]].length > 0) {
             val = titanicData[i][dimensionsInQuestion[j]];
             pivotVal = titanicData[i][pivotDimension];
           } else {
             val = "Unknown";
-          }*/
+          }
 
           // Handle Age Category by grouping into Child, Teen, Adult
           if (dimensionsInQuestion[j] == "Age") {
