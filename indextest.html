@@ -73,7 +73,7 @@ d3.csv(
           i++ // Get counts per category
         ) {
           // Assign value to val variable and handle for nulls
-          if (titanicData[i][dimensionsInQuestion[j]].length >= 0) {
+          if (dimensionsInQuestion[j].length >= 0) {
             val = titanicData[i][dimensionsInQuestion[j]];
             pivotVal = titanicData[i][pivotDimension];
           } else {
