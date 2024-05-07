@@ -37,9 +37,7 @@ d3.csv(
   "https://raw.githubusercontent.com/empress637/empress637.github.io/main/PPC_RESULTS_SAMPLE.csv",
   function (titanicData) {
     const dimensions = Object.keys(titanicData[1]); // All dimensions from file
-    const dimensionsInQuestion = [
-    "Technique","Task" ,"Gender" ,"Age_Group" ,"Profession" ,"Optical Aid" ,"Task_Status" ,"Completion_Time(ms)" 
-    ]; // Dimension to visualize
+    const dimensionsInQuestion = ["Technique","Task" ,"Gender" ,"Age_Group" ,"Profession" ,"Optical Aid" ,"Task_Status" ,"Completion_Time(ms)"]; // Dimension to visualize
     var pivotDimension = dimensionsInQuestion[1]; //Pivot that impacts all dimensions
     var categories = {};
     var pivotCategories = {};
