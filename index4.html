@@ -6,6 +6,7 @@
 <style>
   .parent {
     text-align: left;
+	  width: relative;
   }
 
   .child {
@@ -14,7 +15,6 @@
     vertical-align: left;
     border-left: 50px solid;
     border-color: rgb(223, 231, 237);
-
   }
 </style>
 
@@ -24,7 +24,7 @@
       Home
     </a>
   </h2>
-  <div class='parent' display='inline-block' id='Sonia' >
+  <div class='parent' display='inline-block'>
     <div class='child' id='myDiv1'></div>
     <div class='child' id='myDiv2'></div>
     <div class='child' id='myDiv3'></div>
@@ -296,7 +296,7 @@ d3.csv(
     }
 
     var layout = {
-      width: 300px,
+      width: 300,
       barmode: "stack",
       showlegend: false,
       labelfont: { size: 8 }
@@ -308,10 +308,7 @@ d3.csv(
     var data4 = [traces[3]];
     var data5 = [traces[4]];
 
-
-	  
     // Make plot
-
     Plotly.newPlot("myDiv1", data1, layout);
     Plotly.newPlot("myDiv2", data2, layout);
     Plotly.newPlot("myDiv3", data3, layout);
