@@ -192,58 +192,7 @@ Plotly.newPlot('-plotly-div', {
   layout: layout
 });	
 	  }); 
-			
-//https://www.kaggle.com/code/mateuszk013/titanic-visual-eda-with-insights#Fancy-Plots-with-Plotly-&-Groups-Survival-Rate
-   var train = titanicData.map(function(row) { return row['PassengerId'] });
 
-var df = train.copy()
-df["Survived"] = df["Survived"].map({1: "Survived", 0: "Died"})
-df["Sex"] = df["Sex"].map({"male": "Male", "female": "Female"})
-
-var fig = px.sunburst(
-    data_frame=df,
-    title="Passengers Onboard",
-    path=["Sex", "Survived"],
-    color_discrete_sequence=["#394d5f", "#e8ba91"],
-    height=640,
-    width=640,
-)
-fig.update_traces(
-    textinfo="label+percent parent",
-    insidetextorientation="horizontal",
-    marker_line_width=10,
-    marker_line_color=BACKGROUND_COLOR,
-)
-fig.update_layout(
-    font_color=FONT_COLOR,
-    title_font_size=18,
-    plot_bgcolor=BACKGROUND_COLOR,
-    paper_bgcolor=BACKGROUND_COLOR,
-)
-fig.show()
-
-//https://towardsdatascience.com/visualizing-multidimensional-categorical-data-using-plotly-bfb521bc806f
-## dataframe creation - for plotting
-df_combinations = (
-    df.groupby(["is-edible", "population", "habitat", "bruises"])
-    .size()
-    .reset_index()
-    .rename(columns={0: "count"})
-)
-## Creating sunburst chart
-# define figure element
-fig = px.sunburst(
-    df,
-    path=["is-edible", "bruises", "population", "habitat"],
-    title="Edibility Mushrooms - bruises, population & habitat",
-    color="is-edible",
-    color_discrete_sequence=[medimumvioletred, seagreen],
-    height=800,
-)
-# display the figure
-fig.show()		
-
-			//https://plotly.com/javascript/sunburst-charts/
 	</script>
 
 </body>
