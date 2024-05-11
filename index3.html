@@ -200,7 +200,7 @@ var df = train.copy()
 df["Survived"] = df["Survived"].map({1: "Survived", 0: "Died"})
 df["Sex"] = df["Sex"].map({"male": "Male", "female": "Female"})
 
-fig = px.sunburst(
+var fig = px.sunburst(
     data_frame=df,
     title="Passengers Onboard",
     path=["Sex", "Survived"],
