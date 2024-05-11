@@ -221,6 +221,27 @@ fig.update_layout(
     paper_bgcolor=BACKGROUND_COLOR,
 )
 fig.show()
+
+//https://towardsdatascience.com/visualizing-multidimensional-categorical-data-using-plotly-bfb521bc806f
+## dataframe creation - for plotting
+df_combinations = (
+    df.groupby(["is-edible", "population", "habitat", "bruises"])
+    .size()
+    .reset_index()
+    .rename(columns={0: "count"})
+)
+## Creating sunburst chart
+# define figure element
+fig = px.sunburst(
+    df,
+    path=["is-edible", "bruises", "population", "habitat"],
+    title="Edibility Mushrooms - bruises, population & habitat",
+    color="is-edible",
+    color_discrete_sequence=[medimumvioletred, seagreen],
+    height=800,
+)
+# display the figure
+fig.show()			
 	</script>
 
 </body>
