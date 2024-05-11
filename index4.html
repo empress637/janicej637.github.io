@@ -6,7 +6,7 @@
 <style>
   .parent {
     text-align: left;
-	  width: relative;
+	  width: responsive;
   }
 
   .child {
@@ -15,6 +15,7 @@
     vertical-align: left;
     border-left: 50px solid;
     border-color: rgb(223, 231, 237);
+	  overflow: hidden;
   }
 </style>
 
@@ -296,7 +297,7 @@ d3.csv(
     }
 
     var layout = {
-      width: 300,
+      width: auto,
       barmode: "stack",
       showlegend: false,
       labelfont: { size: 8 }
