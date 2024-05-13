@@ -2,9 +2,10 @@
   <!-- Load plotly.js into the DOM -->
   <script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+
 </head>
 <style>
-   .parent {
+  .parent {
     text-align: left;
     responsive: true;
     flex-flow: row nowrap;
@@ -13,15 +14,23 @@
 
   .child {
     display: inline-block;
-    padding: .05rem .05rem;
-    vertical-align: left;
     border-left: 20px solid;
-    border-color: rgb(223, 231, 237);
     float: left;
     white-space: nowrap;
     width: calc(90vw/5);
+    border-color: rgb(223, 231, 237);
+  }
   }
 </style>
+<script>
+  function pivDim(ID) {
+    var childClass = document.getElementsByClassName("child");
+    for (var j = 0; j < childClass.length; j++) {
+      document.getElementById("myDiv" + [j]).style.borderLeft = "20 px solid #FFFFFF";
+    }
+    document.getElementById(ID).style.borderLeftColor = "#FFFF00";
+  }
+</script>
 
 <body>
   <h2 class="red-text" style="color: green;">
@@ -29,12 +38,13 @@
       Home
     </a>
   </h2>
+  <p>Please select the Pivot Dimension by clicking a gray bar.</p>
   <div class='parent' display='inline-block'>
-   <div class='child' id='myDiv0' onclick="myFunction(this)"></div>
-    <div class='child' id='myDiv1' onclick="myFunction(this)"></div>
-    <div class='child' id='myDiv2' onclick="myFunction(this)"></div>
-    <div class='child' id='myDiv3' onclick="myFunction(this)"></div>
-    <div class='child' id='myDiv4' onclick="myFunction(this)"></div>
+    <div class='child' onclick="pivDim('myDiv0')" id='myDiv0'></div>
+    <div class='child' onclick="pivDim('myDiv1')" id='myDiv1'></div>
+    <div class='child' onclick="pivDim('myDiv2')" id='myDiv2'></div>
+    <div class='child' onclick="pivDim('myDiv3')" id='myDiv3'></div>
+    <div class='child' onclick="pivDim('myDiv4')" id='myDiv4'></div>
   </div>
 </body>
 	<script>
