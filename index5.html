@@ -45,7 +45,7 @@
       if ("myDiv" + [j] == ID) {
         document.getElementById(ID).style.borderLeftColor = "#FFFF00";
 	dim =j;
-	      d3.select(ID).on("click", display(dim));
+	      //d3.select(ID).on("click", display(dim));
 
       } else {
         
@@ -91,7 +91,7 @@ d3.csv(
 */
    // console.log(processData(titanicData));
  processData(titanicData,pivotDimension);
-   display();
+   display(pivotDimension);
 
     function processData(titanicData,pivotDimension) {
 
