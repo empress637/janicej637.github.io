@@ -38,7 +38,6 @@
 d3.csv(
   "https://raw.githubusercontent.com/empress637/empress637.github.io/main/titanic.csv",
   function (titanicData) {
-    const dimensions = Object.keys(titanicData[1]); // All dimensions from file
     const dimensionsInQuestion = [
       "Age",
       "Survived",
@@ -46,13 +45,13 @@ d3.csv(
       "Sex",
       "Embarked"
     ]; // Dimension to visualize
-    var pivotDimension = dimensionsInQuestion[1]; //Pivot that impacts all dimensions
-    var categories = {};
-    var pivotCategories = {};
-    var val, pivotVal;
-    var keysArr = [];
-    var colKeys = [];
+    var pivotDimension = dimensionsInQuestion[3]; //Pivot that impacts all dimensions
+    var categories = {}; //Counts for all categories
+    var pivotCategories = {}; //Counts for all categories with Pivot
+    var val, pivotVal; //Values from each record
+    var keysArr = []; //Array of keys for categories/pivotCategories
     var traces = dimensionsInQuestion.keys();
+    var data = []; //Traces values
 
     /*
  --------------DEBUGGING NOTES-------------
@@ -67,7 +66,8 @@ d3.csv(
   console.log(Object.keys(categories)[1]);  // Keys for Dimension_Category
 */
     console.log(processData(titanicData));
-    //processData(titanicData);
+
+    // processData(titanicData);
 
     function processData(titanicData) {
       for (
@@ -221,6 +221,38 @@ d3.csv(
       return valArr;
     }
 
+    function getGroupCount(dim, p) {
+      var valArr = [];
+      var groupData = Object.keys(categories).filter((k) => k.startsWith(dim));
+
+      if (p > 0) {
+        valArr = [];
+        keysArr = Object.keys(categories)
+          .filter((key) => groupData.includes(key))
+          .reduce((obj, key) => {
+            obj[key] = categories[key];
+            return Object.values(obj);
+          }, {});
+
+        for (var j = 0; j < keysArr.length; j++) {
+          valArr[j] = categories[keysArr[j]];
+        }
+      } else {
+        valArr = [];
+        keysArr = Object.keys(pivotCategories)
+          .filter((key) => groupData.includes(key))
+          .reduce((obj, key) => {
+            obj[key] = pivotCategories[key];
+            return Object.values(obj);
+          }, {});
+        for (var j = 0; j < keysArr.length; j++) {
+          valArr[j] = pivotCategories[keysArr[j]];
+        }
+      }
+
+      return valArr;
+    }
+
     function getPivotDimensions(dim) {
       keysArr = Object.keys(pivotCategories).filter((k) => k.startsWith(dim));
       return keysArr;
@@ -243,7 +275,7 @@ d3.csv(
       for (var i = 0; i < keysArr.length; i++) {
         for (var j = 0; j < getDimensions(pivotDimension).length; j++) {
           if (keysArr[i].endsWith(getDimensions(pivotDimension)[j])) {
-            col[i] = getCount(pivotDimension)[j];
+            col[keysArr[i]] = getCount(pivotDimension)[j];
           }
         }
       }
@@ -253,71 +285,82 @@ d3.csv(
       element.style.border_color = "yellow";
     }
 
-    buildPivotTraces(dimensionsInQuestion, pivotDimension);
-
     function buildPivotTraces(dimensions, pivot) {
-      var col = [];
-      var pivCol = {};
-
+      var traces = [];
+      var groupVals = [];
       for (var j = 0; j < dimensions.length; j++) {
+        traces = [];
+
         if (dimensions[j] == pivot) {
-          traces[j] = {
-            //barmode: "group",
-            type: "bar",
-            name: dimensions[j],
-            orientation: "h",
-            y: getDimensions(dimensions[j]), // array of keys ['Perished','Survived']
-            x: getCount(dimensions[j]), //array of values
-            marker: {
-              color: getCount(dimensions[j])
-            },
-            //hoveron: col,
-            hoverinfo: "count+probability",
-            labelfont: { size: 8 }
-            //arrangement: "freeform"
-          };
+          for (var i = 0; i < getDimensions(dimensions[j]).length; i++) {
+            traces[i] = {
+              type: "bar",
+              name: getDimensions(dimensions[j]),
+              orientation: "h",
+              y: [getDimensions(dimensions[j])[i]], // array of keys
+              x: [getCount(dimensions[j])[i]],
+              marker: {
+                color: getCount(dimensions[j])[i]
+              },
+              hoverinfo: "count+probability",
+              labelfont: { size: 8 }
+            };
+          }
+          data[j] = traces;
         } else {
-          traces[j] = {
-            //barmode: "group",
-            type: "bar",
-            name: dimensions[j],
-            orientation: "h",
-            y: getPivotDimensions(dimensions[j]), // array of keys
-            x: getPivotCount(dimensions[j]), //array of values
-            //hoveron: col,
-            hoverinfo: "count+probability",
-            labelfont: { size: 8 },
-            marker: {
-              color: getPivotColors(dimensions[j])
+          for (var i = 0; i < getDimensions(pivot).length; i++) {
+            var groupData = Object.keys(pivotCategories).filter(
+              (k) =>
+                k.startsWith(dimensions[j]) &&
+                k.endsWith(getDimensions(pivot)[i])
+            );
+
+            groupVals = Object.keys(pivotCategories)
+              .filter((key) => groupData.includes(key))
+              .reduce((obj, key) => {
+                obj[key] = pivotCategories[key];
+                return Object.values(obj);
+              }, {});
+
+            for (var k = 0; k < getDimensions(pivot).length; k++) {
+              traces[i] = {
+                type: "bar",
+                name: groupData[k],
+                orientation: "h",
+                y: getDimensions(dimensions[j]), //groupData,
+                x: groupVals,
+                marker: {
+                  color: getPivotColors(dimensions[j])[i]
+                },
+                hoverinfo: "count+probability",
+                labelfont: { size: 8 }
+              };
             }
-            //arrangement: "freeform"
-          };
+          }
+          data[j] = traces;
         }
       }
+
+      return data;
     }
 
     var layout = {
-      width: 300,
-      barmode: "stack",
+      responsive: true,
+      width: 200,
+      barmode: "group",
       showlegend: false,
-      labelfont: { size: 8 }
+      labelfont: { size: 8 },
+      orientation: "h"
     };
 
-    var data1 = [traces[0]];
-    var data2 = [traces[1]];
-    var data3 = [traces[2]];
-    var data4 = [traces[3]];
-    var data5 = [traces[4]];
+    data = buildPivotTraces(dimensionsInQuestion, pivotDimension);
 
     // Make plot
-    Plotly.newPlot("myDiv1", data1, layout);
-    Plotly.newPlot("myDiv2", data2, layout);
-    Plotly.newPlot("myDiv3", data3, layout);
-    Plotly.newPlot("myDiv4", data4, layout);
-    Plotly.newPlot("myDiv5", data5, layout);
+    for (var j = 0; j < data.length; j++) {
+      Plotly.newPlot("myDiv" + [j], data[j], layout);
+    }
   }
 );
-
 
 	</script>
 
