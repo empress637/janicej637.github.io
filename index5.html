@@ -43,11 +43,11 @@
   </h2>
   <p>Please select the Pivot Dimension by clicking a gray bar.</p>
   <div class='parent' display='inline-block'>
-    <div class='child' onclick="pivDim('myDiv0');displayData();" id='myDiv0'></div>
-    <div class='child' onclick="pivDim('myDiv1');displayData();" id='myDiv1'></div>
-    <div class='child' onclick="pivDim('myDiv2');displayData();" id='myDiv2'></div>
-    <div class='child' onclick="pivDim('myDiv3');displayData();" id='myDiv3'></div>
-    <div class='child' onclick="pivDim('myDiv4');displayData();" id='myDiv4'></div>
+    <div class='child' onclick="pivDim('myDiv0')" id='myDiv0'></div>
+    <div class='child' onclick="pivDim('myDiv1')" id='myDiv1'></div>
+    <div class='child' onclick="pivDim('myDiv2')" id='myDiv2'></div>
+    <div class='child' onclick="pivDim('myDiv3')" id='myDiv3'></div>
+    <div class='child' onclick="pivDim('myDiv4')" id='myDiv4'></div>
   </div>
 </body>
 	<script>
@@ -84,11 +84,11 @@ d3.csv(
   console.log(titanicData[15][headers[10]]);  //value of passenger 15 under header 10
   console.log(Object.keys(categories)[1]);  // Keys for Dimension_Category
 */
-    //console.log(processData(titanicData,pivotDimension));
+    console.log(processData(titanicData));
 
-    //processData(titanicData,pivotDimension);
+    // processData(titanicData);
 
-    function processData(titanicData,pivotDimension) {
+    function processData(titanicData) {
       for (
         var j = 0, jj = dimensionsInQuestion.length;
         j < jj;
@@ -362,8 +362,7 @@ d3.csv(
     }
 
  
-function displayData(){
-	processData(titanicData,pivotDimension);
+
     data = buildPivotTraces(dimensionsInQuestion, pivotDimension);
 
     // Make plot
@@ -391,10 +390,9 @@ function displayData(){
       
       Plotly.newPlot("myDiv" + [j], data[j], layout);
     }
-}
   }
 );
-		
+
 
 	</script>
 
