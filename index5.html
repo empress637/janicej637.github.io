@@ -4,20 +4,22 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
 </head>
 <style>
-  .parent {
+   .parent {
     text-align: left;
-	  width: responsive;
-	   responsive: true;
+     responsive: true;
+    width:100%
   }
 
   .child {
     display: inline-block;
     padding: 1rem 1rem;
     vertical-align: left;
-    border-left: 50px solid;
+    border-left: 20px solid;
     border-color: rgb(223, 231, 237);
-	  overflow: hidden;
-	   responsive: true;
+    position:relative;
+    min-width: calc(100% / 5);
+     float:left;
+    height:400px;
   }
 </style>
 
