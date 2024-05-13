@@ -286,16 +286,15 @@ d3.csv(
     }
 
     function buildPivotTraces(dimensions, pivot) {
-      var traces = [];
-      var groupVals = [];
+     
       for (var j = 0; j < dimensions.length; j++) {
-        traces = [];
+      var traces = [];
 
         if (dimensions[j] == pivot) {
           for (var i = 0; i < getDimensions(dimensions[j]).length; i++) {
             traces[i] = {
               type: "bar",
-              name: getDimensions(dimensions[j]),
+              name: "",
               orientation: "h",
               y: [getDimensions(dimensions[j])[i]], // array of keys
               x: [getCount(dimensions[j])[i]],
@@ -315,7 +314,7 @@ d3.csv(
                 k.endsWith(getDimensions(pivot)[i])
             );
 
-            groupVals = Object.keys(pivotCategories)
+            var groupVals = Object.keys(pivotCategories)
               .filter((key) => groupData.includes(key))
               .reduce((obj, key) => {
                 obj[key] = pivotCategories[key];
@@ -325,9 +324,9 @@ d3.csv(
             for (var k = 0; k < getDimensions(pivot).length; k++) {
               traces[i] = {
                 type: "bar",
-                name: groupData[k],
+                name: '',  //getDimensions(pivot)[i],
                 orientation: "h",
-                y: getDimensions(dimensions[j]), //groupData,
+                y: getDimensions(dimensions[j]),
                 x: groupVals,
                 marker: {
                   color: getPivotColors(dimensions[j])[i]
