@@ -226,8 +226,12 @@ d3.csv(
 
       return Object.fromEntries(sorted);
     }
-    function getDimensions(dim) {
+   function getDimensions(dim) {
       keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
+      
+      for (var j = 0; j < keysArr.length; j++) {
+          keysArr[j] = keysArr[j].replace(dim+'|','');
+      }
       return keysArr;
     }
 
