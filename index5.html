@@ -21,22 +21,7 @@
     border-color: rgb(223, 231, 237);
   }
   }
-</style><script> 
- function pivDim(ID,dim) {
-    var childClass = document.getElementsByClassName("child");
-    for (var j = 0; j < childClass.length; j++) {
-      if ("myDiv" + [j] == ID) {
-        document.getElementById(ID).style.borderLeftColor = "#FFFF00";
-	dim =j;
-      } else {
-        
-	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
-      }
-    }
-display(dim);
-	 
-  }
-</script>
+</style>
 <body>
   <h2 class="red-text" style="color: green;">
     <a href="https://empress637.github.io/">
@@ -52,7 +37,23 @@ display(dim);
     <div class='child' onclick="pivDim('myDiv4')" id='myDiv4'></div>
   </div>
 </body>
-	<script>
+
+<script> 
+ function pivDim(ID,dim) {
+    var childClass = document.getElementsByClassName("child");
+    for (var j = 0; j < childClass.length; j++) {
+      if ("myDiv" + [j] == ID) {
+        document.getElementById(ID).style.borderLeftColor = "#FFFF00";
+	dim =j;
+      } else {
+        
+	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
+      }
+    }
+display(dim);
+	 
+  }
+
 // Read and process data from csv
 d3.csv(
   "https://raw.githubusercontent.com/empress637/empress637.github.io/main/titanic.csv",
