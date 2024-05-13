@@ -26,9 +26,12 @@
   function pivDim(ID) {
     var childClass = document.getElementsByClassName("child");
     for (var j = 0; j < childClass.length; j++) {
-      document.getElementById("myDiv" + [j]).style.borderLeft = "20 px solid #FFFFFF";
+      if ("myDiv" + [j] == ID) {
+        document.getElementById(ID).style.borderLeftColor = "#FFFF00";
+      } else {
+        document.getElementById("myDiv" + [j]).style.borderLeft = "20 px solid #FFFFFF";
+      }
     }
-    document.getElementById(ID).style.borderLeftColor = "#FFFF00";
   }
 </script>
 
