@@ -22,17 +22,19 @@
   }
   }
 </style><script> 
- function pivDim(ID) {
+ function pivDim(ID,dim) {
     var childClass = document.getElementsByClassName("child");
     for (var j = 0; j < childClass.length; j++) {
       if ("myDiv" + [j] == ID) {
         document.getElementById(ID).style.borderLeftColor = "#FFFF00";
-	
+	dim =j;
       } else {
         
 	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
       }
     }
+display(dim);
+	 
   }
 </script>
 <body>
@@ -84,11 +86,11 @@ d3.csv(
   console.log(titanicData[15][headers[10]]);  //value of passenger 15 under header 10
   console.log(Object.keys(categories)[1]);  // Keys for Dimension_Category
 */
-    console.log(processData(titanicData));
+   // console.log(processData(titanicData));
 
-    // processData(titanicData);
+   display();
 
-    function processData(titanicData) {
+    function processData(titanicData,pivotDimension) {
       for (
         var j = 0, jj = dimensionsInQuestion.length;
         j < jj;
@@ -365,8 +367,8 @@ d3.csv(
       return data;
     }
 
- 
-
+ display(pivotDimension){
+ processData(titanicData,pivotDimension);
     data = buildPivotTraces(dimensionsInQuestion, pivotDimension);
 
     // Make plot
@@ -394,7 +396,7 @@ d3.csv(
       
       Plotly.newPlot("myDiv" + [j], data[j], layout);
     }
-  }
+  }}
 );
 
 
