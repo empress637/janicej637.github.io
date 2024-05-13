@@ -21,8 +21,20 @@
     border-color: rgb(223, 231, 237);
   }
   }
-</style>
-
+</style><script> 
+ function pivDim(ID) {
+    var childClass = document.getElementsByClassName("child");
+    for (var j = 0; j < childClass.length; j++) {
+      if ("myDiv" + [j] == ID) {
+        document.getElementById(ID).style.borderLeftColor = "#FFFF00";
+	
+      } else {
+        
+	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
+      }
+    }
+  }
+</script>
 <body>
   <h2 class="red-text" style="color: green;">
     <a href="https://empress637.github.io/">
@@ -58,18 +70,7 @@ d3.csv(
     var traces = dimensionsInQuestion.keys();
     var data = []; //Traces values
 
-	   function pivDim(ID) {
-    var childClass = document.getElementsByClassName("child");
-    for (var j = 0; j < childClass.length; j++) {
-      if ("myDiv" + [j] == ID) {
-        document.getElementById(ID).style.borderLeftColor = "#FFFF00";
-	pivotDimension = j;
-      } else {
-        
-	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
-      }
-    }
-  }
+
 
     /*
  --------------DEBUGGING NOTES-------------
