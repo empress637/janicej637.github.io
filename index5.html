@@ -6,20 +6,20 @@
 <style>
    .parent {
     text-align: left;
-     responsive: true;
-    width:100%
+    responsive: true;
+    flex-flow: row nowrap;
+    width: 100vw;
   }
 
   .child {
     display: inline-block;
-    padding: 1rem 1rem;
+    padding: .05rem .05rem;
     vertical-align: left;
     border-left: 20px solid;
     border-color: rgb(223, 231, 237);
-    position:relative;
-    min-width: calc(100% / 5);
-     float:left;
-    height:400px;
+    float: left;
+    white-space: nowrap;
+    width: calc(90vw/5);
   }
 </style>
 
