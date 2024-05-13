@@ -21,23 +21,20 @@
     border-color: rgb(223, 231, 237);
   }
   }
-</style>
-<script>
-  function pivDim(ID) {
+</style><script> 
+ function pivDim(ID) {
     var childClass = document.getElementsByClassName("child");
-    var pivot;
     for (var j = 0; j < childClass.length; j++) {
       if ("myDiv" + [j] == ID) {
         document.getElementById(ID).style.borderLeftColor = "#FFFF00";
-        pivot = j;
+	
       } else {
-        document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
+        
+	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
       }
     }
-    //display(pivot);
   }
 </script>
-
 <body>
   <h2 class="red-text" style="color: green;">
     <a href="https://empress637.github.io/">
@@ -52,8 +49,9 @@
     <div class='child' onclick="pivDim('myDiv3')" id='myDiv3'></div>
     <div class='child' onclick="pivDim('myDiv4')" id='myDiv4'></div>
   </div>
-
-	// Read and process data from csv
+</body>
+	<script>
+// Read and process data from csv
 d3.csv(
   "https://raw.githubusercontent.com/empress637/empress637.github.io/main/titanic.csv",
   function (titanicData) {
@@ -72,6 +70,8 @@ d3.csv(
     var traces = dimensionsInQuestion.keys();
     var data = []; //Traces values
 
+
+
     /*
  --------------DEBUGGING NOTES-------------
   console.log(Object.keys(titanicData[1]));     //Headers Array
@@ -84,11 +84,11 @@ d3.csv(
   console.log(titanicData[15][headers[10]]);  //value of passenger 15 under header 10
   console.log(Object.keys(categories)[1]);  // Keys for Dimension_Category
 */
-    //console.log(processData(titanicData, pivotDimension));
-    processData(titanicData, pivotDimension);
-    display(pivotDimension);
+    console.log(processData(titanicData));
 
-    function processData(titanicData, pivotDimension) {
+    // processData(titanicData);
+
+    function processData(titanicData) {
       for (
         var j = 0, jj = dimensionsInQuestion.length;
         j < jj;
@@ -300,12 +300,14 @@ d3.csv(
       }
       return col;
     }
+    function myFunction(element) {
+      element.style.border_color = "yellow";
+    }
 
     function buildPivotTraces(dimensions, pivot) {
       for (var j = 0; j < dimensions.length; j++) {
         var traces = [];
 
-        //Get Pivot Dimension counts
         if (dimensions[j] == pivot) {
           for (var i = 0; i < getDimensions(dimensions[j]).length; i++) {
             traces[i] = {
@@ -323,7 +325,6 @@ d3.csv(
           }
           data[j] = traces;
         } else {
-          // Get Dimension Counts
           for (var i = 0; i < getDimensions(pivot).length; i++) {
             var groupData = Object.keys(pivotCategories).filter(
               (k) =>
@@ -360,29 +361,39 @@ d3.csv(
       return data;
     }
 
-    function display(pivotDimension) {
-      // Build Traces
-      data = buildPivotTraces(dimensionsInQuestion, pivotDimension);
+ 
 
-      // Make plot
-      for (var j = 0; j < data.length; j++) {
-        var layout = {
-          barmode: "group",
-          showlegend: false,
-          labelfont: { size: 8 },
-          orientation: "h",
-          title: {
-            text: dimensionsInQuestion[j],
-            font: {
-              family: "Courier New, monospace",
-              size: 24,
-              weight: "bold"
-            }
-          }
-        };
+    data = buildPivotTraces(dimensionsInQuestion, pivotDimension);
 
-        Plotly.newPlot("myDiv" + [j], data[j], layout);
-      }
+    // Make plot
+    for (var j = 0; j < data.length; j++) {
+      
+         var layout = {
+      barmode: "group",
+      showlegend: false,
+      labelfont: { size: 8 },
+      orientation: "h",
+        title: {
+    text: dimensionsInQuestion[j],
+    font: {
+      family: 'Courier New, monospace',
+      size: 24
+    },  xaxis: {
+    title: {
+      text: 'y Axis',
+      font: {
+        family: 'Courier New, monospace',
+        size: 8
+      }}}}
+    };
+      
+      
+      Plotly.newPlot("myDiv" + [j], data[j], layout);
     }
   }
 );
+
+
+	</script>
+
+</body>
