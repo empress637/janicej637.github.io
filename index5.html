@@ -39,20 +39,7 @@
 </body>
 
 <script> 
- function pivDim(ID,dim) {
-    var childClass = document.getElementsByClassName("child");
-    for (var j = 0; j < childClass.length; j++) {
-      if ("myDiv" + [j] == ID) {
-        document.getElementById(ID).style.borderLeftColor = "#FFFF00";
-	dim =j;
-      } else {
-        
-	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
-      }
-    }
-display(dim);
-	 
-  }
+ 
 
 // Read and process data from csv
 d3.csv(
@@ -88,10 +75,13 @@ d3.csv(
   console.log(Object.keys(categories)[1]);  // Keys for Dimension_Category
 */
    // console.log(processData(titanicData));
-
+ processData(titanicData,pivotDimension);
    display();
 
     function processData(titanicData,pivotDimension) {
+
+	         categories = {};
+      pivotCategories ={};
       for (
         var j = 0, jj = dimensionsInQuestion.length;
         j < jj;
@@ -397,7 +387,24 @@ d3.csv(
       
       Plotly.newPlot("myDiv" + [j], data[j], layout);
     }
-  }}
+  }
+  
+  function pivDim(ID,dim) {
+    var childClass = document.getElementsByClassName("child");
+    for (var j = 0; j < childClass.length; j++) {
+      if ("myDiv" + [j] == ID) {
+        document.getElementById(ID).style.borderLeftColor = "#FFFF00";
+	dim =j;
+      } else {
+        
+	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
+      }
+    }
+display(dim);
+	 
+  }
+  
+  }
 );
 
 
