@@ -39,7 +39,20 @@
 </body>
 
 <script> 
- 
+ function pivDim(ID,dim) {
+    var childClass = document.getElementsByClassName("child");
+    for (var j = 0; j < childClass.length; j++) {
+      if ("myDiv" + [j] == ID) {
+        document.getElementById(ID).style.borderLeftColor = "#FFFF00";
+	dim =j;
+      } else {
+        
+	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
+      }
+    }
+display(dim);
+	 
+  }
 
 // Read and process data from csv
 d3.csv(
@@ -389,20 +402,7 @@ d3.csv(
     }
   }
   
-  function pivDim(ID,dim) {
-    var childClass = document.getElementsByClassName("child");
-    for (var j = 0; j < childClass.length; j++) {
-      if ("myDiv" + [j] == ID) {
-        document.getElementById(ID).style.borderLeftColor = "#FFFF00";
-	dim =j;
-      } else {
-        
-	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
-      }
-    }
-display(dim);
-	 
-  }
+  
   
   }
 );
