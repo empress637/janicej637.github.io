@@ -290,9 +290,8 @@ d3.csv(
     }
 
     function buildPivotTraces(dimensions, pivot) {
-     
       for (var j = 0; j < dimensions.length; j++) {
-      var traces = [];
+        var traces = [];
 
         if (dimensions[j] == pivot) {
           for (var i = 0; i < getDimensions(dimensions[j]).length; i++) {
@@ -328,7 +327,7 @@ d3.csv(
             for (var k = 0; k < getDimensions(pivot).length; k++) {
               traces[i] = {
                 type: "bar",
-                name: '',  //getDimensions(pivot)[i],
+                name: "", //getDimensions(pivot)[i],
                 orientation: "h",
                 y: getDimensions(dimensions[j]),
                 x: groupVals,
@@ -347,19 +346,33 @@ d3.csv(
       return data;
     }
 
-    var layout = {
-      responsive: true,
-      width: 200,
-      barmode: "group",
-      showlegend: false,
-      labelfont: { size: 8 },
-      orientation: "h"
-    };
+ 
 
     data = buildPivotTraces(dimensionsInQuestion, pivotDimension);
 
     // Make plot
     for (var j = 0; j < data.length; j++) {
+      
+         var layout = {
+      barmode: "group",
+      showlegend: false,
+      labelfont: { size: 8 },
+      orientation: "h",
+        title: {
+    text: dimensionsInQuestion[j],
+    font: {
+      family: 'Courier New, monospace',
+      size: 24
+    },  xaxis: {
+    title: {
+      text: 'y Axis',
+      font: {
+        family: 'Courier New, monospace',
+        size: 8
+      }}}}
+    };
+      
+      
       Plotly.newPlot("myDiv" + [j], data[j], layout);
     }
   }
