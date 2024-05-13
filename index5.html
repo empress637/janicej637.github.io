@@ -401,6 +401,9 @@ d3.csv(
       
       
       Plotly.newPlot("myDiv" + [j], data[j], layout);
+
+	         if(dimensionsInQuestion[j] ==pivotDimension){
+        document.getElementById("myDiv" + [j]).style.borderLeftColor = "#FFFF00";}
     }
   }
   
