@@ -30,11 +30,11 @@
   </h2>
   <p>Please select the Pivot Dimension by clicking a gray bar.</p>
   <div class='parent' display='inline-block'>
-    <div class='child' onclick="pivDim('myDiv0')" id='myDiv0'></div>
-    <div class='child' onclick="pivDim('myDiv1')" id='myDiv1'></div>
-    <div class='child' onclick="pivDim('myDiv2')" id='myDiv2'></div>
-    <div class='child' onclick="pivDim('myDiv3')" id='myDiv3'></div>
-    <div class='child' onclick="pivDim('myDiv4')" id='myDiv4'></div>
+    <div class='child' onclick="pivDim('myDiv0',0)" id='myDiv0'></div>
+    <div class='child' onclick="pivDim('myDiv1',1)" id='myDiv1'></div>
+    <div class='child' onclick="pivDim('myDiv2',2)" id='myDiv2'></div>
+    <div class='child' onclick="pivDim('myDiv3',3)" id='myDiv3'></div>
+    <div class='child' onclick="pivDim('myDiv4',4)" id='myDiv4'></div>
   </div>
 </body>
 
@@ -52,10 +52,10 @@
 	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
       }
     }
-//display(dim);
+display(dim);
 	 
   }
-</script>
+
 // Read and process data from csv
 d3.csv(
   "https://raw.githubusercontent.com/empress637/empress637.github.io/main/titanic.csv",
