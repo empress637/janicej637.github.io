@@ -45,6 +45,8 @@
       if ("myDiv" + [j] == ID) {
         document.getElementById(ID).style.borderLeftColor = "#FFFF00";
 	dim =j;
+	      d3.select(ID).on("click", display(dim));
+
       } else {
         
 	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
