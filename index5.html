@@ -39,45 +39,29 @@
 </body>
 
 <script> 
- function pivDim(ID,dim) {
-    var childClass = document.getElementsByClassName("child");
-    for (var j = 0; j < childClass.length; j++) {
-      if ("myDiv" + [j] == ID) {
-        document.getElementById(ID).style.borderLeftColor = "#FFFF00";
-	dim =j;
-	      //d3.select(ID).on("click", display(dim));
+ pivDim("myDiv1", 1);
 
-      } else {
-        
-	       document.getElementById("myDiv" + [j]).style.borderLeft = "20px solid rgb(223, 231, 237)";
-      }
-    }
-display(dim);
-	 
-  }
+function pivDim(ID, dim) {
+  // Read and process data from csv
+  d3.csv(
+    "https://raw.githubusercontent.com/empress637/empress637.github.io/main/titanic.csv",
+    function (titanicData) {
+      const dimensionsInQuestion = [
+        "Age",
+        "Survived",
+        "Pclass",
+        "Sex",
+        "Embarked"
+      ]; // Dimension to visualize
+      var pivotDimension = dimensionsInQuestion[dim]; //Pivot that impacts all dimensions
+      var categories = {}; //Counts for all categories
+      var pivotCategories = {}; //Counts for all categories with Pivot
+      var val, pivotVal; //Values from each record
+      var keysArr = []; //Array of keys for categories/pivotCategories
+      var traces = dimensionsInQuestion.keys();
+      var data = []; //Traces values
 
-// Read and process data from csv
-d3.csv(
-  "https://raw.githubusercontent.com/empress637/empress637.github.io/main/titanic.csv",
-  function (titanicData) {
-    const dimensionsInQuestion = [
-      "Age",
-      "Survived",
-      "Pclass",
-      "Sex",
-      "Embarked"
-    ]; // Dimension to visualize
-    var pivotDimension = dimensionsInQuestion[3]; //Pivot that impacts all dimensions
-    var categories = {}; //Counts for all categories
-    var pivotCategories = {}; //Counts for all categories with Pivot
-    var val, pivotVal; //Values from each record
-    var keysArr = []; //Array of keys for categories/pivotCategories
-    var traces = dimensionsInQuestion.keys();
-    var data = []; //Traces values
-
-
-
-    /*
+      /*
  --------------DEBUGGING NOTES-------------
   console.log(Object.keys(titanicData[1]));     //Headers Array
   console.log(Object.keys(titanicData[1])[10]); //Survived
@@ -89,328 +73,333 @@ d3.csv(
   console.log(titanicData[15][headers[10]]);  //value of passenger 15 under header 10
   console.log(Object.keys(categories)[1]);  // Keys for Dimension_Category
 */
-   // console.log(processData(titanicData));
- processData(titanicData,pivotDimension);
-   display(pivotDimension);
+      //console.log(processData(titanicData, pivotDimension));
+      processData(titanicData, pivotDimension);
+      display(pivotDimension);
 
-    function processData(titanicData,pivotDimension) {
-
-	         categories = {};
-      pivotCategories ={};
-      for (
-        var j = 0, jj = dimensionsInQuestion.length;
-        j < jj;
-        j++ // Get counts for dimensionsInQuestion
-      ) {
+      function processData(titanicData, pivotDimension) {
         for (
-          var i = 0, ii = titanicData.length;
-          i < ii;
-          i++ // Get counts per category
+          var j = 0, jj = dimensionsInQuestion.length;
+          j < jj;
+          j++ // Get counts for dimensionsInQuestion
         ) {
-          // Assign value to val variable and handle for nulls
-          if (titanicData[i][dimensionsInQuestion[j]].length > 0) {
-            val = titanicData[i][dimensionsInQuestion[j]];
-            pivotVal = titanicData[i][pivotDimension];
-          } else {
-            val = "Unknown";
-          }
-
-          // Handle Age Category by grouping into Child, Teen, Adult
-          if (dimensionsInQuestion[j] == "Age") {
-            switch (dimensionsInQuestion[j] == "Age") {
-              case val < 13:
-                val = "Child";
-
-                break;
-              case val > 12 && val < 20:
-                val = "Teen";
-
-                break;
-              case val > 20:
-                val = "Adult";
-
-                break;
-              default:
-                val = "Unknown";
-            }
-          }
-
-          if (pivotDimension == "Age") {
-            switch (pivotDimension == "Age") {
-              case pivotVal < 13:
-                pivotVal = "Child";
-
-                break;
-              case pivotVal > 12 && pivotVal < 20:
-                pivotVal = "Teen";
-                break;
-              case pivotVal > 20:
-                pivotVal = "Adult";
-                break;
-              default:
-                pivotVal = "Unknown";
-            }
-          }
-
-          // Handle Survived Category by decoding 1 to Yes, 0 to No
-          if (dimensionsInQuestion[j] == "Survived") {
-            switch (dimensionsInQuestion[j] == "Survived") {
-              case val == 1:
-                val = "Yes";
-
-                break;
-              default:
-                val = "No";
-            }
-          }
-
-          // Handle Survived Category by decoding 1 to Yes, 0 to No
-          if (pivotDimension == "Survived") {
-            switch (pivotDimension == "Survived") {
-              case pivotVal == 1:
-                pivotVal = "Yes";
-                break;
-              default:
-                pivotVal = "No";
-            }
-          }
-
-          //Get total counts for each dimension
-          if (!categories[dimensionsInQuestion[j] + "|" + val]) {
-            categories[dimensionsInQuestion[j] + "|" + val] = 1;
-            //categories[dimensionsInQuestion[j] + "_" + val]= 1;
-          } else {
-            categories[dimensionsInQuestion[j] + "|" + val]++;
-          }
-
-          //Get Counts by Pivot Dimension and exclude Pivot Dimension recount
-          if (dimensionsInQuestion[j] != pivotDimension) {
-            if (
-              !pivotCategories[
-                dimensionsInQuestion[j] +
-                  "|" +
-                  val +
-                  "_" +
-                  pivotDimension +
-                  "|" +
-                  pivotVal
-              ]
-            ) {
-              pivotCategories[
-                dimensionsInQuestion[j] +
-                  "|" +
-                  val +
-                  "_" +
-                  pivotDimension +
-                  "|" +
-                  pivotVal
-              ] = 1;
+          for (
+            var i = 0, ii = titanicData.length;
+            i < ii;
+            i++ // Get counts per category
+          ) {
+            // Assign value to val variable and handle for nulls
+            if (titanicData[i][dimensionsInQuestion[j]].length > 0) {
+              val = titanicData[i][dimensionsInQuestion[j]];
+              pivotVal = titanicData[i][pivotDimension];
             } else {
-              pivotCategories[
-                dimensionsInQuestion[j] +
-                  "|" +
-                  val +
-                  "_" +
-                  pivotDimension +
-                  "|" +
-                  pivotVal
-              ]++;
+              val = "Unknown";
+            }
+
+            // Handle Age Category by grouping into Child, Teen, Adult
+            if (dimensionsInQuestion[j] == "Age") {
+              switch (dimensionsInQuestion[j] == "Age") {
+                case val < 13:
+                  val = "Child";
+
+                  break;
+                case val > 12 && val < 20:
+                  val = "Teen";
+
+                  break;
+                case val > 20:
+                  val = "Adult";
+
+                  break;
+                default:
+                  val = "Unknown";
+              }
+            }
+
+            if (pivotDimension == "Age") {
+              switch (pivotDimension == "Age") {
+                case pivotVal < 13:
+                  pivotVal = "Child";
+
+                  break;
+                case pivotVal > 12 && pivotVal < 20:
+                  pivotVal = "Teen";
+                  break;
+                case pivotVal > 20:
+                  pivotVal = "Adult";
+                  break;
+                default:
+                  pivotVal = "Unknown";
+              }
+            }
+
+            // Handle Survived Category by decoding 1 to Yes, 0 to No
+            if (dimensionsInQuestion[j] == "Survived") {
+              switch (dimensionsInQuestion[j] == "Survived") {
+                case val == 1:
+                  val = "Yes";
+
+                  break;
+                default:
+                  val = "No";
+              }
+            }
+
+            // Handle Survived Category by decoding 1 to Yes, 0 to No
+            if (pivotDimension == "Survived") {
+              switch (pivotDimension == "Survived") {
+                case pivotVal == 1:
+                  pivotVal = "Yes";
+                  break;
+                default:
+                  pivotVal = "No";
+              }
+            }
+
+            //Get total counts for each dimension
+            if (!categories[dimensionsInQuestion[j] + "|" + val]) {
+              categories[dimensionsInQuestion[j] + "|" + val] = 1;
+              //categories[dimensionsInQuestion[j] + "_" + val]= 1;
+            } else {
+              categories[dimensionsInQuestion[j] + "|" + val]++;
+            }
+
+            //Get Counts by Pivot Dimension and exclude Pivot Dimension recount
+            if (dimensionsInQuestion[j] != pivotDimension) {
+              if (
+                !pivotCategories[
+                  dimensionsInQuestion[j] +
+                    "|" +
+                    val +
+                    "_" +
+                    pivotDimension +
+                    "|" +
+                    pivotVal
+                ]
+              ) {
+                pivotCategories[
+                  dimensionsInQuestion[j] +
+                    "|" +
+                    val +
+                    "_" +
+                    pivotDimension +
+                    "|" +
+                    pivotVal
+                ] = 1;
+              } else {
+                pivotCategories[
+                  dimensionsInQuestion[j] +
+                    "|" +
+                    val +
+                    "_" +
+                    pivotDimension +
+                    "|" +
+                    pivotVal
+                ]++;
+              }
             }
           }
         }
+
+        categories = sort(categories);
+        pivotCategories = sort(pivotCategories);
+
+        return [categories, pivotCategories];
       }
 
-      categories = sort(categories);
-      pivotCategories = sort(pivotCategories);
+      function sort(dim) {
+        const arrOfArrays = Object.entries(dim);
+        const sorted = arrOfArrays.sort((a, b) => {
+          return b[0].localeCompare(a[0]);
+        });
 
-      return [categories, pivotCategories];
-    }
-
-    function sort(dim) {
-      const arrOfArrays = Object.entries(dim);
-      const sorted = arrOfArrays.sort((a, b) => {
-        return b[0].localeCompare(a[0]);
-      });
-
-      return Object.fromEntries(sorted);
-    }
-   function getDimensions(dim) {
-      keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
-      
-      for (var j = 0; j < keysArr.length; j++) {
-          keysArr[j] = keysArr[j].replace(dim+'|','');
+        return Object.fromEntries(sorted);
       }
-      return keysArr;
-    }
+      function getDimensions(dim) {
+        keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
 
-    function getCount(dim) {
-      keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
-      var valArr = [];
-      for (var j = 0; j < keysArr.length; j++) {
-        valArr[j] = categories[keysArr[j]];
+        for (var j = 0; j < keysArr.length; j++) {
+          keysArr[j] = keysArr[j].replace(dim + "|", "");
+        }
+        return keysArr;
       }
-      return valArr;
-    }
 
-    function getGroupCount(dim, p) {
-      var valArr = [];
-      var groupData = Object.keys(categories).filter((k) => k.startsWith(dim));
-
-      if (p > 0) {
-        valArr = [];
-        keysArr = Object.keys(categories)
-          .filter((key) => groupData.includes(key))
-          .reduce((obj, key) => {
-            obj[key] = categories[key];
-            return Object.values(obj);
-          }, {});
-
+      function getCount(dim) {
+        keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
+        var valArr = [];
         for (var j = 0; j < keysArr.length; j++) {
           valArr[j] = categories[keysArr[j]];
         }
-      } else {
-        valArr = [];
-        keysArr = Object.keys(pivotCategories)
-          .filter((key) => groupData.includes(key))
-          .reduce((obj, key) => {
-            obj[key] = pivotCategories[key];
-            return Object.values(obj);
-          }, {});
+        return valArr;
+      }
+
+      function getGroupCount(dim, p) {
+        var valArr = [];
+        var groupData = Object.keys(categories).filter((k) =>
+          k.startsWith(dim)
+        );
+
+        if (p > 0) {
+          valArr = [];
+          keysArr = Object.keys(categories)
+            .filter((key) => groupData.includes(key))
+            .reduce((obj, key) => {
+              obj[key] = categories[key];
+              return Object.values(obj);
+            }, {});
+
+          for (var j = 0; j < keysArr.length; j++) {
+            valArr[j] = categories[keysArr[j]];
+          }
+        } else {
+          valArr = [];
+          keysArr = Object.keys(pivotCategories)
+            .filter((key) => groupData.includes(key))
+            .reduce((obj, key) => {
+              obj[key] = pivotCategories[key];
+              return Object.values(obj);
+            }, {});
+          for (var j = 0; j < keysArr.length; j++) {
+            valArr[j] = pivotCategories[keysArr[j]];
+          }
+        }
+
+        return valArr;
+      }
+
+      function getPivotDimensions(dim) {
+        keysArr = Object.keys(pivotCategories).filter((k) => k.startsWith(dim));
+        return keysArr;
+      }
+      function getPivotCount(dim) {
+        keysArr = Object.keys(pivotCategories).filter((k) => k.startsWith(dim));
+        var valArr = [];
         for (var j = 0; j < keysArr.length; j++) {
           valArr[j] = pivotCategories[keysArr[j]];
         }
+
+        return valArr;
       }
 
-      return valArr;
-    }
-
-    function getPivotDimensions(dim) {
-      keysArr = Object.keys(pivotCategories).filter((k) => k.startsWith(dim));
-      return keysArr;
-    }
-    function getPivotCount(dim) {
-      keysArr = Object.keys(pivotCategories).filter((k) => k.startsWith(dim));
-      var valArr = [];
-      for (var j = 0; j < keysArr.length; j++) {
-        valArr[j] = pivotCategories[keysArr[j]];
-      }
-
-      return valArr;
-    }
-
-    function getPivotColors(dim) {
-      var keysArr = Object.keys(pivotCategories).filter((k) =>
-        k.startsWith(dim)
-      );
-      var col = [];
-      for (var i = 0; i < keysArr.length; i++) {
-        for (var j = 0; j < getDimensions(pivotDimension).length; j++) {
-          if (keysArr[i].endsWith(getDimensions(pivotDimension)[j])) {
-            col[keysArr[i]] = getCount(pivotDimension)[j];
+      function getPivotColors(dim) {
+        var keysArr = Object.keys(pivotCategories).filter((k) =>
+          k.startsWith(dim)
+        );
+        var col = [];
+        for (var i = 0; i < keysArr.length; i++) {
+          for (var j = 0; j < getDimensions(pivotDimension).length; j++) {
+            if (keysArr[i].endsWith(getDimensions(pivotDimension)[j])) {
+              col[keysArr[i]] = getCount(pivotDimension)[j];
+            }
           }
         }
+        return col;
       }
-      return col;
-    }
-    function myFunction(element) {
-      element.style.border_color = "yellow";
-    }
 
-    function buildPivotTraces(dimensions, pivot) {
-      for (var j = 0; j < dimensions.length; j++) {
-        var traces = [];
+      function buildPivotTraces(dimensions, pivot) {
+        for (var j = 0; j < dimensions.length; j++) {
+          var traces = [];
 
-        if (dimensions[j] == pivot) {
-          for (var i = 0; i < getDimensions(dimensions[j]).length; i++) {
-            traces[i] = {
-              type: "bar",
-              name: "",
-              orientation: "h",
-              y: [getDimensions(dimensions[j])[i]], // array of keys
-              x: [getCount(dimensions[j])[i]],
-              marker: {
-                color: getCount(dimensions[j])[i]
-              },
-              hoverinfo: "count+probability",
-              labelfont: { size: 8 }
-            };
-          }
-          data[j] = traces;
-        } else {
-          for (var i = 0; i < getDimensions(pivot).length; i++) {
-            var groupData = Object.keys(pivotCategories).filter(
-              (k) =>
-                k.startsWith(dimensions[j]) &&
-                k.endsWith(getDimensions(pivot)[i])
-            );
-
-            var groupVals = Object.keys(pivotCategories)
-              .filter((key) => groupData.includes(key))
-              .reduce((obj, key) => {
-                obj[key] = pivotCategories[key];
-                return Object.values(obj);
-              }, {});
-
-            for (var k = 0; k < getDimensions(pivot).length; k++) {
+          //Get Pivot Dimension counts
+          if (dimensions[j] == pivot) {
+            for (var i = 0; i < getDimensions(dimensions[j]).length; i++) {
               traces[i] = {
                 type: "bar",
-                name: "", //getDimensions(pivot)[i],
+                name: "",
                 orientation: "h",
-                y: getDimensions(dimensions[j]),
-                x: groupVals,
+                y: [getDimensions(dimensions[j])[i]], // array of keys
+                x: [getCount(dimensions[j])[i]],
                 marker: {
-                  color: getPivotColors(dimensions[j])[i]
+                  color: getCount(dimensions[j])[i]
                 },
                 hoverinfo: "count+probability",
                 labelfont: { size: 8 }
               };
             }
+            data[j] = traces;
+          } else {
+            // Get Dimension Counts
+            for (var i = 0; i < getDimensions(pivot).length; i++) {
+              var groupData = Object.keys(pivotCategories).filter(
+                (k) =>
+                  k.startsWith(dimensions[j]) &&
+                  k.endsWith(getDimensions(pivot)[i])
+              );
+
+              var groupVals = Object.keys(pivotCategories)
+                .filter((key) => groupData.includes(key))
+                .reduce((obj, key) => {
+                  obj[key] = pivotCategories[key];
+                  return Object.values(obj);
+                }, {});
+
+              for (var k = 0; k < getDimensions(pivot).length; k++) {
+                traces[i] = {
+                  type: "bar",
+                  name: "", //getDimensions(pivot)[i],
+                  orientation: "h",
+                  y: getDimensions(dimensions[j]),
+                  x: groupVals,
+                  marker: {
+                    color: getPivotColors(dimensions[j])[i]
+                  },
+                  hoverinfo: "count+probability",
+                  labelfont: { size: 8 }
+                };
+              }
+            }
+            data[j] = traces;
           }
-          data[j] = traces;
         }
+
+        return data;
       }
 
-      return data;
+      function display(pivotDimension) {
+        // Build Traces
+        data = buildPivotTraces(dimensionsInQuestion, pivotDimension);
+
+        // Make plot
+        for (var j = 0; j < data.length; j++) {
+          var layout = {
+            barmode: "group",
+            showlegend: false,
+            labelfont: { size: 8 },
+            orientation: "h",
+            title: {
+              text: dimensionsInQuestion[j],
+              font: {
+                family: "Courier New, monospace",
+                size: 24,
+                weight: "bold"
+              }
+            }
+          };
+
+          Plotly.newPlot("myDiv" + [j], data[j], layout);
+
+          if (dimensionsInQuestion[j] == pivotDimension) {
+            document.getElementById("myDiv" + [j]).style.borderLeftColor =
+              "#FFFF00";
+          }
+        }
+        update(ID, dim);
+      }
+
+      function update(ID, dim) {
+        var childClass = document.getElementsByClassName("child");
+        for (var j = 0; j < childClass.length; j++) {
+          if ("myDiv" + [j] == ID) {
+            document.getElementById(ID).style.borderLeftColor = "#FFFF00";
+            dim = j;
+          } else {
+            document.getElementById("myDiv" + [j]).style.borderLeft =
+              "20px solid rgb(223, 231, 237)";
+          }
+        }
+      }
     }
-
- function display(pivotDimension){
- processData(titanicData,pivotDimension);
-    data = buildPivotTraces(dimensionsInQuestion, pivotDimension);
-
-    // Make plot
-    for (var j = 0; j < data.length; j++) {
-      
-         var layout = {
-      barmode: "group",
-      showlegend: false,
-      labelfont: { size: 8 },
-      orientation: "h",
-        title: {
-    text: dimensionsInQuestion[j],
-    font: {
-      family: 'Courier New, monospace',
-      size: 24
-    },  xaxis: {
-    title: {
-      text: 'y Axis',
-      font: {
-        family: 'Courier New, monospace',
-        size: 8
-      }}}}
-    };
-      
-      
-      Plotly.newPlot("myDiv" + [j], data[j], layout);
-
-	         if(dimensionsInQuestion[j] ==pivotDimension){
-        document.getElementById("myDiv" + [j]).style.borderLeftColor = "#FFFF00";}
-    }
-  }
-  
-  
-  
-  }
-);
+}
 
 
 	</script>
