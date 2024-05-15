@@ -5,94 +5,109 @@
 
 </head>
 <style>
-  .parent {
+  .drag-list {
     text-align: left;
     responsive: true;
     flex-flow: row nowrap;
     width: 100vw;
   }
 
-  .child {
-    display: inline-block;
+  .drag-item {
     border-left: 20px solid;
     float: left;
-    white-space: nowrap;
+    height: 80vh;
     width: calc(90vw/5);
     border-color: rgb(223, 231, 237);
+    cursor: move;
   }
-	
-.mydivheader {
-  padding: 10px;
-  cursor: move;
-  z-index: 10;
-  background-color: #2196F3;
-  color: #fff;
-}
-  }
+
+  /*https://codepen.io/w3resource/pen/mdQrGGZ*/
 </style>
+
 <body>
   <h2 class="red-text" style="color: green;">
     <a href="https://empress637.github.io/">
       Home
     </a>
   </h2>
-	<p>Pivoting Parallel Charts (PPC) visualization technique allows users to designate one dimension as the pivot or crucial point of consideration for all data relationships.The bar color of each category in the pivot dimension is used to represent the pivot category across all dimensions. </p>
+  <p>Pivoting Parallel Charts (PPC) visualization technique allows users to designate one dimension as the pivot or crucial point of consideration for all data relationships.The bar color of each category in the pivot dimension is used to represent the pivot category across all dimensions. </p>
   <p>Please select the Pivot Dimension by clicking a gray bar.</p>
-  <div class='parent' display='inline-block'>
-    <div class='child' onclick="pivDim('myDiv0',0)" id='myDiv0'> <div id="mydivheader">Click here to move</div></div>
-    <div class='child' onclick="pivDim('myDiv1',1)" id='myDiv1'></div>
-    <div class='child' onclick="pivDim('myDiv2',2)" id='myDiv2'></div>
-    <div class='child' onclick="pivDim('myDiv3',3)" id='myDiv3'></div>
-    <div class='child' onclick="pivDim('myDiv4',4)" id='myDiv4'></div>
+  
+  <p>Please select the Pivot Dimension by clicking a gray bar.</p>
+  <div display='inline-block' id="dragList" class="drag-list">
+
+    <div class="drag-item" draggable="true" onclick="pivDim('myDiv0',0)" id='myDiv0'></div>
+    <div class="drag-item" draggable="true" onclick="pivDim('myDiv1',1)" id='myDiv1'></div>
+    <div class="drag-item" draggable="true" onclick="pivDim('myDiv2',2)" id='myDiv2'></div>
+    <div class="drag-item" draggable="true" onclick="pivDim('myDiv3',3)" id='myDiv3'></div>
+    <div class="drag-item" draggable="true" onclick="pivDim('myDiv4',4)" id='myDiv4'></div>
   </div>
 </body>
-
 <script> 
-pivDim("myDiv1", 1);
+// https://codepen.io/w3resource/pen/mdQrGGZ
 
-// Make the DIV element draggable:
-dragElement(document.getElementById("myDiv0"));
+const dragList = document.getElementById("dragList");
+let draggedItem = null;
 
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
-  }
+// Add event listeners for drag and drop events
+dragList.addEventListener("dragstart", handleDragStart);
+dragList.addEventListener("dragover", handleDragOver);
+dragList.addEventListener("drop", handleDrop);
 
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
+// Drag start event handler
+function handleDragStart(event) {
+  draggedItem = event.target;
+  event.dataTransfer.effectAllowed = "move";
+  event.dataTransfer.setData("text/html", draggedItem.innerHTML);
+  event.target.style.opacity = "0.5";
+}
 
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
+// Drag over event handler
+function handleDragOver(event) {
+  event.preventDefault();
+  event.dataTransfer.dropEffect = "move";
+  const targetItem = event.target;
+  if (
+    targetItem !== draggedItem &&
+    targetItem.classList.contains("drag-item")
+  ) {
+    const boundingRect = targetItem.getBoundingClientRect();
+    const offset = boundingRect.y + boundingRect.height / 2;
+    if (event.clientY - offset > 0) {
+      targetItem.style.borderBottom = "solid 2px #000";
+      targetItem.style.borderTop = "";
+    } else {
+      targetItem.style.borderTop = "solid 2px #000";
+      targetItem.style.borderBottom = "";
+    }
   }
 }
+
+// Drop event handler
+function handleDrop(event) {
+  event.preventDefault();
+  const targetItem = event.target;
+  if (
+    targetItem !== draggedItem &&
+    targetItem.classList.contains("drag-item")
+  ) {
+    if (
+      event.clientY >
+      targetItem.getBoundingClientRect().top + targetItem.offsetHeight / 2
+    ) {
+      targetItem.parentNode.insertBefore(draggedItem, targetItem.nextSibling);
+    } else {
+      targetItem.parentNode.insertBefore(draggedItem, targetItem);
+    }
+  }
+  targetItem.style.borderTop = "";
+  targetItem.style.borderBottom = "";
+  draggedItem.style.opacity = "";
+  draggedItem = null;
+}
+
+pivDim("myDiv1", 1);
+
 function pivDim(ID, dim) {
   // Read and process data from csv
   d3.csv(
@@ -128,7 +143,7 @@ function pivDim(ID, dim) {
       //console.log(processData(titanicData, pivotDimension));
       processData(titanicData, pivotDimension);
       display(pivotDimension);
-
+      update(ID, dim);
       function processData(titanicData, pivotDimension) {
         for (
           var j = 0, jj = dimensionsInQuestion.length;
@@ -435,11 +450,10 @@ function pivDim(ID, dim) {
               "#FFFF00";
           }
         }
-        update(ID, dim);
       }
 
       function update(ID, dim) {
-        var childClass = document.getElementsByClassName("child");
+        var childClass = document.getElementsByClassName("drag-item");
         for (var j = 0; j < childClass.length; j++) {
           if ("myDiv" + [j] == ID) {
             document.getElementById(ID).style.borderLeftColor = "#FFFF00";
@@ -453,7 +467,6 @@ function pivDim(ID, dim) {
     }
   );
 }
-
 
 
 	</script>
