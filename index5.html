@@ -20,6 +20,14 @@
     width: calc(90vw/5);
     border-color: rgb(223, 231, 237);
   }
+	
+.mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
   }
 </style>
 <body>
@@ -28,10 +36,10 @@
       Home
     </a>
   </h2>
-	<p>Pivoting Parallel Charts (PPC) visualization technique allows users to designate one dimension as the pivot or crucial point of consideration for all data relationships. Any dimension can be designated as the pivot in PPC. Then, categories from the pivot dimension are used to group the data of each dimension. The bar color of each category in the pivot dimension is used to represent the pivot category across all dimensions. </p>
+	<p>Pivoting Parallel Charts (PPC) visualization technique allows users to designate one dimension as the pivot or crucial point of consideration for all data relationships.The bar color of each category in the pivot dimension is used to represent the pivot category across all dimensions. </p>
   <p>Please select the Pivot Dimension by clicking a gray bar.</p>
   <div class='parent' display='inline-block'>
-    <div class='child' onclick="pivDim('myDiv0',0)" id='myDiv0'></div>
+    <div class='child' onclick="pivDim('myDiv0',0)" id='myDiv0'> <div id="mydivheader">Click here to move</div></div>
     <div class='child' onclick="pivDim('myDiv1',1)" id='myDiv1'></div>
     <div class='child' onclick="pivDim('myDiv2',2)" id='myDiv2'></div>
     <div class='child' onclick="pivDim('myDiv3',3)" id='myDiv3'></div>
@@ -42,6 +50,49 @@
 <script> 
 pivDim("myDiv1", 1);
 
+// Make the DIV element draggable:
+dragElement(document.getElementById("myDiv0"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
 function pivDim(ID, dim) {
   // Read and process data from csv
   d3.csv(
