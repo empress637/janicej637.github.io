@@ -31,7 +31,6 @@
     </a>
   </h2>
   <p>Pivoting Parallel Charts (PPC) visualization technique allows users to designate one dimension as the pivot or crucial point of consideration for all data relationships.The bar color of each category in the pivot dimension is used to represent the pivot category across all dimensions. </p>
-  <p>Please select the Pivot Dimension by clicking a gray bar.</p>
   
   <p>Please select the Pivot Dimension by clicking a gray bar.</p>
   <div display='inline-block' id="dragList" class="drag-list">
@@ -74,7 +73,7 @@ function handleDragOver(event) {
     const boundingRect = targetItem.getBoundingClientRect();
     const offset = boundingRect.y + boundingRect.height / 2;
     if (event.clientY - offset > 0) {
-      targetItem.style.borderBottom = "solid 2px #000";
+      targetItem.style.borderBottom = "solid 2px #ff0000";
       targetItem.style.borderTop = "";
     } else {
       targetItem.style.borderTop = "solid 2px #000";
