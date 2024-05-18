@@ -1,12 +1,37 @@
 <head>
-  <!-- Load plotly.js into the DOM -->
-  <script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
+  <!-- Load plotly.js into the DOM 
+https://gradients.shecodes.io/gradients-->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+  <script src='https://cdn.plot.ly/plotly-2.32.0.min.js'></script>
 
-</head>
+</head>>
 <style>
   .drag-list {
-    text-align: left;
+    align: left;
+    responsive: true;
+    flex-flow: row nowrap;
+    width: 100vw;
+  }
+
+  .drag-item {
+    border-left: 20px solid;
+    float: left;
+    height: 80vh;
+    width: calc(90vw/5);
+    border-color: rgb(223, 231, 237);
+    cursor: move;
+  }
+
+  /*https://codepen.io/w3resource/pen/mdQrGGZ*/<head>
+  <!-- Load plotly.js into the DOM 
+https://gradients.shecodes.io/gradients-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+  <script src='https://cdn.plot.ly/plotly-2.32.0.min.js'></script>
+
+</head>>
+<style>
+  .drag-list {
+    align: left;
     responsive: true;
     flex-flow: row nowrap;
     width: 100vw;
@@ -24,26 +49,38 @@
   /*https://codepen.io/w3resource/pen/mdQrGGZ*/
 </style>
 
-<body>
+<body style="background-color: black">
+
+</style>
+
+<body style="background-color: black">
+
   <h2 class="red-text" style="color: green;">
     <a href="https://empress637.github.io/">
       Home
     </a>
   </h2>
-  <p>Pivoting Parallel Charts (PPC) visualization technique allows users to designate one dimension as the pivot or crucial point of consideration for all data relationships.The bar color of each category in the pivot dimension is used to represent the pivot category across all dimensions. </p>
-  
-<p>Click to select  or drag to change location of Pivot Dimension.</p>
-  <div display='inline-block' id="dragList" class="drag-list">
+  <div style="color: white; background-color: black;   text-align: center; border-bottom: 20px solid; border-top: 20px solid;  width: calc(100vw); text-size: 24;">
 
-    <div class="drag-item" draggable="true" onclick="pivDim('myDiv0',0)" id='myDiv0'></div>
+    <h1 style="margin-bottom: 0.1em;">Pivoting Parallel Charts (PPC)</h1>
+    <p style='margin-top: 0em;'> - A Multivariate Categorical Data Visualization Technique -</p>
+    <p> Click to select the Pivot Dimension or drag any dimension to a new location. The bar color of each category in the pivot dimension represents the pivot category across all dimensions. </p>
+  </div>
+  <div style="color: white; text-align: center;">
+
+  </div>
+  <div display='inline-block' id="dragList" class="drag-list" style="color: black; background-color: #FDD017;">
+
+    <div class="drag-item" draggable="true" onclick="pivDim('myDiv0',0)" id='myDiv0' style="color: black; background-color: #FDD017;"></div>
     <div class="drag-item" draggable="true" onclick="pivDim('myDiv1',1)" id='myDiv1'></div>
     <div class="drag-item" draggable="true" onclick="pivDim('myDiv2',2)" id='myDiv2'></div>
     <div class="drag-item" draggable="true" onclick="pivDim('myDiv3',3)" id='myDiv3'></div>
     <div class="drag-item" draggable="true" onclick="pivDim('myDiv4',4)" id='myDiv4'></div>
   </div>
 </body>
-<script> 
-// https://codepen.io/w3resource/pen/mdQrGGZ
+	<script>
+	
+	// https://codepen.io/w3resource/pen/mdQrGGZ
 
 const dragList = document.getElementById("dragList");
 let draggedItem = null;
@@ -71,12 +108,12 @@ function handleDragOver(event) {
     targetItem.classList.contains("drag-item")
   ) {
     const boundingRect = targetItem.getBoundingClientRect();
-    const offset = boundingRect.y + boundingRect.height / 2;
+    const offset = boundingRect.y * 2 + boundingRect.height / 2;
     if (event.clientY - offset > 0) {
-      targetItem.style.borderBottom = "solid 2px #ff0000";
-      targetItem.style.borderTop = "";
+      targetItem.style.borderBottom = "solid 2px #ff0000 ";
+      targetItem.style.borderTop = "solid 2px #ff0000 ";
     } else {
-      targetItem.style.borderTop = "solid 2px #000";
+      targetItem.style.borderTop = "solid 2px #000 ";
       targetItem.style.borderBottom = "";
     }
   }
@@ -92,7 +129,7 @@ function handleDrop(event) {
   ) {
     if (
       event.clientY >
-      targetItem.getBoundingClientRect().top + targetItem.offsetHeight / 2
+      targetItem.getBoundingClientRect().top + targetItem.offsetHeight / 5
     ) {
       targetItem.parentNode.insertBefore(draggedItem, targetItem.nextSibling);
     } else {
@@ -102,7 +139,6 @@ function handleDrop(event) {
   targetItem.style.borderTop = "";
   targetItem.style.borderBottom = "";
   draggedItem.style.opacity = "";
-  draggedItem = null;
 }
 
 pivDim("myDiv1", 1);
@@ -376,7 +412,11 @@ function pivDim(ID, dim) {
                 y: [getDimensions(dimensions[j])[i]], // array of keys
                 x: [getCount(dimensions[j])[i]],
                 marker: {
-                  color: getCount(dimensions[j])[i]
+                  color: getCount(dimensions[j])[i],
+                  line: {
+                    color: "#FDD017",
+                    width: 2
+                  }
                 },
                 hoverinfo: "count+probability",
                 labelfont: { size: 8 }
@@ -401,13 +441,18 @@ function pivDim(ID, dim) {
 
               for (var k = 0; k < getDimensions(pivot).length; k++) {
                 traces[i] = {
+                  backgroundColor: "black",
                   type: "bar",
                   name: "", //getDimensions(pivot)[i],
                   orientation: "h",
                   y: getDimensions(dimensions[j]),
                   x: groupVals,
                   marker: {
-                    color: getPivotColors(dimensions[j])[i]
+                    color: getPivotColors(dimensions[j])[i],
+                    line: {
+                      color: "rgb(223, 231, 237)",
+                      width: 2
+                    }
                   },
                   hoverinfo: "count+probability",
                   labelfont: { size: 8 }
@@ -428,16 +473,20 @@ function pivDim(ID, dim) {
         // Make plot
         for (var j = 0; j < data.length; j++) {
           var layout = {
-            barmode: "group",
+            scattermode: "group",
+            paper_bgcolor: "black",
+            barcornerradius: 10,
             showlegend: false,
             labelfont: { size: 8 },
             orientation: "h",
+            plot_bgcolor: "black",
+            borderRadius: "30%",
             title: {
               text: dimensionsInQuestion[j],
               font: {
-                family: "Courier New, monospace",
                 size: 24,
-                weight: "bold"
+                weight: "bold",
+                color: "white"
               }
             }
           };
@@ -446,7 +495,7 @@ function pivDim(ID, dim) {
 
           if (dimensionsInQuestion[j] == pivotDimension) {
             document.getElementById("myDiv" + [j]).style.borderLeftColor =
-              "#FFFF00";
+              "#FDD017";
           }
         }
       }
@@ -455,7 +504,8 @@ function pivDim(ID, dim) {
         var childClass = document.getElementsByClassName("drag-item");
         for (var j = 0; j < childClass.length; j++) {
           if ("myDiv" + [j] == ID) {
-            document.getElementById(ID).style.borderLeftColor = "#FFFF00";
+            document.getElementById(ID).style.borderLeftColor = "#FDD017";
+
             dim = j;
           } else {
             document.getElementById("myDiv" + [j]).style.borderLeft =
@@ -466,8 +516,4 @@ function pivDim(ID, dim) {
     }
   );
 }
-
-
 	</script>
-
-
