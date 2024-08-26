@@ -14,7 +14,7 @@ A Multivariate Categorical Data Visualization Technique
     align: center;
     responsive: true;
     width: 100vw;
-    height: 70vh;
+    height: 50vh;
     background-color: transparent;
     color: rgb(136, 220, 240);
     flex-flow: row nowrap;
@@ -23,7 +23,7 @@ A Multivariate Categorical Data Visualization Technique
   .drag-item {
     border-left: 10px #000080;
     float: left;
-    height: 100%;
+    height: 65vh;
     width: calc(90vw/4);
     cursor: move;
     background-color: transparent;
@@ -51,10 +51,10 @@ A Multivariate Categorical Data Visualization Technique
   <div style=" text-align: center;  width: calc(100vw); text-size: 24; padding:5;">
 
     <h1 style="margin-bottom: 0.1em; color: #000080;">
-      Pivoting Parallel Charts (PPC)
+      Pivoting Parallel Charts
     </h1>
 
-    <!-- <p style='margin-top: 0em;color: #000080;'> - A Multivariate Categorical Data Visualization Technique -</p>-->
+    <p style='margin-top: 0em;color: #000080;'> - A Multivariate Categorical Data Visualization Technique -</p>
     <div id="begin">
       <!-- afterbegin -->
     </div>
@@ -80,10 +80,8 @@ A Multivariate Categorical Data Visualization Technique
   </div>
 
 </body>
-
-<script>
-
-  /*Author: Janice James
+	<script>
+/*Author: Janice James
 //Pivoting Parallel Charts (PPC)
 //A Multivariate Categorical Data Visualization Technique
 
@@ -92,6 +90,8 @@ A Multivariate Categorical Data Visualization Technique
 //https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/mushrooms.csv
 
 https://aiplanet.com/notebooks/2648/dphi_official/data-pre-processing-using-titanic-dataset
+
+//https://www.sitepoint.com/javascript-generate-lighter-darker-color/#:~:text=To%20generate%20a%20lighter%20or%20darker%20color%20using%20JavaScript%2C%20you,back%20to%20RGB%20or%20HEX.
 
 //DragList of plots to allow dimension reordering
 */
@@ -151,6 +151,11 @@ function handleDrop(event) {
       targetItem.parentNode.insertBefore(draggedItem, targetItem);
     }
   }
+
+  if (format == "Crossover") {
+    pivCrossDim(pivotDimension, addDim());
+  }
+  //console.log(pivotDimension, format, addDim());
   targetItem.style.borderTop = "";
   draggedItem.style.borderTop = "";
   draggedItem.style.opacity = "";
@@ -166,23 +171,6 @@ function handleDrop(event) {
 
   // console.log(format);
 
-  if (format == "Crossover") {
-    let posArr2 = Array.from(
-      document.getElementsByClassName("drag-item"),
-      (e) => e.getAttribute("name") //+"_"+ e.id
-    );
-
-    let posArr = [];
-
-    // let temp = addDim();
-
-    for (var i = 0; i < posArr2; i++) {
-      posArr.push(posArr2[i]);
-    }
-
-    console.log(pivotDimension, posArr2, posArr);
-    pivCrossDim(pivotDimension, posArr2);
-  }
   //console.log(datasetButtons);
 }
 
@@ -192,10 +180,7 @@ function reset() {
   dimList.innerHTML = null;
   document.getElementById("cross").disabled = false;
   document.getElementById("standard").disabled = false;
-  let checkboxes = Array.from(
-    document.querySelectorAll("input[type=checkbox][name=dims]:checked")
-  );
-  (e) => e.id;
+  let checkboxes = addDim();
 
   for (var i = 0; i < checkboxes.length; i++) {
     document.getElementById(checkboxes[i]).checked = false;
@@ -271,10 +256,8 @@ function covid() {
 
 function standard(dim) {
   format = "Standard";
-  let checkboxes = Array.from(
-    document.querySelectorAll("input[type=checkbox][name=dims]:checked"),
-    (e) => e.value
-  );
+
+  let checkboxes = addDim();
 
   var x = document.getElementById("show");
 
@@ -292,10 +275,10 @@ function standard(dim) {
 
 function crossover(dim) {
   format = "Crossover";
-  let checkboxes = Array.from(
-    document.querySelectorAll("input[type=checkbox][name=dims]:checked"),
-    (e) => e.value
-  );
+
+  let checkboxes = addDim();
+
+  console.log(addDim());
 
   var x = document.getElementById("show");
 
@@ -307,17 +290,31 @@ function crossover(dim) {
 
   document.getElementById("dimList").style.display = "none";
   dim = pivotDimension;
+  pivDim(dim, addDim());
   pivCrossDim(dim, addDim());
 }
 
 //Add or Remove Dimensions
 function addDim() {
-  let checkboxes = Array.from(
+  let posArr = Array.from(
     document.querySelectorAll("input[type=checkbox][name=dims]:checked"),
     (e) => e.value
   );
 
-  return checkboxes;
+  let posArr2 = Array.from(
+    document.getElementsByClassName("drag-item"),
+    (e) => e.getAttribute("name") //+"_"+ e.id
+  );
+
+  //console.log(posArr2, posArr);
+
+  if (posArr2.length == posArr.length) {
+    return posArr2;
+  } else {
+    return posArr;
+  }
+
+  // return posArr;
 }
 
 document.getElementById("begin").innerHTML = null;
@@ -375,7 +372,7 @@ document.getElementById("dimButtons").insertAdjacentHTML(
     '"cross" name=' +
     '"cross"' +
     "value=" +
-    '"Crossover" onclick=' +
+    '"Paired" onclick=' +
     '"crossover(0)" class=' +
     '"button"' +
     "/>" +
@@ -390,6 +387,26 @@ document.getElementById("dimButtons").insertAdjacentHTML(
     "/><br></div>"
 );
 
+function ColorLuminance(hex, lum) {
+  // validate hex string
+  hex = String(hex).replace(/[^0-9a-f]/gi, "");
+  if (hex.length < 6) {
+    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+  }
+  lum = lum || 0;
+
+  // convert to decimal and change luminosity
+  var rgb = "#",
+    c,
+    i;
+  for (i = 0; i < 3; i++) {
+    c = parseInt(hex.substr(i * 2, 2), 16);
+    c = Math.round(Math.min(Math.max(0, c + c * lum), 255)).toString(16);
+    rgb += ("00" + c).substr(c.length);
+  }
+
+  return rgb;
+}
 function pivDim(pivot, dimensionsInQuestion) {
   var URL;
   var dataset;
@@ -440,10 +457,7 @@ function pivDim(pivot, dimensionsInQuestion) {
 
     //Display all dimensions from file
     function displayHeaders() {
-      let checkboxes = Array.from(
-        document.querySelectorAll("input[type=checkbox][name=dims]:checked"),
-        (e) => e.value
-      );
+      let checkboxes = addDim();
 
       //Remove exising content from Dimension List/dimList
       document.getElementById("dimList").innerHTML = null;
@@ -493,6 +507,7 @@ function pivDim(pivot, dimensionsInQuestion) {
 
     //Process Data from file
     function processData(titanicData, dim) {
+      update(pivotDimension);
       for (
         var j = 0, jj = dimensionsInQuestion.length;
         j < jj;
@@ -680,7 +695,7 @@ function pivDim(pivot, dimensionsInQuestion) {
     function display() {
       // Build Traces
 
-      data = buildPivotTraces(dimensionsInQuestion);
+      data = buildPivotTraces(addDim());
 
       var container = document.getElementById("dragList");
 
@@ -691,7 +706,7 @@ function pivDim(pivot, dimensionsInQuestion) {
         (e) => e.id
       );
       if (divArray.length > 0) {
-        for (var i = 0; i < dimensionsInQuestion.length; i++) {
+        for (var i = 0; i < addDim().length; i++) {
           var newDiv = document.createElement("div");
           newDiv.draggable = "true";
           newDiv.index = i;
@@ -809,7 +824,10 @@ function pivDim(pivot, dimensionsInQuestion) {
               getDimensions(dimensionsInQuestion[pivotDimension])[j]
             )
           ) {
-            col[keysArr[i]] = getCount(dimensionsInQuestion[pivotDimension])[j];
+            col[keysArr[i]] = "#" + "00800" + i;
+
+            console.log("#" + "008000" + i);
+            //getCount(dimensionsInQuestion[pivotDimension])[j];
           }
         }
       }
@@ -830,7 +848,7 @@ function pivDim(pivot, dimensionsInQuestion) {
               y: [getDimensions(dimensions[j])[i]], // array of keys
               x: [getCount(dimensions[j])[i]],
               marker: {
-                color: getCount(dimensions[j])[i],
+                color: ColorLuminance("6699CC", 0.2 * i),
                 line: {
                   color: "#FDD017",
                   width: 3
@@ -876,7 +894,7 @@ function pivDim(pivot, dimensionsInQuestion) {
                 y: getDimensions(dimensions[j]),
                 x: groupVals,
                 marker: {
-                  color: getPivotColors(dimensions[j])[i]
+                  color: ColorLuminance("6699CC", 0.2 * i)
                 },
                 hoverinfo: "count+probability",
                 labelfont: {
@@ -1137,16 +1155,16 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
       "https://raw.githubusercontent.com/empress637/empress637.github.io/main/Sample-Data-Mushroom-Classification.csv";
     dataset = "Mushrooms";
   }
-  let divArray = Array.from(
-    document.getElementsByClassName("drag-item"),
-    (e) => e.id
-  );
 
-  var col = standard(pivotDimension);
+  standard(pivotDimension, dimensionsInQuestion);
 
   d3.csv(URL, function (titanicData) {
+    let divArray = Array.from(
+      document.getElementsByClassName("drag-item"),
+      (e) => e.id
+    );
+
     for (var x = 0; x < dimensionsInQuestion.length; x++) {
-      //console.log(x, pivotDimension, dimensionsInQuestion.length);
       var dimOne = titanicData.map((row) => row[dimensionsInQuestion[x + 1]]);
       var dimCurr = titanicData.map((row) => row[dimensionsInQuestion[x]]);
       var pivot = titanicData.map(
@@ -1171,8 +1189,6 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
       var plot;
       var vals = [];
 
-      yDimPiv.push(d3.set(pivot).values());
-      yDimPiv = yDimPiv.toString().split(",").reverse();
       var arrKey2 = [];
       var arrKey3 = [];
 
@@ -1198,6 +1214,8 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
       //console.log("yDimCurr", yDimCurr);
 */
       var arrayY = [yDimOne, yDimCurr];
+      yDimPiv.push(d3.set(pivot).values());
+      yDimPiv = yDimPiv.toString().split(",").reverse();
 
       switch (x < dimensionsInQuestion.length) {
         case x == pivotDimension: {
@@ -1210,8 +1228,7 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
 
           break;
         }
-        case x == dimensionsInQuestion.length - 1 ||
-          dimensionsInQuestion[x + 1] == dimensionsInQuestion[pivotDimension]: {
+        case x == dimensionsInQuestion.length - 1 || x + 1 == pivotDimension: {
           document
             .getElementById("myDiv" + divArray.indexOf("myDiv" + x))
             .setAttribute(
@@ -1275,7 +1292,7 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
               type: "bar",
               orientation: "h", //text: vals[l], // show counts
               marker: {
-                color: "#" + l
+                color: ColorLuminance("6699CC", 0.2 * l) //"#" + l
               }
             };
 
@@ -1318,6 +1335,9 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
               }
             }
           };
+          document.getElementById(
+            "myDiv" + divArray.indexOf("myDiv" + x)
+          ).innterHTML = null;
 
           Plotly.newPlot("myDiv" + divArray.indexOf("myDiv" + x), data, layout);
           break;
@@ -1470,7 +1490,7 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
                 type: "bar",
                 name: "", //pivotDimension[i],
                 marker: {
-                  color: colorX
+                  color: ColorLuminance("6699CC", 0.2 * l) //colorX
                 },
                 showgrid: false,
                 paper_bgcolor: "transparent",
@@ -1496,7 +1516,7 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
                   color: "#000080"
                 },
                 title: {
-                  text: dimensionsInQuestion[l],
+                  text: dimensionsInQuestion[x],
                   font: {
                     orientation: "h",
                     size: 20,
@@ -1522,7 +1542,9 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
                 ).style.borderLeft = "10px solid";
               }
               // console.log(x);
-
+              document.getElementById(
+                "myDiv" + divArray.indexOf("myDiv" + x)
+              ).innterHTML = null;
               Plotly.newPlot(
                 "myDiv" + divArray.indexOf("myDiv" + x),
                 crossPlot,
@@ -1580,6 +1602,10 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
 
           break;
       }
+
+      layout = null;
+
+      data = null;
       var graphLine = document.getElementsByClassName("ydivider crisp");
       for (var i = 0; i < graphLine.length; i++) {
         graphLine[i].setAttribute("d", "0,0");
@@ -1598,4 +1624,5 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
   format = "Crossover";
 }
 
-</script>
+
+	</script>
