@@ -1,53 +1,4483 @@
-Data As Of,Start Date,End Date,Group,Year,Month,State,Sex,Age Group,COVID-19 Deaths,Total Deaths,Pneumonia Deaths,Pneumonia and COVID-19 Deaths,Influenza Deaths,"Pneumonia, Influenza, or COVID-19 Deaths",Footnote
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,All Ages,1146774,12303399,1162844,569264,22229,1760095,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,Under 1 year,519,73213,1056,95,64,1541,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,0-17 years,1696,130970,2961,424,509,4716,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,1-4 years,285,14299,692,66,177,1079,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,5-14 years,509,22008,818,143,219,1390,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,15-24 years,3021,133459,3175,1257,206,5133,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,18-29 years,7030,231382,7038,3162,329,11206,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,25-34 years,12401,278680,11706,5842,464,18689,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,30-39 years,19886,348041,18395,9766,644,29114,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,35-44 years,30108,416477,27301,15228,797,42904,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,40-49 years,46260,511478,41105,24074,1002,64168,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,45-54 years,71388,709522,64918,38149,1452,99423,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,50-64 years,203071,2030691,202077,110328,4345,298620,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,55-64 years,159712,1604904,161910,86974,3450,237665,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,65-74 years,256806,2509095,272676,139386,4676,394174,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,75-84 years,300162,3034906,317267,152120,5348,470076,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,All Sexes,85 years and over,311863,3506836,301325,130004,5376,488021,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,All Ages,629728,6469164,645490,326161,10848,958520,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,Under 1 year,284,40371,586,54,40,854,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,0-17 years,910,76420,1601,236,282,2544,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,1-4 years,151,8102,341,35,109,563,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,5-14 years,261,12850,449,83,104,723,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,15-24 years,1797,97748,1917,730,104,3080,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,18-29 years,4301,168776,4276,1900,172,6832,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,25-34 years,7607,196824,7129,3594,235,11354,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,30-39 years,12263,237089,11180,6060,323,17679,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,35-44 years,18602,273868,16415,9399,415,25984,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,40-49 years,28930,326794,24772,15002,552,39167,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,45-54 years,45411,445872,39447,24190,828,61374,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,50-64 years,125592,1249590,120596,67705,2387,180527,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,55-64 years,97883,983034,96141,52818,1881,142817,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,65-74 years,152082,1450938,160476,83003,2464,231668,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,75-84 years,168030,1576934,179597,88219,2598,261698,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Male,85 years and over,137620,1382623,142992,64036,2070,218405,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,All Ages,517046,5834235,517354,243103,11381,801575,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,Under 1 year,235,32842,470,41,24,687,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,0-17 years,786,54550,1360,188,227,2172,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,1-4 years,134,6197,351,31,68,516,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,5-14 years,248,9158,369,60,115,667,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,15-24 years,1224,35711,1258,527,102,2053,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,18-29 years,2729,62606,2762,1262,157,4374,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,25-34 years,4794,81856,4577,2248,229,7335,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,30-39 years,7623,110952,7215,3706,321,11435,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,35-44 years,11506,142609,10886,5829,382,16920,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,40-49 years,17330,184684,16333,9072,450,25001,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,45-54 years,25977,263650,25471,13959,624,38049,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,50-64 years,77479,781101,81481,42623,1958,118093,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,55-64 years,61829,621870,65769,34156,1569,94848,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,65-74 years,104724,1058157,112200,56383,2212,162506,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,75-84 years,132132,1457972,137670,63901,2750,208378,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,United States,Female,85 years and over,174243,2124213,158333,65968,3306,269616,
-09/27/2023,01/01/2020,09/23/2023,By Total,,,Alabama,All Sexes,All Ages,21520,231602,17619,7411,356,32038,
+State,Sex,Age Group
+United States,All Sexes,All Ages
+United States,All Sexes,Under 1 year
+United States,All Sexes,0-17 years
+United States,All Sexes,1-4 years
+United States,All Sexes,5-14 years
+United States,All Sexes,15-24 years
+United States,All Sexes,18-29 years
+United States,All Sexes,25-34 years
+United States,All Sexes,30-39 years
+United States,All Sexes,35-44 years
+United States,All Sexes,40-49 years
+United States,All Sexes,45-54 years
+United States,All Sexes,50-64 years
+United States,All Sexes,55-64 years
+United States,All Sexes,65-74 years
+United States,All Sexes,75-84 years
+United States,All Sexes,85 years and over
+United States,Male,All Ages
+United States,Male,Under 1 year
+United States,Male,0-17 years
+United States,Male,1-4 years
+United States,Male,5-14 years
+United States,Male,15-24 years
+United States,Male,18-29 years
+United States,Male,25-34 years
+United States,Male,30-39 years
+United States,Male,35-44 years
+United States,Male,40-49 years
+United States,Male,45-54 years
+United States,Male,50-64 years
+United States,Male,55-64 years
+United States,Male,65-74 years
+United States,Male,75-84 years
+United States,Male,85 years and over
+United States,Female,All Ages
+United States,Female,Under 1 year
+United States,Female,0-17 years
+United States,Female,1-4 years
+United States,Female,5-14 years
+United States,Female,15-24 years
+United States,Female,18-29 years
+United States,Female,25-34 years
+United States,Female,30-39 years
+United States,Female,35-44 years
+United States,Female,40-49 years
+United States,Female,45-54 years
+United States,Female,50-64 years
+United States,Female,55-64 years
+United States,Female,65-74 years
+United States,Female,75-84 years
+United States,Female,85 years and over
+Alabama,All Sexes,All Ages
+Alabama,All Sexes,Under 1 year
+Alabama,All Sexes,0-17 years
+Alabama,All Sexes,1-4 years
+Alabama,All Sexes,5-14 years
+Alabama,All Sexes,15-24 years
+Alabama,All Sexes,18-29 years
+Alabama,All Sexes,25-34 years
+Alabama,All Sexes,30-39 years
+Alabama,All Sexes,35-44 years
+Alabama,All Sexes,40-49 years
+Alabama,All Sexes,45-54 years
+Alabama,All Sexes,50-64 years
+Alabama,All Sexes,55-64 years
+Alabama,All Sexes,65-74 years
+Alabama,All Sexes,75-84 years
+Alabama,All Sexes,85 years and over
+Alabama,Male,All Ages
+Alabama,Male,Under 1 year
+Alabama,Male,0-17 years
+Alabama,Male,1-4 years
+Alabama,Male,5-14 years
+Alabama,Male,15-24 years
+Alabama,Male,18-29 years
+Alabama,Male,25-34 years
+Alabama,Male,30-39 years
+Alabama,Male,35-44 years
+Alabama,Male,40-49 years
+Alabama,Male,45-54 years
+Alabama,Male,50-64 years
+Alabama,Male,55-64 years
+Alabama,Male,65-74 years
+Alabama,Male,75-84 years
+Alabama,Male,85 years and over
+Alabama,Female,All Ages
+Alabama,Female,Under 1 year
+Alabama,Female,0-17 years
+Alabama,Female,1-4 years
+Alabama,Female,5-14 years
+Alabama,Female,15-24 years
+Alabama,Female,18-29 years
+Alabama,Female,25-34 years
+Alabama,Female,30-39 years
+Alabama,Female,35-44 years
+Alabama,Female,40-49 years
+Alabama,Female,45-54 years
+Alabama,Female,50-64 years
+Alabama,Female,55-64 years
+Alabama,Female,65-74 years
+Alabama,Female,75-84 years
+Alabama,Female,85 years and over
+Alaska,All Sexes,All Ages
+Alaska,All Sexes,Under 1 year
+Alaska,All Sexes,0-17 years
+Alaska,All Sexes,1-4 years
+Alaska,All Sexes,5-14 years
+Alaska,All Sexes,15-24 years
+Alaska,All Sexes,18-29 years
+Alaska,All Sexes,25-34 years
+Alaska,All Sexes,30-39 years
+Alaska,All Sexes,35-44 years
+Alaska,All Sexes,40-49 years
+Alaska,All Sexes,45-54 years
+Alaska,All Sexes,50-64 years
+Alaska,All Sexes,55-64 years
+Alaska,All Sexes,65-74 years
+Alaska,All Sexes,75-84 years
+Alaska,All Sexes,85 years and over
+Alaska,Male,All Ages
+Alaska,Male,Under 1 year
+Alaska,Male,0-17 years
+Alaska,Male,1-4 years
+Alaska,Male,5-14 years
+Alaska,Male,15-24 years
+Alaska,Male,18-29 years
+Alaska,Male,25-34 years
+Alaska,Male,30-39 years
+Alaska,Male,35-44 years
+Alaska,Male,40-49 years
+Alaska,Male,45-54 years
+Alaska,Male,50-64 years
+Alaska,Male,55-64 years
+Alaska,Male,65-74 years
+Alaska,Male,75-84 years
+Alaska,Male,85 years and over
+Alaska,Female,All Ages
+Alaska,Female,Under 1 year
+Alaska,Female,0-17 years
+Alaska,Female,1-4 years
+Alaska,Female,5-14 years
+Alaska,Female,15-24 years
+Alaska,Female,18-29 years
+Alaska,Female,25-34 years
+Alaska,Female,30-39 years
+Alaska,Female,35-44 years
+Alaska,Female,40-49 years
+Alaska,Female,45-54 years
+Alaska,Female,50-64 years
+Alaska,Female,55-64 years
+Alaska,Female,65-74 years
+Alaska,Female,75-84 years
+Alaska,Female,85 years and over
+Arizona,All Sexes,All Ages
+Arizona,All Sexes,Under 1 year
+Arizona,All Sexes,0-17 years
+Arizona,All Sexes,1-4 years
+Arizona,All Sexes,5-14 years
+Arizona,All Sexes,15-24 years
+Arizona,All Sexes,18-29 years
+Arizona,All Sexes,25-34 years
+Arizona,All Sexes,30-39 years
+Arizona,All Sexes,35-44 years
+Arizona,All Sexes,40-49 years
+Arizona,All Sexes,45-54 years
+Arizona,All Sexes,50-64 years
+Arizona,All Sexes,55-64 years
+Arizona,All Sexes,65-74 years
+Arizona,All Sexes,75-84 years
+Arizona,All Sexes,85 years and over
+Arizona,Male,All Ages
+Arizona,Male,Under 1 year
+Arizona,Male,0-17 years
+Arizona,Male,1-4 years
+Arizona,Male,5-14 years
+Arizona,Male,15-24 years
+Arizona,Male,18-29 years
+Arizona,Male,25-34 years
+Arizona,Male,30-39 years
+Arizona,Male,35-44 years
+Arizona,Male,40-49 years
+Arizona,Male,45-54 years
+Arizona,Male,50-64 years
+Arizona,Male,55-64 years
+Arizona,Male,65-74 years
+Arizona,Male,75-84 years
+Arizona,Male,85 years and over
+Arizona,Female,All Ages
+Arizona,Female,Under 1 year
+Arizona,Female,0-17 years
+Arizona,Female,1-4 years
+Arizona,Female,5-14 years
+Arizona,Female,15-24 years
+Arizona,Female,18-29 years
+Arizona,Female,25-34 years
+Arizona,Female,30-39 years
+Arizona,Female,35-44 years
+Arizona,Female,40-49 years
+Arizona,Female,45-54 years
+Arizona,Female,50-64 years
+Arizona,Female,55-64 years
+Arizona,Female,65-74 years
+Arizona,Female,75-84 years
+Arizona,Female,85 years and over
+Arkansas,All Sexes,All Ages
+Arkansas,All Sexes,Under 1 year
+Arkansas,All Sexes,0-17 years
+Arkansas,All Sexes,1-4 years
+Arkansas,All Sexes,5-14 years
+Arkansas,All Sexes,15-24 years
+Arkansas,All Sexes,18-29 years
+Arkansas,All Sexes,25-34 years
+Arkansas,All Sexes,30-39 years
+Arkansas,All Sexes,35-44 years
+Arkansas,All Sexes,40-49 years
+Arkansas,All Sexes,45-54 years
+Arkansas,All Sexes,50-64 years
+Arkansas,All Sexes,55-64 years
+Arkansas,All Sexes,65-74 years
+Arkansas,All Sexes,75-84 years
+Arkansas,All Sexes,85 years and over
+Arkansas,Male,All Ages
+Arkansas,Male,Under 1 year
+Arkansas,Male,0-17 years
+Arkansas,Male,1-4 years
+Arkansas,Male,5-14 years
+Arkansas,Male,15-24 years
+Arkansas,Male,18-29 years
+Arkansas,Male,25-34 years
+Arkansas,Male,30-39 years
+Arkansas,Male,35-44 years
+Arkansas,Male,40-49 years
+Arkansas,Male,45-54 years
+Arkansas,Male,50-64 years
+Arkansas,Male,55-64 years
+Arkansas,Male,65-74 years
+Arkansas,Male,75-84 years
+Arkansas,Male,85 years and over
+Arkansas,Female,All Ages
+Arkansas,Female,Under 1 year
+Arkansas,Female,0-17 years
+Arkansas,Female,1-4 years
+Arkansas,Female,5-14 years
+Arkansas,Female,15-24 years
+Arkansas,Female,18-29 years
+Arkansas,Female,25-34 years
+Arkansas,Female,30-39 years
+Arkansas,Female,35-44 years
+Arkansas,Female,40-49 years
+Arkansas,Female,45-54 years
+Arkansas,Female,50-64 years
+Arkansas,Female,55-64 years
+Arkansas,Female,65-74 years
+Arkansas,Female,75-84 years
+Arkansas,Female,85 years and over
+California,All Sexes,All Ages
+California,All Sexes,Under 1 year
+California,All Sexes,0-17 years
+California,All Sexes,1-4 years
+California,All Sexes,5-14 years
+California,All Sexes,15-24 years
+California,All Sexes,18-29 years
+California,All Sexes,25-34 years
+California,All Sexes,30-39 years
+California,All Sexes,35-44 years
+California,All Sexes,40-49 years
+California,All Sexes,45-54 years
+California,All Sexes,50-64 years
+California,All Sexes,55-64 years
+California,All Sexes,65-74 years
+California,All Sexes,75-84 years
+California,All Sexes,85 years and over
+California,Male,All Ages
+California,Male,Under 1 year
+California,Male,0-17 years
+California,Male,1-4 years
+California,Male,5-14 years
+California,Male,15-24 years
+California,Male,18-29 years
+California,Male,25-34 years
+California,Male,30-39 years
+California,Male,35-44 years
+California,Male,40-49 years
+California,Male,45-54 years
+California,Male,50-64 years
+California,Male,55-64 years
+California,Male,65-74 years
+California,Male,75-84 years
+California,Male,85 years and over
+California,Female,All Ages
+California,Female,Under 1 year
+California,Female,0-17 years
+California,Female,1-4 years
+California,Female,5-14 years
+California,Female,15-24 years
+California,Female,18-29 years
+California,Female,25-34 years
+California,Female,30-39 years
+California,Female,35-44 years
+California,Female,40-49 years
+California,Female,45-54 years
+California,Female,50-64 years
+California,Female,55-64 years
+California,Female,65-74 years
+California,Female,75-84 years
+California,Female,85 years and over
+Colorado,All Sexes,All Ages
+Colorado,All Sexes,Under 1 year
+Colorado,All Sexes,0-17 years
+Colorado,All Sexes,1-4 years
+Colorado,All Sexes,5-14 years
+Colorado,All Sexes,15-24 years
+Colorado,All Sexes,18-29 years
+Colorado,All Sexes,25-34 years
+Colorado,All Sexes,30-39 years
+Colorado,All Sexes,35-44 years
+Colorado,All Sexes,40-49 years
+Colorado,All Sexes,45-54 years
+Colorado,All Sexes,50-64 years
+Colorado,All Sexes,55-64 years
+Colorado,All Sexes,65-74 years
+Colorado,All Sexes,75-84 years
+Colorado,All Sexes,85 years and over
+Colorado,Male,All Ages
+Colorado,Male,Under 1 year
+Colorado,Male,0-17 years
+Colorado,Male,1-4 years
+Colorado,Male,5-14 years
+Colorado,Male,15-24 years
+Colorado,Male,18-29 years
+Colorado,Male,25-34 years
+Colorado,Male,30-39 years
+Colorado,Male,35-44 years
+Colorado,Male,40-49 years
+Colorado,Male,45-54 years
+Colorado,Male,50-64 years
+Colorado,Male,55-64 years
+Colorado,Male,65-74 years
+Colorado,Male,75-84 years
+Colorado,Male,85 years and over
+Colorado,Female,All Ages
+Colorado,Female,Under 1 year
+Colorado,Female,0-17 years
+Colorado,Female,1-4 years
+Colorado,Female,5-14 years
+Colorado,Female,15-24 years
+Colorado,Female,18-29 years
+Colorado,Female,25-34 years
+Colorado,Female,30-39 years
+Colorado,Female,35-44 years
+Colorado,Female,40-49 years
+Colorado,Female,45-54 years
+Colorado,Female,50-64 years
+Colorado,Female,55-64 years
+Colorado,Female,65-74 years
+Colorado,Female,75-84 years
+Colorado,Female,85 years and over
+Connecticut,All Sexes,All Ages
+Connecticut,All Sexes,Under 1 year
+Connecticut,All Sexes,0-17 years
+Connecticut,All Sexes,1-4 years
+Connecticut,All Sexes,5-14 years
+Connecticut,All Sexes,15-24 years
+Connecticut,All Sexes,18-29 years
+Connecticut,All Sexes,25-34 years
+Connecticut,All Sexes,30-39 years
+Connecticut,All Sexes,35-44 years
+Connecticut,All Sexes,40-49 years
+Connecticut,All Sexes,45-54 years
+Connecticut,All Sexes,50-64 years
+Connecticut,All Sexes,55-64 years
+Connecticut,All Sexes,65-74 years
+Connecticut,All Sexes,75-84 years
+Connecticut,All Sexes,85 years and over
+Connecticut,Male,All Ages
+Connecticut,Male,Under 1 year
+Connecticut,Male,0-17 years
+Connecticut,Male,1-4 years
+Connecticut,Male,5-14 years
+Connecticut,Male,15-24 years
+Connecticut,Male,18-29 years
+Connecticut,Male,25-34 years
+Connecticut,Male,30-39 years
+Connecticut,Male,35-44 years
+Connecticut,Male,40-49 years
+Connecticut,Male,45-54 years
+Connecticut,Male,50-64 years
+Connecticut,Male,55-64 years
+Connecticut,Male,65-74 years
+Connecticut,Male,75-84 years
+Connecticut,Male,85 years and over
+Connecticut,Female,All Ages
+Connecticut,Female,Under 1 year
+Connecticut,Female,0-17 years
+Connecticut,Female,1-4 years
+Connecticut,Female,5-14 years
+Connecticut,Female,15-24 years
+Connecticut,Female,18-29 years
+Connecticut,Female,25-34 years
+Connecticut,Female,30-39 years
+Connecticut,Female,35-44 years
+Connecticut,Female,40-49 years
+Connecticut,Female,45-54 years
+Connecticut,Female,50-64 years
+Connecticut,Female,55-64 years
+Connecticut,Female,65-74 years
+Connecticut,Female,75-84 years
+Connecticut,Female,85 years and over
+Delaware,All Sexes,All Ages
+Delaware,All Sexes,Under 1 year
+Delaware,All Sexes,0-17 years
+Delaware,All Sexes,1-4 years
+Delaware,All Sexes,5-14 years
+Delaware,All Sexes,15-24 years
+Delaware,All Sexes,18-29 years
+Delaware,All Sexes,25-34 years
+Delaware,All Sexes,30-39 years
+Delaware,All Sexes,35-44 years
+Delaware,All Sexes,40-49 years
+Delaware,All Sexes,45-54 years
+Delaware,All Sexes,50-64 years
+Delaware,All Sexes,55-64 years
+Delaware,All Sexes,65-74 years
+Delaware,All Sexes,75-84 years
+Delaware,All Sexes,85 years and over
+Delaware,Male,All Ages
+Delaware,Male,Under 1 year
+Delaware,Male,0-17 years
+Delaware,Male,1-4 years
+Delaware,Male,5-14 years
+Delaware,Male,15-24 years
+Delaware,Male,18-29 years
+Delaware,Male,25-34 years
+Delaware,Male,30-39 years
+Delaware,Male,35-44 years
+Delaware,Male,40-49 years
+Delaware,Male,45-54 years
+Delaware,Male,50-64 years
+Delaware,Male,55-64 years
+Delaware,Male,65-74 years
+Delaware,Male,75-84 years
+Delaware,Male,85 years and over
+Delaware,Female,All Ages
+Delaware,Female,Under 1 year
+Delaware,Female,0-17 years
+Delaware,Female,1-4 years
+Delaware,Female,5-14 years
+Delaware,Female,15-24 years
+Delaware,Female,18-29 years
+Delaware,Female,25-34 years
+Delaware,Female,30-39 years
+Delaware,Female,35-44 years
+Delaware,Female,40-49 years
+Delaware,Female,45-54 years
+Delaware,Female,50-64 years
+Delaware,Female,55-64 years
+Delaware,Female,65-74 years
+Delaware,Female,75-84 years
+Delaware,Female,85 years and over
+District of Columbia,All Sexes,All Ages
+District of Columbia,All Sexes,Under 1 year
+District of Columbia,All Sexes,0-17 years
+District of Columbia,All Sexes,1-4 years
+District of Columbia,All Sexes,5-14 years
+District of Columbia,All Sexes,15-24 years
+District of Columbia,All Sexes,18-29 years
+District of Columbia,All Sexes,25-34 years
+District of Columbia,All Sexes,30-39 years
+District of Columbia,All Sexes,35-44 years
+District of Columbia,All Sexes,40-49 years
+District of Columbia,All Sexes,45-54 years
+District of Columbia,All Sexes,50-64 years
+District of Columbia,All Sexes,55-64 years
+District of Columbia,All Sexes,65-74 years
+District of Columbia,All Sexes,75-84 years
+District of Columbia,All Sexes,85 years and over
+District of Columbia,Male,All Ages
+District of Columbia,Male,Under 1 year
+District of Columbia,Male,0-17 years
+District of Columbia,Male,1-4 years
+District of Columbia,Male,5-14 years
+District of Columbia,Male,15-24 years
+District of Columbia,Male,18-29 years
+District of Columbia,Male,25-34 years
+District of Columbia,Male,30-39 years
+District of Columbia,Male,35-44 years
+District of Columbia,Male,40-49 years
+District of Columbia,Male,45-54 years
+District of Columbia,Male,50-64 years
+District of Columbia,Male,55-64 years
+District of Columbia,Male,65-74 years
+District of Columbia,Male,75-84 years
+District of Columbia,Male,85 years and over
+District of Columbia,Female,All Ages
+District of Columbia,Female,Under 1 year
+District of Columbia,Female,0-17 years
+District of Columbia,Female,1-4 years
+District of Columbia,Female,5-14 years
+District of Columbia,Female,15-24 years
+District of Columbia,Female,18-29 years
+District of Columbia,Female,25-34 years
+District of Columbia,Female,30-39 years
+District of Columbia,Female,35-44 years
+District of Columbia,Female,40-49 years
+District of Columbia,Female,45-54 years
+District of Columbia,Female,50-64 years
+District of Columbia,Female,55-64 years
+District of Columbia,Female,65-74 years
+District of Columbia,Female,75-84 years
+District of Columbia,Female,85 years and over
+Florida,All Sexes,All Ages
+Florida,All Sexes,Under 1 year
+Florida,All Sexes,0-17 years
+Florida,All Sexes,1-4 years
+Florida,All Sexes,5-14 years
+Florida,All Sexes,15-24 years
+Florida,All Sexes,18-29 years
+Florida,All Sexes,25-34 years
+Florida,All Sexes,30-39 years
+Florida,All Sexes,35-44 years
+Florida,All Sexes,40-49 years
+Florida,All Sexes,45-54 years
+Florida,All Sexes,50-64 years
+Florida,All Sexes,55-64 years
+Florida,All Sexes,65-74 years
+Florida,All Sexes,75-84 years
+Florida,All Sexes,85 years and over
+Florida,Male,All Ages
+Florida,Male,Under 1 year
+Florida,Male,0-17 years
+Florida,Male,1-4 years
+Florida,Male,5-14 years
+Florida,Male,15-24 years
+Florida,Male,18-29 years
+Florida,Male,25-34 years
+Florida,Male,30-39 years
+Florida,Male,35-44 years
+Florida,Male,40-49 years
+Florida,Male,45-54 years
+Florida,Male,50-64 years
+Florida,Male,55-64 years
+Florida,Male,65-74 years
+Florida,Male,75-84 years
+Florida,Male,85 years and over
+Florida,Female,All Ages
+Florida,Female,Under 1 year
+Florida,Female,0-17 years
+Florida,Female,1-4 years
+Florida,Female,5-14 years
+Florida,Female,15-24 years
+Florida,Female,18-29 years
+Florida,Female,25-34 years
+Florida,Female,30-39 years
+Florida,Female,35-44 years
+Florida,Female,40-49 years
+Florida,Female,45-54 years
+Florida,Female,50-64 years
+Florida,Female,55-64 years
+Florida,Female,65-74 years
+Florida,Female,75-84 years
+Florida,Female,85 years and over
+Georgia,All Sexes,All Ages
+Georgia,All Sexes,Under 1 year
+Georgia,All Sexes,0-17 years
+Georgia,All Sexes,1-4 years
+Georgia,All Sexes,5-14 years
+Georgia,All Sexes,15-24 years
+Georgia,All Sexes,18-29 years
+Georgia,All Sexes,25-34 years
+Georgia,All Sexes,30-39 years
+Georgia,All Sexes,35-44 years
+Georgia,All Sexes,40-49 years
+Georgia,All Sexes,45-54 years
+Georgia,All Sexes,50-64 years
+Georgia,All Sexes,55-64 years
+Georgia,All Sexes,65-74 years
+Georgia,All Sexes,75-84 years
+Georgia,All Sexes,85 years and over
+Georgia,Male,All Ages
+Georgia,Male,Under 1 year
+Georgia,Male,0-17 years
+Georgia,Male,1-4 years
+Georgia,Male,5-14 years
+Georgia,Male,15-24 years
+Georgia,Male,18-29 years
+Georgia,Male,25-34 years
+Georgia,Male,30-39 years
+Georgia,Male,35-44 years
+Georgia,Male,40-49 years
+Georgia,Male,45-54 years
+Georgia,Male,50-64 years
+Georgia,Male,55-64 years
+Georgia,Male,65-74 years
+Georgia,Male,75-84 years
+Georgia,Male,85 years and over
+Georgia,Female,All Ages
+Georgia,Female,Under 1 year
+Georgia,Female,0-17 years
+Georgia,Female,1-4 years
+Georgia,Female,5-14 years
+Georgia,Female,15-24 years
+Georgia,Female,18-29 years
+Georgia,Female,25-34 years
+Georgia,Female,30-39 years
+Georgia,Female,35-44 years
+Georgia,Female,40-49 years
+Georgia,Female,45-54 years
+Georgia,Female,50-64 years
+Georgia,Female,55-64 years
+Georgia,Female,65-74 years
+Georgia,Female,75-84 years
+Georgia,Female,85 years and over
+Hawaii,All Sexes,All Ages
+Hawaii,All Sexes,Under 1 year
+Hawaii,All Sexes,0-17 years
+Hawaii,All Sexes,1-4 years
+Hawaii,All Sexes,5-14 years
+Hawaii,All Sexes,15-24 years
+Hawaii,All Sexes,18-29 years
+Hawaii,All Sexes,25-34 years
+Hawaii,All Sexes,30-39 years
+Hawaii,All Sexes,35-44 years
+Hawaii,All Sexes,40-49 years
+Hawaii,All Sexes,45-54 years
+Hawaii,All Sexes,50-64 years
+Hawaii,All Sexes,55-64 years
+Hawaii,All Sexes,65-74 years
+Hawaii,All Sexes,75-84 years
+Hawaii,All Sexes,85 years and over
+Hawaii,Male,All Ages
+Hawaii,Male,Under 1 year
+Hawaii,Male,0-17 years
+Hawaii,Male,1-4 years
+Hawaii,Male,5-14 years
+Hawaii,Male,15-24 years
+Hawaii,Male,18-29 years
+Hawaii,Male,25-34 years
+Hawaii,Male,30-39 years
+Hawaii,Male,35-44 years
+Hawaii,Male,40-49 years
+Hawaii,Male,45-54 years
+Hawaii,Male,50-64 years
+Hawaii,Male,55-64 years
+Hawaii,Male,65-74 years
+Hawaii,Male,75-84 years
+Hawaii,Male,85 years and over
+Hawaii,Female,All Ages
+Hawaii,Female,Under 1 year
+Hawaii,Female,0-17 years
+Hawaii,Female,1-4 years
+Hawaii,Female,5-14 years
+Hawaii,Female,15-24 years
+Hawaii,Female,18-29 years
+Hawaii,Female,25-34 years
+Hawaii,Female,30-39 years
+Hawaii,Female,35-44 years
+Hawaii,Female,40-49 years
+Hawaii,Female,45-54 years
+Hawaii,Female,50-64 years
+Hawaii,Female,55-64 years
+Hawaii,Female,65-74 years
+Hawaii,Female,75-84 years
+Hawaii,Female,85 years and over
+Idaho,All Sexes,All Ages
+Idaho,All Sexes,Under 1 year
+Idaho,All Sexes,0-17 years
+Idaho,All Sexes,1-4 years
+Idaho,All Sexes,5-14 years
+Idaho,All Sexes,15-24 years
+Idaho,All Sexes,18-29 years
+Idaho,All Sexes,25-34 years
+Idaho,All Sexes,30-39 years
+Idaho,All Sexes,35-44 years
+Idaho,All Sexes,40-49 years
+Idaho,All Sexes,45-54 years
+Idaho,All Sexes,50-64 years
+Idaho,All Sexes,55-64 years
+Idaho,All Sexes,65-74 years
+Idaho,All Sexes,75-84 years
+Idaho,All Sexes,85 years and over
+Idaho,Male,All Ages
+Idaho,Male,Under 1 year
+Idaho,Male,0-17 years
+Idaho,Male,1-4 years
+Idaho,Male,5-14 years
+Idaho,Male,15-24 years
+Idaho,Male,18-29 years
+Idaho,Male,25-34 years
+Idaho,Male,30-39 years
+Idaho,Male,35-44 years
+Idaho,Male,40-49 years
+Idaho,Male,45-54 years
+Idaho,Male,50-64 years
+Idaho,Male,55-64 years
+Idaho,Male,65-74 years
+Idaho,Male,75-84 years
+Idaho,Male,85 years and over
+Idaho,Female,All Ages
+Idaho,Female,Under 1 year
+Idaho,Female,0-17 years
+Idaho,Female,1-4 years
+Idaho,Female,5-14 years
+Idaho,Female,15-24 years
+Idaho,Female,18-29 years
+Idaho,Female,25-34 years
+Idaho,Female,30-39 years
+Idaho,Female,35-44 years
+Idaho,Female,40-49 years
+Idaho,Female,45-54 years
+Idaho,Female,50-64 years
+Idaho,Female,55-64 years
+Idaho,Female,65-74 years
+Idaho,Female,75-84 years
+Idaho,Female,85 years and over
+Illinois,All Sexes,All Ages
+Illinois,All Sexes,Under 1 year
+Illinois,All Sexes,0-17 years
+Illinois,All Sexes,1-4 years
+Illinois,All Sexes,5-14 years
+Illinois,All Sexes,15-24 years
+Illinois,All Sexes,18-29 years
+Illinois,All Sexes,25-34 years
+Illinois,All Sexes,30-39 years
+Illinois,All Sexes,35-44 years
+Illinois,All Sexes,40-49 years
+Illinois,All Sexes,45-54 years
+Illinois,All Sexes,50-64 years
+Illinois,All Sexes,55-64 years
+Illinois,All Sexes,65-74 years
+Illinois,All Sexes,75-84 years
+Illinois,All Sexes,85 years and over
+Illinois,Male,All Ages
+Illinois,Male,Under 1 year
+Illinois,Male,0-17 years
+Illinois,Male,1-4 years
+Illinois,Male,5-14 years
+Illinois,Male,15-24 years
+Illinois,Male,18-29 years
+Illinois,Male,25-34 years
+Illinois,Male,30-39 years
+Illinois,Male,35-44 years
+Illinois,Male,40-49 years
+Illinois,Male,45-54 years
+Illinois,Male,50-64 years
+Illinois,Male,55-64 years
+Illinois,Male,65-74 years
+Illinois,Male,75-84 years
+Illinois,Male,85 years and over
+Illinois,Female,All Ages
+Illinois,Female,Under 1 year
+Illinois,Female,0-17 years
+Illinois,Female,1-4 years
+Illinois,Female,5-14 years
+Illinois,Female,15-24 years
+Illinois,Female,18-29 years
+Illinois,Female,25-34 years
+Illinois,Female,30-39 years
+Illinois,Female,35-44 years
+Illinois,Female,40-49 years
+Illinois,Female,45-54 years
+Illinois,Female,50-64 years
+Illinois,Female,55-64 years
+Illinois,Female,65-74 years
+Illinois,Female,75-84 years
+Illinois,Female,85 years and over
+Indiana,All Sexes,All Ages
+Indiana,All Sexes,Under 1 year
+Indiana,All Sexes,0-17 years
+Indiana,All Sexes,1-4 years
+Indiana,All Sexes,5-14 years
+Indiana,All Sexes,15-24 years
+Indiana,All Sexes,18-29 years
+Indiana,All Sexes,25-34 years
+Indiana,All Sexes,30-39 years
+Indiana,All Sexes,35-44 years
+Indiana,All Sexes,40-49 years
+Indiana,All Sexes,45-54 years
+Indiana,All Sexes,50-64 years
+Indiana,All Sexes,55-64 years
+Indiana,All Sexes,65-74 years
+Indiana,All Sexes,75-84 years
+Indiana,All Sexes,85 years and over
+Indiana,Male,All Ages
+Indiana,Male,Under 1 year
+Indiana,Male,0-17 years
+Indiana,Male,1-4 years
+Indiana,Male,5-14 years
+Indiana,Male,15-24 years
+Indiana,Male,18-29 years
+Indiana,Male,25-34 years
+Indiana,Male,30-39 years
+Indiana,Male,35-44 years
+Indiana,Male,40-49 years
+Indiana,Male,45-54 years
+Indiana,Male,50-64 years
+Indiana,Male,55-64 years
+Indiana,Male,65-74 years
+Indiana,Male,75-84 years
+Indiana,Male,85 years and over
+Indiana,Female,All Ages
+Indiana,Female,Under 1 year
+Indiana,Female,0-17 years
+Indiana,Female,1-4 years
+Indiana,Female,5-14 years
+Indiana,Female,15-24 years
+Indiana,Female,18-29 years
+Indiana,Female,25-34 years
+Indiana,Female,30-39 years
+Indiana,Female,35-44 years
+Indiana,Female,40-49 years
+Indiana,Female,45-54 years
+Indiana,Female,50-64 years
+Indiana,Female,55-64 years
+Indiana,Female,65-74 years
+Indiana,Female,75-84 years
+Indiana,Female,85 years and over
+Iowa,All Sexes,All Ages
+Iowa,All Sexes,Under 1 year
+Iowa,All Sexes,0-17 years
+Iowa,All Sexes,1-4 years
+Iowa,All Sexes,5-14 years
+Iowa,All Sexes,15-24 years
+Iowa,All Sexes,18-29 years
+Iowa,All Sexes,25-34 years
+Iowa,All Sexes,30-39 years
+Iowa,All Sexes,35-44 years
+Iowa,All Sexes,40-49 years
+Iowa,All Sexes,45-54 years
+Iowa,All Sexes,50-64 years
+Iowa,All Sexes,55-64 years
+Iowa,All Sexes,65-74 years
+Iowa,All Sexes,75-84 years
+Iowa,All Sexes,85 years and over
+Iowa,Male,All Ages
+Iowa,Male,Under 1 year
+Iowa,Male,0-17 years
+Iowa,Male,1-4 years
+Iowa,Male,5-14 years
+Iowa,Male,15-24 years
+Iowa,Male,18-29 years
+Iowa,Male,25-34 years
+Iowa,Male,30-39 years
+Iowa,Male,35-44 years
+Iowa,Male,40-49 years
+Iowa,Male,45-54 years
+Iowa,Male,50-64 years
+Iowa,Male,55-64 years
+Iowa,Male,65-74 years
+Iowa,Male,75-84 years
+Iowa,Male,85 years and over
+Iowa,Female,All Ages
+Iowa,Female,Under 1 year
+Iowa,Female,0-17 years
+Iowa,Female,1-4 years
+Iowa,Female,5-14 years
+Iowa,Female,15-24 years
+Iowa,Female,18-29 years
+Iowa,Female,25-34 years
+Iowa,Female,30-39 years
+Iowa,Female,35-44 years
+Iowa,Female,40-49 years
+Iowa,Female,45-54 years
+Iowa,Female,50-64 years
+Iowa,Female,55-64 years
+Iowa,Female,65-74 years
+Iowa,Female,75-84 years
+Iowa,Female,85 years and over
+Kansas,All Sexes,All Ages
+Kansas,All Sexes,Under 1 year
+Kansas,All Sexes,0-17 years
+Kansas,All Sexes,1-4 years
+Kansas,All Sexes,5-14 years
+Kansas,All Sexes,15-24 years
+Kansas,All Sexes,18-29 years
+Kansas,All Sexes,25-34 years
+Kansas,All Sexes,30-39 years
+Kansas,All Sexes,35-44 years
+Kansas,All Sexes,40-49 years
+Kansas,All Sexes,45-54 years
+Kansas,All Sexes,50-64 years
+Kansas,All Sexes,55-64 years
+Kansas,All Sexes,65-74 years
+Kansas,All Sexes,75-84 years
+Kansas,All Sexes,85 years and over
+Kansas,Male,All Ages
+Kansas,Male,Under 1 year
+Kansas,Male,0-17 years
+Kansas,Male,1-4 years
+Kansas,Male,5-14 years
+Kansas,Male,15-24 years
+Kansas,Male,18-29 years
+Kansas,Male,25-34 years
+Kansas,Male,30-39 years
+Kansas,Male,35-44 years
+Kansas,Male,40-49 years
+Kansas,Male,45-54 years
+Kansas,Male,50-64 years
+Kansas,Male,55-64 years
+Kansas,Male,65-74 years
+Kansas,Male,75-84 years
+Kansas,Male,85 years and over
+Kansas,Female,All Ages
+Kansas,Female,Under 1 year
+Kansas,Female,0-17 years
+Kansas,Female,1-4 years
+Kansas,Female,5-14 years
+Kansas,Female,15-24 years
+Kansas,Female,18-29 years
+Kansas,Female,25-34 years
+Kansas,Female,30-39 years
+Kansas,Female,35-44 years
+Kansas,Female,40-49 years
+Kansas,Female,45-54 years
+Kansas,Female,50-64 years
+Kansas,Female,55-64 years
+Kansas,Female,65-74 years
+Kansas,Female,75-84 years
+Kansas,Female,85 years and over
+Kentucky,All Sexes,All Ages
+Kentucky,All Sexes,Under 1 year
+Kentucky,All Sexes,0-17 years
+Kentucky,All Sexes,1-4 years
+Kentucky,All Sexes,5-14 years
+Kentucky,All Sexes,15-24 years
+Kentucky,All Sexes,18-29 years
+Kentucky,All Sexes,25-34 years
+Kentucky,All Sexes,30-39 years
+Kentucky,All Sexes,35-44 years
+Kentucky,All Sexes,40-49 years
+Kentucky,All Sexes,45-54 years
+Kentucky,All Sexes,50-64 years
+Kentucky,All Sexes,55-64 years
+Kentucky,All Sexes,65-74 years
+Kentucky,All Sexes,75-84 years
+Kentucky,All Sexes,85 years and over
+Kentucky,Male,All Ages
+Kentucky,Male,Under 1 year
+Kentucky,Male,0-17 years
+Kentucky,Male,1-4 years
+Kentucky,Male,5-14 years
+Kentucky,Male,15-24 years
+Kentucky,Male,18-29 years
+Kentucky,Male,25-34 years
+Kentucky,Male,30-39 years
+Kentucky,Male,35-44 years
+Kentucky,Male,40-49 years
+Kentucky,Male,45-54 years
+Kentucky,Male,50-64 years
+Kentucky,Male,55-64 years
+Kentucky,Male,65-74 years
+Kentucky,Male,75-84 years
+Kentucky,Male,85 years and over
+Kentucky,Female,All Ages
+Kentucky,Female,Under 1 year
+Kentucky,Female,0-17 years
+Kentucky,Female,1-4 years
+Kentucky,Female,5-14 years
+Kentucky,Female,15-24 years
+Kentucky,Female,18-29 years
+Kentucky,Female,25-34 years
+Kentucky,Female,30-39 years
+Kentucky,Female,35-44 years
+Kentucky,Female,40-49 years
+Kentucky,Female,45-54 years
+Kentucky,Female,50-64 years
+Kentucky,Female,55-64 years
+Kentucky,Female,65-74 years
+Kentucky,Female,75-84 years
+Kentucky,Female,85 years and over
+Louisiana,All Sexes,All Ages
+Louisiana,All Sexes,Under 1 year
+Louisiana,All Sexes,0-17 years
+Louisiana,All Sexes,1-4 years
+Louisiana,All Sexes,5-14 years
+Louisiana,All Sexes,15-24 years
+Louisiana,All Sexes,18-29 years
+Louisiana,All Sexes,25-34 years
+Louisiana,All Sexes,30-39 years
+Louisiana,All Sexes,35-44 years
+Louisiana,All Sexes,40-49 years
+Louisiana,All Sexes,45-54 years
+Louisiana,All Sexes,50-64 years
+Louisiana,All Sexes,55-64 years
+Louisiana,All Sexes,65-74 years
+Louisiana,All Sexes,75-84 years
+Louisiana,All Sexes,85 years and over
+Louisiana,Male,All Ages
+Louisiana,Male,Under 1 year
+Louisiana,Male,0-17 years
+Louisiana,Male,1-4 years
+Louisiana,Male,5-14 years
+Louisiana,Male,15-24 years
+Louisiana,Male,18-29 years
+Louisiana,Male,25-34 years
+Louisiana,Male,30-39 years
+Louisiana,Male,35-44 years
+Louisiana,Male,40-49 years
+Louisiana,Male,45-54 years
+Louisiana,Male,50-64 years
+Louisiana,Male,55-64 years
+Louisiana,Male,65-74 years
+Louisiana,Male,75-84 years
+Louisiana,Male,85 years and over
+Louisiana,Female,All Ages
+Louisiana,Female,Under 1 year
+Louisiana,Female,0-17 years
+Louisiana,Female,1-4 years
+Louisiana,Female,5-14 years
+Louisiana,Female,15-24 years
+Louisiana,Female,18-29 years
+Louisiana,Female,25-34 years
+Louisiana,Female,30-39 years
+Louisiana,Female,35-44 years
+Louisiana,Female,40-49 years
+Louisiana,Female,45-54 years
+Louisiana,Female,50-64 years
+Louisiana,Female,55-64 years
+Louisiana,Female,65-74 years
+Louisiana,Female,75-84 years
+Louisiana,Female,85 years and over
+Maine,All Sexes,All Ages
+Maine,All Sexes,Under 1 year
+Maine,All Sexes,0-17 years
+Maine,All Sexes,1-4 years
+Maine,All Sexes,5-14 years
+Maine,All Sexes,15-24 years
+Maine,All Sexes,18-29 years
+Maine,All Sexes,25-34 years
+Maine,All Sexes,30-39 years
+Maine,All Sexes,35-44 years
+Maine,All Sexes,40-49 years
+Maine,All Sexes,45-54 years
+Maine,All Sexes,50-64 years
+Maine,All Sexes,55-64 years
+Maine,All Sexes,65-74 years
+Maine,All Sexes,75-84 years
+Maine,All Sexes,85 years and over
+Maine,Male,All Ages
+Maine,Male,Under 1 year
+Maine,Male,0-17 years
+Maine,Male,1-4 years
+Maine,Male,5-14 years
+Maine,Male,15-24 years
+Maine,Male,18-29 years
+Maine,Male,25-34 years
+Maine,Male,30-39 years
+Maine,Male,35-44 years
+Maine,Male,40-49 years
+Maine,Male,45-54 years
+Maine,Male,50-64 years
+Maine,Male,55-64 years
+Maine,Male,65-74 years
+Maine,Male,75-84 years
+Maine,Male,85 years and over
+Maine,Female,All Ages
+Maine,Female,Under 1 year
+Maine,Female,0-17 years
+Maine,Female,1-4 years
+Maine,Female,5-14 years
+Maine,Female,15-24 years
+Maine,Female,18-29 years
+Maine,Female,25-34 years
+Maine,Female,30-39 years
+Maine,Female,35-44 years
+Maine,Female,40-49 years
+Maine,Female,45-54 years
+Maine,Female,50-64 years
+Maine,Female,55-64 years
+Maine,Female,65-74 years
+Maine,Female,75-84 years
+Maine,Female,85 years and over
+Maryland,All Sexes,All Ages
+Maryland,All Sexes,Under 1 year
+Maryland,All Sexes,0-17 years
+Maryland,All Sexes,1-4 years
+Maryland,All Sexes,5-14 years
+Maryland,All Sexes,15-24 years
+Maryland,All Sexes,18-29 years
+Maryland,All Sexes,25-34 years
+Maryland,All Sexes,30-39 years
+Maryland,All Sexes,35-44 years
+Maryland,All Sexes,40-49 years
+Maryland,All Sexes,45-54 years
+Maryland,All Sexes,50-64 years
+Maryland,All Sexes,55-64 years
+Maryland,All Sexes,65-74 years
+Maryland,All Sexes,75-84 years
+Maryland,All Sexes,85 years and over
+Maryland,Male,All Ages
+Maryland,Male,Under 1 year
+Maryland,Male,0-17 years
+Maryland,Male,1-4 years
+Maryland,Male,5-14 years
+Maryland,Male,15-24 years
+Maryland,Male,18-29 years
+Maryland,Male,25-34 years
+Maryland,Male,30-39 years
+Maryland,Male,35-44 years
+Maryland,Male,40-49 years
+Maryland,Male,45-54 years
+Maryland,Male,50-64 years
+Maryland,Male,55-64 years
+Maryland,Male,65-74 years
+Maryland,Male,75-84 years
+Maryland,Male,85 years and over
+Maryland,Female,All Ages
+Maryland,Female,Under 1 year
+Maryland,Female,0-17 years
+Maryland,Female,1-4 years
+Maryland,Female,5-14 years
+Maryland,Female,15-24 years
+Maryland,Female,18-29 years
+Maryland,Female,25-34 years
+Maryland,Female,30-39 years
+Maryland,Female,35-44 years
+Maryland,Female,40-49 years
+Maryland,Female,45-54 years
+Maryland,Female,50-64 years
+Maryland,Female,55-64 years
+Maryland,Female,65-74 years
+Maryland,Female,75-84 years
+Maryland,Female,85 years and over
+Massachusetts,All Sexes,All Ages
+Massachusetts,All Sexes,Under 1 year
+Massachusetts,All Sexes,0-17 years
+Massachusetts,All Sexes,1-4 years
+Massachusetts,All Sexes,5-14 years
+Massachusetts,All Sexes,15-24 years
+Massachusetts,All Sexes,18-29 years
+Massachusetts,All Sexes,25-34 years
+Massachusetts,All Sexes,30-39 years
+Massachusetts,All Sexes,35-44 years
+Massachusetts,All Sexes,40-49 years
+Massachusetts,All Sexes,45-54 years
+Massachusetts,All Sexes,50-64 years
+Massachusetts,All Sexes,55-64 years
+Massachusetts,All Sexes,65-74 years
+Massachusetts,All Sexes,75-84 years
+Massachusetts,All Sexes,85 years and over
+Massachusetts,Male,All Ages
+Massachusetts,Male,Under 1 year
+Massachusetts,Male,0-17 years
+Massachusetts,Male,1-4 years
+Massachusetts,Male,5-14 years
+Massachusetts,Male,15-24 years
+Massachusetts,Male,18-29 years
+Massachusetts,Male,25-34 years
+Massachusetts,Male,30-39 years
+Massachusetts,Male,35-44 years
+Massachusetts,Male,40-49 years
+Massachusetts,Male,45-54 years
+Massachusetts,Male,50-64 years
+Massachusetts,Male,55-64 years
+Massachusetts,Male,65-74 years
+Massachusetts,Male,75-84 years
+Massachusetts,Male,85 years and over
+Massachusetts,Female,All Ages
+Massachusetts,Female,Under 1 year
+Massachusetts,Female,0-17 years
+Massachusetts,Female,1-4 years
+Massachusetts,Female,5-14 years
+Massachusetts,Female,15-24 years
+Massachusetts,Female,18-29 years
+Massachusetts,Female,25-34 years
+Massachusetts,Female,30-39 years
+Massachusetts,Female,35-44 years
+Massachusetts,Female,40-49 years
+Massachusetts,Female,45-54 years
+Massachusetts,Female,50-64 years
+Massachusetts,Female,55-64 years
+Massachusetts,Female,65-74 years
+Massachusetts,Female,75-84 years
+Massachusetts,Female,85 years and over
+Michigan,All Sexes,All Ages
+Michigan,All Sexes,Under 1 year
+Michigan,All Sexes,0-17 years
+Michigan,All Sexes,1-4 years
+Michigan,All Sexes,5-14 years
+Michigan,All Sexes,15-24 years
+Michigan,All Sexes,18-29 years
+Michigan,All Sexes,25-34 years
+Michigan,All Sexes,30-39 years
+Michigan,All Sexes,35-44 years
+Michigan,All Sexes,40-49 years
+Michigan,All Sexes,45-54 years
+Michigan,All Sexes,50-64 years
+Michigan,All Sexes,55-64 years
+Michigan,All Sexes,65-74 years
+Michigan,All Sexes,75-84 years
+Michigan,All Sexes,85 years and over
+Michigan,Male,All Ages
+Michigan,Male,Under 1 year
+Michigan,Male,0-17 years
+Michigan,Male,1-4 years
+Michigan,Male,5-14 years
+Michigan,Male,15-24 years
+Michigan,Male,18-29 years
+Michigan,Male,25-34 years
+Michigan,Male,30-39 years
+Michigan,Male,35-44 years
+Michigan,Male,40-49 years
+Michigan,Male,45-54 years
+Michigan,Male,50-64 years
+Michigan,Male,55-64 years
+Michigan,Male,65-74 years
+Michigan,Male,75-84 years
+Michigan,Male,85 years and over
+Michigan,Female,All Ages
+Michigan,Female,Under 1 year
+Michigan,Female,0-17 years
+Michigan,Female,1-4 years
+Michigan,Female,5-14 years
+Michigan,Female,15-24 years
+Michigan,Female,18-29 years
+Michigan,Female,25-34 years
+Michigan,Female,30-39 years
+Michigan,Female,35-44 years
+Michigan,Female,40-49 years
+Michigan,Female,45-54 years
+Michigan,Female,50-64 years
+Michigan,Female,55-64 years
+Michigan,Female,65-74 years
+Michigan,Female,75-84 years
+Michigan,Female,85 years and over
+Minnesota,All Sexes,All Ages
+Minnesota,All Sexes,Under 1 year
+Minnesota,All Sexes,0-17 years
+Minnesota,All Sexes,1-4 years
+Minnesota,All Sexes,5-14 years
+Minnesota,All Sexes,15-24 years
+Minnesota,All Sexes,18-29 years
+Minnesota,All Sexes,25-34 years
+Minnesota,All Sexes,30-39 years
+Minnesota,All Sexes,35-44 years
+Minnesota,All Sexes,40-49 years
+Minnesota,All Sexes,45-54 years
+Minnesota,All Sexes,50-64 years
+Minnesota,All Sexes,55-64 years
+Minnesota,All Sexes,65-74 years
+Minnesota,All Sexes,75-84 years
+Minnesota,All Sexes,85 years and over
+Minnesota,Male,All Ages
+Minnesota,Male,Under 1 year
+Minnesota,Male,0-17 years
+Minnesota,Male,1-4 years
+Minnesota,Male,5-14 years
+Minnesota,Male,15-24 years
+Minnesota,Male,18-29 years
+Minnesota,Male,25-34 years
+Minnesota,Male,30-39 years
+Minnesota,Male,35-44 years
+Minnesota,Male,40-49 years
+Minnesota,Male,45-54 years
+Minnesota,Male,50-64 years
+Minnesota,Male,55-64 years
+Minnesota,Male,65-74 years
+Minnesota,Male,75-84 years
+Minnesota,Male,85 years and over
+Minnesota,Female,All Ages
+Minnesota,Female,Under 1 year
+Minnesota,Female,0-17 years
+Minnesota,Female,1-4 years
+Minnesota,Female,5-14 years
+Minnesota,Female,15-24 years
+Minnesota,Female,18-29 years
+Minnesota,Female,25-34 years
+Minnesota,Female,30-39 years
+Minnesota,Female,35-44 years
+Minnesota,Female,40-49 years
+Minnesota,Female,45-54 years
+Minnesota,Female,50-64 years
+Minnesota,Female,55-64 years
+Minnesota,Female,65-74 years
+Minnesota,Female,75-84 years
+Minnesota,Female,85 years and over
+Mississippi,All Sexes,All Ages
+Mississippi,All Sexes,Under 1 year
+Mississippi,All Sexes,0-17 years
+Mississippi,All Sexes,1-4 years
+Mississippi,All Sexes,5-14 years
+Mississippi,All Sexes,15-24 years
+Mississippi,All Sexes,18-29 years
+Mississippi,All Sexes,25-34 years
+Mississippi,All Sexes,30-39 years
+Mississippi,All Sexes,35-44 years
+Mississippi,All Sexes,40-49 years
+Mississippi,All Sexes,45-54 years
+Mississippi,All Sexes,50-64 years
+Mississippi,All Sexes,55-64 years
+Mississippi,All Sexes,65-74 years
+Mississippi,All Sexes,75-84 years
+Mississippi,All Sexes,85 years and over
+Mississippi,Male,All Ages
+Mississippi,Male,Under 1 year
+Mississippi,Male,0-17 years
+Mississippi,Male,1-4 years
+Mississippi,Male,5-14 years
+Mississippi,Male,15-24 years
+Mississippi,Male,18-29 years
+Mississippi,Male,25-34 years
+Mississippi,Male,30-39 years
+Mississippi,Male,35-44 years
+Mississippi,Male,40-49 years
+Mississippi,Male,45-54 years
+Mississippi,Male,50-64 years
+Mississippi,Male,55-64 years
+Mississippi,Male,65-74 years
+Mississippi,Male,75-84 years
+Mississippi,Male,85 years and over
+Mississippi,Female,All Ages
+Mississippi,Female,Under 1 year
+Mississippi,Female,0-17 years
+Mississippi,Female,1-4 years
+Mississippi,Female,5-14 years
+Mississippi,Female,15-24 years
+Mississippi,Female,18-29 years
+Mississippi,Female,25-34 years
+Mississippi,Female,30-39 years
+Mississippi,Female,35-44 years
+Mississippi,Female,40-49 years
+Mississippi,Female,45-54 years
+Mississippi,Female,50-64 years
+Mississippi,Female,55-64 years
+Mississippi,Female,65-74 years
+Mississippi,Female,75-84 years
+Mississippi,Female,85 years and over
+Missouri,All Sexes,All Ages
+Missouri,All Sexes,Under 1 year
+Missouri,All Sexes,0-17 years
+Missouri,All Sexes,1-4 years
+Missouri,All Sexes,5-14 years
+Missouri,All Sexes,15-24 years
+Missouri,All Sexes,18-29 years
+Missouri,All Sexes,25-34 years
+Missouri,All Sexes,30-39 years
+Missouri,All Sexes,35-44 years
+Missouri,All Sexes,40-49 years
+Missouri,All Sexes,45-54 years
+Missouri,All Sexes,50-64 years
+Missouri,All Sexes,55-64 years
+Missouri,All Sexes,65-74 years
+Missouri,All Sexes,75-84 years
+Missouri,All Sexes,85 years and over
+Missouri,Male,All Ages
+Missouri,Male,Under 1 year
+Missouri,Male,0-17 years
+Missouri,Male,1-4 years
+Missouri,Male,5-14 years
+Missouri,Male,15-24 years
+Missouri,Male,18-29 years
+Missouri,Male,25-34 years
+Missouri,Male,30-39 years
+Missouri,Male,35-44 years
+Missouri,Male,40-49 years
+Missouri,Male,45-54 years
+Missouri,Male,50-64 years
+Missouri,Male,55-64 years
+Missouri,Male,65-74 years
+Missouri,Male,75-84 years
+Missouri,Male,85 years and over
+Missouri,Female,All Ages
+Missouri,Female,Under 1 year
+Missouri,Female,0-17 years
+Missouri,Female,1-4 years
+Missouri,Female,5-14 years
+Missouri,Female,15-24 years
+Missouri,Female,18-29 years
+Missouri,Female,25-34 years
+Missouri,Female,30-39 years
+Missouri,Female,35-44 years
+Missouri,Female,40-49 years
+Missouri,Female,45-54 years
+Missouri,Female,50-64 years
+Missouri,Female,55-64 years
+Missouri,Female,65-74 years
+Missouri,Female,75-84 years
+Missouri,Female,85 years and over
+Montana,All Sexes,All Ages
+Montana,All Sexes,Under 1 year
+Montana,All Sexes,0-17 years
+Montana,All Sexes,1-4 years
+Montana,All Sexes,5-14 years
+Montana,All Sexes,15-24 years
+Montana,All Sexes,18-29 years
+Montana,All Sexes,25-34 years
+Montana,All Sexes,30-39 years
+Montana,All Sexes,35-44 years
+Montana,All Sexes,40-49 years
+Montana,All Sexes,45-54 years
+Montana,All Sexes,50-64 years
+Montana,All Sexes,55-64 years
+Montana,All Sexes,65-74 years
+Montana,All Sexes,75-84 years
+Montana,All Sexes,85 years and over
+Montana,Male,All Ages
+Montana,Male,Under 1 year
+Montana,Male,0-17 years
+Montana,Male,1-4 years
+Montana,Male,5-14 years
+Montana,Male,15-24 years
+Montana,Male,18-29 years
+Montana,Male,25-34 years
+Montana,Male,30-39 years
+Montana,Male,35-44 years
+Montana,Male,40-49 years
+Montana,Male,45-54 years
+Montana,Male,50-64 years
+Montana,Male,55-64 years
+Montana,Male,65-74 years
+Montana,Male,75-84 years
+Montana,Male,85 years and over
+Montana,Female,All Ages
+Montana,Female,Under 1 year
+Montana,Female,0-17 years
+Montana,Female,1-4 years
+Montana,Female,5-14 years
+Montana,Female,15-24 years
+Montana,Female,18-29 years
+Montana,Female,25-34 years
+Montana,Female,30-39 years
+Montana,Female,35-44 years
+Montana,Female,40-49 years
+Montana,Female,45-54 years
+Montana,Female,50-64 years
+Montana,Female,55-64 years
+Montana,Female,65-74 years
+Montana,Female,75-84 years
+Montana,Female,85 years and over
+Nebraska,All Sexes,All Ages
+Nebraska,All Sexes,Under 1 year
+Nebraska,All Sexes,0-17 years
+Nebraska,All Sexes,1-4 years
+Nebraska,All Sexes,5-14 years
+Nebraska,All Sexes,15-24 years
+Nebraska,All Sexes,18-29 years
+Nebraska,All Sexes,25-34 years
+Nebraska,All Sexes,30-39 years
+Nebraska,All Sexes,35-44 years
+Nebraska,All Sexes,40-49 years
+Nebraska,All Sexes,45-54 years
+Nebraska,All Sexes,50-64 years
+Nebraska,All Sexes,55-64 years
+Nebraska,All Sexes,65-74 years
+Nebraska,All Sexes,75-84 years
+Nebraska,All Sexes,85 years and over
+Nebraska,Male,All Ages
+Nebraska,Male,Under 1 year
+Nebraska,Male,0-17 years
+Nebraska,Male,1-4 years
+Nebraska,Male,5-14 years
+Nebraska,Male,15-24 years
+Nebraska,Male,18-29 years
+Nebraska,Male,25-34 years
+Nebraska,Male,30-39 years
+Nebraska,Male,35-44 years
+Nebraska,Male,40-49 years
+Nebraska,Male,45-54 years
+Nebraska,Male,50-64 years
+Nebraska,Male,55-64 years
+Nebraska,Male,65-74 years
+Nebraska,Male,75-84 years
+Nebraska,Male,85 years and over
+Nebraska,Female,All Ages
+Nebraska,Female,Under 1 year
+Nebraska,Female,0-17 years
+Nebraska,Female,1-4 years
+Nebraska,Female,5-14 years
+Nebraska,Female,15-24 years
+Nebraska,Female,18-29 years
+Nebraska,Female,25-34 years
+Nebraska,Female,30-39 years
+Nebraska,Female,35-44 years
+Nebraska,Female,40-49 years
+Nebraska,Female,45-54 years
+Nebraska,Female,50-64 years
+Nebraska,Female,55-64 years
+Nebraska,Female,65-74 years
+Nebraska,Female,75-84 years
+Nebraska,Female,85 years and over
+Nevada,All Sexes,All Ages
+Nevada,All Sexes,Under 1 year
+Nevada,All Sexes,0-17 years
+Nevada,All Sexes,1-4 years
+Nevada,All Sexes,5-14 years
+Nevada,All Sexes,15-24 years
+Nevada,All Sexes,18-29 years
+Nevada,All Sexes,25-34 years
+Nevada,All Sexes,30-39 years
+Nevada,All Sexes,35-44 years
+Nevada,All Sexes,40-49 years
+Nevada,All Sexes,45-54 years
+Nevada,All Sexes,50-64 years
+Nevada,All Sexes,55-64 years
+Nevada,All Sexes,65-74 years
+Nevada,All Sexes,75-84 years
+Nevada,All Sexes,85 years and over
+Nevada,Male,All Ages
+Nevada,Male,Under 1 year
+Nevada,Male,0-17 years
+Nevada,Male,1-4 years
+Nevada,Male,5-14 years
+Nevada,Male,15-24 years
+Nevada,Male,18-29 years
+Nevada,Male,25-34 years
+Nevada,Male,30-39 years
+Nevada,Male,35-44 years
+Nevada,Male,40-49 years
+Nevada,Male,45-54 years
+Nevada,Male,50-64 years
+Nevada,Male,55-64 years
+Nevada,Male,65-74 years
+Nevada,Male,75-84 years
+Nevada,Male,85 years and over
+Nevada,Female,All Ages
+Nevada,Female,Under 1 year
+Nevada,Female,0-17 years
+Nevada,Female,1-4 years
+Nevada,Female,5-14 years
+Nevada,Female,15-24 years
+Nevada,Female,18-29 years
+Nevada,Female,25-34 years
+Nevada,Female,30-39 years
+Nevada,Female,35-44 years
+Nevada,Female,40-49 years
+Nevada,Female,45-54 years
+Nevada,Female,50-64 years
+Nevada,Female,55-64 years
+Nevada,Female,65-74 years
+Nevada,Female,75-84 years
+Nevada,Female,85 years and over
+New Hampshire,All Sexes,All Ages
+New Hampshire,All Sexes,Under 1 year
+New Hampshire,All Sexes,0-17 years
+New Hampshire,All Sexes,1-4 years
+New Hampshire,All Sexes,5-14 years
+New Hampshire,All Sexes,15-24 years
+New Hampshire,All Sexes,18-29 years
+New Hampshire,All Sexes,25-34 years
+New Hampshire,All Sexes,30-39 years
+New Hampshire,All Sexes,35-44 years
+New Hampshire,All Sexes,40-49 years
+New Hampshire,All Sexes,45-54 years
+New Hampshire,All Sexes,50-64 years
+New Hampshire,All Sexes,55-64 years
+New Hampshire,All Sexes,65-74 years
+New Hampshire,All Sexes,75-84 years
+New Hampshire,All Sexes,85 years and over
+New Hampshire,Male,All Ages
+New Hampshire,Male,Under 1 year
+New Hampshire,Male,0-17 years
+New Hampshire,Male,1-4 years
+New Hampshire,Male,5-14 years
+New Hampshire,Male,15-24 years
+New Hampshire,Male,18-29 years
+New Hampshire,Male,25-34 years
+New Hampshire,Male,30-39 years
+New Hampshire,Male,35-44 years
+New Hampshire,Male,40-49 years
+New Hampshire,Male,45-54 years
+New Hampshire,Male,50-64 years
+New Hampshire,Male,55-64 years
+New Hampshire,Male,65-74 years
+New Hampshire,Male,75-84 years
+New Hampshire,Male,85 years and over
+New Hampshire,Female,All Ages
+New Hampshire,Female,Under 1 year
+New Hampshire,Female,0-17 years
+New Hampshire,Female,1-4 years
+New Hampshire,Female,5-14 years
+New Hampshire,Female,15-24 years
+New Hampshire,Female,18-29 years
+New Hampshire,Female,25-34 years
+New Hampshire,Female,30-39 years
+New Hampshire,Female,35-44 years
+New Hampshire,Female,40-49 years
+New Hampshire,Female,45-54 years
+New Hampshire,Female,50-64 years
+New Hampshire,Female,55-64 years
+New Hampshire,Female,65-74 years
+New Hampshire,Female,75-84 years
+New Hampshire,Female,85 years and over
+New Jersey,All Sexes,All Ages
+New Jersey,All Sexes,Under 1 year
+New Jersey,All Sexes,0-17 years
+New Jersey,All Sexes,1-4 years
+New Jersey,All Sexes,5-14 years
+New Jersey,All Sexes,15-24 years
+New Jersey,All Sexes,18-29 years
+New Jersey,All Sexes,25-34 years
+New Jersey,All Sexes,30-39 years
+New Jersey,All Sexes,35-44 years
+New Jersey,All Sexes,40-49 years
+New Jersey,All Sexes,45-54 years
+New Jersey,All Sexes,50-64 years
+New Jersey,All Sexes,55-64 years
+New Jersey,All Sexes,65-74 years
+New Jersey,All Sexes,75-84 years
+New Jersey,All Sexes,85 years and over
+New Jersey,Male,All Ages
+New Jersey,Male,Under 1 year
+New Jersey,Male,0-17 years
+New Jersey,Male,1-4 years
+New Jersey,Male,5-14 years
+New Jersey,Male,15-24 years
+New Jersey,Male,18-29 years
+New Jersey,Male,25-34 years
+New Jersey,Male,30-39 years
+New Jersey,Male,35-44 years
+New Jersey,Male,40-49 years
+New Jersey,Male,45-54 years
+New Jersey,Male,50-64 years
+New Jersey,Male,55-64 years
+New Jersey,Male,65-74 years
+New Jersey,Male,75-84 years
+New Jersey,Male,85 years and over
+New Jersey,Female,All Ages
+New Jersey,Female,Under 1 year
+New Jersey,Female,0-17 years
+New Jersey,Female,1-4 years
+New Jersey,Female,5-14 years
+New Jersey,Female,15-24 years
+New Jersey,Female,18-29 years
+New Jersey,Female,25-34 years
+New Jersey,Female,30-39 years
+New Jersey,Female,35-44 years
+New Jersey,Female,40-49 years
+New Jersey,Female,45-54 years
+New Jersey,Female,50-64 years
+New Jersey,Female,55-64 years
+New Jersey,Female,65-74 years
+New Jersey,Female,75-84 years
+New Jersey,Female,85 years and over
+New Mexico,All Sexes,All Ages
+New Mexico,All Sexes,Under 1 year
+New Mexico,All Sexes,0-17 years
+New Mexico,All Sexes,1-4 years
+New Mexico,All Sexes,5-14 years
+New Mexico,All Sexes,15-24 years
+New Mexico,All Sexes,18-29 years
+New Mexico,All Sexes,25-34 years
+New Mexico,All Sexes,30-39 years
+New Mexico,All Sexes,35-44 years
+New Mexico,All Sexes,40-49 years
+New Mexico,All Sexes,45-54 years
+New Mexico,All Sexes,50-64 years
+New Mexico,All Sexes,55-64 years
+New Mexico,All Sexes,65-74 years
+New Mexico,All Sexes,75-84 years
+New Mexico,All Sexes,85 years and over
+New Mexico,Male,All Ages
+New Mexico,Male,Under 1 year
+New Mexico,Male,0-17 years
+New Mexico,Male,1-4 years
+New Mexico,Male,5-14 years
+New Mexico,Male,15-24 years
+New Mexico,Male,18-29 years
+New Mexico,Male,25-34 years
+New Mexico,Male,30-39 years
+New Mexico,Male,35-44 years
+New Mexico,Male,40-49 years
+New Mexico,Male,45-54 years
+New Mexico,Male,50-64 years
+New Mexico,Male,55-64 years
+New Mexico,Male,65-74 years
+New Mexico,Male,75-84 years
+New Mexico,Male,85 years and over
+New Mexico,Female,All Ages
+New Mexico,Female,Under 1 year
+New Mexico,Female,0-17 years
+New Mexico,Female,1-4 years
+New Mexico,Female,5-14 years
+New Mexico,Female,15-24 years
+New Mexico,Female,18-29 years
+New Mexico,Female,25-34 years
+New Mexico,Female,30-39 years
+New Mexico,Female,35-44 years
+New Mexico,Female,40-49 years
+New Mexico,Female,45-54 years
+New Mexico,Female,50-64 years
+New Mexico,Female,55-64 years
+New Mexico,Female,65-74 years
+New Mexico,Female,75-84 years
+New Mexico,Female,85 years and over
+New York,All Sexes,All Ages
+New York,All Sexes,Under 1 year
+New York,All Sexes,0-17 years
+New York,All Sexes,1-4 years
+New York,All Sexes,5-14 years
+New York,All Sexes,15-24 years
+New York,All Sexes,18-29 years
+New York,All Sexes,25-34 years
+New York,All Sexes,30-39 years
+New York,All Sexes,35-44 years
+New York,All Sexes,40-49 years
+New York,All Sexes,45-54 years
+New York,All Sexes,50-64 years
+New York,All Sexes,55-64 years
+New York,All Sexes,65-74 years
+New York,All Sexes,75-84 years
+New York,All Sexes,85 years and over
+New York,Male,All Ages
+New York,Male,Under 1 year
+New York,Male,0-17 years
+New York,Male,1-4 years
+New York,Male,5-14 years
+New York,Male,15-24 years
+New York,Male,18-29 years
+New York,Male,25-34 years
+New York,Male,30-39 years
+New York,Male,35-44 years
+New York,Male,40-49 years
+New York,Male,45-54 years
+New York,Male,50-64 years
+New York,Male,55-64 years
+New York,Male,65-74 years
+New York,Male,75-84 years
+New York,Male,85 years and over
+New York,Female,All Ages
+New York,Female,Under 1 year
+New York,Female,0-17 years
+New York,Female,1-4 years
+New York,Female,5-14 years
+New York,Female,15-24 years
+New York,Female,18-29 years
+New York,Female,25-34 years
+New York,Female,30-39 years
+New York,Female,35-44 years
+New York,Female,40-49 years
+New York,Female,45-54 years
+New York,Female,50-64 years
+New York,Female,55-64 years
+New York,Female,65-74 years
+New York,Female,75-84 years
+New York,Female,85 years and over
+New York City,All Sexes,All Ages
+New York City,All Sexes,Under 1 year
+New York City,All Sexes,0-17 years
+New York City,All Sexes,1-4 years
+New York City,All Sexes,5-14 years
+New York City,All Sexes,15-24 years
+New York City,All Sexes,18-29 years
+New York City,All Sexes,25-34 years
+New York City,All Sexes,30-39 years
+New York City,All Sexes,35-44 years
+New York City,All Sexes,40-49 years
+New York City,All Sexes,45-54 years
+New York City,All Sexes,50-64 years
+New York City,All Sexes,55-64 years
+New York City,All Sexes,65-74 years
+New York City,All Sexes,75-84 years
+New York City,All Sexes,85 years and over
+New York City,Male,All Ages
+New York City,Male,Under 1 year
+New York City,Male,0-17 years
+New York City,Male,1-4 years
+New York City,Male,5-14 years
+New York City,Male,15-24 years
+New York City,Male,18-29 years
+New York City,Male,25-34 years
+New York City,Male,30-39 years
+New York City,Male,35-44 years
+New York City,Male,40-49 years
+New York City,Male,45-54 years
+New York City,Male,50-64 years
+New York City,Male,55-64 years
+New York City,Male,65-74 years
+New York City,Male,75-84 years
+New York City,Male,85 years and over
+New York City,Female,All Ages
+New York City,Female,Under 1 year
+New York City,Female,0-17 years
+New York City,Female,1-4 years
+New York City,Female,5-14 years
+New York City,Female,15-24 years
+New York City,Female,18-29 years
+New York City,Female,25-34 years
+New York City,Female,30-39 years
+New York City,Female,35-44 years
+New York City,Female,40-49 years
+New York City,Female,45-54 years
+New York City,Female,50-64 years
+New York City,Female,55-64 years
+New York City,Female,65-74 years
+New York City,Female,75-84 years
+New York City,Female,85 years and over
+North Carolina,All Sexes,All Ages
+North Carolina,All Sexes,Under 1 year
+North Carolina,All Sexes,0-17 years
+North Carolina,All Sexes,1-4 years
+North Carolina,All Sexes,5-14 years
+North Carolina,All Sexes,15-24 years
+North Carolina,All Sexes,18-29 years
+North Carolina,All Sexes,25-34 years
+North Carolina,All Sexes,30-39 years
+North Carolina,All Sexes,35-44 years
+North Carolina,All Sexes,40-49 years
+North Carolina,All Sexes,45-54 years
+North Carolina,All Sexes,50-64 years
+North Carolina,All Sexes,55-64 years
+North Carolina,All Sexes,65-74 years
+North Carolina,All Sexes,75-84 years
+North Carolina,All Sexes,85 years and over
+North Carolina,Male,All Ages
+North Carolina,Male,Under 1 year
+North Carolina,Male,0-17 years
+North Carolina,Male,1-4 years
+North Carolina,Male,5-14 years
+North Carolina,Male,15-24 years
+North Carolina,Male,18-29 years
+North Carolina,Male,25-34 years
+North Carolina,Male,30-39 years
+North Carolina,Male,35-44 years
+North Carolina,Male,40-49 years
+North Carolina,Male,45-54 years
+North Carolina,Male,50-64 years
+North Carolina,Male,55-64 years
+North Carolina,Male,65-74 years
+North Carolina,Male,75-84 years
+North Carolina,Male,85 years and over
+North Carolina,Female,All Ages
+North Carolina,Female,Under 1 year
+North Carolina,Female,0-17 years
+North Carolina,Female,1-4 years
+North Carolina,Female,5-14 years
+North Carolina,Female,15-24 years
+North Carolina,Female,18-29 years
+North Carolina,Female,25-34 years
+North Carolina,Female,30-39 years
+North Carolina,Female,35-44 years
+North Carolina,Female,40-49 years
+North Carolina,Female,45-54 years
+North Carolina,Female,50-64 years
+North Carolina,Female,55-64 years
+North Carolina,Female,65-74 years
+North Carolina,Female,75-84 years
+North Carolina,Female,85 years and over
+North Dakota,All Sexes,All Ages
+North Dakota,All Sexes,Under 1 year
+North Dakota,All Sexes,0-17 years
+North Dakota,All Sexes,1-4 years
+North Dakota,All Sexes,5-14 years
+North Dakota,All Sexes,15-24 years
+North Dakota,All Sexes,18-29 years
+North Dakota,All Sexes,25-34 years
+North Dakota,All Sexes,30-39 years
+North Dakota,All Sexes,35-44 years
+North Dakota,All Sexes,40-49 years
+North Dakota,All Sexes,45-54 years
+North Dakota,All Sexes,50-64 years
+North Dakota,All Sexes,55-64 years
+North Dakota,All Sexes,65-74 years
+North Dakota,All Sexes,75-84 years
+North Dakota,All Sexes,85 years and over
+North Dakota,Male,All Ages
+North Dakota,Male,Under 1 year
+North Dakota,Male,0-17 years
+North Dakota,Male,1-4 years
+North Dakota,Male,5-14 years
+North Dakota,Male,15-24 years
+North Dakota,Male,18-29 years
+North Dakota,Male,25-34 years
+North Dakota,Male,30-39 years
+North Dakota,Male,35-44 years
+North Dakota,Male,40-49 years
+North Dakota,Male,45-54 years
+North Dakota,Male,50-64 years
+North Dakota,Male,55-64 years
+North Dakota,Male,65-74 years
+North Dakota,Male,75-84 years
+North Dakota,Male,85 years and over
+North Dakota,Female,All Ages
+North Dakota,Female,Under 1 year
+North Dakota,Female,0-17 years
+North Dakota,Female,1-4 years
+North Dakota,Female,5-14 years
+North Dakota,Female,15-24 years
+North Dakota,Female,18-29 years
+North Dakota,Female,25-34 years
+North Dakota,Female,30-39 years
+North Dakota,Female,35-44 years
+North Dakota,Female,40-49 years
+North Dakota,Female,45-54 years
+North Dakota,Female,50-64 years
+North Dakota,Female,55-64 years
+North Dakota,Female,65-74 years
+North Dakota,Female,75-84 years
+North Dakota,Female,85 years and over
+Ohio,All Sexes,All Ages
+Ohio,All Sexes,Under 1 year
+Ohio,All Sexes,0-17 years
+Ohio,All Sexes,1-4 years
+Ohio,All Sexes,5-14 years
+Ohio,All Sexes,15-24 years
+Ohio,All Sexes,18-29 years
+Ohio,All Sexes,25-34 years
+Ohio,All Sexes,30-39 years
+Ohio,All Sexes,35-44 years
+Ohio,All Sexes,40-49 years
+Ohio,All Sexes,45-54 years
+Ohio,All Sexes,50-64 years
+Ohio,All Sexes,55-64 years
+Ohio,All Sexes,65-74 years
+Ohio,All Sexes,75-84 years
+Ohio,All Sexes,85 years and over
+Ohio,Male,All Ages
+Ohio,Male,Under 1 year
+Ohio,Male,0-17 years
+Ohio,Male,1-4 years
+Ohio,Male,5-14 years
+Ohio,Male,15-24 years
+Ohio,Male,18-29 years
+Ohio,Male,25-34 years
+Ohio,Male,30-39 years
+Ohio,Male,35-44 years
+Ohio,Male,40-49 years
+Ohio,Male,45-54 years
+Ohio,Male,50-64 years
+Ohio,Male,55-64 years
+Ohio,Male,65-74 years
+Ohio,Male,75-84 years
+Ohio,Male,85 years and over
+Ohio,Female,All Ages
+Ohio,Female,Under 1 year
+Ohio,Female,0-17 years
+Ohio,Female,1-4 years
+Ohio,Female,5-14 years
+Ohio,Female,15-24 years
+Ohio,Female,18-29 years
+Ohio,Female,25-34 years
+Ohio,Female,30-39 years
+Ohio,Female,35-44 years
+Ohio,Female,40-49 years
+Ohio,Female,45-54 years
+Ohio,Female,50-64 years
+Ohio,Female,55-64 years
+Ohio,Female,65-74 years
+Ohio,Female,75-84 years
+Ohio,Female,85 years and over
+Oklahoma,All Sexes,All Ages
+Oklahoma,All Sexes,Under 1 year
+Oklahoma,All Sexes,0-17 years
+Oklahoma,All Sexes,1-4 years
+Oklahoma,All Sexes,5-14 years
+Oklahoma,All Sexes,15-24 years
+Oklahoma,All Sexes,18-29 years
+Oklahoma,All Sexes,25-34 years
+Oklahoma,All Sexes,30-39 years
+Oklahoma,All Sexes,35-44 years
+Oklahoma,All Sexes,40-49 years
+Oklahoma,All Sexes,45-54 years
+Oklahoma,All Sexes,50-64 years
+Oklahoma,All Sexes,55-64 years
+Oklahoma,All Sexes,65-74 years
+Oklahoma,All Sexes,75-84 years
+Oklahoma,All Sexes,85 years and over
+Oklahoma,Male,All Ages
+Oklahoma,Male,Under 1 year
+Oklahoma,Male,0-17 years
+Oklahoma,Male,1-4 years
+Oklahoma,Male,5-14 years
+Oklahoma,Male,15-24 years
+Oklahoma,Male,18-29 years
+Oklahoma,Male,25-34 years
+Oklahoma,Male,30-39 years
+Oklahoma,Male,35-44 years
+Oklahoma,Male,40-49 years
+Oklahoma,Male,45-54 years
+Oklahoma,Male,50-64 years
+Oklahoma,Male,55-64 years
+Oklahoma,Male,65-74 years
+Oklahoma,Male,75-84 years
+Oklahoma,Male,85 years and over
+Oklahoma,Female,All Ages
+Oklahoma,Female,Under 1 year
+Oklahoma,Female,0-17 years
+Oklahoma,Female,1-4 years
+Oklahoma,Female,5-14 years
+Oklahoma,Female,15-24 years
+Oklahoma,Female,18-29 years
+Oklahoma,Female,25-34 years
+Oklahoma,Female,30-39 years
+Oklahoma,Female,35-44 years
+Oklahoma,Female,40-49 years
+Oklahoma,Female,45-54 years
+Oklahoma,Female,50-64 years
+Oklahoma,Female,55-64 years
+Oklahoma,Female,65-74 years
+Oklahoma,Female,75-84 years
+Oklahoma,Female,85 years and over
+Oregon,All Sexes,All Ages
+Oregon,All Sexes,Under 1 year
+Oregon,All Sexes,0-17 years
+Oregon,All Sexes,1-4 years
+Oregon,All Sexes,5-14 years
+Oregon,All Sexes,15-24 years
+Oregon,All Sexes,18-29 years
+Oregon,All Sexes,25-34 years
+Oregon,All Sexes,30-39 years
+Oregon,All Sexes,35-44 years
+Oregon,All Sexes,40-49 years
+Oregon,All Sexes,45-54 years
+Oregon,All Sexes,50-64 years
+Oregon,All Sexes,55-64 years
+Oregon,All Sexes,65-74 years
+Oregon,All Sexes,75-84 years
+Oregon,All Sexes,85 years and over
+Oregon,Male,All Ages
+Oregon,Male,Under 1 year
+Oregon,Male,0-17 years
+Oregon,Male,1-4 years
+Oregon,Male,5-14 years
+Oregon,Male,15-24 years
+Oregon,Male,18-29 years
+Oregon,Male,25-34 years
+Oregon,Male,30-39 years
+Oregon,Male,35-44 years
+Oregon,Male,40-49 years
+Oregon,Male,45-54 years
+Oregon,Male,50-64 years
+Oregon,Male,55-64 years
+Oregon,Male,65-74 years
+Oregon,Male,75-84 years
+Oregon,Male,85 years and over
+Oregon,Female,All Ages
+Oregon,Female,Under 1 year
+Oregon,Female,0-17 years
+Oregon,Female,1-4 years
+Oregon,Female,5-14 years
+Oregon,Female,15-24 years
+Oregon,Female,18-29 years
+Oregon,Female,25-34 years
+Oregon,Female,30-39 years
+Oregon,Female,35-44 years
+Oregon,Female,40-49 years
+Oregon,Female,45-54 years
+Oregon,Female,50-64 years
+Oregon,Female,55-64 years
+Oregon,Female,65-74 years
+Oregon,Female,75-84 years
+Oregon,Female,85 years and over
+Pennsylvania,All Sexes,All Ages
+Pennsylvania,All Sexes,Under 1 year
+Pennsylvania,All Sexes,0-17 years
+Pennsylvania,All Sexes,1-4 years
+Pennsylvania,All Sexes,5-14 years
+Pennsylvania,All Sexes,15-24 years
+Pennsylvania,All Sexes,18-29 years
+Pennsylvania,All Sexes,25-34 years
+Pennsylvania,All Sexes,30-39 years
+Pennsylvania,All Sexes,35-44 years
+Pennsylvania,All Sexes,40-49 years
+Pennsylvania,All Sexes,45-54 years
+Pennsylvania,All Sexes,50-64 years
+Pennsylvania,All Sexes,55-64 years
+Pennsylvania,All Sexes,65-74 years
+Pennsylvania,All Sexes,75-84 years
+Pennsylvania,All Sexes,85 years and over
+Pennsylvania,Male,All Ages
+Pennsylvania,Male,Under 1 year
+Pennsylvania,Male,0-17 years
+Pennsylvania,Male,1-4 years
+Pennsylvania,Male,5-14 years
+Pennsylvania,Male,15-24 years
+Pennsylvania,Male,18-29 years
+Pennsylvania,Male,25-34 years
+Pennsylvania,Male,30-39 years
+Pennsylvania,Male,35-44 years
+Pennsylvania,Male,40-49 years
+Pennsylvania,Male,45-54 years
+Pennsylvania,Male,50-64 years
+Pennsylvania,Male,55-64 years
+Pennsylvania,Male,65-74 years
+Pennsylvania,Male,75-84 years
+Pennsylvania,Male,85 years and over
+Pennsylvania,Female,All Ages
+Pennsylvania,Female,Under 1 year
+Pennsylvania,Female,0-17 years
+Pennsylvania,Female,1-4 years
+Pennsylvania,Female,5-14 years
+Pennsylvania,Female,15-24 years
+Pennsylvania,Female,18-29 years
+Pennsylvania,Female,25-34 years
+Pennsylvania,Female,30-39 years
+Pennsylvania,Female,35-44 years
+Pennsylvania,Female,40-49 years
+Pennsylvania,Female,45-54 years
+Pennsylvania,Female,50-64 years
+Pennsylvania,Female,55-64 years
+Pennsylvania,Female,65-74 years
+Pennsylvania,Female,75-84 years
+Pennsylvania,Female,85 years and over
+Rhode Island,All Sexes,All Ages
+Rhode Island,All Sexes,Under 1 year
+Rhode Island,All Sexes,0-17 years
+Rhode Island,All Sexes,1-4 years
+Rhode Island,All Sexes,5-14 years
+Rhode Island,All Sexes,15-24 years
+Rhode Island,All Sexes,18-29 years
+Rhode Island,All Sexes,25-34 years
+Rhode Island,All Sexes,30-39 years
+Rhode Island,All Sexes,35-44 years
+Rhode Island,All Sexes,40-49 years
+Rhode Island,All Sexes,45-54 years
+Rhode Island,All Sexes,50-64 years
+Rhode Island,All Sexes,55-64 years
+Rhode Island,All Sexes,65-74 years
+Rhode Island,All Sexes,75-84 years
+Rhode Island,All Sexes,85 years and over
+Rhode Island,Male,All Ages
+Rhode Island,Male,Under 1 year
+Rhode Island,Male,0-17 years
+Rhode Island,Male,1-4 years
+Rhode Island,Male,5-14 years
+Rhode Island,Male,15-24 years
+Rhode Island,Male,18-29 years
+Rhode Island,Male,25-34 years
+Rhode Island,Male,30-39 years
+Rhode Island,Male,35-44 years
+Rhode Island,Male,40-49 years
+Rhode Island,Male,45-54 years
+Rhode Island,Male,50-64 years
+Rhode Island,Male,55-64 years
+Rhode Island,Male,65-74 years
+Rhode Island,Male,75-84 years
+Rhode Island,Male,85 years and over
+Rhode Island,Female,All Ages
+Rhode Island,Female,Under 1 year
+Rhode Island,Female,0-17 years
+Rhode Island,Female,1-4 years
+Rhode Island,Female,5-14 years
+Rhode Island,Female,15-24 years
+Rhode Island,Female,18-29 years
+Rhode Island,Female,25-34 years
+Rhode Island,Female,30-39 years
+Rhode Island,Female,35-44 years
+Rhode Island,Female,40-49 years
+Rhode Island,Female,45-54 years
+Rhode Island,Female,50-64 years
+Rhode Island,Female,55-64 years
+Rhode Island,Female,65-74 years
+Rhode Island,Female,75-84 years
+Rhode Island,Female,85 years and over
+South Carolina,All Sexes,All Ages
+South Carolina,All Sexes,Under 1 year
+South Carolina,All Sexes,0-17 years
+South Carolina,All Sexes,1-4 years
+South Carolina,All Sexes,5-14 years
+South Carolina,All Sexes,15-24 years
+South Carolina,All Sexes,18-29 years
+South Carolina,All Sexes,25-34 years
+South Carolina,All Sexes,30-39 years
+South Carolina,All Sexes,35-44 years
+South Carolina,All Sexes,40-49 years
+South Carolina,All Sexes,45-54 years
+South Carolina,All Sexes,50-64 years
+South Carolina,All Sexes,55-64 years
+South Carolina,All Sexes,65-74 years
+South Carolina,All Sexes,75-84 years
+South Carolina,All Sexes,85 years and over
+South Carolina,Male,All Ages
+South Carolina,Male,Under 1 year
+South Carolina,Male,0-17 years
+South Carolina,Male,1-4 years
+South Carolina,Male,5-14 years
+South Carolina,Male,15-24 years
+South Carolina,Male,18-29 years
+South Carolina,Male,25-34 years
+South Carolina,Male,30-39 years
+South Carolina,Male,35-44 years
+South Carolina,Male,40-49 years
+South Carolina,Male,45-54 years
+South Carolina,Male,50-64 years
+South Carolina,Male,55-64 years
+South Carolina,Male,65-74 years
+South Carolina,Male,75-84 years
+South Carolina,Male,85 years and over
+South Carolina,Female,All Ages
+South Carolina,Female,Under 1 year
+South Carolina,Female,0-17 years
+South Carolina,Female,1-4 years
+South Carolina,Female,5-14 years
+South Carolina,Female,15-24 years
+South Carolina,Female,18-29 years
+South Carolina,Female,25-34 years
+South Carolina,Female,30-39 years
+South Carolina,Female,35-44 years
+South Carolina,Female,40-49 years
+South Carolina,Female,45-54 years
+South Carolina,Female,50-64 years
+South Carolina,Female,55-64 years
+South Carolina,Female,65-74 years
+South Carolina,Female,75-84 years
+South Carolina,Female,85 years and over
+South Dakota,All Sexes,All Ages
+South Dakota,All Sexes,Under 1 year
+South Dakota,All Sexes,0-17 years
+South Dakota,All Sexes,1-4 years
+South Dakota,All Sexes,5-14 years
+South Dakota,All Sexes,15-24 years
+South Dakota,All Sexes,18-29 years
+South Dakota,All Sexes,25-34 years
+South Dakota,All Sexes,30-39 years
+South Dakota,All Sexes,35-44 years
+South Dakota,All Sexes,40-49 years
+South Dakota,All Sexes,45-54 years
+South Dakota,All Sexes,50-64 years
+South Dakota,All Sexes,55-64 years
+South Dakota,All Sexes,65-74 years
+South Dakota,All Sexes,75-84 years
+South Dakota,All Sexes,85 years and over
+South Dakota,Male,All Ages
+South Dakota,Male,Under 1 year
+South Dakota,Male,0-17 years
+South Dakota,Male,1-4 years
+South Dakota,Male,5-14 years
+South Dakota,Male,15-24 years
+South Dakota,Male,18-29 years
+South Dakota,Male,25-34 years
+South Dakota,Male,30-39 years
+South Dakota,Male,35-44 years
+South Dakota,Male,40-49 years
+South Dakota,Male,45-54 years
+South Dakota,Male,50-64 years
+South Dakota,Male,55-64 years
+South Dakota,Male,65-74 years
+South Dakota,Male,75-84 years
+South Dakota,Male,85 years and over
+South Dakota,Female,All Ages
+South Dakota,Female,Under 1 year
+South Dakota,Female,0-17 years
+South Dakota,Female,1-4 years
+South Dakota,Female,5-14 years
+South Dakota,Female,15-24 years
+South Dakota,Female,18-29 years
+South Dakota,Female,25-34 years
+South Dakota,Female,30-39 years
+South Dakota,Female,35-44 years
+South Dakota,Female,40-49 years
+South Dakota,Female,45-54 years
+South Dakota,Female,50-64 years
+South Dakota,Female,55-64 years
+South Dakota,Female,65-74 years
+South Dakota,Female,75-84 years
+South Dakota,Female,85 years and over
+Tennessee,All Sexes,All Ages
+Tennessee,All Sexes,Under 1 year
+Tennessee,All Sexes,0-17 years
+Tennessee,All Sexes,1-4 years
+Tennessee,All Sexes,5-14 years
+Tennessee,All Sexes,15-24 years
+Tennessee,All Sexes,18-29 years
+Tennessee,All Sexes,25-34 years
+Tennessee,All Sexes,30-39 years
+Tennessee,All Sexes,35-44 years
+Tennessee,All Sexes,40-49 years
+Tennessee,All Sexes,45-54 years
+Tennessee,All Sexes,50-64 years
+Tennessee,All Sexes,55-64 years
+Tennessee,All Sexes,65-74 years
+Tennessee,All Sexes,75-84 years
+Tennessee,All Sexes,85 years and over
+Tennessee,Male,All Ages
+Tennessee,Male,Under 1 year
+Tennessee,Male,0-17 years
+Tennessee,Male,1-4 years
+Tennessee,Male,5-14 years
+Tennessee,Male,15-24 years
+Tennessee,Male,18-29 years
+Tennessee,Male,25-34 years
+Tennessee,Male,30-39 years
+Tennessee,Male,35-44 years
+Tennessee,Male,40-49 years
+Tennessee,Male,45-54 years
+Tennessee,Male,50-64 years
+Tennessee,Male,55-64 years
+Tennessee,Male,65-74 years
+Tennessee,Male,75-84 years
+Tennessee,Male,85 years and over
+Tennessee,Female,All Ages
+Tennessee,Female,Under 1 year
+Tennessee,Female,0-17 years
+Tennessee,Female,1-4 years
+Tennessee,Female,5-14 years
+Tennessee,Female,15-24 years
+Tennessee,Female,18-29 years
+Tennessee,Female,25-34 years
+Tennessee,Female,30-39 years
+Tennessee,Female,35-44 years
+Tennessee,Female,40-49 years
+Tennessee,Female,45-54 years
+Tennessee,Female,50-64 years
+Tennessee,Female,55-64 years
+Tennessee,Female,65-74 years
+Tennessee,Female,75-84 years
+Tennessee,Female,85 years and over
+Texas,All Sexes,All Ages
+Texas,All Sexes,Under 1 year
+Texas,All Sexes,0-17 years
+Texas,All Sexes,1-4 years
+Texas,All Sexes,5-14 years
+Texas,All Sexes,15-24 years
+Texas,All Sexes,18-29 years
+Texas,All Sexes,25-34 years
+Texas,All Sexes,30-39 years
+Texas,All Sexes,35-44 years
+Texas,All Sexes,40-49 years
+Texas,All Sexes,45-54 years
+Texas,All Sexes,50-64 years
+Texas,All Sexes,55-64 years
+Texas,All Sexes,65-74 years
+Texas,All Sexes,75-84 years
+Texas,All Sexes,85 years and over
+Texas,Male,All Ages
+Texas,Male,Under 1 year
+Texas,Male,0-17 years
+Texas,Male,1-4 years
+Texas,Male,5-14 years
+Texas,Male,15-24 years
+Texas,Male,18-29 years
+Texas,Male,25-34 years
+Texas,Male,30-39 years
+Texas,Male,35-44 years
+Texas,Male,40-49 years
+Texas,Male,45-54 years
+Texas,Male,50-64 years
+Texas,Male,55-64 years
+Texas,Male,65-74 years
+Texas,Male,75-84 years
+Texas,Male,85 years and over
+Texas,Female,All Ages
+Texas,Female,Under 1 year
+Texas,Female,0-17 years
+Texas,Female,1-4 years
+Texas,Female,5-14 years
+Texas,Female,15-24 years
+Texas,Female,18-29 years
+Texas,Female,25-34 years
+Texas,Female,30-39 years
+Texas,Female,35-44 years
+Texas,Female,40-49 years
+Texas,Female,45-54 years
+Texas,Female,50-64 years
+Texas,Female,55-64 years
+Texas,Female,65-74 years
+Texas,Female,75-84 years
+Texas,Female,85 years and over
+Utah,All Sexes,All Ages
+Utah,All Sexes,Under 1 year
+Utah,All Sexes,0-17 years
+Utah,All Sexes,1-4 years
+Utah,All Sexes,5-14 years
+Utah,All Sexes,15-24 years
+Utah,All Sexes,18-29 years
+Utah,All Sexes,25-34 years
+Utah,All Sexes,30-39 years
+Utah,All Sexes,35-44 years
+Utah,All Sexes,40-49 years
+Utah,All Sexes,45-54 years
+Utah,All Sexes,50-64 years
+Utah,All Sexes,55-64 years
+Utah,All Sexes,65-74 years
+Utah,All Sexes,75-84 years
+Utah,All Sexes,85 years and over
+Utah,Male,All Ages
+Utah,Male,Under 1 year
+Utah,Male,0-17 years
+Utah,Male,1-4 years
+Utah,Male,5-14 years
+Utah,Male,15-24 years
+Utah,Male,18-29 years
+Utah,Male,25-34 years
+Utah,Male,30-39 years
+Utah,Male,35-44 years
+Utah,Male,40-49 years
+Utah,Male,45-54 years
+Utah,Male,50-64 years
+Utah,Male,55-64 years
+Utah,Male,65-74 years
+Utah,Male,75-84 years
+Utah,Male,85 years and over
+Utah,Female,All Ages
+Utah,Female,Under 1 year
+Utah,Female,0-17 years
+Utah,Female,1-4 years
+Utah,Female,5-14 years
+Utah,Female,15-24 years
+Utah,Female,18-29 years
+Utah,Female,25-34 years
+Utah,Female,30-39 years
+Utah,Female,35-44 years
+Utah,Female,40-49 years
+Utah,Female,45-54 years
+Utah,Female,50-64 years
+Utah,Female,55-64 years
+Utah,Female,65-74 years
+Utah,Female,75-84 years
+Utah,Female,85 years and over
+Vermont,All Sexes,All Ages
+Vermont,All Sexes,Under 1 year
+Vermont,All Sexes,0-17 years
+Vermont,All Sexes,1-4 years
+Vermont,All Sexes,5-14 years
+Vermont,All Sexes,15-24 years
+Vermont,All Sexes,18-29 years
+Vermont,All Sexes,25-34 years
+Vermont,All Sexes,30-39 years
+Vermont,All Sexes,35-44 years
+Vermont,All Sexes,40-49 years
+Vermont,All Sexes,45-54 years
+Vermont,All Sexes,50-64 years
+Vermont,All Sexes,55-64 years
+Vermont,All Sexes,65-74 years
+Vermont,All Sexes,75-84 years
+Vermont,All Sexes,85 years and over
+Vermont,Male,All Ages
+Vermont,Male,Under 1 year
+Vermont,Male,0-17 years
+Vermont,Male,1-4 years
+Vermont,Male,5-14 years
+Vermont,Male,15-24 years
+Vermont,Male,18-29 years
+Vermont,Male,25-34 years
+Vermont,Male,30-39 years
+Vermont,Male,35-44 years
+Vermont,Male,40-49 years
+Vermont,Male,45-54 years
+Vermont,Male,50-64 years
+Vermont,Male,55-64 years
+Vermont,Male,65-74 years
+Vermont,Male,75-84 years
+Vermont,Male,85 years and over
+Vermont,Female,All Ages
+Vermont,Female,Under 1 year
+Vermont,Female,0-17 years
+Vermont,Female,1-4 years
+Vermont,Female,5-14 years
+Vermont,Female,15-24 years
+Vermont,Female,18-29 years
+Vermont,Female,25-34 years
+Vermont,Female,30-39 years
+Vermont,Female,35-44 years
+Vermont,Female,40-49 years
+Vermont,Female,45-54 years
+Vermont,Female,50-64 years
+Vermont,Female,55-64 years
+Vermont,Female,65-74 years
+Vermont,Female,75-84 years
+Vermont,Female,85 years and over
+Virginia,All Sexes,All Ages
+Virginia,All Sexes,Under 1 year
+Virginia,All Sexes,0-17 years
+Virginia,All Sexes,1-4 years
+Virginia,All Sexes,5-14 years
+Virginia,All Sexes,15-24 years
+Virginia,All Sexes,18-29 years
+Virginia,All Sexes,25-34 years
+Virginia,All Sexes,30-39 years
+Virginia,All Sexes,35-44 years
+Virginia,All Sexes,40-49 years
+Virginia,All Sexes,45-54 years
+Virginia,All Sexes,50-64 years
+Virginia,All Sexes,55-64 years
+Virginia,All Sexes,65-74 years
+Virginia,All Sexes,75-84 years
+Virginia,All Sexes,85 years and over
+Virginia,Male,All Ages
+Virginia,Male,Under 1 year
+Virginia,Male,0-17 years
+Virginia,Male,1-4 years
+Virginia,Male,5-14 years
+Virginia,Male,15-24 years
+Virginia,Male,18-29 years
+Virginia,Male,25-34 years
+Virginia,Male,30-39 years
+Virginia,Male,35-44 years
+Virginia,Male,40-49 years
+Virginia,Male,45-54 years
+Virginia,Male,50-64 years
+Virginia,Male,55-64 years
+Virginia,Male,65-74 years
+Virginia,Male,75-84 years
+Virginia,Male,85 years and over
+Virginia,Female,All Ages
+Virginia,Female,Under 1 year
+Virginia,Female,0-17 years
+Virginia,Female,1-4 years
+Virginia,Female,5-14 years
+Virginia,Female,15-24 years
+Virginia,Female,18-29 years
+Virginia,Female,25-34 years
+Virginia,Female,30-39 years
+Virginia,Female,35-44 years
+Virginia,Female,40-49 years
+Virginia,Female,45-54 years
+Virginia,Female,50-64 years
+Virginia,Female,55-64 years
+Virginia,Female,65-74 years
+Virginia,Female,75-84 years
+Virginia,Female,85 years and over
+Washington,All Sexes,All Ages
+Washington,All Sexes,Under 1 year
+Washington,All Sexes,0-17 years
+Washington,All Sexes,1-4 years
+Washington,All Sexes,5-14 years
+Washington,All Sexes,15-24 years
+Washington,All Sexes,18-29 years
+Washington,All Sexes,25-34 years
+Washington,All Sexes,30-39 years
+Washington,All Sexes,35-44 years
+Washington,All Sexes,40-49 years
+Washington,All Sexes,45-54 years
+Washington,All Sexes,50-64 years
+Washington,All Sexes,55-64 years
+Washington,All Sexes,65-74 years
+Washington,All Sexes,75-84 years
+Washington,All Sexes,85 years and over
+Washington,Male,All Ages
+Washington,Male,Under 1 year
+Washington,Male,0-17 years
+Washington,Male,1-4 years
+Washington,Male,5-14 years
+Washington,Male,15-24 years
+Washington,Male,18-29 years
+Washington,Male,25-34 years
+Washington,Male,30-39 years
+Washington,Male,35-44 years
+Washington,Male,40-49 years
+Washington,Male,45-54 years
+Washington,Male,50-64 years
+Washington,Male,55-64 years
+Washington,Male,65-74 years
+Washington,Male,75-84 years
+Washington,Male,85 years and over
+Washington,Female,All Ages
+Washington,Female,Under 1 year
+Washington,Female,0-17 years
+Washington,Female,1-4 years
+Washington,Female,5-14 years
+Washington,Female,15-24 years
+Washington,Female,18-29 years
+Washington,Female,25-34 years
+Washington,Female,30-39 years
+Washington,Female,35-44 years
+Washington,Female,40-49 years
+Washington,Female,45-54 years
+Washington,Female,50-64 years
+Washington,Female,55-64 years
+Washington,Female,65-74 years
+Washington,Female,75-84 years
+Washington,Female,85 years and over
+West Virginia,All Sexes,All Ages
+West Virginia,All Sexes,Under 1 year
+West Virginia,All Sexes,0-17 years
+West Virginia,All Sexes,1-4 years
+West Virginia,All Sexes,5-14 years
+West Virginia,All Sexes,15-24 years
+West Virginia,All Sexes,18-29 years
+West Virginia,All Sexes,25-34 years
+West Virginia,All Sexes,30-39 years
+West Virginia,All Sexes,35-44 years
+West Virginia,All Sexes,40-49 years
+West Virginia,All Sexes,45-54 years
+West Virginia,All Sexes,50-64 years
+West Virginia,All Sexes,55-64 years
+West Virginia,All Sexes,65-74 years
+West Virginia,All Sexes,75-84 years
+West Virginia,All Sexes,85 years and over
+West Virginia,Male,All Ages
+West Virginia,Male,Under 1 year
+West Virginia,Male,0-17 years
+West Virginia,Male,1-4 years
+West Virginia,Male,5-14 years
+West Virginia,Male,15-24 years
+West Virginia,Male,18-29 years
+West Virginia,Male,25-34 years
+West Virginia,Male,30-39 years
+West Virginia,Male,35-44 years
+West Virginia,Male,40-49 years
+West Virginia,Male,45-54 years
+West Virginia,Male,50-64 years
+West Virginia,Male,55-64 years
+West Virginia,Male,65-74 years
+West Virginia,Male,75-84 years
+West Virginia,Male,85 years and over
+West Virginia,Female,All Ages
+West Virginia,Female,Under 1 year
+West Virginia,Female,0-17 years
+West Virginia,Female,1-4 years
+West Virginia,Female,5-14 years
+West Virginia,Female,15-24 years
+West Virginia,Female,18-29 years
+West Virginia,Female,25-34 years
+West Virginia,Female,30-39 years
+West Virginia,Female,35-44 years
+West Virginia,Female,40-49 years
+West Virginia,Female,45-54 years
+West Virginia,Female,50-64 years
+West Virginia,Female,55-64 years
+West Virginia,Female,65-74 years
+West Virginia,Female,75-84 years
+West Virginia,Female,85 years and over
+Wisconsin,All Sexes,All Ages
+Wisconsin,All Sexes,Under 1 year
+Wisconsin,All Sexes,0-17 years
+Wisconsin,All Sexes,1-4 years
+Wisconsin,All Sexes,5-14 years
+Wisconsin,All Sexes,15-24 years
+Wisconsin,All Sexes,18-29 years
+Wisconsin,All Sexes,25-34 years
+Wisconsin,All Sexes,30-39 years
+Wisconsin,All Sexes,35-44 years
+Wisconsin,All Sexes,40-49 years
+Wisconsin,All Sexes,45-54 years
+Wisconsin,All Sexes,50-64 years
+Wisconsin,All Sexes,55-64 years
+Wisconsin,All Sexes,65-74 years
+Wisconsin,All Sexes,75-84 years
+Wisconsin,All Sexes,85 years and over
+Wisconsin,Male,All Ages
+Wisconsin,Male,Under 1 year
+Wisconsin,Male,0-17 years
+Wisconsin,Male,1-4 years
+Wisconsin,Male,5-14 years
+Wisconsin,Male,15-24 years
+Wisconsin,Male,18-29 years
+Wisconsin,Male,25-34 years
+Wisconsin,Male,30-39 years
+Wisconsin,Male,35-44 years
+Wisconsin,Male,40-49 years
+Wisconsin,Male,45-54 years
+Wisconsin,Male,50-64 years
+Wisconsin,Male,55-64 years
+Wisconsin,Male,65-74 years
+Wisconsin,Male,75-84 years
+Wisconsin,Male,85 years and over
+Wisconsin,Female,All Ages
+Wisconsin,Female,Under 1 year
+Wisconsin,Female,0-17 years
+Wisconsin,Female,1-4 years
+Wisconsin,Female,5-14 years
+Wisconsin,Female,15-24 years
+Wisconsin,Female,18-29 years
+Wisconsin,Female,25-34 years
+Wisconsin,Female,30-39 years
+Wisconsin,Female,35-44 years
+Wisconsin,Female,40-49 years
+Wisconsin,Female,45-54 years
+Wisconsin,Female,50-64 years
+Wisconsin,Female,55-64 years
+Wisconsin,Female,65-74 years
+Wisconsin,Female,75-84 years
+Wisconsin,Female,85 years and over
+Wyoming,All Sexes,All Ages
+Wyoming,All Sexes,Under 1 year
+Wyoming,All Sexes,0-17 years
+Wyoming,All Sexes,1-4 years
+Wyoming,All Sexes,5-14 years
+Wyoming,All Sexes,15-24 years
+Wyoming,All Sexes,18-29 years
+Wyoming,All Sexes,25-34 years
+Wyoming,All Sexes,30-39 years
+Wyoming,All Sexes,35-44 years
+Wyoming,All Sexes,40-49 years
+Wyoming,All Sexes,45-54 years
+Wyoming,All Sexes,50-64 years
+Wyoming,All Sexes,55-64 years
+Wyoming,All Sexes,65-74 years
+Wyoming,All Sexes,75-84 years
+Wyoming,All Sexes,85 years and over
+Wyoming,Male,All Ages
+Wyoming,Male,Under 1 year
+Wyoming,Male,0-17 years
+Wyoming,Male,1-4 years
+Wyoming,Male,5-14 years
+Wyoming,Male,15-24 years
+Wyoming,Male,18-29 years
+Wyoming,Male,25-34 years
+Wyoming,Male,30-39 years
+Wyoming,Male,35-44 years
+Wyoming,Male,40-49 years
+Wyoming,Male,45-54 years
+Wyoming,Male,50-64 years
+Wyoming,Male,55-64 years
+Wyoming,Male,65-74 years
+Wyoming,Male,75-84 years
+Wyoming,Male,85 years and over
+Wyoming,Female,All Ages
+Wyoming,Female,Under 1 year
+Wyoming,Female,0-17 years
+Wyoming,Female,1-4 years
+Wyoming,Female,5-14 years
+Wyoming,Female,15-24 years
+Wyoming,Female,18-29 years
+Wyoming,Female,25-34 years
+Wyoming,Female,30-39 years
+Wyoming,Female,35-44 years
+Wyoming,Female,40-49 years
+Wyoming,Female,45-54 years
+Wyoming,Female,50-64 years
+Wyoming,Female,55-64 years
+Wyoming,Female,65-74 years
+Wyoming,Female,75-84 years
+Wyoming,Female,85 years and over
+Puerto Rico,All Sexes,All Ages
+Puerto Rico,All Sexes,Under 1 year
+Puerto Rico,All Sexes,0-17 years
+Puerto Rico,All Sexes,1-4 years
+Puerto Rico,All Sexes,5-14 years
+Puerto Rico,All Sexes,15-24 years
+Puerto Rico,All Sexes,18-29 years
+Puerto Rico,All Sexes,25-34 years
+Puerto Rico,All Sexes,30-39 years
+Puerto Rico,All Sexes,35-44 years
+Puerto Rico,All Sexes,40-49 years
+Puerto Rico,All Sexes,45-54 years
+Puerto Rico,All Sexes,50-64 years
+Puerto Rico,All Sexes,55-64 years
+Puerto Rico,All Sexes,65-74 years
+Puerto Rico,All Sexes,75-84 years
+Puerto Rico,All Sexes,85 years and over
+Puerto Rico,Male,All Ages
+Puerto Rico,Male,Under 1 year
+Puerto Rico,Male,0-17 years
+Puerto Rico,Male,1-4 years
+Puerto Rico,Male,5-14 years
+Puerto Rico,Male,15-24 years
+Puerto Rico,Male,18-29 years
+Puerto Rico,Male,25-34 years
+Puerto Rico,Male,30-39 years
+Puerto Rico,Male,35-44 years
+Puerto Rico,Male,40-49 years
+Puerto Rico,Male,45-54 years
+Puerto Rico,Male,50-64 years
+Puerto Rico,Male,55-64 years
+Puerto Rico,Male,65-74 years
+Puerto Rico,Male,75-84 years
+Puerto Rico,Male,85 years and over
+Puerto Rico,Female,All Ages
+Puerto Rico,Female,Under 1 year
+Puerto Rico,Female,0-17 years
+Puerto Rico,Female,1-4 years
+Puerto Rico,Female,5-14 years
+Puerto Rico,Female,15-24 years
+Puerto Rico,Female,18-29 years
+Puerto Rico,Female,25-34 years
+Puerto Rico,Female,30-39 years
+Puerto Rico,Female,35-44 years
+Puerto Rico,Female,40-49 years
+Puerto Rico,Female,45-54 years
+Puerto Rico,Female,50-64 years
+Puerto Rico,Female,55-64 years
+Puerto Rico,Female,65-74 years
+Puerto Rico,Female,75-84 years
+Puerto Rico,Female,85 years and over
+United States,All Sexes,All Ages
+United States,All Sexes,Under 1 year
+United States,All Sexes,0-17 years
+United States,All Sexes,1-4 years
+United States,All Sexes,5-14 years
+United States,All Sexes,15-24 years
+United States,All Sexes,18-29 years
+United States,All Sexes,25-34 years
+United States,All Sexes,30-39 years
+United States,All Sexes,35-44 years
+United States,All Sexes,40-49 years
+United States,All Sexes,45-54 years
+United States,All Sexes,50-64 years
+United States,All Sexes,55-64 years
+United States,All Sexes,65-74 years
+United States,All Sexes,75-84 years
+United States,All Sexes,85 years and over
+United States,Male,All Ages
+United States,Male,Under 1 year
+United States,Male,0-17 years
+United States,Male,1-4 years
+United States,Male,5-14 years
+United States,Male,15-24 years
+United States,Male,18-29 years
+United States,Male,25-34 years
+United States,Male,30-39 years
+United States,Male,35-44 years
+United States,Male,40-49 years
+United States,Male,45-54 years
+United States,Male,50-64 years
+United States,Male,55-64 years
+United States,Male,65-74 years
+United States,Male,75-84 years
+United States,Male,85 years and over
+United States,Female,All Ages
+United States,Female,Under 1 year
+United States,Female,0-17 years
+United States,Female,1-4 years
+United States,Female,5-14 years
+United States,Female,15-24 years
+United States,Female,18-29 years
+United States,Female,25-34 years
+United States,Female,30-39 years
+United States,Female,35-44 years
+United States,Female,40-49 years
+United States,Female,45-54 years
+United States,Female,50-64 years
+United States,Female,55-64 years
+United States,Female,65-74 years
+United States,Female,75-84 years
+United States,Female,85 years and over
+United States,All Sexes,All Ages
+United States,All Sexes,Under 1 year
+United States,All Sexes,0-17 years
+United States,All Sexes,1-4 years
+United States,All Sexes,5-14 years
+United States,All Sexes,15-24 years
+United States,All Sexes,18-29 years
+United States,All Sexes,25-34 years
+United States,All Sexes,30-39 years
+United States,All Sexes,35-44 years
+United States,All Sexes,40-49 years
+United States,All Sexes,45-54 years
+United States,All Sexes,50-64 years
+United States,All Sexes,55-64 years
+United States,All Sexes,65-74 years
+United States,All Sexes,75-84 years
+United States,All Sexes,85 years and over
+United States,Male,All Ages
+United States,Male,Under 1 year
+United States,Male,0-17 years
+United States,Male,1-4 years
+United States,Male,5-14 years
+United States,Male,15-24 years
+United States,Male,18-29 years
+United States,Male,25-34 years
+United States,Male,30-39 years
+United States,Male,35-44 years
+United States,Male,40-49 years
+United States,Male,45-54 years
+United States,Male,50-64 years
+United States,Male,55-64 years
+United States,Male,65-74 years
+United States,Male,75-84 years
+United States,Male,85 years and over
+United States,Female,All Ages
+United States,Female,Under 1 year
+United States,Female,0-17 years
+United States,Female,1-4 years
+United States,Female,5-14 years
+United States,Female,15-24 years
+United States,Female,18-29 years
+United States,Female,25-34 years
+United States,Female,30-39 years
+United States,Female,35-44 years
+United States,Female,40-49 years
+United States,Female,45-54 years
+United States,Female,50-64 years
+United States,Female,55-64 years
+United States,Female,65-74 years
+United States,Female,75-84 years
+United States,Female,85 years and over
+United States,All Sexes,All Ages
+United States,All Sexes,Under 1 year
+United States,All Sexes,0-17 years
+United States,All Sexes,1-4 years
+United States,All Sexes,5-14 years
+United States,All Sexes,15-24 years
+United States,All Sexes,18-29 years
+United States,All Sexes,25-34 years
+United States,All Sexes,30-39 years
+United States,All Sexes,35-44 years
+United States,All Sexes,40-49 years
+United States,All Sexes,45-54 years
+United States,All Sexes,50-64 years
+United States,All Sexes,55-64 years
+United States,All Sexes,65-74 years
+United States,All Sexes,75-84 years
+United States,All Sexes,85 years and over
+United States,Male,All Ages
+United States,Male,Under 1 year
+United States,Male,0-17 years
+United States,Male,1-4 years
+United States,Male,5-14 years
+United States,Male,15-24 years
+United States,Male,18-29 years
+United States,Male,25-34 years
+United States,Male,30-39 years
+United States,Male,35-44 years
+United States,Male,40-49 years
+United States,Male,45-54 years
+United States,Male,50-64 years
+United States,Male,55-64 years
+United States,Male,65-74 years
+United States,Male,75-84 years
+United States,Male,85 years and over
+United States,Female,All Ages
+United States,Female,Under 1 year
+United States,Female,0-17 years
+United States,Female,1-4 years
+United States,Female,5-14 years
+United States,Female,15-24 years
+United States,Female,18-29 years
+United States,Female,25-34 years
+United States,Female,30-39 years
+United States,Female,35-44 years
+United States,Female,40-49 years
+United States,Female,45-54 years
+United States,Female,50-64 years
+United States,Female,55-64 years
+United States,Female,65-74 years
+United States,Female,75-84 years
+United States,Female,85 years and over
+United States,All Sexes,All Ages
+United States,All Sexes,Under 1 year
+United States,All Sexes,0-17 years
+United States,All Sexes,1-4 years
+United States,All Sexes,5-14 years
+United States,All Sexes,15-24 years
+United States,All Sexes,18-29 years
+United States,All Sexes,25-34 years
+United States,All Sexes,30-39 years
+United States,All Sexes,35-44 years
+United States,All Sexes,40-49 years
+United States,All Sexes,45-54 years
+United States,All Sexes,50-64 years
+United States,All Sexes,55-64 years
+United States,All Sexes,65-74 years
+United States,All Sexes,75-84 years
+United States,All Sexes,85 years and over
+United States,Male,All Ages
+United States,Male,Under 1 year
+United States,Male,0-17 years
+United States,Male,1-4 years
+United States,Male,5-14 years
+United States,Male,15-24 years
+United States,Male,18-29 years
+United States,Male,25-34 years
+United States,Male,30-39 years
+United States,Male,35-44 years
+United States,Male,40-49 years
+United States,Male,45-54 years
+United States,Male,50-64 years
+United States,Male,55-64 years
+United States,Male,65-74 years
+United States,Male,75-84 years
+United States,Male,85 years and over
+United States,Female,All Ages
+United States,Female,Under 1 year
+United States,Female,0-17 years
+United States,Female,1-4 years
+United States,Female,5-14 years
+United States,Female,15-24 years
+United States,Female,18-29 years
+United States,Female,25-34 years
+United States,Female,30-39 years
+United States,Female,35-44 years
+United States,Female,40-49 years
+United States,Female,45-54 years
+United States,Female,50-64 years
+United States,Female,55-64 years
+United States,Female,65-74 years
+United States,Female,75-84 years
+United States,Female,85 years and over
+Alabama,All Sexes,All Ages
+Alabama,All Sexes,Under 1 year
+Alabama,All Sexes,0-17 years
+Alabama,All Sexes,1-4 years
+Alabama,All Sexes,5-14 years
+Alabama,All Sexes,15-24 years
+Alabama,All Sexes,18-29 years
+Alabama,All Sexes,25-34 years
+Alabama,All Sexes,30-39 years
+Alabama,All Sexes,35-44 years
+Alabama,All Sexes,40-49 years
+Alabama,All Sexes,45-54 years
+Alabama,All Sexes,50-64 years
+Alabama,All Sexes,55-64 years
+Alabama,All Sexes,65-74 years
+Alabama,All Sexes,75-84 years
+Alabama,All Sexes,85 years and over
+Alabama,Male,All Ages
+Alabama,Male,Under 1 year
+Alabama,Male,0-17 years
+Alabama,Male,1-4 years
+Alabama,Male,5-14 years
+Alabama,Male,15-24 years
+Alabama,Male,18-29 years
+Alabama,Male,25-34 years
+Alabama,Male,30-39 years
+Alabama,Male,35-44 years
+Alabama,Male,40-49 years
+Alabama,Male,45-54 years
+Alabama,Male,50-64 years
+Alabama,Male,55-64 years
+Alabama,Male,65-74 years
+Alabama,Male,75-84 years
+Alabama,Male,85 years and over
+Alabama,Female,All Ages
+Alabama,Female,Under 1 year
+Alabama,Female,0-17 years
+Alabama,Female,1-4 years
+Alabama,Female,5-14 years
+Alabama,Female,15-24 years
+Alabama,Female,18-29 years
+Alabama,Female,25-34 years
+Alabama,Female,30-39 years
+Alabama,Female,35-44 years
+Alabama,Female,40-49 years
+Alabama,Female,45-54 years
+Alabama,Female,50-64 years
+Alabama,Female,55-64 years
+Alabama,Female,65-74 years
+Alabama,Female,75-84 years
+Alabama,Female,85 years and over
+Alabama,All Sexes,All Ages
+Alabama,All Sexes,Under 1 year
+Alabama,All Sexes,0-17 years
+Alabama,All Sexes,1-4 years
+Alabama,All Sexes,5-14 years
+Alabama,All Sexes,15-24 years
+Alabama,All Sexes,18-29 years
+Alabama,All Sexes,25-34 years
+Alabama,All Sexes,30-39 years
+Alabama,All Sexes,35-44 years
+Alabama,All Sexes,40-49 years
+Alabama,All Sexes,45-54 years
+Alabama,All Sexes,50-64 years
+Alabama,All Sexes,55-64 years
+Alabama,All Sexes,65-74 years
+Alabama,All Sexes,75-84 years
+Alabama,All Sexes,85 years and over
+Alabama,Male,All Ages
+Alabama,Male,Under 1 year
+Alabama,Male,0-17 years
+Alabama,Male,1-4 years
+Alabama,Male,5-14 years
+Alabama,Male,15-24 years
+Alabama,Male,18-29 years
+Alabama,Male,25-34 years
+Alabama,Male,30-39 years
+Alabama,Male,35-44 years
+Alabama,Male,40-49 years
+Alabama,Male,45-54 years
+Alabama,Male,50-64 years
+Alabama,Male,55-64 years
+Alabama,Male,65-74 years
+Alabama,Male,75-84 years
+Alabama,Male,85 years and over
+Alabama,Female,All Ages
+Alabama,Female,Under 1 year
+Alabama,Female,0-17 years
+Alabama,Female,1-4 years
+Alabama,Female,5-14 years
+Alabama,Female,15-24 years
+Alabama,Female,18-29 years
+Alabama,Female,25-34 years
+Alabama,Female,30-39 years
+Alabama,Female,35-44 years
+Alabama,Female,40-49 years
+Alabama,Female,45-54 years
+Alabama,Female,50-64 years
+Alabama,Female,55-64 years
+Alabama,Female,65-74 years
+Alabama,Female,75-84 years
+Alabama,Female,85 years and over
+Alabama,All Sexes,All Ages
+Alabama,All Sexes,Under 1 year
+Alabama,All Sexes,0-17 years
+Alabama,All Sexes,1-4 years
+Alabama,All Sexes,5-14 years
+Alabama,All Sexes,15-24 years
+Alabama,All Sexes,18-29 years
+Alabama,All Sexes,25-34 years
+Alabama,All Sexes,30-39 years
+Alabama,All Sexes,35-44 years
+Alabama,All Sexes,40-49 years
+Alabama,All Sexes,45-54 years
+Alabama,All Sexes,50-64 years
+Alabama,All Sexes,55-64 years
+Alabama,All Sexes,65-74 years
+Alabama,All Sexes,75-84 years
+Alabama,All Sexes,85 years and over
+Alabama,Male,All Ages
+Alabama,Male,Under 1 year
+Alabama,Male,0-17 years
+Alabama,Male,1-4 years
+Alabama,Male,5-14 years
+Alabama,Male,15-24 years
+Alabama,Male,18-29 years
+Alabama,Male,25-34 years
+Alabama,Male,30-39 years
+Alabama,Male,35-44 years
+Alabama,Male,40-49 years
+Alabama,Male,45-54 years
+Alabama,Male,50-64 years
+Alabama,Male,55-64 years
+Alabama,Male,65-74 years
+Alabama,Male,75-84 years
+Alabama,Male,85 years and over
+Alabama,Female,All Ages
+Alabama,Female,Under 1 year
+Alabama,Female,0-17 years
+Alabama,Female,1-4 years
+Alabama,Female,5-14 years
+Alabama,Female,15-24 years
+Alabama,Female,18-29 years
+Alabama,Female,25-34 years
+Alabama,Female,30-39 years
+Alabama,Female,35-44 years
+Alabama,Female,40-49 years
+Alabama,Female,45-54 years
+Alabama,Female,50-64 years
+Alabama,Female,55-64 years
+Alabama,Female,65-74 years
+Alabama,Female,75-84 years
+Alabama,Female,85 years and over
+Alabama,All Sexes,All Ages
+Alabama,All Sexes,Under 1 year
+Alabama,All Sexes,0-17 years
+Alabama,All Sexes,1-4 years
+Alabama,All Sexes,5-14 years
+Alabama,All Sexes,15-24 years
+Alabama,All Sexes,18-29 years
+Alabama,All Sexes,25-34 years
+Alabama,All Sexes,30-39 years
+Alabama,All Sexes,35-44 years
+Alabama,All Sexes,40-49 years
+Alabama,All Sexes,45-54 years
+Alabama,All Sexes,50-64 years
+Alabama,All Sexes,55-64 years
+Alabama,All Sexes,65-74 years
+Alabama,All Sexes,75-84 years
+Alabama,All Sexes,85 years and over
+Alabama,Male,All Ages
+Alabama,Male,Under 1 year
+Alabama,Male,0-17 years
+Alabama,Male,1-4 years
+Alabama,Male,5-14 years
+Alabama,Male,15-24 years
+Alabama,Male,18-29 years
+Alabama,Male,25-34 years
+Alabama,Male,30-39 years
+Alabama,Male,35-44 years
+Alabama,Male,40-49 years
+Alabama,Male,45-54 years
+Alabama,Male,50-64 years
+Alabama,Male,55-64 years
+Alabama,Male,65-74 years
+Alabama,Male,75-84 years
+Alabama,Male,85 years and over
+Alabama,Female,All Ages
+Alabama,Female,Under 1 year
+Alabama,Female,0-17 years
+Alabama,Female,1-4 years
+Alabama,Female,5-14 years
+Alabama,Female,15-24 years
+Alabama,Female,18-29 years
+Alabama,Female,25-34 years
+Alabama,Female,30-39 years
+Alabama,Female,35-44 years
+Alabama,Female,40-49 years
+Alabama,Female,45-54 years
+Alabama,Female,50-64 years
+Alabama,Female,55-64 years
+Alabama,Female,65-74 years
+Alabama,Female,75-84 years
+Alabama,Female,85 years and over
+Alaska,All Sexes,All Ages
+Alaska,All Sexes,Under 1 year
+Alaska,All Sexes,0-17 years
+Alaska,All Sexes,1-4 years
+Alaska,All Sexes,5-14 years
+Alaska,All Sexes,15-24 years
+Alaska,All Sexes,18-29 years
+Alaska,All Sexes,25-34 years
+Alaska,All Sexes,30-39 years
+Alaska,All Sexes,35-44 years
+Alaska,All Sexes,40-49 years
+Alaska,All Sexes,45-54 years
+Alaska,All Sexes,50-64 years
+Alaska,All Sexes,55-64 years
+Alaska,All Sexes,65-74 years
+Alaska,All Sexes,75-84 years
+Alaska,All Sexes,85 years and over
+Alaska,Male,All Ages
+Alaska,Male,Under 1 year
+Alaska,Male,0-17 years
+Alaska,Male,1-4 years
+Alaska,Male,5-14 years
+Alaska,Male,15-24 years
+Alaska,Male,18-29 years
+Alaska,Male,25-34 years
+Alaska,Male,30-39 years
+Alaska,Male,35-44 years
+Alaska,Male,40-49 years
+Alaska,Male,45-54 years
+Alaska,Male,50-64 years
+Alaska,Male,55-64 years
+Alaska,Male,65-74 years
+Alaska,Male,75-84 years
+Alaska,Male,85 years and over
+Alaska,Female,All Ages
+Alaska,Female,Under 1 year
+Alaska,Female,0-17 years
+Alaska,Female,1-4 years
+Alaska,Female,5-14 years
+Alaska,Female,15-24 years
+Alaska,Female,18-29 years
+Alaska,Female,25-34 years
+Alaska,Female,30-39 years
+Alaska,Female,35-44 years
+Alaska,Female,40-49 years
+Alaska,Female,45-54 years
+Alaska,Female,50-64 years
+Alaska,Female,55-64 years
+Alaska,Female,65-74 years
+Alaska,Female,75-84 years
+Alaska,Female,85 years and over
+Alaska,All Sexes,All Ages
+Alaska,All Sexes,Under 1 year
+Alaska,All Sexes,0-17 years
+Alaska,All Sexes,1-4 years
+Alaska,All Sexes,5-14 years
+Alaska,All Sexes,15-24 years
+Alaska,All Sexes,18-29 years
+Alaska,All Sexes,25-34 years
+Alaska,All Sexes,30-39 years
+Alaska,All Sexes,35-44 years
+Alaska,All Sexes,40-49 years
+Alaska,All Sexes,45-54 years
+Alaska,All Sexes,50-64 years
+Alaska,All Sexes,55-64 years
+Alaska,All Sexes,65-74 years
+Alaska,All Sexes,75-84 years
+Alaska,All Sexes,85 years and over
+Alaska,Male,All Ages
+Alaska,Male,Under 1 year
+Alaska,Male,0-17 years
+Alaska,Male,1-4 years
+Alaska,Male,5-14 years
+Alaska,Male,15-24 years
+Alaska,Male,18-29 years
+Alaska,Male,25-34 years
+Alaska,Male,30-39 years
+Alaska,Male,35-44 years
+Alaska,Male,40-49 years
+Alaska,Male,45-54 years
+Alaska,Male,50-64 years
+Alaska,Male,55-64 years
+Alaska,Male,65-74 years
+Alaska,Male,75-84 years
+Alaska,Male,85 years and over
+Alaska,Female,All Ages
+Alaska,Female,Under 1 year
+Alaska,Female,0-17 years
+Alaska,Female,1-4 years
+Alaska,Female,5-14 years
+Alaska,Female,15-24 years
+Alaska,Female,18-29 years
+Alaska,Female,25-34 years
+Alaska,Female,30-39 years
+Alaska,Female,35-44 years
+Alaska,Female,40-49 years
+Alaska,Female,45-54 years
+Alaska,Female,50-64 years
+Alaska,Female,55-64 years
+Alaska,Female,65-74 years
+Alaska,Female,75-84 years
+Alaska,Female,85 years and over
+Alaska,All Sexes,All Ages
+Alaska,All Sexes,Under 1 year
+Alaska,All Sexes,0-17 years
+Alaska,All Sexes,1-4 years
+Alaska,All Sexes,5-14 years
+Alaska,All Sexes,15-24 years
+Alaska,All Sexes,18-29 years
+Alaska,All Sexes,25-34 years
+Alaska,All Sexes,30-39 years
+Alaska,All Sexes,35-44 years
+Alaska,All Sexes,40-49 years
+Alaska,All Sexes,45-54 years
+Alaska,All Sexes,50-64 years
+Alaska,All Sexes,55-64 years
+Alaska,All Sexes,65-74 years
+Alaska,All Sexes,75-84 years
+Alaska,All Sexes,85 years and over
+Alaska,Male,All Ages
+Alaska,Male,Under 1 year
+Alaska,Male,0-17 years
+Alaska,Male,1-4 years
+Alaska,Male,5-14 years
+Alaska,Male,15-24 years
+Alaska,Male,18-29 years
+Alaska,Male,25-34 years
+Alaska,Male,30-39 years
+Alaska,Male,35-44 years
+Alaska,Male,40-49 years
+Alaska,Male,45-54 years
+Alaska,Male,50-64 years
+Alaska,Male,55-64 years
+Alaska,Male,65-74 years
+Alaska,Male,75-84 years
+Alaska,Male,85 years and over
+Alaska,Female,All Ages
+Alaska,Female,Under 1 year
+Alaska,Female,0-17 years
+Alaska,Female,1-4 years
+Alaska,Female,5-14 years
+Alaska,Female,15-24 years
+Alaska,Female,18-29 years
+Alaska,Female,25-34 years
+Alaska,Female,30-39 years
+Alaska,Female,35-44 years
+Alaska,Female,40-49 years
+Alaska,Female,45-54 years
+Alaska,Female,50-64 years
+Alaska,Female,55-64 years
+Alaska,Female,65-74 years
+Alaska,Female,75-84 years
+Alaska,Female,85 years and over
+Alaska,All Sexes,All Ages
+Alaska,All Sexes,Under 1 year
+Alaska,All Sexes,0-17 years
+Alaska,All Sexes,1-4 years
+Alaska,All Sexes,5-14 years
+Alaska,All Sexes,15-24 years
+Alaska,All Sexes,18-29 years
+Alaska,All Sexes,25-34 years
+Alaska,All Sexes,30-39 years
+Alaska,All Sexes,35-44 years
+Alaska,All Sexes,40-49 years
+Alaska,All Sexes,45-54 years
+Alaska,All Sexes,50-64 years
+Alaska,All Sexes,55-64 years
+Alaska,All Sexes,65-74 years
+Alaska,All Sexes,75-84 years
+Alaska,All Sexes,85 years and over
+Alaska,Male,All Ages
+Alaska,Male,Under 1 year
+Alaska,Male,0-17 years
+Alaska,Male,1-4 years
+Alaska,Male,5-14 years
+Alaska,Male,15-24 years
+Alaska,Male,18-29 years
+Alaska,Male,25-34 years
+Alaska,Male,30-39 years
+Alaska,Male,35-44 years
+Alaska,Male,40-49 years
+Alaska,Male,45-54 years
+Alaska,Male,50-64 years
+Alaska,Male,55-64 years
+Alaska,Male,65-74 years
+Alaska,Male,75-84 years
+Alaska,Male,85 years and over
+Alaska,Female,All Ages
+Alaska,Female,Under 1 year
+Alaska,Female,0-17 years
+Alaska,Female,1-4 years
+Alaska,Female,5-14 years
+Alaska,Female,15-24 years
+Alaska,Female,18-29 years
+Alaska,Female,25-34 years
+Alaska,Female,30-39 years
+Alaska,Female,35-44 years
+Alaska,Female,40-49 years
+Alaska,Female,45-54 years
+Alaska,Female,50-64 years
+Alaska,Female,55-64 years
+Alaska,Female,65-74 years
+Alaska,Female,75-84 years
+Alaska,Female,85 years and over
+Arizona,All Sexes,All Ages
+Arizona,All Sexes,Under 1 year
+Arizona,All Sexes,0-17 years
+Arizona,All Sexes,1-4 years
+Arizona,All Sexes,5-14 years
+Arizona,All Sexes,15-24 years
+Arizona,All Sexes,18-29 years
+Arizona,All Sexes,25-34 years
+Arizona,All Sexes,30-39 years
+Arizona,All Sexes,35-44 years
+Arizona,All Sexes,40-49 years
+Arizona,All Sexes,45-54 years
+Arizona,All Sexes,50-64 years
+Arizona,All Sexes,55-64 years
+Arizona,All Sexes,65-74 years
+Arizona,All Sexes,75-84 years
+Arizona,All Sexes,85 years and over
+Arizona,Male,All Ages
+Arizona,Male,Under 1 year
+Arizona,Male,0-17 years
+Arizona,Male,1-4 years
+Arizona,Male,5-14 years
+Arizona,Male,15-24 years
+Arizona,Male,18-29 years
+Arizona,Male,25-34 years
+Arizona,Male,30-39 years
+Arizona,Male,35-44 years
+Arizona,Male,40-49 years
+Arizona,Male,45-54 years
+Arizona,Male,50-64 years
+Arizona,Male,55-64 years
+Arizona,Male,65-74 years
+Arizona,Male,75-84 years
+Arizona,Male,85 years and over
+Arizona,Female,All Ages
+Arizona,Female,Under 1 year
+Arizona,Female,0-17 years
+Arizona,Female,1-4 years
+Arizona,Female,5-14 years
+Arizona,Female,15-24 years
+Arizona,Female,18-29 years
+Arizona,Female,25-34 years
+Arizona,Female,30-39 years
+Arizona,Female,35-44 years
+Arizona,Female,40-49 years
+Arizona,Female,45-54 years
+Arizona,Female,50-64 years
+Arizona,Female,55-64 years
+Arizona,Female,65-74 years
+Arizona,Female,75-84 years
+Arizona,Female,85 years and over
+Arizona,All Sexes,All Ages
+Arizona,All Sexes,Under 1 year
+Arizona,All Sexes,0-17 years
+Arizona,All Sexes,1-4 years
+Arizona,All Sexes,5-14 years
+Arizona,All Sexes,15-24 years
+Arizona,All Sexes,18-29 years
+Arizona,All Sexes,25-34 years
+Arizona,All Sexes,30-39 years
+Arizona,All Sexes,35-44 years
+Arizona,All Sexes,40-49 years
+Arizona,All Sexes,45-54 years
+Arizona,All Sexes,50-64 years
+Arizona,All Sexes,55-64 years
+Arizona,All Sexes,65-74 years
+Arizona,All Sexes,75-84 years
+Arizona,All Sexes,85 years and over
+Arizona,Male,All Ages
+Arizona,Male,Under 1 year
+Arizona,Male,0-17 years
+Arizona,Male,1-4 years
+Arizona,Male,5-14 years
+Arizona,Male,15-24 years
+Arizona,Male,18-29 years
+Arizona,Male,25-34 years
+Arizona,Male,30-39 years
+Arizona,Male,35-44 years
+Arizona,Male,40-49 years
+Arizona,Male,45-54 years
+Arizona,Male,50-64 years
+Arizona,Male,55-64 years
+Arizona,Male,65-74 years
+Arizona,Male,75-84 years
+Arizona,Male,85 years and over
+Arizona,Female,All Ages
+Arizona,Female,Under 1 year
+Arizona,Female,0-17 years
+Arizona,Female,1-4 years
+Arizona,Female,5-14 years
+Arizona,Female,15-24 years
+Arizona,Female,18-29 years
+Arizona,Female,25-34 years
+Arizona,Female,30-39 years
+Arizona,Female,35-44 years
+Arizona,Female,40-49 years
+Arizona,Female,45-54 years
+Arizona,Female,50-64 years
+Arizona,Female,55-64 years
+Arizona,Female,65-74 years
+Arizona,Female,75-84 years
+Arizona,Female,85 years and over
+Arizona,All Sexes,All Ages
+Arizona,All Sexes,Under 1 year
+Arizona,All Sexes,0-17 years
+Arizona,All Sexes,1-4 years
+Arizona,All Sexes,5-14 years
+Arizona,All Sexes,15-24 years
+Arizona,All Sexes,18-29 years
+Arizona,All Sexes,25-34 years
+Arizona,All Sexes,30-39 years
+Arizona,All Sexes,35-44 years
+Arizona,All Sexes,40-49 years
+Arizona,All Sexes,45-54 years
+Arizona,All Sexes,50-64 years
+Arizona,All Sexes,55-64 years
+Arizona,All Sexes,65-74 years
+Arizona,All Sexes,75-84 years
+Arizona,All Sexes,85 years and over
+Arizona,Male,All Ages
+Arizona,Male,Under 1 year
+Arizona,Male,0-17 years
+Arizona,Male,1-4 years
+Arizona,Male,5-14 years
+Arizona,Male,15-24 years
+Arizona,Male,18-29 years
+Arizona,Male,25-34 years
+Arizona,Male,30-39 years
+Arizona,Male,35-44 years
+Arizona,Male,40-49 years
+Arizona,Male,45-54 years
+Arizona,Male,50-64 years
+Arizona,Male,55-64 years
+Arizona,Male,65-74 years
+Arizona,Male,75-84 years
+Arizona,Male,85 years and over
+Arizona,Female,All Ages
+Arizona,Female,Under 1 year
+Arizona,Female,0-17 years
+Arizona,Female,1-4 years
+Arizona,Female,5-14 years
+Arizona,Female,15-24 years
+Arizona,Female,18-29 years
+Arizona,Female,25-34 years
+Arizona,Female,30-39 years
+Arizona,Female,35-44 years
+Arizona,Female,40-49 years
+Arizona,Female,45-54 years
+Arizona,Female,50-64 years
+Arizona,Female,55-64 years
+Arizona,Female,65-74 years
+Arizona,Female,75-84 years
+Arizona,Female,85 years and over
+Arizona,All Sexes,All Ages
+Arizona,All Sexes,Under 1 year
+Arizona,All Sexes,0-17 years
+Arizona,All Sexes,1-4 years
+Arizona,All Sexes,5-14 years
+Arizona,All Sexes,15-24 years
+Arizona,All Sexes,18-29 years
+Arizona,All Sexes,25-34 years
+Arizona,All Sexes,30-39 years
+Arizona,All Sexes,35-44 years
+Arizona,All Sexes,40-49 years
+Arizona,All Sexes,45-54 years
+Arizona,All Sexes,50-64 years
+Arizona,All Sexes,55-64 years
+Arizona,All Sexes,65-74 years
+Arizona,All Sexes,75-84 years
+Arizona,All Sexes,85 years and over
+Arizona,Male,All Ages
+Arizona,Male,Under 1 year
+Arizona,Male,0-17 years
+Arizona,Male,1-4 years
+Arizona,Male,5-14 years
+Arizona,Male,15-24 years
+Arizona,Male,18-29 years
+Arizona,Male,25-34 years
+Arizona,Male,30-39 years
+Arizona,Male,35-44 years
+Arizona,Male,40-49 years
+Arizona,Male,45-54 years
+Arizona,Male,50-64 years
+Arizona,Male,55-64 years
+Arizona,Male,65-74 years
+Arizona,Male,75-84 years
+Arizona,Male,85 years and over
+Arizona,Female,All Ages
+Arizona,Female,Under 1 year
+Arizona,Female,0-17 years
+Arizona,Female,1-4 years
+Arizona,Female,5-14 years
+Arizona,Female,15-24 years
+Arizona,Female,18-29 years
+Arizona,Female,25-34 years
+Arizona,Female,30-39 years
+Arizona,Female,35-44 years
+Arizona,Female,40-49 years
+Arizona,Female,45-54 years
+Arizona,Female,50-64 years
+Arizona,Female,55-64 years
+Arizona,Female,65-74 years
+Arizona,Female,75-84 years
+Arizona,Female,85 years and over
+Arkansas,All Sexes,All Ages
+Arkansas,All Sexes,Under 1 year
+Arkansas,All Sexes,0-17 years
+Arkansas,All Sexes,1-4 years
+Arkansas,All Sexes,5-14 years
+Arkansas,All Sexes,15-24 years
+Arkansas,All Sexes,18-29 years
+Arkansas,All Sexes,25-34 years
+Arkansas,All Sexes,30-39 years
+Arkansas,All Sexes,35-44 years
+Arkansas,All Sexes,40-49 years
+Arkansas,All Sexes,45-54 years
+Arkansas,All Sexes,50-64 years
+Arkansas,All Sexes,55-64 years
+Arkansas,All Sexes,65-74 years
+Arkansas,All Sexes,75-84 years
+Arkansas,All Sexes,85 years and over
+Arkansas,Male,All Ages
+Arkansas,Male,Under 1 year
+Arkansas,Male,0-17 years
+Arkansas,Male,1-4 years
+Arkansas,Male,5-14 years
+Arkansas,Male,15-24 years
+Arkansas,Male,18-29 years
+Arkansas,Male,25-34 years
+Arkansas,Male,30-39 years
+Arkansas,Male,35-44 years
+Arkansas,Male,40-49 years
+Arkansas,Male,45-54 years
+Arkansas,Male,50-64 years
+Arkansas,Male,55-64 years
+Arkansas,Male,65-74 years
+Arkansas,Male,75-84 years
+Arkansas,Male,85 years and over
+Arkansas,Female,All Ages
+Arkansas,Female,Under 1 year
+Arkansas,Female,0-17 years
+Arkansas,Female,1-4 years
+Arkansas,Female,5-14 years
+Arkansas,Female,15-24 years
+Arkansas,Female,18-29 years
+Arkansas,Female,25-34 years
+Arkansas,Female,30-39 years
+Arkansas,Female,35-44 years
+Arkansas,Female,40-49 years
+Arkansas,Female,45-54 years
+Arkansas,Female,50-64 years
+Arkansas,Female,55-64 years
+Arkansas,Female,65-74 years
+Arkansas,Female,75-84 years
+Arkansas,Female,85 years and over
+Arkansas,All Sexes,All Ages
+Arkansas,All Sexes,Under 1 year
+Arkansas,All Sexes,0-17 years
+Arkansas,All Sexes,1-4 years
+Arkansas,All Sexes,5-14 years
+Arkansas,All Sexes,15-24 years
+Arkansas,All Sexes,18-29 years
+Arkansas,All Sexes,25-34 years
+Arkansas,All Sexes,30-39 years
+Arkansas,All Sexes,35-44 years
+Arkansas,All Sexes,40-49 years
+Arkansas,All Sexes,45-54 years
+Arkansas,All Sexes,50-64 years
+Arkansas,All Sexes,55-64 years
+Arkansas,All Sexes,65-74 years
+Arkansas,All Sexes,75-84 years
+Arkansas,All Sexes,85 years and over
+Arkansas,Male,All Ages
+Arkansas,Male,Under 1 year
+Arkansas,Male,0-17 years
+Arkansas,Male,1-4 years
+Arkansas,Male,5-14 years
+Arkansas,Male,15-24 years
+Arkansas,Male,18-29 years
+Arkansas,Male,25-34 years
+Arkansas,Male,30-39 years
+Arkansas,Male,35-44 years
+Arkansas,Male,40-49 years
+Arkansas,Male,45-54 years
+Arkansas,Male,50-64 years
+Arkansas,Male,55-64 years
+Arkansas,Male,65-74 years
+Arkansas,Male,75-84 years
+Arkansas,Male,85 years and over
+Arkansas,Female,All Ages
+Arkansas,Female,Under 1 year
+Arkansas,Female,0-17 years
+Arkansas,Female,1-4 years
+Arkansas,Female,5-14 years
+Arkansas,Female,15-24 years
+Arkansas,Female,18-29 years
+Arkansas,Female,25-34 years
+Arkansas,Female,30-39 years
+Arkansas,Female,35-44 years
+Arkansas,Female,40-49 years
+Arkansas,Female,45-54 years
+Arkansas,Female,50-64 years
+Arkansas,Female,55-64 years
+Arkansas,Female,65-74 years
+Arkansas,Female,75-84 years
+Arkansas,Female,85 years and over
+Arkansas,All Sexes,All Ages
+Arkansas,All Sexes,Under 1 year
+Arkansas,All Sexes,0-17 years
+Arkansas,All Sexes,1-4 years
+Arkansas,All Sexes,5-14 years
+Arkansas,All Sexes,15-24 years
+Arkansas,All Sexes,18-29 years
+Arkansas,All Sexes,25-34 years
+Arkansas,All Sexes,30-39 years
+Arkansas,All Sexes,35-44 years
+Arkansas,All Sexes,40-49 years
+Arkansas,All Sexes,45-54 years
+Arkansas,All Sexes,50-64 years
+Arkansas,All Sexes,55-64 years
+Arkansas,All Sexes,65-74 years
+Arkansas,All Sexes,75-84 years
+Arkansas,All Sexes,85 years and over
+Arkansas,Male,All Ages
+Arkansas,Male,Under 1 year
+Arkansas,Male,0-17 years
+Arkansas,Male,1-4 years
+Arkansas,Male,5-14 years
+Arkansas,Male,15-24 years
+Arkansas,Male,18-29 years
+Arkansas,Male,25-34 years
+Arkansas,Male,30-39 years
+Arkansas,Male,35-44 years
+Arkansas,Male,40-49 years
+Arkansas,Male,45-54 years
+Arkansas,Male,50-64 years
+Arkansas,Male,55-64 years
+Arkansas,Male,65-74 years
+Arkansas,Male,75-84 years
+Arkansas,Male,85 years and over
+Arkansas,Female,All Ages
+Arkansas,Female,Under 1 year
+Arkansas,Female,0-17 years
+Arkansas,Female,1-4 years
+Arkansas,Female,5-14 years
+Arkansas,Female,15-24 years
+Arkansas,Female,18-29 years
+Arkansas,Female,25-34 years
+Arkansas,Female,30-39 years
+Arkansas,Female,35-44 years
+Arkansas,Female,40-49 years
+Arkansas,Female,45-54 years
+Arkansas,Female,50-64 years
+Arkansas,Female,55-64 years
+Arkansas,Female,65-74 years
+Arkansas,Female,75-84 years
+Arkansas,Female,85 years and over
+Arkansas,All Sexes,All Ages
+Arkansas,All Sexes,Under 1 year
+Arkansas,All Sexes,0-17 years
+Arkansas,All Sexes,1-4 years
+Arkansas,All Sexes,5-14 years
+Arkansas,All Sexes,15-24 years
+Arkansas,All Sexes,18-29 years
+Arkansas,All Sexes,25-34 years
+Arkansas,All Sexes,30-39 years
+Arkansas,All Sexes,35-44 years
+Arkansas,All Sexes,40-49 years
+Arkansas,All Sexes,45-54 years
+Arkansas,All Sexes,50-64 years
+Arkansas,All Sexes,55-64 years
+Arkansas,All Sexes,65-74 years
+Arkansas,All Sexes,75-84 years
+Arkansas,All Sexes,85 years and over
+Arkansas,Male,All Ages
+Arkansas,Male,Under 1 year
+Arkansas,Male,0-17 years
+Arkansas,Male,1-4 years
+Arkansas,Male,5-14 years
+Arkansas,Male,15-24 years
+Arkansas,Male,18-29 years
+Arkansas,Male,25-34 years
+Arkansas,Male,30-39 years
+Arkansas,Male,35-44 years
+Arkansas,Male,40-49 years
+Arkansas,Male,45-54 years
+Arkansas,Male,50-64 years
+Arkansas,Male,55-64 years
+Arkansas,Male,65-74 years
+Arkansas,Male,75-84 years
+Arkansas,Male,85 years and over
+Arkansas,Female,All Ages
+Arkansas,Female,Under 1 year
+Arkansas,Female,0-17 years
+Arkansas,Female,1-4 years
+Arkansas,Female,5-14 years
+Arkansas,Female,15-24 years
+Arkansas,Female,18-29 years
+Arkansas,Female,25-34 years
+Arkansas,Female,30-39 years
+Arkansas,Female,35-44 years
+Arkansas,Female,40-49 years
+Arkansas,Female,45-54 years
+Arkansas,Female,50-64 years
+Arkansas,Female,55-64 years
+Arkansas,Female,65-74 years
+Arkansas,Female,75-84 years
+Arkansas,Female,85 years and over
+California,All Sexes,All Ages
+California,All Sexes,Under 1 year
+California,All Sexes,0-17 years
+California,All Sexes,1-4 years
+California,All Sexes,5-14 years
+California,All Sexes,15-24 years
+California,All Sexes,18-29 years
+California,All Sexes,25-34 years
+California,All Sexes,30-39 years
+California,All Sexes,35-44 years
+California,All Sexes,40-49 years
+California,All Sexes,45-54 years
+California,All Sexes,50-64 years
+California,All Sexes,55-64 years
+California,All Sexes,65-74 years
+California,All Sexes,75-84 years
+California,All Sexes,85 years and over
+California,Male,All Ages
+California,Male,Under 1 year
+California,Male,0-17 years
+California,Male,1-4 years
+California,Male,5-14 years
+California,Male,15-24 years
+California,Male,18-29 years
+California,Male,25-34 years
+California,Male,30-39 years
+California,Male,35-44 years
+California,Male,40-49 years
+California,Male,45-54 years
+California,Male,50-64 years
+California,Male,55-64 years
+California,Male,65-74 years
+California,Male,75-84 years
+California,Male,85 years and over
+California,Female,All Ages
+California,Female,Under 1 year
+California,Female,0-17 years
+California,Female,1-4 years
+California,Female,5-14 years
+California,Female,15-24 years
+California,Female,18-29 years
+California,Female,25-34 years
+California,Female,30-39 years
+California,Female,35-44 years
+California,Female,40-49 years
+California,Female,45-54 years
+California,Female,50-64 years
+California,Female,55-64 years
+California,Female,65-74 years
+California,Female,75-84 years
+California,Female,85 years and over
+California,All Sexes,All Ages
+California,All Sexes,Under 1 year
+California,All Sexes,0-17 years
+California,All Sexes,1-4 years
+California,All Sexes,5-14 years
+California,All Sexes,15-24 years
+California,All Sexes,18-29 years
+California,All Sexes,25-34 years
+California,All Sexes,30-39 years
+California,All Sexes,35-44 years
+California,All Sexes,40-49 years
+California,All Sexes,45-54 years
+California,All Sexes,50-64 years
+California,All Sexes,55-64 years
+California,All Sexes,65-74 years
+California,All Sexes,75-84 years
+California,All Sexes,85 years and over
+California,Male,All Ages
+California,Male,Under 1 year
+California,Male,0-17 years
+California,Male,1-4 years
+California,Male,5-14 years
+California,Male,15-24 years
+California,Male,18-29 years
+California,Male,25-34 years
+California,Male,30-39 years
+California,Male,35-44 years
+California,Male,40-49 years
+California,Male,45-54 years
+California,Male,50-64 years
+California,Male,55-64 years
+California,Male,65-74 years
+California,Male,75-84 years
+California,Male,85 years and over
+California,Female,All Ages
+California,Female,Under 1 year
+California,Female,0-17 years
+California,Female,1-4 years
+California,Female,5-14 years
+California,Female,15-24 years
+California,Female,18-29 years
+California,Female,25-34 years
+California,Female,30-39 years
+California,Female,35-44 years
+California,Female,40-49 years
+California,Female,45-54 years
+California,Female,50-64 years
+California,Female,55-64 years
+California,Female,65-74 years
+California,Female,75-84 years
+California,Female,85 years and over
+California,All Sexes,All Ages
+California,All Sexes,Under 1 year
+California,All Sexes,0-17 years
+California,All Sexes,1-4 years
+California,All Sexes,5-14 years
+California,All Sexes,15-24 years
+California,All Sexes,18-29 years
+California,All Sexes,25-34 years
+California,All Sexes,30-39 years
+California,All Sexes,35-44 years
+California,All Sexes,40-49 years
+California,All Sexes,45-54 years
+California,All Sexes,50-64 years
+California,All Sexes,55-64 years
+California,All Sexes,65-74 years
+California,All Sexes,75-84 years
+California,All Sexes,85 years and over
+California,Male,All Ages
+California,Male,Under 1 year
+California,Male,0-17 years
+California,Male,1-4 years
+California,Male,5-14 years
+California,Male,15-24 years
+California,Male,18-29 years
+California,Male,25-34 years
+California,Male,30-39 years
+California,Male,35-44 years
+California,Male,40-49 years
+California,Male,45-54 years
+California,Male,50-64 years
+California,Male,55-64 years
+California,Male,65-74 years
+California,Male,75-84 years
+California,Male,85 years and over
+California,Female,All Ages
+California,Female,Under 1 year
+California,Female,0-17 years
+California,Female,1-4 years
+California,Female,5-14 years
+California,Female,15-24 years
+California,Female,18-29 years
+California,Female,25-34 years
+California,Female,30-39 years
+California,Female,35-44 years
+California,Female,40-49 years
+California,Female,45-54 years
+California,Female,50-64 years
+California,Female,55-64 years
+California,Female,65-74 years
+California,Female,75-84 years
+California,Female,85 years and over
+California,All Sexes,All Ages
+California,All Sexes,Under 1 year
+California,All Sexes,0-17 years
+California,All Sexes,1-4 years
+California,All Sexes,5-14 years
+California,All Sexes,15-24 years
+California,All Sexes,18-29 years
+California,All Sexes,25-34 years
+California,All Sexes,30-39 years
+California,All Sexes,35-44 years
+California,All Sexes,40-49 years
+California,All Sexes,45-54 years
+California,All Sexes,50-64 years
+California,All Sexes,55-64 years
+California,All Sexes,65-74 years
+California,All Sexes,75-84 years
+California,All Sexes,85 years and over
+California,Male,All Ages
+California,Male,Under 1 year
+California,Male,0-17 years
+California,Male,1-4 years
+California,Male,5-14 years
+California,Male,15-24 years
+California,Male,18-29 years
+California,Male,25-34 years
+California,Male,30-39 years
+California,Male,35-44 years
+California,Male,40-49 years
+California,Male,45-54 years
+California,Male,50-64 years
+California,Male,55-64 years
+California,Male,65-74 years
+California,Male,75-84 years
+California,Male,85 years and over
+California,Female,All Ages
+California,Female,Under 1 year
+California,Female,0-17 years
+California,Female,1-4 years
+California,Female,5-14 years
+California,Female,15-24 years
+California,Female,18-29 years
+California,Female,25-34 years
+California,Female,30-39 years
+California,Female,35-44 years
+California,Female,40-49 years
+California,Female,45-54 years
+California,Female,50-64 years
+California,Female,55-64 years
+California,Female,65-74 years
+California,Female,75-84 years
+California,Female,85 years and over
+Colorado,All Sexes,All Ages
+Colorado,All Sexes,Under 1 year
+Colorado,All Sexes,0-17 years
+Colorado,All Sexes,1-4 years
+Colorado,All Sexes,5-14 years
+Colorado,All Sexes,15-24 years
+Colorado,All Sexes,18-29 years
+Colorado,All Sexes,25-34 years
+Colorado,All Sexes,30-39 years
+Colorado,All Sexes,35-44 years
+Colorado,All Sexes,40-49 years
+Colorado,All Sexes,45-54 years
+Colorado,All Sexes,50-64 years
+Colorado,All Sexes,55-64 years
+Colorado,All Sexes,65-74 years
+Colorado,All Sexes,75-84 years
+Colorado,All Sexes,85 years and over
+Colorado,Male,All Ages
+Colorado,Male,Under 1 year
+Colorado,Male,0-17 years
+Colorado,Male,1-4 years
+Colorado,Male,5-14 years
+Colorado,Male,15-24 years
+Colorado,Male,18-29 years
+Colorado,Male,25-34 years
+Colorado,Male,30-39 years
+Colorado,Male,35-44 years
+Colorado,Male,40-49 years
+Colorado,Male,45-54 years
+Colorado,Male,50-64 years
+Colorado,Male,55-64 years
+Colorado,Male,65-74 years
+Colorado,Male,75-84 years
+Colorado,Male,85 years and over
+Colorado,Female,All Ages
+Colorado,Female,Under 1 year
+Colorado,Female,0-17 years
+Colorado,Female,1-4 years
+Colorado,Female,5-14 years
+Colorado,Female,15-24 years
+Colorado,Female,18-29 years
+Colorado,Female,25-34 years
+Colorado,Female,30-39 years
+Colorado,Female,35-44 years
+Colorado,Female,40-49 years
+Colorado,Female,45-54 years
+Colorado,Female,50-64 years
+Colorado,Female,55-64 years
+Colorado,Female,65-74 years
+Colorado,Female,75-84 years
+Colorado,Female,85 years and over
+Colorado,All Sexes,All Ages
+Colorado,All Sexes,Under 1 year
+Colorado,All Sexes,0-17 years
+Colorado,All Sexes,1-4 years
+Colorado,All Sexes,5-14 years
+Colorado,All Sexes,15-24 years
+Colorado,All Sexes,18-29 years
+Colorado,All Sexes,25-34 years
+Colorado,All Sexes,30-39 years
+Colorado,All Sexes,35-44 years
+Colorado,All Sexes,40-49 years
+Colorado,All Sexes,45-54 years
+Colorado,All Sexes,50-64 years
+Colorado,All Sexes,55-64 years
+Colorado,All Sexes,65-74 years
+Colorado,All Sexes,75-84 years
+Colorado,All Sexes,85 years and over
+Colorado,Male,All Ages
+Colorado,Male,Under 1 year
+Colorado,Male,0-17 years
+Colorado,Male,1-4 years
+Colorado,Male,5-14 years
+Colorado,Male,15-24 years
+Colorado,Male,18-29 years
+Colorado,Male,25-34 years
+Colorado,Male,30-39 years
+Colorado,Male,35-44 years
+Colorado,Male,40-49 years
+Colorado,Male,45-54 years
+Colorado,Male,50-64 years
+Colorado,Male,55-64 years
+Colorado,Male,65-74 years
+Colorado,Male,75-84 years
+Colorado,Male,85 years and over
+Colorado,Female,All Ages
+Colorado,Female,Under 1 year
+Colorado,Female,0-17 years
+Colorado,Female,1-4 years
+Colorado,Female,5-14 years
+Colorado,Female,15-24 years
+Colorado,Female,18-29 years
+Colorado,Female,25-34 years
+Colorado,Female,30-39 years
+Colorado,Female,35-44 years
+Colorado,Female,40-49 years
+Colorado,Female,45-54 years
+Colorado,Female,50-64 years
+Colorado,Female,55-64 years
+Colorado,Female,65-74 years
+Colorado,Female,75-84 years
+Colorado,Female,85 years and over
+Colorado,All Sexes,All Ages
+Colorado,All Sexes,Under 1 year
+Colorado,All Sexes,0-17 years
+Colorado,All Sexes,1-4 years
+Colorado,All Sexes,5-14 years
+Colorado,All Sexes,15-24 years
+Colorado,All Sexes,18-29 years
+Colorado,All Sexes,25-34 years
+Colorado,All Sexes,30-39 years
+Colorado,All Sexes,35-44 years
+Colorado,All Sexes,40-49 years
+Colorado,All Sexes,45-54 years
+Colorado,All Sexes,50-64 years
+Colorado,All Sexes,55-64 years
+Colorado,All Sexes,65-74 years
+Colorado,All Sexes,75-84 years
+Colorado,All Sexes,85 years and over
+Colorado,Male,All Ages
+Colorado,Male,Under 1 year
+Colorado,Male,0-17 years
+Colorado,Male,1-4 years
+Colorado,Male,5-14 years
+Colorado,Male,15-24 years
+Colorado,Male,18-29 years
+Colorado,Male,25-34 years
+Colorado,Male,30-39 years
+Colorado,Male,35-44 years
+Colorado,Male,40-49 years
+Colorado,Male,45-54 years
+Colorado,Male,50-64 years
+Colorado,Male,55-64 years
+Colorado,Male,65-74 years
+Colorado,Male,75-84 years
+Colorado,Male,85 years and over
+Colorado,Female,All Ages
+Colorado,Female,Under 1 year
+Colorado,Female,0-17 years
+Colorado,Female,1-4 years
+Colorado,Female,5-14 years
+Colorado,Female,15-24 years
+Colorado,Female,18-29 years
+Colorado,Female,25-34 years
+Colorado,Female,30-39 years
+Colorado,Female,35-44 years
+Colorado,Female,40-49 years
+Colorado,Female,45-54 years
+Colorado,Female,50-64 years
+Colorado,Female,55-64 years
+Colorado,Female,65-74 years
+Colorado,Female,75-84 years
+Colorado,Female,85 years and over
+Colorado,All Sexes,All Ages
+Colorado,All Sexes,Under 1 year
+Colorado,All Sexes,0-17 years
+Colorado,All Sexes,1-4 years
+Colorado,All Sexes,5-14 years
+Colorado,All Sexes,15-24 years
+Colorado,All Sexes,18-29 years
+Colorado,All Sexes,25-34 years
+Colorado,All Sexes,30-39 years
+Colorado,All Sexes,35-44 years
+Colorado,All Sexes,40-49 years
+Colorado,All Sexes,45-54 years
+Colorado,All Sexes,50-64 years
+Colorado,All Sexes,55-64 years
+Colorado,All Sexes,65-74 years
+Colorado,All Sexes,75-84 years
+Colorado,All Sexes,85 years and over
+Colorado,Male,All Ages
+Colorado,Male,Under 1 year
+Colorado,Male,0-17 years
+Colorado,Male,1-4 years
+Colorado,Male,5-14 years
+Colorado,Male,15-24 years
+Colorado,Male,18-29 years
+Colorado,Male,25-34 years
+Colorado,Male,30-39 years
+Colorado,Male,35-44 years
+Colorado,Male,40-49 years
+Colorado,Male,45-54 years
+Colorado,Male,50-64 years
+Colorado,Male,55-64 years
+Colorado,Male,65-74 years
+Colorado,Male,75-84 years
+Colorado,Male,85 years and over
+Colorado,Female,All Ages
+Colorado,Female,Under 1 year
+Colorado,Female,0-17 years
+Colorado,Female,1-4 years
+Colorado,Female,5-14 years
+Colorado,Female,15-24 years
+Colorado,Female,18-29 years
+Colorado,Female,25-34 years
+Colorado,Female,30-39 years
+Colorado,Female,35-44 years
+Colorado,Female,40-49 years
+Colorado,Female,45-54 years
+Colorado,Female,50-64 years
+Colorado,Female,55-64 years
+Colorado,Female,65-74 years
+Colorado,Female,75-84 years
+Colorado,Female,85 years and over
+Connecticut,All Sexes,All Ages
+Connecticut,All Sexes,Under 1 year
+Connecticut,All Sexes,0-17 years
+Connecticut,All Sexes,1-4 years
+Connecticut,All Sexes,5-14 years
+Connecticut,All Sexes,15-24 years
+Connecticut,All Sexes,18-29 years
+Connecticut,All Sexes,25-34 years
+Connecticut,All Sexes,30-39 years
+Connecticut,All Sexes,35-44 years
+Connecticut,All Sexes,40-49 years
+Connecticut,All Sexes,45-54 years
+Connecticut,All Sexes,50-64 years
+Connecticut,All Sexes,55-64 years
+Connecticut,All Sexes,65-74 years
+Connecticut,All Sexes,75-84 years
+Connecticut,All Sexes,85 years and over
+Connecticut,Male,All Ages
+Connecticut,Male,Under 1 year
+Connecticut,Male,0-17 years
+Connecticut,Male,1-4 years
+Connecticut,Male,5-14 years
+Connecticut,Male,15-24 years
+Connecticut,Male,18-29 years
+Connecticut,Male,25-34 years
+Connecticut,Male,30-39 years
+Connecticut,Male,35-44 years
+Connecticut,Male,40-49 years
+Connecticut,Male,45-54 years
+Connecticut,Male,50-64 years
+Connecticut,Male,55-64 years
+Connecticut,Male,65-74 years
+Connecticut,Male,75-84 years
+Connecticut,Male,85 years and over
+Connecticut,Female,All Ages
+Connecticut,Female,Under 1 year
+Connecticut,Female,0-17 years
+Connecticut,Female,1-4 years
+Connecticut,Female,5-14 years
+Connecticut,Female,15-24 years
+Connecticut,Female,18-29 years
+Connecticut,Female,25-34 years
+Connecticut,Female,30-39 years
+Connecticut,Female,35-44 years
+Connecticut,Female,40-49 years
+Connecticut,Female,45-54 years
+Connecticut,Female,50-64 years
+Connecticut,Female,55-64 years
+Connecticut,Female,65-74 years
+Connecticut,Female,75-84 years
+Connecticut,Female,85 years and over
+Connecticut,All Sexes,All Ages
+Connecticut,All Sexes,Under 1 year
+Connecticut,All Sexes,0-17 years
+Connecticut,All Sexes,1-4 years
+Connecticut,All Sexes,5-14 years
+Connecticut,All Sexes,15-24 years
+Connecticut,All Sexes,18-29 years
+Connecticut,All Sexes,25-34 years
+Connecticut,All Sexes,30-39 years
+Connecticut,All Sexes,35-44 years
+Connecticut,All Sexes,40-49 years
+Connecticut,All Sexes,45-54 years
+Connecticut,All Sexes,50-64 years
+Connecticut,All Sexes,55-64 years
+Connecticut,All Sexes,65-74 years
+Connecticut,All Sexes,75-84 years
+Connecticut,All Sexes,85 years and over
+Connecticut,Male,All Ages
+Connecticut,Male,Under 1 year
+Connecticut,Male,0-17 years
+Connecticut,Male,1-4 years
+Connecticut,Male,5-14 years
+Connecticut,Male,15-24 years
+Connecticut,Male,18-29 years
+Connecticut,Male,25-34 years
+Connecticut,Male,30-39 years
+Connecticut,Male,35-44 years
+Connecticut,Male,40-49 years
+Connecticut,Male,45-54 years
+Connecticut,Male,50-64 years
+Connecticut,Male,55-64 years
+Connecticut,Male,65-74 years
+Connecticut,Male,75-84 years
+Connecticut,Male,85 years and over
+Connecticut,Female,All Ages
+Connecticut,Female,Under 1 year
+Connecticut,Female,0-17 years
+Connecticut,Female,1-4 years
+Connecticut,Female,5-14 years
+Connecticut,Female,15-24 years
+Connecticut,Female,18-29 years
+Connecticut,Female,25-34 years
+Connecticut,Female,30-39 years
+Connecticut,Female,35-44 years
+Connecticut,Female,40-49 years
+Connecticut,Female,45-54 years
+Connecticut,Female,50-64 years
+Connecticut,Female,55-64 years
+Connecticut,Female,65-74 years
+Connecticut,Female,75-84 years
+Connecticut,Female,85 years and over
+Connecticut,All Sexes,All Ages
+Connecticut,All Sexes,Under 1 year
+Connecticut,All Sexes,0-17 years
+Connecticut,All Sexes,1-4 years
+Connecticut,All Sexes,5-14 years
+Connecticut,All Sexes,15-24 years
+Connecticut,All Sexes,18-29 years
+Connecticut,All Sexes,25-34 years
+Connecticut,All Sexes,30-39 years
+Connecticut,All Sexes,35-44 years
+Connecticut,All Sexes,40-49 years
+Connecticut,All Sexes,45-54 years
+Connecticut,All Sexes,50-64 years
+Connecticut,All Sexes,55-64 years
+Connecticut,All Sexes,65-74 years
+Connecticut,All Sexes,75-84 years
+Connecticut,All Sexes,85 years and over
+Connecticut,Male,All Ages
+Connecticut,Male,Under 1 year
+Connecticut,Male,0-17 years
+Connecticut,Male,1-4 years
+Connecticut,Male,5-14 years
+Connecticut,Male,15-24 years
+Connecticut,Male,18-29 years
+Connecticut,Male,25-34 years
+Connecticut,Male,30-39 years
+Connecticut,Male,35-44 years
+Connecticut,Male,40-49 years
+Connecticut,Male,45-54 years
+Connecticut,Male,50-64 years
+Connecticut,Male,55-64 years
+Connecticut,Male,65-74 years
+Connecticut,Male,75-84 years
+Connecticut,Male,85 years and over
+Connecticut,Female,All Ages
+Connecticut,Female,Under 1 year
+Connecticut,Female,0-17 years
+Connecticut,Female,1-4 years
+Connecticut,Female,5-14 years
+Connecticut,Female,15-24 years
+Connecticut,Female,18-29 years
+Connecticut,Female,25-34 years
+Connecticut,Female,30-39 years
+Connecticut,Female,35-44 years
+Connecticut,Female,40-49 years
+Connecticut,Female,45-54 years
+Connecticut,Female,50-64 years
+Connecticut,Female,55-64 years
+Connecticut,Female,65-74 years
+Connecticut,Female,75-84 years
+Connecticut,Female,85 years and over
+Connecticut,All Sexes,All Ages
+Connecticut,All Sexes,Under 1 year
+Connecticut,All Sexes,0-17 years
+Connecticut,All Sexes,1-4 years
+Connecticut,All Sexes,5-14 years
+Connecticut,All Sexes,15-24 years
+Connecticut,All Sexes,18-29 years
+Connecticut,All Sexes,25-34 years
+Connecticut,All Sexes,30-39 years
+Connecticut,All Sexes,35-44 years
+Connecticut,All Sexes,40-49 years
+Connecticut,All Sexes,45-54 years
+Connecticut,All Sexes,50-64 years
+Connecticut,All Sexes,55-64 years
+Connecticut,All Sexes,65-74 years
+Connecticut,All Sexes,75-84 years
+Connecticut,All Sexes,85 years and over
+Connecticut,Male,All Ages
+Connecticut,Male,Under 1 year
+Connecticut,Male,0-17 years
+Connecticut,Male,1-4 years
+Connecticut,Male,5-14 years
+Connecticut,Male,15-24 years
+Connecticut,Male,18-29 years
+Connecticut,Male,25-34 years
+Connecticut,Male,30-39 years
+Connecticut,Male,35-44 years
+Connecticut,Male,40-49 years
+Connecticut,Male,45-54 years
+Connecticut,Male,50-64 years
+Connecticut,Male,55-64 years
+Connecticut,Male,65-74 years
+Connecticut,Male,75-84 years
+Connecticut,Male,85 years and over
+Connecticut,Female,All Ages
+Connecticut,Female,Under 1 year
+Connecticut,Female,0-17 years
+Connecticut,Female,1-4 years
+Connecticut,Female,5-14 years
+Connecticut,Female,15-24 years
+Connecticut,Female,18-29 years
+Connecticut,Female,25-34 years
+Connecticut,Female,30-39 years
+Connecticut,Female,35-44 years
+Connecticut,Female,40-49 years
+Connecticut,Female,45-54 years
+Connecticut,Female,50-64 years
+Connecticut,Female,55-64 years
+Connecticut,Female,65-74 years
+Connecticut,Female,75-84 years
+Connecticut,Female,85 years and over
+Delaware,All Sexes,All Ages
+Delaware,All Sexes,Under 1 year
+Delaware,All Sexes,0-17 years
+Delaware,All Sexes,1-4 years
+Delaware,All Sexes,5-14 years
+Delaware,All Sexes,15-24 years
+Delaware,All Sexes,18-29 years
+Delaware,All Sexes,25-34 years
+Delaware,All Sexes,30-39 years
+Delaware,All Sexes,35-44 years
+Delaware,All Sexes,40-49 years
+Delaware,All Sexes,45-54 years
+Delaware,All Sexes,50-64 years
+Delaware,All Sexes,55-64 years
+Delaware,All Sexes,65-74 years
+Delaware,All Sexes,75-84 years
+Delaware,All Sexes,85 years and over
+Delaware,Male,All Ages
+Delaware,Male,Under 1 year
+Delaware,Male,0-17 years
+Delaware,Male,1-4 years
+Delaware,Male,5-14 years
+Delaware,Male,15-24 years
+Delaware,Male,18-29 years
+Delaware,Male,25-34 years
+Delaware,Male,30-39 years
+Delaware,Male,35-44 years
+Delaware,Male,40-49 years
+Delaware,Male,45-54 years
+Delaware,Male,50-64 years
+Delaware,Male,55-64 years
+Delaware,Male,65-74 years
+Delaware,Male,75-84 years
+Delaware,Male,85 years and over
+Delaware,Female,All Ages
+Delaware,Female,Under 1 year
+Delaware,Female,0-17 years
+Delaware,Female,1-4 years
+Delaware,Female,5-14 years
+Delaware,Female,15-24 years
+Delaware,Female,18-29 years
+Delaware,Female,25-34 years
+Delaware,Female,30-39 years
+Delaware,Female,35-44 years
+Delaware,Female,40-49 years
+Delaware,Female,45-54 years
+Delaware,Female,50-64 years
+Delaware,Female,55-64 years
+Delaware,Female,65-74 years
+Delaware,Female,75-84 years
+Delaware,Female,85 years and over
+Delaware,All Sexes,All Ages
+Delaware,All Sexes,Under 1 year
+Delaware,All Sexes,0-17 years
+Delaware,All Sexes,1-4 years
+Delaware,All Sexes,5-14 years
+Delaware,All Sexes,15-24 years
+Delaware,All Sexes,18-29 years
+Delaware,All Sexes,25-34 years
+Delaware,All Sexes,30-39 years
+Delaware,All Sexes,35-44 years
+Delaware,All Sexes,40-49 years
+Delaware,All Sexes,45-54 years
+Delaware,All Sexes,50-64 years
+Delaware,All Sexes,55-64 years
+Delaware,All Sexes,65-74 years
+Delaware,All Sexes,75-84 years
+Delaware,All Sexes,85 years and over
+Delaware,Male,All Ages
+Delaware,Male,Under 1 year
+Delaware,Male,0-17 years
+Delaware,Male,1-4 years
+Delaware,Male,5-14 years
+Delaware,Male,15-24 years
+Delaware,Male,18-29 years
+Delaware,Male,25-34 years
+Delaware,Male,30-39 years
+Delaware,Male,35-44 years
+Delaware,Male,40-49 years
+Delaware,Male,45-54 years
+Delaware,Male,50-64 years
+Delaware,Male,55-64 years
+Delaware,Male,65-74 years
+Delaware,Male,75-84 years
+Delaware,Male,85 years and over
+Delaware,Female,All Ages
+Delaware,Female,Under 1 year
+Delaware,Female,0-17 years
+Delaware,Female,1-4 years
+Delaware,Female,5-14 years
+Delaware,Female,15-24 years
+Delaware,Female,18-29 years
+Delaware,Female,25-34 years
+Delaware,Female,30-39 years
+Delaware,Female,35-44 years
+Delaware,Female,40-49
