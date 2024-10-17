@@ -1,4 +1,4 @@
-PARTICIPANT_ID,Gender,Age_Group,IT_Data_Experience,Education_Level,Completion_Time,PPC Standard,PPC Paired,Parallel Sets,Sunburst
+PARTICIPANT_ID,Gender,Age_Range,IT_Data_Experience,Education_Level,Completion_Time,PPC Standard,PPC Paired,Parallel Sets,Sunburst
 1,female,30-39,5.5+,Bachelors,301-400,5,3,3,3
 2,female,30-39,5.5+,Bachelors,401-500,4,3,3,5
 3,female,40-49,5.5+,Masters,501-600,3,4,3,3
