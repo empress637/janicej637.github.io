@@ -1,4 +1,4 @@
-CORRECT ANSWER,PARTICIPANT_ID,Task,Technique,,Dimension_Location,Gender,,Age_Group,Education_Level,Profession,,IT_Data_Experience,Optical Aid,,Hearing Aid,Task Status,,Response,Task_Result,Completion_Time (MI:SS:MS),,CALC COMP TIME
+CORRECT ANSWER,PARTICIPANT_ID,Task,Technique,Dimension_Location,Gender,Age_Group,Education_Level,Profession,IT_Data_Experience,Optical Aid,Hearing Aid,Task Status,Response,Task_Result,Completion_Time (MI:SS:MS),CALC COMP TIME
 POSITIVE,1,1,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,COMPLETE,POSITIVE,CORRECT,24.8,24.8
 NEGATIVE,1,2,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,COMPLETE,POSITIVE,INCORRECT,28.06,3.26
 NEGATIVE,1,3,PPC PAIRED,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,COMPLETE,POSITIVE,INCORRECT,18.55,18.55
