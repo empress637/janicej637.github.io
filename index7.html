@@ -6,7 +6,13 @@ A Multivariate Categorical Data Visualization Technique
 
 <head>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
-  <script src='https://cdn.plot.ly/plotly-2.32.0.min.js'></script>
+  <!--<script src='https://cdn.plot.ly/plotly-2.32.0.min.js'></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"> 
+  <script src='https://cdn.plot.ly/plotly-2.35.0.min.js'></script>-->
+
+  </script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src='https://cdn.plot.ly/plotly-2.35.0.min.js'></script>
 
 </head>
 <style>
@@ -222,6 +228,8 @@ A Multivariate Categorical Data Visualization Technique
 //Pivoting Parallel Charts (PPC)
 //A Multivariate Categorical Data Visualization Technique
 
+//REFERENCES
+
 //covid data - https://github.com/nytimes/covid-19-data/blob/master/live/us-counties.csv
 
 //https://github.com/stedy/Machine-Learning-with-R-datasets/blob/master/mushrooms.csv
@@ -230,7 +238,10 @@ A Multivariate Categorical Data Visualization Technique
 
 https://aiplanet.com/notebooks/2648/dphi_official/data-pre-processing-using-titanic-dataset
 
+https://www.kaggle.com/datasets/iamhungundji/covid19-symptoms-checker?resource=download
+
 //DragList of plots to allow dimension reordering
+
 */
 
 const dragList = document.getElementById("dragList");
@@ -240,6 +251,7 @@ var pivotDimension = 0;
 let divArray = [];
 var colorShade = "0059b3";
 var filterX;
+var activeValues;
 
 // Add event listeners for drag and drop events
 dragList.addEventListener("dragstart", handleDragStart);
@@ -266,7 +278,7 @@ function handleDragOver(event) {
     const boundingRect = targetItem.getBoundingClientRect();
     const offset = boundingRect.x + boundingRect.Height / 2;
     if (event.clientY - offset > 0) {
-      // targetItem.style.borderTop = "solid 10px #AAFF00 "; targetItem.nextSibling.style.borderTop = "";
+      targetItem.style.borderTop = "solid 10px #AAFF00 ";
     } else {
       targetItem.style.borderTop = "solid 10px #AAFF00";
     }
@@ -294,23 +306,12 @@ function handleDrop(event) {
   if (format == "Crossover") {
     pivCrossDim(pivotDimension, addDim());
   }
-  //console.log(pivotDimension, format, addDim());
+
   targetItem.style.borderTop = "";
   draggedItem.style.borderTop = "";
   draggedItem.style.opacity = "";
 
   targetItem.parentNode.style.borderTop = "";
-
-  /*divArray = Array.from(
-    document.getElementsByClassName("drag-item"),
-    (e) => e.id
-  );*/
-
-  //console.log(targetItem.id.substring(5, 6), draggedItem.id.substring(5, 6));
-
-  // console.log(format);
-
-  //console.log(datasetButtons);
 }
 
 //Clear all values
@@ -337,6 +338,7 @@ function reset() {
   document.getElementById("covid").disabled = false;
   document.getElementById("mushrooms").disabled = false;
   document.getElementById("titanic").disabled = false;
+  document.getElementById("ppc_survey").disabled = false;
 
   document.getElementById("begin").style.display = "block";
 
@@ -345,17 +347,20 @@ function reset() {
   document.getElementById("covid").style.visibility = "visible";
   document.getElementById("mushrooms").style.visibility = "visible";
   document.getElementById("titanic").style.visibility = "visible";
+  document.getElementById("ppc_survey").style.visibility = "visible";
 }
 
 //Get Titanic Data
 function titanic() {
   document.getElementById("covid").disabled = true;
   document.getElementById("mushrooms").disabled = true;
+  document.getElementById("ppc_survey").disabled = true;
   document.getElementById("titanic").disabled = false;
   document.getElementById("titanic").setAttribute("color", "#fff");
 
   document.getElementById("covid").style.visibility = "hidden";
   document.getElementById("mushrooms").style.visibility = "hidden";
+  document.getElementById("ppc_survey").style.visibility = "hidden";
 
   document.getElementById("dimList").style.display = "block";
   document.getElementById("dimButtons").style.display = "block";
@@ -368,9 +373,11 @@ function mushrooms() {
   document.getElementById("covid").disabled = true;
   document.getElementById("mushrooms").disabled = false;
   document.getElementById("titanic").disabled = true;
+  document.getElementById("ppc_survey").disabled = true;
 
   document.getElementById("covid").style.visibility = "hidden";
   document.getElementById("titanic").style.visibility = "hidden";
+  document.getElementById("ppc_survey").style.visibility = "hidden";
 
   document.getElementById("dimList").style.display = "block";
   document.getElementById("dimButtons").style.display = "block";
@@ -379,14 +386,31 @@ function mushrooms() {
 }
 
 //Get Covid Data
-
 function covid() {
   document.getElementById("covid").disabled = false;
   document.getElementById("mushrooms").disabled = true;
   document.getElementById("titanic").disabled = true;
+  document.getElementById("ppc_survey").disabled = true;
 
   document.getElementById("mushrooms").style.visibility = "hidden";
   document.getElementById("titanic").style.visibility = "hidden";
+  document.getElementById("ppc_survey").style.visibility = "hidden";
+
+  document.getElementById("dimList").style.display = "block";
+  document.getElementById("dimButtons").style.display = "block";
+
+  pivDim(pivotDimension, addDim());
+}
+
+function ppc_survey() {
+  document.getElementById("ppc_survey").disabled = false;
+  document.getElementById("mushrooms").disabled = true;
+  document.getElementById("titanic").disabled = true;
+  document.getElementById("covid").disabled = true;
+
+  document.getElementById("mushrooms").style.visibility = "hidden";
+  document.getElementById("titanic").style.visibility = "hidden";
+  document.getElementById("covid").style.visibility = "hidden";
 
   document.getElementById("dimList").style.display = "block";
   document.getElementById("dimButtons").style.display = "block";
@@ -408,7 +432,7 @@ function standard(dim) {
   }
 
   document.getElementById("dimList").style.display = "none";
-  //console.log("pivot", pivotDimension);
+
   dim = pivotDimension;
   pivDim(dim, addDim());
 }
@@ -417,8 +441,6 @@ function crossover(dim) {
   format = "Crossover";
 
   let checkboxes = addDim();
-
-  console.log(addDim());
 
   var x = document.getElementById("show");
 
@@ -446,15 +468,11 @@ function addDim() {
     (e) => e.getAttribute("name") //+"_"+ e.id
   );
 
-  //console.log(posArr2, posArr);
-
   if (posArr2.length == posArr.length) {
     return posArr2;
   } else {
     return posArr;
   }
-
-  // return posArr;
 }
 
 document.getElementById("begin").innerHTML = null;
@@ -487,6 +505,15 @@ document
       "value=" +
       '"Covid" onclick=' +
       '"covid()" class=' +
+      '"button"' +
+      "/>" +
+      "<input type=" +
+      '"submit" id=' +
+      '"ppc_survey" name=' +
+      '"dataset"' +
+      "value=" +
+      '"Survey" onclick=' +
+      '"ppc_survey()" class=' +
       '"button"' +
       "/></div>"
   );
@@ -541,13 +568,10 @@ function ColorLuminance(hex, lum) {
     i;
   for (i = 0; i < 3; i++) {
     c = parseInt(hex.substr(i * 2, 2), 16);
-    c = Math.round(Math.min(Math.max(1, c + c * lum), 255)).toString(16);
+    c = Math.round(Math.min(Math.max(1, c + c * lum + 50), 255)).toString(16);
     rgb += ("00" + c).substr(c.length);
   }
 
-  /*if (rgb == "#FFFFFF") {
-    return ColorLuminance("#FFFFFF", -0.5);
-  } else {*/
   return rgb;
   //}
 }
@@ -564,11 +588,13 @@ function handleCarouselMove(direction) {
   }
 }
 
+// START pivDim(pivot, dimensionsInQuestion)
 function pivDim(pivot, dimensionsInQuestion) {
   var URL;
   var dataset;
   pivotDimension = pivot;
-  // console.log(pivotDimension);
+
+  //Set pivotDimension for Standard and Paired buttons
   document
     .getElementById("standard")
     .setAttribute("onclick", "standard(" + pivotDimension + ")");
@@ -576,11 +602,13 @@ function pivDim(pivot, dimensionsInQuestion) {
     .getElementById("cross")
     .setAttribute("onclick", "crossover(" + pivotDimension + ")");
 
+  //Enable all dataset buttons
   let datasetButtons = Array.from(
     document.querySelectorAll("input[type=submit][name=dataset]:enabled"),
     (e) => e.value
   );
 
+  //Set all dataset URLs
   if (datasetButtons[0] == "Titanic") {
     URL =
       "https://raw.githubusercontent.com/empress637/empress637.github.io/main/titanic.csv";
@@ -600,29 +628,33 @@ function pivDim(pivot, dimensionsInQuestion) {
     dataset = "Mushrooms";
   }
 
-  // Read and process data from csv
+  if (datasetButtons[0] == "Survey") {
+    URL =
+      "https://raw.githubusercontent.com/empress637/empress637.github.io/main/ppc_survey.csv";
+    dataset = "PPC Survey";
+  }
+
+  // START D3 --- Read and process data from csv
   d3.csv(URL, function (titanicData) {
     var headers = Object.keys(titanicData[1]); // All Dimensions from file
-
-    //var dimensionsInQuestion = addDim();
     var categories = {}; //Counts for all categories
     var pivotCategories = {}; //Counts for all categories with Pivot
     var val, pivotVal; //Values from each record
     var keysArr = []; //Array of keys for categories/pivotCategories
-    var traces = dimensionsInQuestion.keys();
-    var data = []; //Traces values
 
-    //Display all dimensions from file
+    //START displayHeaders() -Display all dimensions from file
     function displayHeaders() {
       let checkboxes = addDim();
 
       //Remove exising content from Dimension List/dimList
       document.getElementById("dimList").innerHTML = null;
 
+      //Create container for checkboxes
       var container = document.getElementById("dimList");
       var div = document.createElement("input");
       var label = document.createElement("label");
 
+      //Add checkboxes
       for (var i = 1; i < headers.length; i++) {
         var newDiv = div.cloneNode(true);
         var label = label.cloneNode(true);
@@ -640,8 +672,6 @@ function pivDim(pivot, dimensionsInQuestion) {
         label.style = "color:#000080";
         label.innerHTML = headers[i];
 
-        //console.log(newDiv);
-
         //Marked Dimensions already selected with checkmark
         if (checkboxes.includes(headers[i])) {
           newDiv.checked = true;
@@ -658,13 +688,13 @@ function pivDim(pivot, dimensionsInQuestion) {
           dataset +
           " Dataset.</p>"
       );
-    }
+    } //END OF displayHeaders()
 
     displayHeaders();
 
-    //Process Data from file
+    //START processData(titanicData, dim) -- Process Data from file
     function processData(titanicData, dim) {
-      update(pivotDimension);
+      //update(pivotDimension);
       for (
         var j = 0, jj = dimensionsInQuestion.length;
         j < jj;
@@ -680,10 +710,6 @@ function pivDim(pivot, dimensionsInQuestion) {
             val = titanicData[i][dimensionsInQuestion[j]];
             pivotVal = titanicData[i][dimensionsInQuestion[pivotDimension]];
           }
-
-          /* else {
-            val = "Unknown";
-          }*/
 
           // Handle Age Category by grouping into Child, Teen, Adult
           if (dimensionsInQuestion[j] == "Age") {
@@ -705,6 +731,7 @@ function pivDim(pivot, dimensionsInQuestion) {
             }
           }
 
+          // Handle Age Category as PIVOT by grouping into Child, Teen, Adult
           if (dimensionsInQuestion[pivotDimension] == "Age") {
             switch (dimensionsInQuestion[pivotDimension] == "Age") {
               case pivotVal < 13:
@@ -734,7 +761,7 @@ function pivDim(pivot, dimensionsInQuestion) {
             }
           }
 
-          // Handle Survived Category by decoding 1 to Yes, 0 to No
+          // Handle Survived Category as PIVOT by decoding 1 to Yes, 0 to No
           if (dimensionsInQuestion[pivotDimension] == "Survived") {
             switch (dimensionsInQuestion[pivotDimension] == "Survived") {
               case pivotVal == 1:
@@ -749,7 +776,6 @@ function pivDim(pivot, dimensionsInQuestion) {
           //Get total counts for each dimension
           if (!categories[dimensionsInQuestion[j] + "|" + val]) {
             categories[dimensionsInQuestion[j] + "|" + val] = 1;
-            //categories[dimensionsInQuestion[j] + "_" + val]= 1;
           } else {
             categories[dimensionsInQuestion[j] + "|" + val]++;
           }
@@ -793,11 +819,38 @@ function pivDim(pivot, dimensionsInQuestion) {
 
       categories = sort(categories);
       pivotCategories = sort(pivotCategories);
-      // console.log(categories, pivotCategories);
+      //console.log(categories, pivotCategories);
       return [categories, pivotCategories];
     }
+    //END processData(titanicData, dim)
 
-    //Sort categories and group them by values
+    //START getPivotColors(dim,piv)
+    function getPivotColors(dim, piv) {
+      var counter = getDimensions(dim);
+      var keysArr;
+      var col = [];
+      for (var q = counter.length; q >= 0; q--) {
+        keysArr = Object.keys(categories).filter((k) =>
+          k.startsWith(dim + "|" + counter[q])
+        );
+        col[dim + "|" + counter[q]] = ColorLuminance(colorShade, 0.2 * q);
+
+        /*console.log(
+        
+        dim + "|" + counter[piv],
+        col[dim + "|" + counter[piv]]
+      );*/
+      }
+
+      //var keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
+
+      //for (var i = keysArr.length; i > 0; i--) {
+
+      // }
+      return col[dim + "|" + counter[piv]];
+    } //END getPivotColors(dim)
+
+    //START sort(dim)  -- Sort categories and group them by values
     function sort(dim) {
       const arrOfArrays = Object.entries(dim);
       const sorted = arrOfArrays.sort((a, b) => {
@@ -806,19 +859,52 @@ function pivDim(pivot, dimensionsInQuestion) {
 
       return Object.fromEntries(sorted);
     }
+    //END sort(dim)
 
-    //Get categories for dimension
-    function getDimensions(dim) {
+    //START getActiveLegendValues(graphDiv)
+    function getActiveLegendValues(graphDiv) {
+      var gd = document.getElementById(graphDiv);
+      var data = gd.data;
+      var activeLegendValues = [];
+
+      for (let i = 0; i < data.length; i++) {
+        console.log(data[i].visible);
+        if (data[i].visible != "false") {
+          if (data[i].visible != "legendonly") {
+            activeLegendValues.push(String(data[i].y).replace(/"/g, ""));
+          }
+        }
+      }
+
+      if (activeLegendValues.length == 0) {
+        Plotly.restyle(
+          "myDiv" + pivotDimension,
+          {
+            visible: activeLegendValues.map((i) => "false")
+          },
+          activeLegendValues
+        );
+      }
+
+      return activeLegendValues;
+    } //END getActiveLegendValues(graphDiv)
+
+    //START getDimensions(dim) --- Get categories for dimension
+    function getDimensions(dim, actLegend = 0) {
       keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
 
       for (var j = 0; j < keysArr.length; j++) {
         keysArr[j] = keysArr[j].replace(dim + "|", "");
       }
 
-      return keysArr.filter((e) => e !== filterX);
-    }
+      if (actLegend > 0) {
+        return activeValues;
+      } else {
+        return keysArr;
+      }
+    } //END getDimensions(dim)
 
-    //Get categories for dimension
+    //START getDimensionsUnfiltered(dim) --- Get categories for dimension
     function getDimensionsUnfiltered(dim) {
       keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
 
@@ -827,9 +913,9 @@ function pivDim(pivot, dimensionsInQuestion) {
       }
 
       return keysArr;
-    }
+    } //END getDimensionsUnfiltered(dim)
 
-    //Get Counts for each dimension
+    //START getCount(dim)   -- Get Counts for each dimension
     function getCount(dim) {
       keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
       var valArr = [];
@@ -837,49 +923,265 @@ function pivDim(pivot, dimensionsInQuestion) {
         valArr[j] = categories[keysArr[j]];
       }
       return valArr;
-    }
+    } //END getCount(dim)
 
-    //Update bar color of pivot dimension to yellow
+    //START getPivotDimensions(dim) --- Get categories for dimension
+    function getPivotDimensions(dim, piv, actLegend = 0) {
+      var valArr = [];
+      var counter = getDimensions(dimensionsInQuestion[dim]);
+      var keysArr = [];
+      for (var j = 0; j < counter.length; j++) {
+        keysArr[j] = getDimensions(dimensionsInQuestion[dim])[j];
+
+        valArr[j] = keysArr[j];
+      }
+
+      return getDimensions(dimensionsInQuestion[dim]); //valArr; //.concat(keysArr);
+    } //END getPivotDimensions(dim)
+
+    //START getPivotCount(dim)   -- Get Counts for each dimension
+    function getPivotCount(dim, piv) {
+      var valArr = [],
+        data = [];
+      var counter = getDimensions(dimensionsInQuestion[dim]);
+      var keysArr;
+
+      for (var q = 0; q < counter.length; q++) {
+        keysArr = Object.keys(pivotCategories).filter(
+          (k) =>
+            k.startsWith(
+              dimensionsInQuestion[dim] +
+                "|" +
+                getDimensions(dimensionsInQuestion[dim])[q]
+            ) &&
+            k.endsWith(
+              "_" +
+                dimensionsInQuestion[pivot] +
+                "|" +
+                getDimensions(dimensionsInQuestion[pivot])[piv]
+            )
+        );
+
+        /*console.log(
+           q,
+
+            "|" +
+          dimensionsInQuestion[dim] +
+            getDimensions(dimensionsInQuestion[dim])[q] +
+            "_" +
+            dimensionsInQuestion[pivot] +
+            "|" +
+            getDimensions(dimensionsInQuestion[pivot])[i],
+          pivotCategories[keysArr[j]]
+        ); */
+
+        if (keysArr.length > 0) {
+          valArr.push(pivotCategories[keysArr]);
+        } else {
+          valArr.push(0);
+        }
+        keysArr = "";
+      }
+
+      return valArr;
+    } //END getPivotCount(dim)
+
+    //START refresh()
+
+    function refresh() {
+      var data = [];
+      for (var j = 0; j < dimensionsInQuestion.length; j++) {
+        var traces = [];
+        for (
+          var i = 0;
+          i < getDimensions(dimensionsInQuestion[pivotDimension], 1).length;
+          i++
+        ) {
+          var groupData = Object.keys(pivotCategories).filter(
+            (k) =>
+              k.startsWith(dimensionsInQuestion[j]) &&
+              k.endsWith(
+                getDimensions(dimensionsInQuestion[pivotDimension], 1)[i]
+              )
+          );
+
+          var groupVals = Object.keys(pivotCategories)
+            .filter((key) => groupData.includes(key))
+            .reduce((obj, key) => {
+              obj[key] = pivotCategories[key];
+              return Object.values(obj);
+            }, {});
+
+          if (groupVals == "") {
+            groupVals = 0;
+          }
+          for (
+            var k = 0;
+            k < getDimensions(dimensionsInQuestion[pivotDimension], 1).length;
+            k++
+          ) {
+            traces[i] = {
+              type: "bar",
+              name: "",
+              orientation: "h",
+              y: getDimensions(dimensionsInQuestion[j]),
+              x: getPivotCount(j, i),
+              marker: {
+                color: getPivotColors(dimensionsInQuestion[pivotDimension], i)
+              },
+              hoverinfo: "count+probability",
+              displayModeBar: "false",
+              labelfont: {
+                size: 8
+              } //,text: groupVals // show counts
+            };
+          }
+        }
+        data[j] = traces;
+      }
+
+      divArray = Array.from(
+        document.getElementsByClassName("drag-item"),
+        (e) => e.id
+      );
+      for (var j = 0; j < divArray.length; j++) {
+        var layout = {
+          showgrid: true,
+          paper_bgcolor: "transparent",
+          plot_bgcolor: "transparent",
+          barcornerradius: 10,
+          showlegend: false,
+          labelfont: {
+            size: 8
+          },
+          orientation: "h",
+          borderRadius: "30%",
+          transparent: true,
+          opacity: 0.8,
+          displayModeBar: "false", // Hide the modebar
+          scrollZoom: true, // Enable zooming with the scroll wheel
+
+          margin: {
+            l: 20,
+            r: 10,
+            b: 20,
+            t: 60,
+            pad: 5
+          },
+          zindex: 1,
+          yaxis: {
+            tickangle: 90,
+            color: "#000080"
+          },
+          title: {
+            text: dimensionsInQuestion[j],
+            font: {
+              orientation: "h",
+              size: 20,
+              weight: "bold",
+              color: "#000080",
+              family: "Times New Roman"
+            }
+          },
+          scattermode: "group"
+        };
+
+        if (j != pivotDimension) {
+          Plotly.react(divArray[j], data[j], layout);
+        }
+      }
+    } //END refresh()
+    //START update(pivotDimension)  -- Update LEFT bar color of pivot dimension to yellow
     function update(pivotDimension) {
+      event.preventDefault();
       var childClass = document.getElementsByClassName("drag-item");
       for (var j = 0; j < childClass.length; j++) {
         if (j == pivotDimension) {
           document.getElementById(
             "myDiv" + pivotDimension
           ).style.borderLeftColor = "#FDD017";
-          /*
-          var update = {
-            showlegend: "true"
+          Plotly.relayout("myDiv" + pivotDimension, {
+            showlegend: "true",
+            displayModeBar: "false",
+            showtips: "false"
+          });
+          const activeLegendIndices = [];
+          var myPlot = document.getElementById("myDiv" + pivotDimension);
+          var d = myPlot.data;
+          myPlot.oncontextmenu = function (e) {
+            e.preventDefault(); // Prevent the default context menu from appearing
           };
+          myPlot.on("plotly_legendclick", (data) => {
+            switch (data.event.button) {
+              case 0:
+                //console.log("left click");
+                for (let i = 0; i < d.length; i++) {
+                  activeLegendIndices.push(i);
+                }
+                Plotly.restyle(
+                  "myDiv" + pivotDimension,
+                  {
+                    visible: activeLegendIndices.map((i) => "true"),
+                    displayModeBar: false
+                  },
+                  activeLegendIndices
+                );
+                activeValues = getActiveLegendValues("myDiv" + pivotDimension);
+                refresh();
 
-          Plotly.relayout("myDiv" + pivotDimension, update);
-*/
+                break;
+              case 1:
+                //console.log("wheel click");
+                break;
+              case 2:
+                if (format == "Crossover") {
+                  pivCrossDim(pivotDimension, addDim());
+                } else {
+                  //console.log("right click");
+                  //console.log(d[data.curveNumber].visible);
+                  // Restore active legend state
+
+                  d[data.curveNumber].visible = "false";
+
+                  activeValues = getActiveLegendValues(
+                    "myDiv" + pivotDimension
+                  );
+                  console.log("activeValues", activeValues);
+
+                  refresh();
+                }
+                break;
+            }
+          });
+
           pivotDimension = j;
         } else {
-          document.getElementById("myDiv" + [j]).style.borderLeft =
-            "10px solid";
+          document.getElementById("myDiv" + j).style.borderLeft = "10px solid";
         }
       }
-    }
+    } //END  update(pivotDimension)
 
-    //
     if (dimensionsInQuestion.length < 2) {
       displayHeaders();
     }
 
+    //START display() -- SHOW ALL PLOTS
     function display() {
-      // Build Traces
+      update(pivotDimension);
 
+      // Build Traces for the Plots
       data = buildPivotTraces(addDim());
 
+      //Clear draglist
       var container = document.getElementById("dragList");
-
       container.innerHTML = null;
 
+      //Get current position of divs
       divArray = Array.from(
         document.getElementsByClassName("drag-item"),
         (e) => e.id
       );
+
       if (divArray.length > 0) {
         for (var i = 0; i < addDim().length; i++) {
           var newDiv = document.createElement("div");
@@ -889,10 +1191,9 @@ function pivDim(pivot, dimensionsInQuestion) {
           newDiv.setAttribute("class", "drag-item");
           newDiv.display = "none";
           newDiv.style.borderLeft = "10px solid rgb(136, 220, 240)";
-
           newDiv.setAttribute(
             "name",
-            document.getElementById(divArray[x]).name
+            document.getElementById(divArray[i]).name
           );
           newDiv.id = divArray[i];
           childDiv.id = divArray[i] + "_child";
@@ -904,6 +1205,7 @@ function pivDim(pivot, dimensionsInQuestion) {
           container.appendChild(newDiv);
         }
       } else {
+        //Add plot div for each dimension
         for (var i = 0; i < dimensionsInQuestion.length; i++) {
           var newDiv = document.createElement("div");
           var childDiv = document.createElement("div");
@@ -920,19 +1222,17 @@ function pivDim(pivot, dimensionsInQuestion) {
         }
       }
 
-      // Make plot
-
+      // Make plots
       for (var j = 0; j < data.length; j++) {
-        var nameX = dimensionsInQuestion[j];
-        if (divArray.length > 0) {
-          nameX = document.getElementById(divArray[x]).name;
-        }
         var layout = {
           showgrid: true,
           paper_bgcolor: "transparent",
           plot_bgcolor: "transparent",
           barcornerradius: 10,
           showlegend: false,
+          displayModeBar: false, // Hide the modebar
+          scrollZoom: true, // Enable zooming with the scroll wheel
+
           labelfont: {
             size: 8
           },
@@ -940,6 +1240,9 @@ function pivDim(pivot, dimensionsInQuestion) {
           borderRadius: "30%",
           transparent: true,
           opacity: 0.8,
+          displayModeBar: false, // Hide the modebar
+          scrollZoom: true, // Enable zooming with the scroll wheel
+
           margin: {
             l: 20,
             r: 10,
@@ -953,7 +1256,7 @@ function pivDim(pivot, dimensionsInQuestion) {
             color: "#000080"
           },
           title: {
-            text: nameX,
+            text: dimensionsInQuestion[j],
             font: {
               orientation: "h",
               size: 20,
@@ -966,38 +1269,13 @@ function pivDim(pivot, dimensionsInQuestion) {
         };
 
         if (divArray.length > 0) {
-          Plotly.newPlot(divArray[j], data[j], layout, {
+          /*Plotly.newPlot(divArray[j], data[j], layout, {
             displayModeBar: false
-          });
+          });*/
 
           if (dimensionsInQuestion[j] == dimensionsInQuestion[pivotDimension]) {
             document.getElementById(divArray[j]).style.borderLeft =
               "10px solid #FDD017";
-
-            /*var updatex = {
-              showlegend: "true"
-            };
-
-            Plotly.relayout(divArray[j], updatex);
-
-            var myPlot = document.getElementById(divArray[j]);
-            myPlot.on("plotly_click", function (data) {
-              //console.log(data.points[0].label);
-              filterX = data.points[0].label;
-            });*/
-
-            /*myPlot.on("plotly_legendclick", function (data) {
-              //console.log(data);
-              //console.log(data.curveNumber);
-              /*console.log(
-                getDimensions(dimensionsInQuestion[pivotDimension])[
-                  data.curveNumber
-                ]
-              );
-              filterX = getDimensions(dimensionsInQuestion[pivotDimension])[
-                data.curveNumber
-              ];
-            });*/
           }
         } else {
           Plotly.newPlot("myDiv" + j, data[j], layout, {
@@ -1007,66 +1285,18 @@ function pivDim(pivot, dimensionsInQuestion) {
           if (j == pivotDimension) {
             document.getElementById("myDiv" + j).style.borderLeft =
               "10px solid #FDD017";
-
-            /*var updatex = {
-              showlegend: "true"
-            };
-
-            Plotly.relayout("myDiv" + j, updatex);
-
-            var myPlot = document.getElementById("myDiv" + j);
-            myPlot.on("plotly_click", function (data) {
-              //console.log(data.points[0].label);
-              filterX = data.points[0].label;
-            });*/
-
-            /*myPlot.on("plotly_legendclick", function (data) {
-              //console.log(data);
-              //console.log(data.curveNumber);
-              console.log(
-                getDimensions(dimensionsInQuestion[pivotDimension])[
-                  data.curveNumber
-                ]
-              );
-              filterX = getDimensions(dimensionsInQuestion[pivotDimension])[
-                data.curveNumber
-              ];
-            });*/
           }
         }
       }
       update(pivotDimension);
-    }
+    } //END display()
+
     processData(titanicData, 1);
     display();
 
-    function getPivotColors(dim) {
-      var keysArr = Object.keys(pivotCategories).filter((k) =>
-        k.startsWith(dim)
-      );
-      var col = [];
-      for (var i = 0; i < keysArr.length; i++) {
-        for (
-          var j = 0;
-          j < getDimensions(dimensionsInQuestion[pivotDimension]).length;
-          j++
-        ) {
-          if (
-            keysArr[i].endsWith(
-              getDimensions(dimensionsInQuestion[pivotDimension])[j]
-            )
-          ) {
-            col[keysArr[i]] = "#" + "00800" + i;
-
-            console.log("#" + "008000" + i);
-            //getCount(dimensionsInQuestion[pivotDimension])[j];
-          }
-        }
-      }
-      return col;
-    }
-
+    //START buildPivotTraces(dimensions)
     function buildPivotTraces(dimensions) {
+      var data = [];
       for (var j = 0; j < dimensionsInQuestion.length; j++) {
         var traces = [];
 
@@ -1077,10 +1307,15 @@ function pivDim(pivot, dimensionsInQuestion) {
               type: "bar",
               name: "",
               orientation: "h",
+              visible: "true",
               y: [getDimensions(dimensions[j])[i]], // array of keys
               x: [getCount(dimensions[j])[i]],
               marker: {
-                color: ColorLuminance(colorShade, 0.2 * i),
+                color: getPivotColors(dimensionsInQuestion[pivotDimension], i),
+                showTips: false,
+                displayModeBar: false, // Hide the modebar
+                scrollZoom: true, // Enable zooming with the scroll wheel
+
                 line: {
                   color: "#FDD017",
                   width: 3
@@ -1096,47 +1331,37 @@ function pivDim(pivot, dimensionsInQuestion) {
           data[j] = traces;
         } else {
           // Get Dimension Counts
+
           for (
             var i = 0;
-            i < getDimensions(dimensions[pivotDimension]).length;
+            i < getDimensions(dimensionsInQuestion[pivotDimension]).length;
             i++
           ) {
-            var groupData = Object.keys(pivotCategories).filter(
-              (k) =>
-                k.startsWith(dimensions[j]) &&
-                k.endsWith(getDimensions(dimensions[pivotDimension])[i])
+            traces[i] = {
+              type: "bar",
+              name: "",
+              orientation: "h",
+              y: getDimensions(dimensions[j]),
+              x: getPivotCount(j, i), //groupVals,
+              marker: {
+                color: getPivotColors(dimensions[pivotDimension], i)
+              },
+              hoverinfo: "count+probability",
+              labelfont: {
+                size: 8
+              } //,text: groupVals // show counts
+            };
+            console.log(
+              "getPivotCount",
+              getPivotCount(j, i),
+              getPivotDimensions(j, i)
             );
-
-            var groupVals = Object.keys(pivotCategories)
-              .filter((key) => groupData.includes(key))
-              .reduce((obj, key) => {
-                obj[key] = pivotCategories[key];
-                return Object.values(obj);
-              }, {});
-
-            for (
-              var k = 0;
-              k < getDimensions(dimensions[pivotDimension]).length;
-              k++
-            ) {
-              traces[i] = {
-                type: "bar",
-                name: "",
-                orientation: "h",
-                y: getDimensions(dimensions[j]),
-                x: groupVals,
-                marker: {
-                  color: ColorLuminance(colorShade, 0.2 * i)
-                },
-                hoverinfo: "count+probability",
-                labelfont: {
-                  size: 8
-                } //,text: groupVals // show counts
-              };
-            }
           }
           data[j] = traces;
         }
+
+        console.log(data);
+
         if (j == dimensions[pivotDimension]) {
           document.getElementById("myDiv" + j).style.borderLeftColor =
             "#FDD017";
@@ -1145,9 +1370,9 @@ function pivDim(pivot, dimensionsInQuestion) {
       }
 
       return data;
-    }
-  });
-}
+    } //END buildPivotTraces(dimensions)
+  }); //END  D3
+} //END pivDim(pivot, dimensionsInQuestion)
 
 //Cross three dimensions
 function cross(currDim, pivotDimension, thirdDim, titanicData) {
@@ -1355,6 +1580,7 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
   var arrKey = [];
   var childClass = document.getElementsByClassName("drag-item");
   pivotDimension = pivotX;
+
   //console.log(getDimensions("Survived"));
   /*
       https://community.plotly.com/t/grouped-stacked-bar-chart/60805
@@ -1388,6 +1614,12 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
     dataset = "Mushrooms";
   }
 
+  if (datasetButtons[0] == "Survey") {
+    URL =
+      "https://raw.githubusercontent.com/empress637/empress637.github.io/main/ppc_survey.csv";
+    dataset = "PPC Survey";
+  }
+
   standard(pivotDimension, dimensionsInQuestion);
 
   d3.csv(URL, function (titanicData) {
@@ -1396,6 +1628,49 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
       (e) => e.id
     );
 
+    //START getDimensions(dim) --- Get categories for dimension
+    function getDimensions(dim, actLegend = 0) {
+      keysArr = Object.keys(
+        countDim(dimensionsInQuestion[pivotDimension], titanicData)
+      ).reverse();
+
+      for (var j = 0; j < keysArr.length; j++) {
+        keysArr[j] = keysArr[j].replace(dim + "|", "");
+      }
+
+      if (actLegend > 0) {
+        return activeValues;
+      } else {
+        return keysArr;
+      }
+    } //END getDimensions(dim)
+
+    //START getPivotColors(dim,piv)
+    function getPivotColors(dim, piv) {
+      var counter = getDimensions(dim);
+      var keysArr;
+      var col = [];
+      for (var q = counter.length; q >= 0; q--) {
+        keysArr = Object.keys(
+          countDim(dimensionsInQuestion[pivotDimension], titanicData)
+        ).reverse();
+
+        col[dim + "|" + counter[q]] = ColorLuminance(colorShade, 0.2 * q);
+
+        /*console.log(
+        
+        dim + "|" + counter[piv],
+        col[dim + "|" + counter[piv]]
+      );*/
+      }
+
+      //var keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
+
+      //for (var i = keysArr.length; i > 0; i--) {
+
+      // }
+      return col[dim + "|" + counter[piv]];
+    } //END getPivotColors(dim)
     for (var x = 0; x < dimensionsInQuestion.length; x++) {
       var dimOne = titanicData.map((row) => row[dimensionsInQuestion[x + 1]]);
       var dimCurr = titanicData.map((row) => row[dimensionsInQuestion[x]]);
@@ -1530,7 +1805,7 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
               type: "bar",
               orientation: "h", //text: vals[l], // show counts
               marker: {
-                color: ColorLuminance(colorShade, 0.2 * l) //"#" + l
+                color: getPivotColors(dimensionsInQuestion[pivotDimension], l) //"#" + l
               }
             };
 
@@ -1611,6 +1886,7 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
                   trackArr2.push(catDimCurr[j]);
                 }
               }
+
               for (var j = 0; j < catDimCurr.length * catDimOne.length; j++) {
                 if (j > 3) {
                 }
@@ -1731,7 +2007,7 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
                 type: "bar",
                 name: "", //pivotDimension[i],
                 marker: {
-                  color: ColorLuminance(colorShade, 0.2 * l) //colorX
+                  color: getPivotColors(dimensionsInQuestion[pivotDimension], i) //colorX
                 },
                 showgrid: false,
                 paper_bgcolor: "transparent",
