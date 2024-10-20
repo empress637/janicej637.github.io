@@ -568,7 +568,7 @@ function ColorLuminance(hex, lum) {
     i;
   for (i = 0; i < 3; i++) {
     c = parseInt(hex.substr(i * 2, 2), 16);
-    c = Math.round(Math.min(Math.max(1, c + c * lum + 50), 255)).toString(16);
+    c = Math.round(Math.min(Math.max(1, c + c * lum + 10), 255)).toString(16);
     rgb += ("00" + c).substr(c.length);
   }
 
