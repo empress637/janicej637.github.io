@@ -1,4 +1,28 @@
 Task,Technique,DimensionLocation,Gender,AgeGroup,EducationLevel,Profession,ITDataExperience,Optical Aid,TaskResult
+1,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+2,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,INCORRECT
+3,PPC PAIRED,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,INCORRECT
+4,PPC PAIRED,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,INCORRECT
+5,PARALLEL SETS,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+6,PARALLEL SETS,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,INCORRECT
+7,SUNBURST,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+8,SUNBURST,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,INCORRECT
+1,PPC STANDARD,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+2,PPC STANDARD,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+3,PPC PAIRED,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+4,PPC PAIRED,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+5,PARALLEL SETS,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,INCORRECT
+6,PARALLEL SETS,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+7,SUNBURST,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,INCORRECT
+8,SUNBURST,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,INCORRECT
+1,PPC STANDARD,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+2,PPC STANDARD,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+3,PPC PAIRED,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,INCORRECT
+4,PPC PAIRED,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+5,PARALLEL SETS,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,INCORRECT
+6,PARALLEL SETS,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+7,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
+8,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,No,CORRECT
 1,PPC STANDARD,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
 2,PPC STANDARD,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
 3,PPC PAIRED,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
