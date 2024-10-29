@@ -829,17 +829,11 @@ function pivDim(pivot, dimensionsInQuestion) {
       var counter = getDimensions(dim);
       var keysArr;
       var col = [];
-      for (var q = counter.length; q >= 0; q--) {
+      for (var q = 0; q < counter.length; q++) {
         keysArr = Object.keys(categories).filter((k) =>
           k.startsWith(dim + "|" + counter[q])
         );
         col[dim + "|" + counter[q]] = ColorLuminance(colorShade, 0.2 * q);
-
-        /*console.log(
-        
-        dim + "|" + counter[piv],
-        col[dim + "|" + counter[piv]]
-      );*/
       }
 
       //var keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
@@ -847,6 +841,13 @@ function pivDim(pivot, dimensionsInQuestion) {
       //for (var i = keysArr.length; i > 0; i--) {
 
       // }
+      console.log(
+        piv,
+        dim,
+        getDimensions(dim),
+        dim + "|" + counter[piv],
+        col[dim + "|" + counter[piv]]
+      );
       return col[dim + "|" + counter[piv]];
     } //END getPivotColors(dim)
 
@@ -868,7 +869,7 @@ function pivDim(pivot, dimensionsInQuestion) {
       var activeLegendValues = [];
 
       for (let i = 0; i < data.length; i++) {
-        console.log(data[i].visible);
+        // console.log(data[i].visible);
         if (data[i].visible != "false") {
           if (data[i].visible != "legendonly") {
             activeLegendValues.push(String(data[i].y).replace(/"/g, ""));
@@ -876,7 +877,7 @@ function pivDim(pivot, dimensionsInQuestion) {
         }
       }
 
-      if (activeLegendValues.length == 0) {
+      /*if (activeLegendValues.length == 0) {
         Plotly.restyle(
           "myDiv" + pivotDimension,
           {
@@ -884,7 +885,7 @@ function pivDim(pivot, dimensionsInQuestion) {
           },
           activeLegendValues
         );
-      }
+      }*/
 
       return activeLegendValues;
     } //END getActiveLegendValues(graphDiv)
@@ -898,7 +899,7 @@ function pivDim(pivot, dimensionsInQuestion) {
       }
 
       if (actLegend > 0) {
-        return activeValues;
+        return getActiveLegendValues("myDiv" + pivotDimension);
       } else {
         return keysArr;
       }
@@ -953,27 +954,8 @@ function pivDim(pivot, dimensionsInQuestion) {
               dimensionsInQuestion[dim] +
                 "|" +
                 getDimensions(dimensionsInQuestion[dim])[q]
-            ) &&
-            k.endsWith(
-              "_" +
-                dimensionsInQuestion[pivot] +
-                "|" +
-                getDimensions(dimensionsInQuestion[pivot])[piv]
-            )
+            ) && k.endsWith("_" + dimensionsInQuestion[pivot] + "|" + piv)
         );
-
-        /*console.log(
-           q,
-
-            "|" +
-          dimensionsInQuestion[dim] +
-            getDimensions(dimensionsInQuestion[dim])[q] +
-            "_" +
-            dimensionsInQuestion[pivot] +
-            "|" +
-            getDimensions(dimensionsInQuestion[pivot])[i],
-          pivotCategories[keysArr[j]]
-        ); */
 
         if (keysArr.length > 0) {
           valArr.push(pivotCategories[keysArr]);
@@ -990,47 +972,28 @@ function pivDim(pivot, dimensionsInQuestion) {
 
     function refresh() {
       var data = [];
-      for (var j = 0; j < dimensionsInQuestion.length; j++) {
+      var dimensions = addDim();
+      for (var j = 0; j < dimensions.length; j++) {
         var traces = [];
         for (
           var i = 0;
           i < getDimensions(dimensionsInQuestion[pivotDimension], 1).length;
           i++
         ) {
-          var groupData = Object.keys(pivotCategories).filter(
-            (k) =>
-              k.startsWith(dimensionsInQuestion[j]) &&
-              k.endsWith(
-                getDimensions(dimensionsInQuestion[pivotDimension], 1)[i]
-              )
-          );
-
-          var groupVals = Object.keys(pivotCategories)
-            .filter((key) => groupData.includes(key))
-            .reduce((obj, key) => {
-              obj[key] = pivotCategories[key];
-              return Object.values(obj);
-            }, {});
-
-          if (groupVals == "") {
-            groupVals = 0;
-          }
-          for (
-            var k = 0;
-            k < getDimensions(dimensionsInQuestion[pivotDimension], 1).length;
-            k++
-          ) {
+          for (var k = 0; k < getDimensions(dimensions[j], 1).length; k++) {
             traces[i] = {
               type: "bar",
               name: "",
               orientation: "h",
-              y: getDimensions(dimensionsInQuestion[j]),
-              x: getPivotCount(j, i),
+              y: getDimensions(dimensions[j]),
+              x: getPivotCount(j, getDimensions(dimensions[j], 1)[i]),
               marker: {
-                color: getPivotColors(dimensionsInQuestion[pivotDimension], i)
+                color: getPivotColors(dimensions[pivotDimension], i)
+                //getPivotColors(dimensionsInQuestion[pivotDimension], i),
               },
               hoverinfo: "count+probability",
               displayModeBar: "false",
+              text: getPivotCount(j, getDimensions(dimensions[j], 1)[i]), // show counts
               labelfont: {
                 size: 8
               } //,text: groupVals // show counts
@@ -1044,7 +1007,7 @@ function pivDim(pivot, dimensionsInQuestion) {
         document.getElementsByClassName("drag-item"),
         (e) => e.id
       );
-      for (var j = 0; j < divArray.length; j++) {
+      for (var k = 0; k < divArray.length; k++) {
         var layout = {
           showgrid: true,
           paper_bgcolor: "transparent",
@@ -1060,7 +1023,6 @@ function pivDim(pivot, dimensionsInQuestion) {
           opacity: 0.8,
           displayModeBar: "false", // Hide the modebar
           scrollZoom: true, // Enable zooming with the scroll wheel
-
           margin: {
             l: 20,
             r: 10,
@@ -1074,7 +1036,7 @@ function pivDim(pivot, dimensionsInQuestion) {
             color: "#000080"
           },
           title: {
-            text: dimensionsInQuestion[j],
+            text: dimensions[k],
             font: {
               orientation: "h",
               size: 20,
@@ -1086,13 +1048,14 @@ function pivDim(pivot, dimensionsInQuestion) {
           scattermode: "group"
         };
 
-        if (j != pivotDimension) {
-          Plotly.react(divArray[j], data[j], layout);
+        if (k != pivotDimension) {
+          Plotly.react(divArray[k], data[k], layout);
         }
       }
     } //END refresh()
     //START update(pivotDimension)  -- Update LEFT bar color of pivot dimension to yellow
     function update(pivotDimension) {
+      //standard();
       event.preventDefault();
       var childClass = document.getElementsByClassName("drag-item");
       for (var j = 0; j < childClass.length; j++) {
@@ -1127,7 +1090,7 @@ function pivDim(pivot, dimensionsInQuestion) {
                   activeLegendIndices
                 );
                 activeValues = getActiveLegendValues("myDiv" + pivotDimension);
-                refresh();
+                //refresh();
 
                 break;
               case 1:
@@ -1146,7 +1109,7 @@ function pivDim(pivot, dimensionsInQuestion) {
                   activeValues = getActiveLegendValues(
                     "myDiv" + pivotDimension
                   );
-                  console.log("activeValues", activeValues);
+                  //console.log(data.curveNumber, "activeValues", activeValues);
 
                   refresh();
                 }
@@ -1324,7 +1287,8 @@ function pivDim(pivot, dimensionsInQuestion) {
               hoverinfo: "count+probability",
               labelfont: {
                 size: 8
-              } //,text: getCount(dimensions[j])[i] // show counts
+              },
+              text: getCount(dimensions[j])[i] // show counts
             };
           }
 
@@ -1342,25 +1306,29 @@ function pivDim(pivot, dimensionsInQuestion) {
               name: "",
               orientation: "h",
               y: getDimensions(dimensions[j]),
-              x: getPivotCount(j, i), //groupVals,
+              x: getPivotCount(j, getDimensions(dimensions[pivotDimension])[i]), //groupVals,
               marker: {
-                color: getPivotColors(dimensions[pivotDimension], i)
+                color: getPivotColors(dimensionsInQuestion[pivotDimension], i)
               },
               hoverinfo: "count+probability",
               labelfont: {
                 size: 8
-              } //,text: groupVals // show counts
+              },
+              text: getPivotCount(
+                j,
+                getDimensions(dimensions[pivotDimension])[i]
+              ) // show counts
             };
-            console.log(
+            /* console.log(
               "getPivotCount",
               getPivotCount(j, i),
               getPivotDimensions(j, i)
-            );
+            );*/
           }
           data[j] = traces;
         }
 
-        console.log(data);
+        //console.log(data);
 
         if (j == dimensions[pivotDimension]) {
           document.getElementById("myDiv" + j).style.borderLeftColor =
@@ -1637,7 +1605,7 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
       for (var j = 0; j < keysArr.length; j++) {
         keysArr[j] = keysArr[j].replace(dim + "|", "");
       }
-
+      //console.log("activeValues", activeValues)
       if (actLegend > 0) {
         return activeValues;
       } else {
@@ -1648,28 +1616,18 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
     //START getPivotColors(dim,piv)
     function getPivotColors(dim, piv) {
       var counter = getDimensions(dim);
-      var keysArr;
+      var keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
       var col = [];
       for (var q = counter.length; q >= 0; q--) {
-        keysArr = Object.keys(
-          countDim(dimensionsInQuestion[pivotDimension], titanicData)
-        ).reverse();
-
         col[dim + "|" + counter[q]] = ColorLuminance(colorShade, 0.2 * q);
-
-        /*console.log(
-        
-        dim + "|" + counter[piv],
-        col[dim + "|" + counter[piv]]
-      );*/
       }
-
-      //var keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
+      console.log("dim + " | " + piv", col[dim + "|" + piv], dim, piv);
+      //
 
       //for (var i = keysArr.length; i > 0; i--) {
 
       // }
-      return col[dim + "|" + counter[piv]];
+      return col[dim + "|" + piv];
     } //END getPivotColors(dim)
     for (var x = 0; x < dimensionsInQuestion.length; x++) {
       var dimOne = titanicData.map((row) => row[dimensionsInQuestion[x + 1]]);
