@@ -1,241 +1,241 @@
-Task,Technique,DimensionLocation,Gender,AgeGroup,EducationLevel,Profession,ITDataExperience,Optical Aid,TaskResult
-1,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-2,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
-3,PPC PAIRED,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
-4,PPC PAIRED,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
-5,PARALLEL SETS,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-6,PARALLEL SETS,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
-7,SUNBURST,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-8,SUNBURST,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
-1,PPC STANDARD,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-2,PPC STANDARD,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-3,PPC PAIRED,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-4,PPC PAIRED,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-5,PARALLEL SETS,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
-6,PARALLEL SETS,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-7,SUNBURST,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
-8,SUNBURST,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
-1,PPC STANDARD,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-2,PPC STANDARD,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-3,PPC PAIRED,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
-4,PPC PAIRED,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-5,PARALLEL SETS,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
-6,PARALLEL SETS,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-7,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-8,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
-1,PPC STANDARD,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-2,PPC STANDARD,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-3,PPC PAIRED,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-4,PPC PAIRED,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,INCORRECT
-5,PARALLEL SETS,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,INCORRECT
-6,PARALLEL SETS,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,INCORRECT
-7,SUNBURST,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-8,SUNBURST,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-1,PPC STANDARD,ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-2,PPC STANDARD,ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,INCORRECT
-3,PPC PAIRED,ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-4,PPC PAIRED,ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-5,PARALLEL SETS,ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-6,PARALLEL SETS,ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-7,SUNBURST,ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-8,SUNBURST,ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-1,PPC STANDARD,NON-ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,INCORRECT
-2,PPC STANDARD,NON-ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-3,PPC PAIRED,NON-ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,INCORRECT
-4,PPC PAIRED,NON-ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,INCORRECT
-5,PARALLEL SETS,NON-ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-6,PARALLEL SETS,NON-ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,INCORRECT
-7,SUNBURST,NON-ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
-8,SUNBURST,NON-ADJACENT,Female,40-49,Masters,IT Professional,5.5,Glasses,INCORRECT
-1,PPC STANDARD,N/A,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-2,PPC STANDARD,N/A,Female,50-59,Bachelors,IT Professional,5.5,Glasses,INCORRECT
-3,PPC PAIRED,N/A,Female,50-59,Bachelors,IT Professional,5.5,Glasses,INCORRECT
-4,PPC PAIRED,N/A,Female,50-59,Bachelors,IT Professional,5.5,Glasses,INCORRECT
-5,PARALLEL SETS,N/A,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-6,PARALLEL SETS,N/A,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-7,SUNBURST,N/A,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-8,SUNBURST,N/A,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-1,PPC STANDARD,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,INCORRECT
-2,PPC STANDARD,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,INCORRECT
-3,PPC PAIRED,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-4,PPC PAIRED,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-5,PARALLEL SETS,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,INCORRECT
-6,PARALLEL SETS,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-7,SUNBURST,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,INCORRECT
-8,SUNBURST,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,INCORRECT
-1,PPC STANDARD,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-2,PPC STANDARD,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-3,PPC PAIRED,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-4,PPC PAIRED,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-5,PARALLEL SETS,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,INCORRECT
-6,PARALLEL SETS,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,INCORRECT
-7,SUNBURST,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,INCORRECT
-8,SUNBURST,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5,Glasses,CORRECT
-1,PPC STANDARD,N/A,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-2,PPC STANDARD,N/A,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-3,PPC PAIRED,N/A,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-4,PPC PAIRED,N/A,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-5,PARALLEL SETS,N/A,Female,30-39,Masters,College Student,.5-3,None,INCORRECT
-6,PARALLEL SETS,N/A,Female,30-39,Masters,College Student,.5-3,None,INCORRECT
-7,SUNBURST,N/A,Female,30-39,Masters,College Student,.5-3,None,INCORRECT
-8,SUNBURST,N/A,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-1,PPC STANDARD,ADJACENT,Female,30-39,Masters,College Student,.5-3,None,INCORRECT
-2,PPC STANDARD,ADJACENT,Female,30-39,Masters,College Student,.5-3,None,INCORRECT
-3,PPC PAIRED,ADJACENT,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-4,PPC PAIRED,ADJACENT,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-5,PARALLEL SETS,ADJACENT,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-6,PARALLEL SETS,ADJACENT,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-7,SUNBURST,ADJACENT,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-8,SUNBURST,ADJACENT,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-1,PPC STANDARD,NON-ADJACENT,Female,30-39,Masters,College Student,.5-3,None,INCORRECT
-2,PPC STANDARD,NON-ADJACENT,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-3,PPC PAIRED,NON-ADJACENT,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-4,PPC PAIRED,NON-ADJACENT,Female,30-39,Masters,College Student,.5-3,None,INCORRECT
-5,PARALLEL SETS,NON-ADJACENT,Female,30-39,Masters,College Student,.5-3,None,INCORRECT
-6,PARALLEL SETS,NON-ADJACENT,Female,30-39,Masters,College Student,.5-3,None,INCORRECT
-7,SUNBURST,NON-ADJACENT,Female,30-39,Masters,College Student,.5-3,None,CORRECT
-8,SUNBURST,NON-ADJACENT,Female,30-39,Masters,College Student,.5-3,None,INCORRECT
-1,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-2,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-3,PPC PAIRED,N/A,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,INCORRECT
-4,PPC PAIRED,N/A,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,INCORRECT
-5,PARALLEL SETS,N/A,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-6,PARALLEL SETS,N/A,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-7,SUNBURST,N/A,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-8,SUNBURST,N/A,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,INCORRECT
-1,PPC STANDARD,ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,INCORRECT
-2,PPC STANDARD,ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,INCORRECT
-3,PPC PAIRED,ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-4,PPC PAIRED,ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-5,PARALLEL SETS,ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,INCORRECT
-6,PARALLEL SETS,ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-7,SUNBURST,ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-8,SUNBURST,ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-1,PPC STANDARD,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-2,PPC STANDARD,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-3,PPC PAIRED,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-4,PPC PAIRED,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-5,PARALLEL SETS,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,INCORRECT
-6,PARALLEL SETS,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-7,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,CORRECT
-8,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,3.5-5,Contacts,INCORRECT
-1,PPC STANDARD,N/A,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-2,PPC STANDARD,N/A,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-3,PPC PAIRED,N/A,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-4,PPC PAIRED,N/A,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,INCORRECT
-5,PARALLEL SETS,N/A,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-6,PARALLEL SETS,N/A,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,INCORRECT
-7,SUNBURST,N/A,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-8,SUNBURST,N/A,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-1,PPC STANDARD,ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,INCORRECT
-2,PPC STANDARD,ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,INCORRECT
-3,PPC PAIRED,ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-4,PPC PAIRED,ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-5,PARALLEL SETS,ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,INCORRECT
-6,PARALLEL SETS,ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-7,SUNBURST,ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-8,SUNBURST,ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-1,PPC STANDARD,NON-ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-2,PPC STANDARD,NON-ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-3,PPC PAIRED,NON-ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-4,PPC PAIRED,NON-ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-5,PARALLEL SETS,NON-ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,INCORRECT
-6,PARALLEL SETS,NON-ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,INCORRECT
-7,SUNBURST,NON-ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-8,SUNBURST,NON-ADJACENT,Male,20-29,Bachelors,IT Professional,.5-3,Glasses,CORRECT
-1,PPC STANDARD,N/A,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-2,PPC STANDARD,N/A,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-3,PPC PAIRED,N/A,Female,60-69,Masters,IT Professional,5.5+,Contacts,INCORRECT
-4,PPC PAIRED,N/A,Female,60-69,Masters,IT Professional,5.5+,Contacts,INCORRECT
-5,PARALLEL SETS,N/A,Female,60-69,Masters,IT Professional,5.5+,Contacts,INCORRECT
-6,PARALLEL SETS,N/A,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-7,SUNBURST,N/A,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-8,SUNBURST,N/A,Female,60-69,Masters,IT Professional,5.5+,Contacts,INCORRECT
-1,PPC STANDARD,ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-2,PPC STANDARD,ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-3,PPC PAIRED,ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-4,PPC PAIRED,ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-5,PARALLEL SETS,ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-6,PARALLEL SETS,ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,INCORRECT
-7,SUNBURST,ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-8,SUNBURST,ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-1,PPC STANDARD,NON-ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-2,PPC STANDARD,NON-ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-3,PPC PAIRED,NON-ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-4,PPC PAIRED,NON-ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-5,PARALLEL SETS,NON-ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,INCORRECT
-6,PARALLEL SETS,NON-ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-7,SUNBURST,NON-ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-8,SUNBURST,NON-ADJACENT,Female,60-69,Masters,IT Professional,5.5+,Contacts,CORRECT
-1,PPC STANDARD,N/A,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-2,PPC STANDARD,N/A,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-3,PPC PAIRED,N/A,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-4,PPC PAIRED,N/A,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,INCORRECT
-5,PARALLEL SETS,N/A,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-6,PARALLEL SETS,N/A,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,INCORRECT
-7,SUNBURST,N/A,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-8,SUNBURST,N/A,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,INCORRECT
-1,PPC STANDARD,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-2,PPC STANDARD,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,INCORRECT
-3,PPC PAIRED,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-4,PPC PAIRED,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-5,PARALLEL SETS,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-6,PARALLEL SETS,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,INCORRECT
-7,SUNBURST,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-8,SUNBURST,ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-1,PPC STANDARD,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,INCORRECT
-2,PPC STANDARD,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,INCORRECT
-3,PPC PAIRED,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-4,PPC PAIRED,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,CORRECT
-5,PARALLEL SETS,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,INCORRECT
-6,PARALLEL SETS,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,INCORRECT
-7,SUNBURST,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,INCORRECT
-8,SUNBURST,NON-ADJACENT,Female,50-59,Bachelors,IT Professional,5.5+,Glasses,INCORRECT
-1,PPC STANDARD,N/A,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-2,PPC STANDARD,N/A,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-3,PPC PAIRED,N/A,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-4,PPC PAIRED,N/A,Male,20-29,Masters,IT Professional,3.5-5,None,INCORRECT
-5,PARALLEL SETS,N/A,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-6,PARALLEL SETS,N/A,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-7,SUNBURST,N/A,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-8,SUNBURST,N/A,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-1,PPC STANDARD,ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-2,PPC STANDARD,ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-3,PPC PAIRED,ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-4,PPC PAIRED,ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-5,PARALLEL SETS,ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-6,PARALLEL SETS,ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,INCORRECT
-7,SUNBURST,ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,INCORRECT
-8,SUNBURST,ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,INCORRECT
-1,PPC STANDARD,NON-ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,INCORRECT
-2,PPC STANDARD,NON-ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-3,PPC PAIRED,NON-ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-4,PPC PAIRED,NON-ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-5,PARALLEL SETS,NON-ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,INCORRECT
-6,PARALLEL SETS,NON-ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-7,SUNBURST,NON-ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,CORRECT
-8,SUNBURST,NON-ADJACENT,Male,20-29,Masters,IT Professional,3.5-5,None,INCORRECT
-1,PPC STANDARD,N/A,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-2,PPC STANDARD,N/A,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-3,PPC PAIRED,N/A,Female,30-39,Masters,IT Professional,.5-3,Contacts,INCORRECT
-4,PPC PAIRED,N/A,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-5,PARALLEL SETS,N/A,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-6,PARALLEL SETS,N/A,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-7,SUNBURST,N/A,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-8,SUNBURST,N/A,Female,30-39,Masters,IT Professional,.5-3,Contacts,INCORRECT
-1,PPC STANDARD,ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-2,PPC STANDARD,ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,INCORRECT
-3,PPC PAIRED,ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-4,PPC PAIRED,ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,INCORRECT
-5,PARALLEL SETS,ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,INCORRECT
-6,PARALLEL SETS,ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,INCORRECT
-7,SUNBURST,ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-8,SUNBURST,ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,INCORRECT
-1,PPC STANDARD,NON-ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-2,PPC STANDARD,NON-ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-3,PPC PAIRED,NON-ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-4,PPC PAIRED,NON-ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,INCORRECT
-5,PARALLEL SETS,NON-ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,INCORRECT
-6,PARALLEL SETS,NON-ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
-7,SUNBURST,NON-ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,INCORRECT
-8,SUNBURST,NON-ADJACENT,Female,30-39,Masters,IT Professional,.5-3,Contacts,CORRECT
+Task,Technique,DimensionLocation,Gender,AgeGroup,EducationLevel,Profession,ITDataExperience,OpticalAid,TaskResult
+1,PPCSTANDARD,N/A,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+2,PPCSTANDARD,N/A,Female,30-39,Bachelors,ITProfessional,5.5+,None,INCORRECT
+3,PPCPAIRED,N/A,Female,30-39,Bachelors,ITProfessional,5.5+,None,INCORRECT
+4,PPCPAIRED,N/A,Female,30-39,Bachelors,ITProfessional,5.5+,None,INCORRECT
+5,PARALLELSETS,N/A,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+6,PARALLELSETS,N/A,Female,30-39,Bachelors,ITProfessional,5.5+,None,INCORRECT
+7,SUNBURST,N/A,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+8,SUNBURST,N/A,Female,30-39,Bachelors,ITProfessional,5.5+,None,INCORRECT
+1,PPCSTANDARD,ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+2,PPCSTANDARD,ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+3,PPCPAIRED,ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+4,PPCPAIRED,ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+5,PARALLELSETS,ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,INCORRECT
+6,PARALLELSETS,ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+7,SUNBURST,ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,INCORRECT
+8,SUNBURST,ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,INCORRECT
+1,PPCSTANDARD,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+2,PPCSTANDARD,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+3,PPCPAIRED,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,INCORRECT
+4,PPCPAIRED,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+5,PARALLELSETS,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,INCORRECT
+6,PARALLELSETS,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+7,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+8,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,5.5+,None,CORRECT
+1,PPCSTANDARD,N/A,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+2,PPCSTANDARD,N/A,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+3,PPCPAIRED,N/A,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+4,PPCPAIRED,N/A,Female,40-49,Masters,ITProfessional,5.5,Glasses,INCORRECT
+5,PARALLELSETS,N/A,Female,40-49,Masters,ITProfessional,5.5,Glasses,INCORRECT
+6,PARALLELSETS,N/A,Female,40-49,Masters,ITProfessional,5.5,Glasses,INCORRECT
+7,SUNBURST,N/A,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+8,SUNBURST,N/A,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+1,PPCSTANDARD,ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+2,PPCSTANDARD,ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,INCORRECT
+3,PPCPAIRED,ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+4,PPCPAIRED,ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+5,PARALLELSETS,ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+6,PARALLELSETS,ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+7,SUNBURST,ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+8,SUNBURST,ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+1,PPCSTANDARD,NON-ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,INCORRECT
+2,PPCSTANDARD,NON-ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+3,PPCPAIRED,NON-ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,INCORRECT
+4,PPCPAIRED,NON-ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,INCORRECT
+5,PARALLELSETS,NON-ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+6,PARALLELSETS,NON-ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,INCORRECT
+7,SUNBURST,NON-ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,CORRECT
+8,SUNBURST,NON-ADJACENT,Female,40-49,Masters,ITProfessional,5.5,Glasses,INCORRECT
+1,PPCSTANDARD,N/A,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+2,PPCSTANDARD,N/A,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,INCORRECT
+3,PPCPAIRED,N/A,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,INCORRECT
+4,PPCPAIRED,N/A,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,INCORRECT
+5,PARALLELSETS,N/A,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+6,PARALLELSETS,N/A,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+7,SUNBURST,N/A,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+8,SUNBURST,N/A,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+1,PPCSTANDARD,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,INCORRECT
+2,PPCSTANDARD,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,INCORRECT
+3,PPCPAIRED,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+4,PPCPAIRED,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+5,PARALLELSETS,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,INCORRECT
+6,PARALLELSETS,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+7,SUNBURST,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,INCORRECT
+8,SUNBURST,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,INCORRECT
+1,PPCSTANDARD,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+2,PPCSTANDARD,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+3,PPCPAIRED,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+4,PPCPAIRED,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+5,PARALLELSETS,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,INCORRECT
+6,PARALLELSETS,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,INCORRECT
+7,SUNBURST,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,INCORRECT
+8,SUNBURST,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5,Glasses,CORRECT
+1,PPCSTANDARD,N/A,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+2,PPCSTANDARD,N/A,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+3,PPCPAIRED,N/A,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+4,PPCPAIRED,N/A,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+5,PARALLELSETS,N/A,Female,30-39,Masters,CollegeStudent,.5-3,None,INCORRECT
+6,PARALLELSETS,N/A,Female,30-39,Masters,CollegeStudent,.5-3,None,INCORRECT
+7,SUNBURST,N/A,Female,30-39,Masters,CollegeStudent,.5-3,None,INCORRECT
+8,SUNBURST,N/A,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+1,PPCSTANDARD,ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,INCORRECT
+2,PPCSTANDARD,ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,INCORRECT
+3,PPCPAIRED,ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+4,PPCPAIRED,ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+5,PARALLELSETS,ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+6,PARALLELSETS,ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+7,SUNBURST,ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+8,SUNBURST,ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+1,PPCSTANDARD,NON-ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,INCORRECT
+2,PPCSTANDARD,NON-ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+3,PPCPAIRED,NON-ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+4,PPCPAIRED,NON-ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,INCORRECT
+5,PARALLELSETS,NON-ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,INCORRECT
+6,PARALLELSETS,NON-ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,INCORRECT
+7,SUNBURST,NON-ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,CORRECT
+8,SUNBURST,NON-ADJACENT,Female,30-39,Masters,CollegeStudent,.5-3,None,INCORRECT
+1,PPCSTANDARD,N/A,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+2,PPCSTANDARD,N/A,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+3,PPCPAIRED,N/A,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,INCORRECT
+4,PPCPAIRED,N/A,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,INCORRECT
+5,PARALLELSETS,N/A,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+6,PARALLELSETS,N/A,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+7,SUNBURST,N/A,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+8,SUNBURST,N/A,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,INCORRECT
+1,PPCSTANDARD,ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,INCORRECT
+2,PPCSTANDARD,ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,INCORRECT
+3,PPCPAIRED,ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+4,PPCPAIRED,ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+5,PARALLELSETS,ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,INCORRECT
+6,PARALLELSETS,ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+7,SUNBURST,ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+8,SUNBURST,ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+1,PPCSTANDARD,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+2,PPCSTANDARD,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+3,PPCPAIRED,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+4,PPCPAIRED,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+5,PARALLELSETS,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,INCORRECT
+6,PARALLELSETS,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+7,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,CORRECT
+8,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,ITProfessional,3.5-5,Contacts,INCORRECT
+1,PPCSTANDARD,N/A,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+2,PPCSTANDARD,N/A,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+3,PPCPAIRED,N/A,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+4,PPCPAIRED,N/A,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,INCORRECT
+5,PARALLELSETS,N/A,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+6,PARALLELSETS,N/A,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,INCORRECT
+7,SUNBURST,N/A,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+8,SUNBURST,N/A,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+1,PPCSTANDARD,ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,INCORRECT
+2,PPCSTANDARD,ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,INCORRECT
+3,PPCPAIRED,ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+4,PPCPAIRED,ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+5,PARALLELSETS,ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,INCORRECT
+6,PARALLELSETS,ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+7,SUNBURST,ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+8,SUNBURST,ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+1,PPCSTANDARD,NON-ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+2,PPCSTANDARD,NON-ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+3,PPCPAIRED,NON-ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+4,PPCPAIRED,NON-ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+5,PARALLELSETS,NON-ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,INCORRECT
+6,PARALLELSETS,NON-ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,INCORRECT
+7,SUNBURST,NON-ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+8,SUNBURST,NON-ADJACENT,Male,20-29,Bachelors,ITProfessional,.5-3,Glasses,CORRECT
+1,PPCSTANDARD,N/A,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+2,PPCSTANDARD,N/A,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+3,PPCPAIRED,N/A,Female,60-69,Masters,ITProfessional,5.5+,Contacts,INCORRECT
+4,PPCPAIRED,N/A,Female,60-69,Masters,ITProfessional,5.5+,Contacts,INCORRECT
+5,PARALLELSETS,N/A,Female,60-69,Masters,ITProfessional,5.5+,Contacts,INCORRECT
+6,PARALLELSETS,N/A,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+7,SUNBURST,N/A,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+8,SUNBURST,N/A,Female,60-69,Masters,ITProfessional,5.5+,Contacts,INCORRECT
+1,PPCSTANDARD,ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+2,PPCSTANDARD,ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+3,PPCPAIRED,ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+4,PPCPAIRED,ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+5,PARALLELSETS,ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+6,PARALLELSETS,ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,INCORRECT
+7,SUNBURST,ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+8,SUNBURST,ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+1,PPCSTANDARD,NON-ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+2,PPCSTANDARD,NON-ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+3,PPCPAIRED,NON-ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+4,PPCPAIRED,NON-ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+5,PARALLELSETS,NON-ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,INCORRECT
+6,PARALLELSETS,NON-ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+7,SUNBURST,NON-ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+8,SUNBURST,NON-ADJACENT,Female,60-69,Masters,ITProfessional,5.5+,Contacts,CORRECT
+1,PPCSTANDARD,N/A,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+2,PPCSTANDARD,N/A,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+3,PPCPAIRED,N/A,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+4,PPCPAIRED,N/A,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,INCORRECT
+5,PARALLELSETS,N/A,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+6,PARALLELSETS,N/A,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,INCORRECT
+7,SUNBURST,N/A,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+8,SUNBURST,N/A,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,INCORRECT
+1,PPCSTANDARD,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+2,PPCSTANDARD,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,INCORRECT
+3,PPCPAIRED,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+4,PPCPAIRED,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+5,PARALLELSETS,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+6,PARALLELSETS,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,INCORRECT
+7,SUNBURST,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+8,SUNBURST,ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+1,PPCSTANDARD,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,INCORRECT
+2,PPCSTANDARD,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,INCORRECT
+3,PPCPAIRED,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+4,PPCPAIRED,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,CORRECT
+5,PARALLELSETS,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,INCORRECT
+6,PARALLELSETS,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,INCORRECT
+7,SUNBURST,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,INCORRECT
+8,SUNBURST,NON-ADJACENT,Female,50-59,Bachelors,ITProfessional,5.5+,Glasses,INCORRECT
+1,PPCSTANDARD,N/A,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+2,PPCSTANDARD,N/A,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+3,PPCPAIRED,N/A,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+4,PPCPAIRED,N/A,Male,20-29,Masters,ITProfessional,3.5-5,None,INCORRECT
+5,PARALLELSETS,N/A,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+6,PARALLELSETS,N/A,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+7,SUNBURST,N/A,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+8,SUNBURST,N/A,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+1,PPCSTANDARD,ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+2,PPCSTANDARD,ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+3,PPCPAIRED,ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+4,PPCPAIRED,ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+5,PARALLELSETS,ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+6,PARALLELSETS,ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,INCORRECT
+7,SUNBURST,ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,INCORRECT
+8,SUNBURST,ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,INCORRECT
+1,PPCSTANDARD,NON-ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,INCORRECT
+2,PPCSTANDARD,NON-ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+3,PPCPAIRED,NON-ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+4,PPCPAIRED,NON-ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+5,PARALLELSETS,NON-ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,INCORRECT
+6,PARALLELSETS,NON-ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+7,SUNBURST,NON-ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,CORRECT
+8,SUNBURST,NON-ADJACENT,Male,20-29,Masters,ITProfessional,3.5-5,None,INCORRECT
+1,PPCSTANDARD,N/A,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+2,PPCSTANDARD,N/A,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+3,PPCPAIRED,N/A,Female,30-39,Masters,ITProfessional,.5-3,Contacts,INCORRECT
+4,PPCPAIRED,N/A,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+5,PARALLELSETS,N/A,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+6,PARALLELSETS,N/A,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+7,SUNBURST,N/A,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+8,SUNBURST,N/A,Female,30-39,Masters,ITProfessional,.5-3,Contacts,INCORRECT
+1,PPCSTANDARD,ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+2,PPCSTANDARD,ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,INCORRECT
+3,PPCPAIRED,ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+4,PPCPAIRED,ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,INCORRECT
+5,PARALLELSETS,ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,INCORRECT
+6,PARALLELSETS,ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,INCORRECT
+7,SUNBURST,ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+8,SUNBURST,ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,INCORRECT
+1,PPCSTANDARD,NON-ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+2,PPCSTANDARD,NON-ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+3,PPCPAIRED,NON-ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+4,PPCPAIRED,NON-ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,INCORRECT
+5,PARALLELSETS,NON-ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,INCORRECT
+6,PARALLELSETS,NON-ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
+7,SUNBURST,NON-ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,INCORRECT
+8,SUNBURST,NON-ADJACENT,Female,30-39,Masters,ITProfessional,.5-3,Contacts,CORRECT
