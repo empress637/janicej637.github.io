@@ -1,28 +1,28 @@
 Task,Technique,DimensionLocation,Gender,AgeGroup,EducationLevel,Profession,ITDataExperience,Optical Aid,TaskResult
-1,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-2,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,INCORRECT
-3,PPC PAIRED,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,INCORRECT
-4,PPC PAIRED,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,INCORRECT
-5,PARALLEL SETS,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-6,PARALLEL SETS,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,INCORRECT
-7,SUNBURST,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-8,SUNBURST,N/A,Female,30-39,Bachelors,IT Professional,5.5 +,None,INCORRECT
-1,PPC STANDARD,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-2,PPC STANDARD,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-3,PPC PAIRED,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-4,PPC PAIRED,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-5,PARALLEL SETS,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,INCORRECT
-6,PARALLEL SETS,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-7,SUNBURST,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,INCORRECT
-8,SUNBURST,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,INCORRECT
-1,PPC STANDARD,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-2,PPC STANDARD,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-3,PPC PAIRED,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,INCORRECT
-4,PPC PAIRED,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-5,PARALLEL SETS,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,INCORRECT
-6,PARALLEL SETS,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-7,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
-8,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5 +,None,CORRECT
+1,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+2,PPC STANDARD,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
+3,PPC PAIRED,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
+4,PPC PAIRED,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
+5,PARALLEL SETS,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+6,PARALLEL SETS,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
+7,SUNBURST,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+8,SUNBURST,N/A,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
+1,PPC STANDARD,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+2,PPC STANDARD,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+3,PPC PAIRED,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+4,PPC PAIRED,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+5,PARALLEL SETS,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
+6,PARALLEL SETS,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+7,SUNBURST,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
+8,SUNBURST,ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
+1,PPC STANDARD,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+2,PPC STANDARD,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+3,PPC PAIRED,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
+4,PPC PAIRED,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+5,PARALLEL SETS,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,INCORRECT
+6,PARALLEL SETS,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+7,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
+8,SUNBURST,NON-ADJACENT,Female,30-39,Bachelors,IT Professional,5.5,None,CORRECT
 1,PPC STANDARD,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
 2,PPC STANDARD,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
 3,PPC PAIRED,N/A,Female,40-49,Masters,IT Professional,5.5,Glasses,CORRECT
