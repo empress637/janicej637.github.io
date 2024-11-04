@@ -845,10 +845,10 @@ function pivDim(pivot, dimensionsInQuestion) {
         piv,
         dim,
         getDimensions(dim),
-        dim + "|" + counter[piv],
-        col[dim + "|" + counter[piv]]
+        dim + "|" + piv,
+        col[dim + "|" + piv]
       );
-      return col[dim + "|" + counter[piv]];
+      return col[dim + "|" + piv];
     } //END getPivotColors(dim)
 
     //START sort(dim)  -- Sort categories and group them by values
@@ -988,7 +988,10 @@ function pivDim(pivot, dimensionsInQuestion) {
               y: getDimensions(dimensions[j]),
               x: getPivotCount(j, getDimensions(dimensions[j], 1)[i]),
               marker: {
-                color: getPivotColors(dimensions[pivotDimension], i)
+                color: getPivotColors(
+                  dimensions[pivotDimension],
+                  getDimensions(dimensions[pivotDimension])[i]
+                )
                 //getPivotColors(dimensionsInQuestion[pivotDimension], i),
               },
               hoverinfo: "count+probability",
@@ -1274,7 +1277,10 @@ function pivDim(pivot, dimensionsInQuestion) {
               y: [getDimensions(dimensions[j])[i]], // array of keys
               x: [getCount(dimensions[j])[i]],
               marker: {
-                color: getPivotColors(dimensionsInQuestion[pivotDimension], i),
+                color: getPivotColors(
+                  dimensionsInQuestion[pivotDimension],
+                  getDimensions(dimensions[pivotDimension])[i]
+                ),
                 showTips: false,
                 displayModeBar: false, // Hide the modebar
                 scrollZoom: true, // Enable zooming with the scroll wheel
@@ -1308,7 +1314,10 @@ function pivDim(pivot, dimensionsInQuestion) {
               y: getDimensions(dimensions[j]),
               x: getPivotCount(j, getDimensions(dimensions[pivotDimension])[i]), //groupVals,
               marker: {
-                color: getPivotColors(dimensionsInQuestion[pivotDimension], i)
+                color: getPivotColors(
+                  dimensionsInQuestion[pivotDimension],
+                  getDimensions(dimensions[pivotDimension])[i]
+                )
               },
               hoverinfo: "count+probability",
               labelfont: {
@@ -1319,11 +1328,13 @@ function pivDim(pivot, dimensionsInQuestion) {
                 getDimensions(dimensions[pivotDimension])[i]
               ) // show counts
             };
-            /* console.log(
-              "getPivotCount",
-              getPivotCount(j, i),
-              getPivotDimensions(j, i)
-            );*/
+            console.log(
+              "getPivotColors",
+              getPivotColors(
+                dimensionsInQuestion[pivotDimension],
+                getDimensions(dimensions[pivotDimension])[i]
+              )
+            );
           }
           data[j] = traces;
         }
@@ -1339,7 +1350,10 @@ function pivDim(pivot, dimensionsInQuestion) {
 
       return data;
     } //END buildPivotTraces(dimensions)
+
+    //return categories;
   }); //END  D3
+  // return categories;
 } //END pivDim(pivot, dimensionsInQuestion)
 
 //Cross three dimensions
@@ -1611,12 +1625,13 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
       } else {
         return keysArr;
       }
-    } //END getDimensions(dim)
+    } //END getDimensions(dim) //END getPivotColors(dim)
 
-    //START getPivotColors(dim,piv)
+    /*START getPivotColors(dim,piv)
     function getPivotColors(dim, piv) {
       var counter = getDimensions(dim);
-      var keysArr = Object.keys(categories).filter((k) => k.startsWith(dim));
+      var catArr = pivDim(dim, dimensionsInQuestion);
+      var keysArr = Object.keys(catArr).filter((k) => k.startsWith(dim));
       var col = [];
       for (var q = counter.length; q >= 0; q--) {
         col[dim + "|" + counter[q]] = ColorLuminance(colorShade, 0.2 * q);
@@ -1628,8 +1643,11 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
 
       // }
       return col[dim + "|" + piv];
-    } //END getPivotColors(dim)
-    for (var x = 0; x < dimensionsInQuestion.length; x++) {
+    } */ for (
+      var x = 0;
+      x < dimensionsInQuestion.length;
+      x++
+    ) {
       var dimOne = titanicData.map((row) => row[dimensionsInQuestion[x + 1]]);
       var dimCurr = titanicData.map((row) => row[dimensionsInQuestion[x]]);
       var pivot = titanicData.map(
@@ -1763,7 +1781,7 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
               type: "bar",
               orientation: "h", //text: vals[l], // show counts
               marker: {
-                color: getPivotColors(dimensionsInQuestion[pivotDimension], l) //"#" + l
+                color: ColorLuminance("6699CC", 0.2 * l) // getPivotColors(dimensionsInQuestion[pivotDimension], l) //
               }
             };
 
@@ -1965,7 +1983,7 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
                 type: "bar",
                 name: "", //pivotDimension[i],
                 marker: {
-                  color: getPivotColors(dimensionsInQuestion[pivotDimension], i) //colorX
+                  color: ColorLuminance("0059b3", 0.2 * l) // getPivotColors(dimensionsInQuestion[pivotDimension], i) //colorX
                 },
                 showgrid: false,
                 paper_bgcolor: "transparent",
@@ -2099,5 +2117,4 @@ function pivCrossDim(pivotX, dimensionsInQuestion) {
   format = "Crossover";
 }
 
-  
 </script>
