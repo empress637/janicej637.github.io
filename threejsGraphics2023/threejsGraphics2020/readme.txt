@@ -17,6 +17,7 @@ The three.js programs from my graphics site https://sites.nova.edu/mjl/graphics/
 
 ----THIS THE PATH TO DISPLAY MY WORK FOR THIS CLASS----
 
-https://empress637.github.io/threejsGraphics2023/threejsGraphics2020/show1.html?load=js/triangle015.js
+https://janicej637.github.io/threejsGraphics2023/threejsGraphics2020/show1.html?load=js/triangle015.js
 
-https://empress637.github.io/threejsGraphics2023/threejsGraphics2020/show1.html?load=js/square020.js
+https://janicej637.github.io/threejsGraphics2023/threejsGraphics2020/show1.html?load=js/square020.js
+
